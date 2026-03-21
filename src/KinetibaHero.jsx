@@ -372,6 +372,13 @@ function createFaceTexture(gx, gy, gz, faceIdx) {
   const fg = `rgb(${r - 40},${g - 40},${b - 40})`;
   drawFrame(ctx, size, fg);
 
+  // Inner shadow to simulate recessed panel
+  const shadowGrad = ctx.createLinearGradient(0, 0, 0, size * 0.15);
+  shadowGrad.addColorStop(0, 'rgba(0,0,0,0.08)');
+  shadowGrad.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = shadowGrad;
+  ctx.fillRect(size * 0.06, size * 0.06, size * 0.88, size * 0.3);
+
   // Icon
   const iconIdx = (Math.abs(gx * 7 + gy * 13 + gz * 19) + faceIdx * 3) % ICON_DRAWERS.length;
   ICON_DRAWERS[iconIdx](ctx, size);
@@ -788,9 +795,9 @@ function Scene({ scrollRef }) {
 
       <ContactShadows
         position={[0, -2.1, 0]}
-        opacity={0.55}
+        opacity={0.65}
         scale={12}
-        blur={1.8}
+        blur={1.5}
         far={3}
       />
 

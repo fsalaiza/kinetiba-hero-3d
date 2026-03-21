@@ -447,10 +447,7 @@ function CubePiece({ position, gx, gy, gz }) {
       console.warn('No mesh found in cube_piece.glb');
       return null;
     }
-    const geo = meshNode.geometry.clone();
-    geo.computeBoundingBox();
-    console.log('GLB bounding box:', geo.boundingBox);
-    return geo;
+    return meshNode.geometry.clone();
   }, [nodes]);
 
   const roughnessMap = useMemo(() => generateRoughnessMap(), []);

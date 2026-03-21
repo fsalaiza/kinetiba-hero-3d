@@ -599,8 +599,8 @@ function RubiksCube({ scrollRef }) {
         scrollTrigger: {
           trigger: sections[1],
           start: 'top bottom',
-          end: 'top center',
-          scrub: 1.5,
+          end: 'center center',
+          scrub: 3,
         },
       });
 
@@ -612,8 +612,8 @@ function RubiksCube({ scrollRef }) {
         scrollTrigger: {
           trigger: sections[2],
           start: 'top bottom',
-          end: 'top center',
-          scrub: 1.5,
+          end: 'center center',
+          scrub: 3,
         },
       });
 
@@ -625,8 +625,8 @@ function RubiksCube({ scrollRef }) {
         scrollTrigger: {
           trigger: sections[3],
           start: 'top bottom',
-          end: 'top center',
-          scrub: 1.5,
+          end: 'center center',
+          scrub: 3,
         },
       });
 
@@ -638,8 +638,8 @@ function RubiksCube({ scrollRef }) {
         scrollTrigger: {
           trigger: sections[4],
           start: 'top bottom',
-          end: 'top center',
-          scrub: 1.5,
+          end: 'center center',
+          scrub: 3,
         },
       });
     });

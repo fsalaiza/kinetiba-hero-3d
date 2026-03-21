@@ -1242,7 +1242,7 @@ export default function KinetibaHero() {
           inset: 0,
           zIndex: 0,
           background:
-            "radial-gradient(ellipse at 50% 40%, #939e8d 0%, #8a9484 18%, #818b7c 38%, #778070 58%, #6e7868 78%, #666f60 100%)",
+            "radial-gradient(ellipse at 50% 35%, #8a9684 0%, #7d8977 20%, #717e6e 42%, #667364 62%, #5c6a5b 80%, #535f52 100%)",
         }}
       />
 

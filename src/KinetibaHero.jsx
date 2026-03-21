@@ -708,7 +708,7 @@ function RubiksCube({ scrollRef }) {
             />
           </group>
         ))}
-        <AccentLines explosionRef={explosionRef} />
+        {/* <AccentLines explosionRef={explosionRef} /> */}
       </group>
       <group ref={pivotRef} />
     </group>

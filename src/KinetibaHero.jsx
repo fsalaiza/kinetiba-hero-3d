@@ -577,8 +577,14 @@ function RubiksCube({ scrollRef }) {
   const rotYAccum = useRef(0);
   const explosionRef = useRef(0);
 
-  // GSAP proxy — GSAP animates these, useFrame reads them
+  // GSAP proxy — GSAP animates targets, useFrame lerps actuals
   const scrollState = useRef({
+    // GSAP animates these (targets)
+    targetX: 0,
+    targetScale: 1.0,
+    targetRotSpeed: 0.10,
+    targetExplode: 0,
+    // useFrame lerps these (actuals)
     cubeX: 0,
     cubeScale: 1.0,
     rotSpeed: 0.10,
@@ -594,52 +600,52 @@ function RubiksCube({ scrollRef }) {
     const ctx = gsap.context(() => {
       // Hero → BI: cube moves left
       gsap.to(st, {
-        cubeX: -3,
-        rotSpeed: 0.08,
+        targetX: -3,
+        targetRotSpeed: 0.08,
         scrollTrigger: {
           trigger: sections[1],
           start: 'top bottom',
           end: 'center center',
-          scrub: 3,
+          scrub: 1,
         },
       });
 
       // BI → Close-up: cube centered, zoom in
       gsap.to(st, {
-        cubeX: 0,
-        cubeScale: 1.3,
-        rotSpeed: 0.02,
+        targetX: 0,
+        targetScale: 1.3,
+        targetRotSpeed: 0.02,
         scrollTrigger: {
           trigger: sections[2],
           start: 'top bottom',
           end: 'center center',
-          scrub: 3,
+          scrub: 1,
         },
       });
 
       // Close-up → ERP: cube moves right
       gsap.to(st, {
-        cubeX: 3,
-        cubeScale: 1.0,
-        rotSpeed: 0.08,
+        targetX: 3,
+        targetScale: 1.0,
+        targetRotSpeed: 0.08,
         scrollTrigger: {
           trigger: sections[3],
           start: 'top bottom',
           end: 'center center',
-          scrub: 3,
+          scrub: 1,
         },
       });
 
       // ERP → CTA: cube centered, explode
       gsap.to(st, {
-        cubeX: 0,
-        rotSpeed: 0.05,
-        explode: 0.5,
+        targetX: 0,
+        targetRotSpeed: 0.05,
+        targetExplode: 0.5,
         scrollTrigger: {
           trigger: sections[4],
           start: 'top bottom',
           end: 'center center',
-          scrub: 3,
+          scrub: 1,
         },
       });
     });
@@ -761,19 +767,23 @@ function RubiksCube({ scrollRef }) {
     };
   }, [doFaceRotation]);
 
-  // Apply GSAP proxy values to 3D objects each frame
+  // Lerp actuals toward GSAP targets each frame (exponential decay)
   useFrame(({ clock }, delta) => {
     if (!outerRef.current) return;
     const st = scrollState.current;
+    const lf = 0.06;
 
-    // Position (GSAP controls via proxy)
+    // Interpolate actuals toward targets
+    st.cubeX += (st.targetX - st.cubeX) * lf;
+    st.cubeScale += (st.targetScale - st.cubeScale) * lf;
+    st.rotSpeed += (st.targetRotSpeed - st.rotSpeed) * lf;
+    st.explode += (st.targetExplode - st.explode) * lf;
+
+    // Apply
     outerRef.current.position.x = st.cubeX;
-
-    // Scale
     const s = st.cubeScale;
     outerRef.current.scale.set(s, s, s);
 
-    // Rotation — accumulative with speed controlled by GSAP
     rotYAccum.current += delta * st.rotSpeed;
     outerRef.current.rotation.y = rotYAccum.current;
     outerRef.current.rotation.x = Math.sin(clock.getElapsedTime() * 0.16) * 0.07;

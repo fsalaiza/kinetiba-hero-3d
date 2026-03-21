@@ -748,7 +748,7 @@ function Overlay() {
           CDMX — México
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 0, marginLeft: "calc(-1 * clamp(24px, 4vw, 50px))", marginRight: "calc(-1 * clamp(24px, 4vw, 50px))" }}>
-          <div style={{ flex: 1, height: 1, background: "rgba(230,230,220,0.15)" }} />
+          <div style={{ flex: 1, height: 1, background: "linear-gradient(to right, rgba(230,230,220,0.18) 0%, rgba(230,230,220,0.18) 25%, rgba(230,230,220,0) 45%, rgba(230,230,220,0) 55%, rgba(230,230,220,0.18) 75%, rgba(230,230,220,0.18) 100%)" }} />
           <div
             style={{
               color: "#c4c4b8",

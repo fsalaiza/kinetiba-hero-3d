@@ -18,7 +18,7 @@
 
 **Step 1: Install dependency**
 
-Run: `cd /Users/alfredosalaiza/kinetiba-hero-test && npm install gsap`
+Run: `cd /Users/alfredosalaiza/kinetiba-hero-3d && npm install gsap`
 
 ---
 

@@ -23,6 +23,10 @@ import {
   N8AO,
 } from "@react-three/postprocessing";
 import * as THREE from "three";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 // ============================================================
 // CONFIG
@@ -570,10 +574,78 @@ function RubiksCube({ scrollRef }) {
   const pivotRef = useRef();
   const cubesRef = useRef([]);
   const isRotating = useRef(false);
-  const currentExplode = useRef(0);
-  const currentRotSpeed = useRef(0.10);
   const rotYAccum = useRef(0);
   const explosionRef = useRef(0);
+
+  // GSAP proxy — GSAP animates these, useFrame reads them
+  const scrollState = useRef({
+    cubeX: 0,
+    cubeScale: 1.0,
+    rotSpeed: 0.10,
+    explode: 0,
+  });
+
+  // GSAP ScrollTrigger for cube 3D animation
+  useEffect(() => {
+    const st = scrollState.current;
+    const sections = document.querySelectorAll('#scroll-container > div');
+    if (!sections.length) return;
+
+    const ctx = gsap.context(() => {
+      // Hero → BI: cube moves left
+      gsap.to(st, {
+        cubeX: -3,
+        rotSpeed: 0.08,
+        scrollTrigger: {
+          trigger: sections[1],
+          start: 'top bottom',
+          end: 'top center',
+          scrub: 1.5,
+        },
+      });
+
+      // BI → Close-up: cube centered, zoom in
+      gsap.to(st, {
+        cubeX: 0,
+        cubeScale: 1.3,
+        rotSpeed: 0.02,
+        scrollTrigger: {
+          trigger: sections[2],
+          start: 'top bottom',
+          end: 'top center',
+          scrub: 1.5,
+        },
+      });
+
+      // Close-up → ERP: cube moves right
+      gsap.to(st, {
+        cubeX: 3,
+        cubeScale: 1.0,
+        rotSpeed: 0.08,
+        scrollTrigger: {
+          trigger: sections[3],
+          start: 'top bottom',
+          end: 'top center',
+          scrub: 1.5,
+        },
+      });
+
+      // ERP → CTA: cube centered, explode
+      gsap.to(st, {
+        cubeX: 0,
+        rotSpeed: 0.05,
+        explode: 0.5,
+        scrollTrigger: {
+          trigger: sections[4],
+          start: 'top bottom',
+          end: 'top center',
+          scrub: 1.5,
+        },
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   // Generate grid positions
   const grid = useMemo(() => {
@@ -587,7 +659,8 @@ function RubiksCube({ scrollRef }) {
 
   // Rubik face rotation
   const doFaceRotation = useCallback(() => {
-    if (scrollRef && scrollRef.current > 0.2) return;
+    const scrollProgress = ScrollTrigger.getAll()[0]?.progress || 0;
+    if (scrollProgress > 0.2) return;
     if (isRotating.current || !mainRef.current || !pivotRef.current) return;
     isRotating.current = true;
 
@@ -676,7 +749,7 @@ function RubiksCube({ scrollRef }) {
       }
     }
     tick();
-  }, [scrollRef]);
+  }, []);
 
   // Periodic face rotations
   useEffect(() => {
@@ -688,60 +761,38 @@ function RubiksCube({ scrollRef }) {
     };
   }, [doFaceRotation]);
 
-  // Scroll-driven animation
+  // Apply GSAP proxy values to 3D objects each frame
   useFrame(({ clock }, delta) => {
     if (!outerRef.current) return;
-    const t = scrollRef ? scrollRef.current : 0;
-    const lerp = THREE.MathUtils.lerp;
-    const lf = 0.06;
+    const st = scrollState.current;
 
-    // --- Position X ---
-    let targetX = 0;
-    if (t >= 0.2 && t < 0.4) targetX = -3;
-    else if (t >= 0.6 && t < 0.8) targetX = 3;
-    outerRef.current.position.x = lerp(outerRef.current.position.x, targetX, lf);
+    // Position (GSAP controls via proxy)
+    outerRef.current.position.x = st.cubeX;
 
-    // --- Scale ---
-    let targetScale = 1.0;
-    if (t >= 0.4 && t < 0.6) targetScale = 1.3;
-    const s = lerp(outerRef.current.scale.x, targetScale, lf);
+    // Scale
+    const s = st.cubeScale;
     outerRef.current.scale.set(s, s, s);
 
-    // --- Rotation speed ---
-    let tgtSpeed = 0.10;
-    if (t >= 0.2 && t < 0.4) tgtSpeed = 0.08;
-    else if (t >= 0.4 && t < 0.6) tgtSpeed = 0.02;
-    else if (t >= 0.8) tgtSpeed = 0.05;
-    currentRotSpeed.current = lerp(currentRotSpeed.current, tgtSpeed, lf);
-    rotYAccum.current += delta * currentRotSpeed.current;
-
+    // Rotation — accumulative with speed controlled by GSAP
+    rotYAccum.current += delta * st.rotSpeed;
     outerRef.current.rotation.y = rotYAccum.current;
-    outerRef.current.rotation.x =
-      Math.sin(clock.getElapsedTime() * 0.16) * 0.07;
-    outerRef.current.rotation.z =
-      Math.sin(clock.getElapsedTime() * 0.12) * 0.025;
+    outerRef.current.rotation.x = Math.sin(clock.getElapsedTime() * 0.16) * 0.07;
+    outerRef.current.rotation.z = Math.sin(clock.getElapsedTime() * 0.12) * 0.025;
 
-    // --- Explode ---
-    let targetExplode = 0;
-    if (t >= 0.8) {
-      targetExplode = ((t - 0.8) / 0.2) * 0.5;
-    }
-    currentExplode.current = lerp(currentExplode.current, targetExplode, lf);
-    explosionRef.current = currentExplode.current;
-
-    // Apply piece positions when scrolled past hero
-    if (t > 0.2 && !isRotating.current) {
+    // Explode
+    explosionRef.current = st.explode;
+    if (!isRotating.current) {
       cubesRef.current.forEach((c) => {
         if (!c?.mesh) return;
         const { gx, gy, gz } = c.grid;
         const dir = new THREE.Vector3(gx, gy, gz);
         if (dir.length() > 0) dir.normalize();
         const target = new THREE.Vector3(
-          gx * CELL + dir.x * currentExplode.current,
-          gy * CELL + dir.y * currentExplode.current,
-          gz * CELL + dir.z * currentExplode.current
+          gx * CELL + dir.x * st.explode,
+          gy * CELL + dir.y * st.explode,
+          gz * CELL + dir.z * st.explode
         );
-        c.mesh.position.lerp(target, lf);
+        c.mesh.position.lerp(target, 0.08);
       });
     }
   });
@@ -1037,6 +1088,7 @@ function ScrollSections({ scrollProgress }) {
 
   return (
     <div
+      id="scroll-container"
       style={{
         position: "relative",
         zIndex: 3,

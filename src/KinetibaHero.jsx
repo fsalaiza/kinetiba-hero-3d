@@ -9,7 +9,7 @@
     <KinetibaHero />
 */
 
-import React, { useRef, useMemo, useEffect, useCallback } from "react";
+import React, { useState, useRef, useMemo, useEffect, useCallback } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   Environment,
@@ -23,10 +23,6 @@ import {
   N8AO,
 } from "@react-three/postprocessing";
 import * as THREE from "three";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // ============================================================
 // CONFIG
@@ -44,8 +40,38 @@ const SPECULAR_COLOR = new THREE.Color('#F5F0E8');
 const SHEEN_COLOR = new THREE.Color('#D4CFC4');
 
 // ============================================================
-// (scroll system moved to GSAP ScrollTrigger)
+// SCROLL PROGRESS HOOK
 // ============================================================
+
+function useScrollProgress() {
+  const [progress, setProgress] = useState(0);
+  const progressRef = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const p = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+      progressRef.current = p;
+      setProgress(p);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return { progress, progressRef };
+}
+
+function sectionOpacity(scrollProgress, sectionStart, sectionEnd) {
+  const fadeIn = 0.04;
+  const fadeOut = 0.04;
+  if (scrollProgress < sectionStart || scrollProgress > sectionEnd) return 0;
+  if (scrollProgress < sectionStart + fadeIn)
+    return (scrollProgress - sectionStart) / fadeIn;
+  if (scrollProgress > sectionEnd - fadeOut)
+    return (sectionEnd - scrollProgress) / fadeOut;
+  return 1;
+}
 
 // ============================================================
 // CANVAS TEXTURE GENERATORS
@@ -538,22 +564,16 @@ function AccentLines({ explosionRef }) {
 // RUBIK'S CUBE ASSEMBLY + ROTATION
 // ============================================================
 
-function RubiksCube() {
+function RubiksCube({ scrollRef }) {
   const outerRef = useRef();
   const mainRef = useRef();
   const pivotRef = useRef();
   const cubesRef = useRef([]);
   const isRotating = useRef(false);
+  const currentExplode = useRef(0);
+  const currentRotSpeed = useRef(0.10);
   const rotYAccum = useRef(0);
-
-  // GSAP proxy — these values are animated by GSAP, useFrame reads them
-  const scrollState = useRef({
-    cubeX: 0,
-    cubeY: 0,
-    cubeScale: 1.0,
-    rotSpeed: 0.10,
-    explode: 0,
-  });
+  const explosionRef = useRef(0);
 
   // Generate grid positions
   const grid = useMemo(() => {
@@ -566,68 +586,8 @@ function RubiksCube() {
   }, []);
 
   // Rubik face rotation
-  // GSAP ScrollTrigger timeline
-  useEffect(() => {
-    const st = scrollState.current;
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#scroll-container',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 1.5,
-      },
-    });
-
-    // HERO → KINETIBA BI (18%–24%)
-    tl.to(st, {
-      cubeX: -3,
-      rotSpeed: 0.08,
-      duration: 0.06,
-      ease: 'power2.inOut',
-    }, 0.18);
-
-    // BI → CLOSE-UP (38%–46%)
-    tl.to(st, {
-      cubeX: 0,
-      cubeScale: 1.3,
-      rotSpeed: 0.02,
-      duration: 0.08,
-      ease: 'power2.inOut',
-    }, 0.38);
-
-    // CLOSE-UP → KINETI-ERP (56%–64%)
-    tl.to(st, {
-      cubeX: 3,
-      cubeScale: 1.0,
-      rotSpeed: 0.08,
-      duration: 0.08,
-      ease: 'power2.inOut',
-    }, 0.56);
-
-    // ERP → CTA (78%–100%)
-    tl.to(st, {
-      cubeX: 0,
-      rotSpeed: 0.05,
-      duration: 0.06,
-      ease: 'power2.inOut',
-    }, 0.78);
-
-    tl.to(st, {
-      explode: 0.5,
-      duration: 0.18,
-      ease: 'power1.out',
-    }, 0.82);
-
-    return () => {
-      tl.kill();
-      ScrollTrigger.getAll().forEach(t => t.kill());
-    };
-  }, []);
-
   const doFaceRotation = useCallback(() => {
-    const scrollProgress = ScrollTrigger.getAll()[0]?.progress || 0;
-    if (scrollProgress > 0.2) return;
+    if (scrollRef && scrollRef.current > 0.2) return;
     if (isRotating.current || !mainRef.current || !pivotRef.current) return;
     isRotating.current = true;
 
@@ -716,7 +676,7 @@ function RubiksCube() {
       }
     }
     tick();
-  }, []);
+  }, [scrollRef]);
 
   // Periodic face rotations
   useEffect(() => {
@@ -728,37 +688,60 @@ function RubiksCube() {
     };
   }, [doFaceRotation]);
 
-  // Apply GSAP proxy values to 3D objects each frame
+  // Scroll-driven animation
   useFrame(({ clock }, delta) => {
     if (!outerRef.current) return;
-    const st = scrollState.current;
+    const t = scrollRef ? scrollRef.current : 0;
+    const lerp = THREE.MathUtils.lerp;
+    const lf = 0.06;
 
-    // Position X (GSAP controls value, useFrame applies)
-    outerRef.current.position.x = st.cubeX;
+    // --- Position X ---
+    let targetX = 0;
+    if (t >= 0.2 && t < 0.4) targetX = -3;
+    else if (t >= 0.6 && t < 0.8) targetX = 3;
+    outerRef.current.position.x = lerp(outerRef.current.position.x, targetX, lf);
 
-    // Scale
-    const s = st.cubeScale;
+    // --- Scale ---
+    let targetScale = 1.0;
+    if (t >= 0.4 && t < 0.6) targetScale = 1.3;
+    const s = lerp(outerRef.current.scale.x, targetScale, lf);
     outerRef.current.scale.set(s, s, s);
 
-    // Rotation — accumulative with speed controlled by GSAP
-    rotYAccum.current += delta * st.rotSpeed;
-    outerRef.current.rotation.y = rotYAccum.current;
-    outerRef.current.rotation.x = Math.sin(clock.getElapsedTime() * 0.16) * 0.07;
-    outerRef.current.rotation.z = Math.sin(clock.getElapsedTime() * 0.12) * 0.025;
+    // --- Rotation speed ---
+    let tgtSpeed = 0.10;
+    if (t >= 0.2 && t < 0.4) tgtSpeed = 0.08;
+    else if (t >= 0.4 && t < 0.6) tgtSpeed = 0.02;
+    else if (t >= 0.8) tgtSpeed = 0.05;
+    currentRotSpeed.current = lerp(currentRotSpeed.current, tgtSpeed, lf);
+    rotYAccum.current += delta * currentRotSpeed.current;
 
-    // Explode — apply to each piece
-    if (!isRotating.current) {
+    outerRef.current.rotation.y = rotYAccum.current;
+    outerRef.current.rotation.x =
+      Math.sin(clock.getElapsedTime() * 0.16) * 0.07;
+    outerRef.current.rotation.z =
+      Math.sin(clock.getElapsedTime() * 0.12) * 0.025;
+
+    // --- Explode ---
+    let targetExplode = 0;
+    if (t >= 0.8) {
+      targetExplode = ((t - 0.8) / 0.2) * 0.5;
+    }
+    currentExplode.current = lerp(currentExplode.current, targetExplode, lf);
+    explosionRef.current = currentExplode.current;
+
+    // Apply piece positions when scrolled past hero
+    if (t > 0.2 && !isRotating.current) {
       cubesRef.current.forEach((c) => {
         if (!c?.mesh) return;
         const { gx, gy, gz } = c.grid;
         const dir = new THREE.Vector3(gx, gy, gz);
         if (dir.length() > 0) dir.normalize();
         const target = new THREE.Vector3(
-          gx * CELL + dir.x * st.explode,
-          gy * CELL + dir.y * st.explode,
-          gz * CELL + dir.z * st.explode
+          gx * CELL + dir.x * currentExplode.current,
+          gy * CELL + dir.y * currentExplode.current,
+          gz * CELL + dir.z * currentExplode.current
         );
-        c.mesh.position.lerp(target, 0.08);
+        c.mesh.position.lerp(target, lf);
       });
     }
   });
@@ -804,7 +787,7 @@ function RubiksCube() {
 // SCENE (Canvas internals)
 // ============================================================
 
-function Scene() {
+function Scene({ scrollRef }) {
   return (
     <>
       <ambientLight intensity={0.45} color="#fff5e6" />
@@ -819,7 +802,7 @@ function Scene() {
       <directionalLight position={[-6, 4, -4]} intensity={0.25} color="#d4e8d4" />
       <directionalLight position={[0, -4, 8]} intensity={0.25} color="#ffeedd" />
 
-      <RubiksCube />
+      <RubiksCube scrollRef={scrollRef} />
 
       <ContactShadows
         position={[0, -2.1, 0]}
@@ -856,15 +839,16 @@ function Scene() {
 const monoFont = "'SF Mono', 'Fira Code', 'Cascadia Code', monospace";
 const sansFont = "'SF Pro Display', -apple-system, 'Helvetica Neue', sans-serif";
 
-function Overlay() {
+function Overlay({ scrollProgress }) {
   return (
     <div
-      id="hero-overlay"
       style={{
         position: "fixed",
         inset: 0,
         zIndex: 2,
         pointerEvents: "none",
+        opacity: scrollProgress !== undefined ? Math.max(0, 1 - scrollProgress * 6) : 1,
+        transition: "opacity 0.1s ease",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -1043,7 +1027,7 @@ function Overlay() {
 // SCROLL SECTIONS
 // ============================================================
 
-function ScrollSections() {
+function ScrollSections({ scrollProgress }) {
   const sectionStyle = {
     height: "100vh",
     display: "flex",
@@ -1053,7 +1037,6 @@ function ScrollSections() {
 
   return (
     <div
-      id="scroll-container"
       style={{
         position: "relative",
         zIndex: 3,
@@ -1063,14 +1046,13 @@ function ScrollSections() {
       {/* Section 1: Hero spacer */}
       <div style={{ height: "100vh" }} />
 
-      {/* Section 2: Kinetiba BI */}
+      {/* Section 2: Kinetiba BI (0.2–0.4) */}
       <div
-        id="section-bi"
         style={{
           ...sectionStyle,
           justifyContent: "flex-end",
           padding: "0 clamp(48px, 8vw, 120px)",
-          opacity: 0,
+          opacity: sectionOpacity(scrollProgress, 0.2, 0.4),
         }}
       >
         <div style={{ maxWidth: 500 }}>
@@ -1121,15 +1103,14 @@ function ScrollSections() {
         </div>
       </div>
 
-      {/* Section 3: Close-up */}
+      {/* Section 3: Close-up (0.4–0.6) */}
       <div
-        id="section-closeup"
         style={{
           ...sectionStyle,
           justifyContent: "center",
           flexDirection: "column",
           textAlign: "center",
-          opacity: 0,
+          opacity: sectionOpacity(scrollProgress, 0.4, 0.6),
         }}
       >
         <p
@@ -1151,14 +1132,13 @@ function ScrollSections() {
         </p>
       </div>
 
-      {/* Section 4: Kineti-ERP */}
+      {/* Section 4: Kineti-ERP (0.6–0.8) */}
       <div
-        id="section-erp"
         style={{
           ...sectionStyle,
           justifyContent: "flex-start",
           padding: "0 clamp(48px, 8vw, 120px)",
-          opacity: 0,
+          opacity: sectionOpacity(scrollProgress, 0.6, 0.8),
         }}
       >
         <div style={{ maxWidth: 500 }}>
@@ -1209,16 +1189,15 @@ function ScrollSections() {
         </div>
       </div>
 
-      {/* Section 5: CTA Final */}
+      {/* Section 5: CTA Final (0.8–1.0) */}
       <div
-        id="section-cta"
         style={{
           ...sectionStyle,
           justifyContent: "center",
           flexDirection: "column",
           textAlign: "center",
           gap: 28,
-          opacity: 0,
+          opacity: sectionOpacity(scrollProgress, 0.8, 1.0),
         }}
       >
         <h2
@@ -1273,92 +1252,7 @@ function ScrollSections() {
 // ============================================================
 
 export default function KinetibaHero() {
-  // GSAP DOM animations for UI sections
-  useEffect(() => {
-    // Hero overlay fade out
-    gsap.to('#hero-overlay', {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: '#scroll-container',
-        start: 'top top',
-        end: '20% top',
-        scrub: 1,
-      },
-    });
-
-    // BI section fade in/out
-    gsap.fromTo('#section-bi', { opacity: 0 }, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: '#section-bi',
-        start: 'top 80%',
-        end: 'top 30%',
-        scrub: 1,
-      },
-    });
-    gsap.to('#section-bi', {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: '#section-bi',
-        start: 'bottom 70%',
-        end: 'bottom 30%',
-        scrub: 1,
-      },
-    });
-
-    // Close-up section fade in/out
-    gsap.fromTo('#section-closeup', { opacity: 0 }, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: '#section-closeup',
-        start: 'top 80%',
-        end: 'top 30%',
-        scrub: 1,
-      },
-    });
-    gsap.to('#section-closeup', {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: '#section-closeup',
-        start: 'bottom 70%',
-        end: 'bottom 30%',
-        scrub: 1,
-      },
-    });
-
-    // ERP section fade in/out
-    gsap.fromTo('#section-erp', { opacity: 0 }, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: '#section-erp',
-        start: 'top 80%',
-        end: 'top 30%',
-        scrub: 1,
-      },
-    });
-    gsap.to('#section-erp', {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: '#section-erp',
-        start: 'bottom 70%',
-        end: 'bottom 30%',
-        scrub: 1,
-      },
-    });
-
-    // CTA section fade in
-    gsap.fromTo('#section-cta', { opacity: 0 }, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: '#section-cta',
-        start: 'top 80%',
-        end: 'top 30%',
-        scrub: 1,
-      },
-    });
-
-    return () => ScrollTrigger.getAll().forEach(t => t.kill());
-  }, []);
+  const { progress, progressRef } = useScrollProgress();
 
   return (
     <div style={{ minHeight: "100vh" }}>
@@ -1384,14 +1278,14 @@ export default function KinetibaHero() {
         }}
         style={{ position: "fixed", inset: 0, zIndex: 1 }}
       >
-        <Scene />
+        <Scene scrollRef={progressRef} />
       </Canvas>
 
       {/* Fixed hero overlay — fades on scroll */}
-      <Overlay />
+      <Overlay scrollProgress={progress} />
 
       {/* Scrollable content sections */}
-      <ScrollSections />
+      <ScrollSections scrollProgress={progress} />
     </div>
   );
 }

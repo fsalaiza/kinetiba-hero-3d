@@ -35,6 +35,10 @@ const BEVEL_SEGMENTS = 4;
 
 const LAYER_COLORS = ["#8B3A3A", "#3A5A8B", "#3A8B5A"];
 
+// Ceramic material colors (pre-allocated to avoid re-creation per render)
+const SPECULAR_COLOR = new THREE.Color('#F5F0E8');
+const SHEEN_COLOR = new THREE.Color('#D4CFC4');
+
 // ============================================================
 // SCROLL PROGRESS HOOK
 // ============================================================
@@ -459,9 +463,9 @@ function CubePiece({ position, gx, gy, gz }) {
           clearcoatRoughness={0.4}
           ior={1.45}
           specularIntensity={0.6}
-          specularColor={new THREE.Color('#F5F0E8')}
+          specularColor={SPECULAR_COLOR}
           sheen={0.05}
-          sheenColor={new THREE.Color('#D4CFC4')}
+          sheenColor={SHEEN_COLOR}
           sheenRoughness={0.8}
           envMapIntensity={1.2}
         />
@@ -477,7 +481,7 @@ function CubePiece({ position, gx, gy, gz }) {
             clearcoatRoughness={0.45}
             ior={1.45}
             specularIntensity={0.5}
-            specularColor={new THREE.Color('#F5F0E8')}
+            specularColor={SPECULAR_COLOR}
             envMapIntensity={1.0}
           />
         </mesh>

@@ -455,8 +455,8 @@ function CubePiece({ position, gx, gy, gz }) {
         receiveShadow
       >
         <meshPhysicalMaterial
-          color="#B5AE9A"
-          roughness={0.65}
+          color="#ADA68E"
+          roughness={0.72}
           roughnessMap={roughnessMap}
           metalness={0.0}
           clearcoat={0.1}
@@ -467,7 +467,7 @@ function CubePiece({ position, gx, gy, gz }) {
           sheen={0.05}
           sheenColor={SHEEN_COLOR}
           sheenRoughness={0.8}
-          envMapIntensity={0.8}
+          envMapIntensity={0.55}
         />
       </RoundedBox>
       {decals.map(({ axis, pos, rot, texture }) => (

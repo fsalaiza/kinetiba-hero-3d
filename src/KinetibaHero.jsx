@@ -426,8 +426,8 @@ function generateRoughnessMap(width = 256, height = 256) {
 // CUBE PIECE COMPONENT — single cream material + plane decals
 // ============================================================
 
-const DECAL_SIZE = PIECE_SIZE * 0.78;
-const DECAL_OFFSET = PIECE_SIZE / 2 - 0.015 + 0.002;
+const DECAL_SIZE = PIECE_SIZE * 0.72;
+const DECAL_OFFSET = PIECE_SIZE / 2 - 0.013;
 
 const FACE_DEFS = [
   { axis: "+x", check: (gx) => gx === 1,  idx: 0, pos: [DECAL_OFFSET, 0, 0],  rot: [0, Math.PI / 2, 0] },
@@ -447,7 +447,10 @@ function CubePiece({ position, gx, gy, gz }) {
       console.warn('No mesh found in cube_piece.glb');
       return null;
     }
-    return meshNode.geometry.clone();
+    const geo = meshNode.geometry.clone();
+    geo.computeBoundingBox();
+    console.log('GLB bounding box:', geo.boundingBox);
+    return geo;
   }, [nodes]);
 
   const roughnessMap = useMemo(() => generateRoughnessMap(), []);
@@ -760,7 +763,7 @@ function RubiksCube({ scrollRef }) {
   }, []);
 
   return (
-    <group ref={outerRef}>
+    <group ref={outerRef} scale={0.93}>
       <group ref={mainRef}>
         {grid.map((g, i) => (
           <group

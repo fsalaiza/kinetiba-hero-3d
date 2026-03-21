@@ -9,7 +9,7 @@
     <KinetibaHero />
 */
 
-import React, { useRef, useMemo, useEffect, useCallback } from "react";
+import React, { useState, useRef, useMemo, useEffect, useCallback } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   RoundedBox,
@@ -34,6 +34,40 @@ const BEVEL_RADIUS = 0.06;
 const BEVEL_SEGMENTS = 4;
 
 const LAYER_COLORS = ["#8B3A3A", "#3A5A8B", "#3A8B5A"];
+
+// ============================================================
+// SCROLL PROGRESS HOOK
+// ============================================================
+
+function useScrollProgress() {
+  const [progress, setProgress] = useState(0);
+  const progressRef = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const p = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+      progressRef.current = p;
+      setProgress(p);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return { progress, progressRef };
+}
+
+function sectionOpacity(scrollProgress, sectionStart, sectionEnd) {
+  const fadeIn = 0.04;
+  const fadeOut = 0.04;
+  if (scrollProgress < sectionStart || scrollProgress > sectionEnd) return 0;
+  if (scrollProgress < sectionStart + fadeIn)
+    return (scrollProgress - sectionStart) / fadeIn;
+  if (scrollProgress > sectionEnd - fadeOut)
+    return (sectionEnd - scrollProgress) / fadeOut;
+  return 1;
+}
 
 // ============================================================
 // CANVAS TEXTURE GENERATORS
@@ -409,7 +443,24 @@ function CubePiece({ position, gx, gy, gz }) {
 // ACCENT LINES BETWEEN LAYERS
 // ============================================================
 
-function AccentLines() {
+function AccentLines({ explosionRef }) {
+  const groupRef = useRef();
+
+  useFrame(() => {
+    if (!groupRef.current || !explosionRef) return;
+    const exp = explosionRef.current || 0;
+    const targetOpacity = exp > 0.001 ? Math.max(0, 0.4 - exp * 2) : 0.4;
+    groupRef.current.children.forEach((mesh) => {
+      if (mesh.material) {
+        mesh.material.opacity = THREE.MathUtils.lerp(
+          mesh.material.opacity,
+          targetOpacity,
+          0.06
+        );
+      }
+    });
+  });
+
   const lines = [];
   for (let y = -1; y <= 0; y++) {
     const yPos = (y + 0.5) * CELL + PIECE_SIZE / 2 + GAP * 0.25;
@@ -438,19 +489,23 @@ function AccentLines() {
       );
     }
   }
-  return <>{lines}</>;
+  return <group ref={groupRef}>{lines}</group>;
 }
 
 // ============================================================
 // RUBIK'S CUBE ASSEMBLY + ROTATION
 // ============================================================
 
-function RubiksCube() {
+function RubiksCube({ scrollRef }) {
   const outerRef = useRef();
   const mainRef = useRef();
   const pivotRef = useRef();
   const cubesRef = useRef([]);
   const isRotating = useRef(false);
+  const currentExplode = useRef(0);
+  const currentRotSpeed = useRef(0.10);
+  const rotYAccum = useRef(0);
+  const explosionRef = useRef(0);
 
   // Generate grid positions
   const grid = useMemo(() => {
@@ -464,6 +519,7 @@ function RubiksCube() {
 
   // Rubik face rotation
   const doFaceRotation = useCallback(() => {
+    if (scrollRef && scrollRef.current > 0.2) return;
     if (isRotating.current || !mainRef.current || !pivotRef.current) return;
     isRotating.current = true;
 
@@ -552,7 +608,7 @@ function RubiksCube() {
       }
     }
     tick();
-  }, []);
+  }, [scrollRef]);
 
   // Periodic face rotations
   useEffect(() => {
@@ -564,13 +620,62 @@ function RubiksCube() {
     };
   }, [doFaceRotation]);
 
-  // Ambient orbital rotation
-  useFrame(({ clock }) => {
+  // Scroll-driven animation
+  useFrame(({ clock }, delta) => {
     if (!outerRef.current) return;
-    const t = clock.getElapsedTime();
-    outerRef.current.rotation.y = t * 0.10;
-    outerRef.current.rotation.x = Math.sin(t * 0.16) * 0.07;
-    outerRef.current.rotation.z = Math.sin(t * 0.12) * 0.025;
+    const t = scrollRef ? scrollRef.current : 0;
+    const lerp = THREE.MathUtils.lerp;
+    const lf = 0.06;
+
+    // --- Position X ---
+    let targetX = 0;
+    if (t >= 0.2 && t < 0.4) targetX = -3;
+    else if (t >= 0.6 && t < 0.8) targetX = 3;
+    outerRef.current.position.x = lerp(outerRef.current.position.x, targetX, lf);
+
+    // --- Scale ---
+    let targetScale = 1.0;
+    if (t >= 0.4 && t < 0.6) targetScale = 1.3;
+    const s = lerp(outerRef.current.scale.x, targetScale, lf);
+    outerRef.current.scale.set(s, s, s);
+
+    // --- Rotation speed ---
+    let tgtSpeed = 0.10;
+    if (t >= 0.2 && t < 0.4) tgtSpeed = 0.08;
+    else if (t >= 0.4 && t < 0.6) tgtSpeed = 0.02;
+    else if (t >= 0.8) tgtSpeed = 0.05;
+    currentRotSpeed.current = lerp(currentRotSpeed.current, tgtSpeed, lf);
+    rotYAccum.current += delta * currentRotSpeed.current;
+
+    outerRef.current.rotation.y = rotYAccum.current;
+    outerRef.current.rotation.x =
+      Math.sin(clock.getElapsedTime() * 0.16) * 0.07;
+    outerRef.current.rotation.z =
+      Math.sin(clock.getElapsedTime() * 0.12) * 0.025;
+
+    // --- Explode ---
+    let targetExplode = 0;
+    if (t >= 0.8) {
+      targetExplode = ((t - 0.8) / 0.2) * 0.5;
+    }
+    currentExplode.current = lerp(currentExplode.current, targetExplode, lf);
+    explosionRef.current = currentExplode.current;
+
+    // Apply piece positions when scrolled past hero
+    if (t > 0.2 && !isRotating.current) {
+      cubesRef.current.forEach((c) => {
+        if (!c?.mesh) return;
+        const { gx, gy, gz } = c.grid;
+        const dir = new THREE.Vector3(gx, gy, gz);
+        if (dir.length() > 0) dir.normalize();
+        const target = new THREE.Vector3(
+          gx * CELL + dir.x * currentExplode.current,
+          gy * CELL + dir.y * currentExplode.current,
+          gz * CELL + dir.z * currentExplode.current
+        );
+        c.mesh.position.lerp(target, lf);
+      });
+    }
   });
 
   // Register piece refs
@@ -603,7 +708,7 @@ function RubiksCube() {
             />
           </group>
         ))}
-        <AccentLines />
+        <AccentLines explosionRef={explosionRef} />
       </group>
       <group ref={pivotRef} />
     </group>
@@ -614,7 +719,7 @@ function RubiksCube() {
 // SCENE (Canvas internals)
 // ============================================================
 
-function Scene() {
+function Scene({ scrollRef }) {
   return (
     <>
       <ambientLight intensity={0.5} />
@@ -629,7 +734,7 @@ function Scene() {
       <directionalLight position={[-6, 4, -4]} intensity={0.35} color="#d4e8d4" />
       <directionalLight position={[0, -4, 8]} intensity={0.25} color="#ffeedd" />
 
-      <RubiksCube />
+      <RubiksCube scrollRef={scrollRef} />
 
       <ContactShadows
         position={[0, -2.1, 0]}
@@ -666,14 +771,16 @@ function Scene() {
 const monoFont = "'SF Mono', 'Fira Code', 'Cascadia Code', monospace";
 const sansFont = "'SF Pro Display', -apple-system, 'Helvetica Neue', sans-serif";
 
-function Overlay() {
+function Overlay({ scrollProgress }) {
   return (
     <div
       style={{
-        position: "absolute",
+        position: "fixed",
         inset: 0,
         zIndex: 2,
         pointerEvents: "none",
+        opacity: scrollProgress !== undefined ? Math.max(0, 1 - scrollProgress * 6) : 1,
+        transition: "opacity 0.1s ease",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -849,21 +956,250 @@ function Overlay() {
 }
 
 // ============================================================
+// SCROLL SECTIONS
+// ============================================================
+
+function ScrollSections({ scrollProgress }) {
+  const sectionStyle = {
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    position: "relative",
+  };
+
+  return (
+    <div
+      style={{
+        position: "relative",
+        zIndex: 3,
+        pointerEvents: "none",
+      }}
+    >
+      {/* Section 1: Hero spacer */}
+      <div style={{ height: "100vh" }} />
+
+      {/* Section 2: Kinetiba BI (0.2–0.4) */}
+      <div
+        style={{
+          ...sectionStyle,
+          justifyContent: "flex-end",
+          padding: "0 clamp(48px, 8vw, 120px)",
+          opacity: sectionOpacity(scrollProgress, 0.2, 0.4),
+        }}
+      >
+        <div style={{ maxWidth: 500 }}>
+          <h2
+            style={{
+              color: "#eeeee4",
+              fontSize: "clamp(28px, 4vw, 52px)",
+              fontWeight: 800,
+              fontFamily: sansFont,
+              letterSpacing: "-0.02em",
+              textTransform: "uppercase",
+              margin: "0 0 8px 0",
+            }}
+          >
+            Kinetiba BI
+          </h2>
+          <p
+            style={{
+              color: "#c8c8bc",
+              fontSize: "clamp(11px, 1.2vw, 14px)",
+              fontFamily: monoFont,
+              letterSpacing: "0.06em",
+              margin: "0 0 24px 0",
+            }}
+          >
+            Business Intelligence en tiempo real
+          </p>
+          {[
+            "996K transacciones procesadas",
+            "10 dashboards configurables",
+            "Alertas por WhatsApp",
+            "Desde $299 MXN/mes",
+          ].map((item, i) => (
+            <div
+              key={i}
+              style={{
+                color: "#d4d4c8",
+                fontSize: "clamp(10px, 1.1vw, 13px)",
+                fontFamily: monoFont,
+                letterSpacing: "0.04em",
+                padding: "8px 0",
+                borderBottom: "1px solid rgba(230,230,220,0.1)",
+              }}
+            >
+              → {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Section 3: Close-up (0.4–0.6) */}
+      <div
+        style={{
+          ...sectionStyle,
+          justifyContent: "center",
+          flexDirection: "column",
+          textAlign: "center",
+          opacity: sectionOpacity(scrollProgress, 0.4, 0.6),
+        }}
+      >
+        <p
+          style={{
+            color: "#eeeee4",
+            fontSize: "clamp(18px, 3vw, 40px)",
+            fontWeight: 300,
+            fontFamily: sansFont,
+            fontStyle: "italic",
+            letterSpacing: "-0.01em",
+            margin: 0,
+            maxWidth: 600,
+            lineHeight: 1.3,
+          }}
+        >
+          Cada cara, un KPI.
+          <br />
+          Cada dato, una decisión.
+        </p>
+      </div>
+
+      {/* Section 4: Kineti-ERP (0.6–0.8) */}
+      <div
+        style={{
+          ...sectionStyle,
+          justifyContent: "flex-start",
+          padding: "0 clamp(48px, 8vw, 120px)",
+          opacity: sectionOpacity(scrollProgress, 0.6, 0.8),
+        }}
+      >
+        <div style={{ maxWidth: 500 }}>
+          <h2
+            style={{
+              color: "#eeeee4",
+              fontSize: "clamp(28px, 4vw, 52px)",
+              fontWeight: 800,
+              fontFamily: sansFont,
+              letterSpacing: "-0.02em",
+              textTransform: "uppercase",
+              margin: "0 0 8px 0",
+            }}
+          >
+            Kineti-ERP
+          </h2>
+          <p
+            style={{
+              color: "#c8c8bc",
+              fontSize: "clamp(11px, 1.2vw, 14px)",
+              fontFamily: monoFont,
+              letterSpacing: "0.06em",
+              margin: "0 0 24px 0",
+            }}
+          >
+            Facturación CFDI 4.0 integrada
+          </p>
+          {[
+            "Multi-PAC (Solución Factible, SW Sapien)",
+            "Compatible con AdminPAQ",
+            "100% validado vs SAT",
+            "Sellado local con CSD",
+          ].map((item, i) => (
+            <div
+              key={i}
+              style={{
+                color: "#d4d4c8",
+                fontSize: "clamp(10px, 1.1vw, 13px)",
+                fontFamily: monoFont,
+                letterSpacing: "0.04em",
+                padding: "8px 0",
+                borderBottom: "1px solid rgba(230,230,220,0.1)",
+              }}
+            >
+              → {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Section 5: CTA Final (0.8–1.0) */}
+      <div
+        style={{
+          ...sectionStyle,
+          justifyContent: "center",
+          flexDirection: "column",
+          textAlign: "center",
+          gap: 28,
+          opacity: sectionOpacity(scrollProgress, 0.8, 1.0),
+        }}
+      >
+        <h2
+          style={{
+            color: "#eeeee4",
+            fontSize: "clamp(24px, 4vw, 52px)",
+            fontWeight: 800,
+            fontFamily: sansFont,
+            letterSpacing: "-0.02em",
+            textTransform: "uppercase",
+            margin: 0,
+          }}
+        >
+          ¿Listo para decidir
+          <br />
+          con datos?
+        </h2>
+        <button
+          style={{
+            pointerEvents: "auto",
+            background: "rgba(230,230,220,0.12)",
+            border: "1.5px solid rgba(230,230,220,0.35)",
+            borderRadius: 6,
+            padding: "14px 40px",
+            color: "#eeeee4",
+            fontSize: "clamp(10px, 1.1vw, 13px)",
+            fontFamily: monoFont,
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            cursor: "pointer",
+            backdropFilter: "blur(6px)",
+            transition: "background 0.2s, border-color 0.2s",
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.background = "rgba(230,230,220,0.22)";
+            e.target.style.borderColor = "rgba(230,230,220,0.55)";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = "rgba(230,230,220,0.12)";
+            e.target.style.borderColor = "rgba(230,230,220,0.35)";
+          }}
+        >
+          Solicita tu demo &rsaquo;
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================
 // MAIN EXPORT
 // ============================================================
 
 export default function KinetibaHero() {
+  const { progress, progressRef } = useScrollProgress();
+
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "100vh",
-        position: "relative",
-        overflow: "hidden",
-        background:
-          "radial-gradient(ellipse at 50% 40%, #939e8d 0%, #8a9484 18%, #818b7c 38%, #778070 58%, #6e7868 78%, #666f60 100%)",
-      }}
-    >
+    <div style={{ minHeight: "100vh" }}>
+      {/* Fixed background */}
+      <div
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 0,
+          background:
+            "radial-gradient(ellipse at 50% 40%, #939e8d 0%, #8a9484 18%, #818b7c 38%, #778070 58%, #6e7868 78%, #666f60 100%)",
+        }}
+      />
+
+      {/* Fixed 3D Canvas */}
       <Canvas
         camera={{ position: [5.8, 4.0, 5.8], fov: 36, near: 0.1, far: 100 }}
         shadows
@@ -872,11 +1208,16 @@ export default function KinetibaHero() {
           toneMapping: THREE.ACESFilmicToneMapping,
           toneMappingExposure: 1.0,
         }}
-        style={{ position: "absolute", inset: 0, zIndex: 1 }}
+        style={{ position: "fixed", inset: 0, zIndex: 1 }}
       >
-        <Scene />
+        <Scene scrollRef={progressRef} />
       </Canvas>
-      <Overlay />
+
+      {/* Fixed hero overlay — fades on scroll */}
+      <Overlay scrollProgress={progress} />
+
+      {/* Scrollable content sections */}
+      <ScrollSections scrollProgress={progress} />
     </div>
   );
 }

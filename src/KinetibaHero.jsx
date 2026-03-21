@@ -763,7 +763,7 @@ function RubiksCube({ scrollRef }) {
   }, []);
 
   return (
-    <group ref={outerRef} scale={0.93}>
+    <group ref={outerRef} scale={0.85}>
       <group ref={mainRef}>
         {grid.map((g, i) => (
           <group
@@ -1272,7 +1272,7 @@ export default function KinetibaHero() {
 
       {/* Fixed 3D Canvas */}
       <Canvas
-        camera={{ position: [5.8, 4.0, 5.8], fov: 36, near: 0.1, far: 100 }}
+        camera={{ position: [6.5, 4.5, 6.5], fov: 36, near: 0.1, far: 100 }}
         shadows
         gl={{
           antialias: true,

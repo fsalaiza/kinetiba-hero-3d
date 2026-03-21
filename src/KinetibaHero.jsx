@@ -12,9 +12,9 @@
 import React, { useState, useRef, useMemo, useEffect, useCallback } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
-  RoundedBox,
   Environment,
   ContactShadows,
+  useGLTF,
 } from "@react-three/drei";
 import {
   EffectComposer,
@@ -426,8 +426,8 @@ function generateRoughnessMap(width = 256, height = 256) {
 // CUBE PIECE COMPONENT — single cream material + plane decals
 // ============================================================
 
-const DECAL_SIZE = PIECE_SIZE * 0.88;
-const DECAL_OFFSET = PIECE_SIZE / 2 + 0.002;
+const DECAL_SIZE = PIECE_SIZE * 0.78;
+const DECAL_OFFSET = PIECE_SIZE / 2 - 0.015 + 0.002;
 
 const FACE_DEFS = [
   { axis: "+x", check: (gx) => gx === 1,  idx: 0, pos: [DECAL_OFFSET, 0, 0],  rot: [0, Math.PI / 2, 0] },
@@ -439,6 +439,17 @@ const FACE_DEFS = [
 ];
 
 function CubePiece({ position, gx, gy, gz }) {
+  const { nodes } = useGLTF('/models/cube_piece.glb');
+
+  const geometry = useMemo(() => {
+    const meshNode = Object.values(nodes).find(n => n.isMesh);
+    if (!meshNode) {
+      console.warn('No mesh found in cube_piece.glb');
+      return null;
+    }
+    return meshNode.geometry.clone();
+  }, [nodes]);
+
   const roughnessMap = useMemo(() => generateRoughnessMap(), []);
 
   const decals = useMemo(() => {
@@ -452,12 +463,12 @@ function CubePiece({ position, gx, gy, gz }) {
       }));
   }, [gx, gy, gz]);
 
+  if (!geometry) return null;
+
   return (
     <group position={position}>
-      <RoundedBox
-        args={[PIECE_SIZE, PIECE_SIZE, PIECE_SIZE]}
-        radius={BEVEL_RADIUS}
-        smoothness={BEVEL_SEGMENTS}
+      <mesh
+        geometry={geometry}
         castShadow
         receiveShadow
       >
@@ -476,7 +487,7 @@ function CubePiece({ position, gx, gy, gz }) {
           sheenRoughness={0.8}
           envMapIntensity={0.55}
         />
-      </RoundedBox>
+      </mesh>
       {decals.map(({ axis, pos, rot, texture }) => (
         <mesh key={axis} position={pos} rotation={rot}>
           <planeGeometry args={[DECAL_SIZE, DECAL_SIZE]} />
@@ -1278,3 +1289,5 @@ export default function KinetibaHero() {
     </div>
   );
 }
+
+useGLTF.preload('/models/cube_piece.glb');

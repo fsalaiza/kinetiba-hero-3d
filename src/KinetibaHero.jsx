@@ -381,11 +381,42 @@ function createFaceTexture(gx, gy, gz, faceIdx) {
 }
 
 // ============================================================
+// PROCEDURAL ROUGHNESS MAP
+// ============================================================
+
+function generateRoughnessMap(width = 256, height = 256) {
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d');
+  const imageData = ctx.createImageData(width, height);
+  const data = imageData.data;
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const i = (y * width + x) * 4;
+      const n1 = Math.sin(x * 0.05) * Math.cos(y * 0.05) * 0.3;
+      const n2 = Math.sin(x * 0.13 + 1.7) * Math.cos(y * 0.11 + 2.3) * 0.2;
+      const n3 = (Math.random() - 0.5) * 0.15;
+      const val = 0.65 + n1 + n2 + n3;
+      const byte = Math.max(0, Math.min(255, Math.floor(val * 255)));
+      data[i] = byte;
+      data[i + 1] = byte;
+      data[i + 2] = byte;
+      data[i + 3] = 255;
+    }
+  }
+  ctx.putImageData(imageData, 0, 0);
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+  return tex;
+}
+
+// ============================================================
 // CUBE PIECE COMPONENT — single cream material + plane decals
 // ============================================================
 
 const DECAL_SIZE = PIECE_SIZE * 0.88;
-const DECAL_OFFSET = PIECE_SIZE / 2 + 0.001;
+const DECAL_OFFSET = PIECE_SIZE / 2 + 0.002;
 
 const FACE_DEFS = [
   { axis: "+x", check: (gx) => gx === 1,  idx: 0, pos: [DECAL_OFFSET, 0, 0],  rot: [0, Math.PI / 2, 0] },
@@ -397,6 +428,8 @@ const FACE_DEFS = [
 ];
 
 function CubePiece({ position, gx, gy, gz }) {
+  const roughnessMap = useMemo(() => generateRoughnessMap(), []);
+
   const decals = useMemo(() => {
     return FACE_DEFS
       .filter(({ check }) => check(gx, gy, gz))
@@ -417,21 +450,35 @@ function CubePiece({ position, gx, gy, gz }) {
         castShadow
         receiveShadow
       >
-        <meshStandardMaterial
+        <meshPhysicalMaterial
           color="#BFB9AA"
-          roughness={0.7}
-          metalness={0.02}
-          envMapIntensity={0.35}
+          roughness={0.65}
+          roughnessMap={roughnessMap}
+          metalness={0.0}
+          clearcoat={0.15}
+          clearcoatRoughness={0.4}
+          ior={1.45}
+          specularIntensity={0.6}
+          specularColor={new THREE.Color('#F5F0E8')}
+          sheen={0.05}
+          sheenColor={new THREE.Color('#D4CFC4')}
+          sheenRoughness={0.8}
+          envMapIntensity={1.2}
         />
       </RoundedBox>
       {decals.map(({ axis, pos, rot, texture }) => (
         <mesh key={axis} position={pos} rotation={rot}>
           <planeGeometry args={[DECAL_SIZE, DECAL_SIZE]} />
-          <meshStandardMaterial
+          <meshPhysicalMaterial
             map={texture}
-            roughness={0.7}
-            metalness={0.02}
-            envMapIntensity={0.35}
+            roughness={0.6}
+            metalness={0.0}
+            clearcoat={0.12}
+            clearcoatRoughness={0.45}
+            ior={1.45}
+            specularIntensity={0.5}
+            specularColor={new THREE.Color('#F5F0E8')}
+            envMapIntensity={1.0}
           />
         </mesh>
       ))}

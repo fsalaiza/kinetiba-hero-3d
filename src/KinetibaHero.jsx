@@ -459,15 +459,15 @@ function CubePiece({ position, gx, gy, gz }) {
           roughness={0.65}
           roughnessMap={roughnessMap}
           metalness={0.0}
-          clearcoat={0.15}
+          clearcoat={0.1}
           clearcoatRoughness={0.4}
           ior={1.45}
-          specularIntensity={0.6}
+          specularIntensity={0.4}
           specularColor={SPECULAR_COLOR}
           sheen={0.05}
           sheenColor={SHEEN_COLOR}
           sheenRoughness={0.8}
-          envMapIntensity={1.2}
+          envMapIntensity={0.8}
         />
       </RoundedBox>
       {decals.map(({ axis, pos, rot, texture }) => (
@@ -475,14 +475,13 @@ function CubePiece({ position, gx, gy, gz }) {
           <planeGeometry args={[DECAL_SIZE, DECAL_SIZE]} />
           <meshPhysicalMaterial
             map={texture}
-            roughness={0.6}
+            roughness={0.75}
             metalness={0.0}
-            clearcoat={0.12}
-            clearcoatRoughness={0.45}
+            clearcoat={0}
             ior={1.45}
-            specularIntensity={0.5}
+            specularIntensity={0.2}
             specularColor={SPECULAR_COLOR}
-            envMapIntensity={1.0}
+            envMapIntensity={0.4}
           />
         </mesh>
       ))}
@@ -776,13 +775,13 @@ function Scene({ scrollRef }) {
       <ambientLight intensity={0.5} />
       <directionalLight
         position={[8, 12, 6]}
-        intensity={1.3}
+        intensity={1.0}
         color="#fff8ee"
         castShadow
         shadow-mapSize={[1024, 1024]}
         shadow-bias={-0.002}
       />
-      <directionalLight position={[-6, 4, -4]} intensity={0.35} color="#d4e8d4" />
+      <directionalLight position={[-6, 4, -4]} intensity={0.25} color="#d4e8d4" />
       <directionalLight position={[0, -4, 8]} intensity={0.25} color="#ffeedd" />
 
       <RubiksCube scrollRef={scrollRef} />
@@ -795,7 +794,7 @@ function Scene({ scrollRef }) {
         far={3}
       />
 
-      <Environment preset="studio" environmentIntensity={0.8} />
+      <Environment preset="studio" environmentIntensity={0.55} />
 
       <EffectComposer>
         <Bloom
@@ -1257,7 +1256,7 @@ export default function KinetibaHero() {
         gl={{
           antialias: true,
           toneMapping: THREE.ACESFilmicToneMapping,
-          toneMappingExposure: 1.0,
+          toneMappingExposure: 0.92,
         }}
         style={{ position: "fixed", inset: 0, zIndex: 1 }}
       >

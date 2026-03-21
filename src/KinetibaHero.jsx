@@ -734,49 +734,46 @@ function Overlay() {
       </div>
 
       {/* MID */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <div>
+      <div style={{ position: "relative" }}>
+        <div
+          style={{
+            color: "#d4d4c8",
+            fontSize: "clamp(9px, 1vw, 12px)",
+            fontFamily: monoFont,
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            marginBottom: 12,
+          }}
+        >
+          CDMX — México
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 0, marginLeft: "calc(-1 * clamp(24px, 4vw, 50px))", marginRight: "calc(-1 * clamp(24px, 4vw, 50px))" }}>
+          <div style={{ flex: 1, height: 1, background: "rgba(230,230,220,0.15)" }} />
           <div
             style={{
-              color: "#d4d4c8",
+              color: "#c4c4b8",
               fontSize: "clamp(9px, 1vw, 12px)",
               fontFamily: monoFont,
-              letterSpacing: "0.15em",
+              letterSpacing: "0.12em",
               textTransform: "uppercase",
-              marginBottom: 12,
+              paddingLeft: 20,
+              paddingRight: "clamp(24px, 4vw, 50px)",
+              whiteSpace: "nowrap",
             }}
           >
-            CDMX — México
-          </div>
-          <div
-            style={{
-              width: "clamp(100px, 20vw, 260px)",
-              height: 1,
-              background: "rgba(230,230,220,0.15)",
-              marginBottom: 10,
-            }}
-          />
-          <div
-            style={{
-              color: "#bbbcab",
-              fontSize: "clamp(9px, 1vw, 11px)",
-              fontFamily: monoFont,
-              letterSpacing: "0.08em",
-            }}
-          >
-            ↕ 19.4326 ··· -99.1332
+            Scroll to discover ⌄
           </div>
         </div>
         <div
           style={{
-            color: "#c4c4b8",
-            fontSize: "clamp(9px, 1vw, 12px)",
+            color: "#bbbcab",
+            fontSize: "clamp(9px, 1vw, 11px)",
             fontFamily: monoFont,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
+            letterSpacing: "0.08em",
+            marginTop: 10,
           }}
         >
-          Scroll to discover ⌄
+          ↕ 19.4326 ··· -99.1332
         </div>
       </div>
 

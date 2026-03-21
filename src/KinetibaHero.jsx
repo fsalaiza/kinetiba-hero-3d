@@ -772,7 +772,7 @@ function Scene({ scrollRef }) {
       <ambientLight intensity={0.5} />
       <directionalLight
         position={[8, 12, 6]}
-        intensity={1.0}
+        intensity={1.3}
         color="#fff8ee"
         castShadow
         shadow-mapSize={[1024, 1024]}
@@ -785,25 +785,25 @@ function Scene({ scrollRef }) {
 
       <ContactShadows
         position={[0, -2.1, 0]}
-        opacity={0.3}
+        opacity={0.55}
         scale={12}
-        blur={2.5}
-        far={4}
+        blur={1.8}
+        far={3}
       />
 
-      <Environment preset="studio" environmentIntensity={0.5} />
+      <Environment preset="studio" environmentIntensity={0.8} />
 
       <EffectComposer>
         <Bloom
-          intensity={0.25}
-          luminanceThreshold={0.85}
+          intensity={0.18}
+          luminanceThreshold={0.88}
           luminanceSmoothing={0.9}
           mipmapBlur
         />
         <N8AO
-          aoRadius={0.5}
-          intensity={1.5}
-          distanceFalloff={0.5}
+          aoRadius={0.25}
+          intensity={3.0}
+          distanceFalloff={0.3}
         />
         <Vignette offset={0.3} darkness={0.45} />
       </EffectComposer>

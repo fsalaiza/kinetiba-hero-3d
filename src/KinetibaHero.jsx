@@ -372,6 +372,20 @@ function createFaceTexture(gx, gy, gz, faceIdx) {
   const fg = `rgb(${r - 40},${g - 40},${b - 40})`;
   drawFrame(ctx, size, fg);
 
+  // Inner shadow to simulate recessed panel
+  const shadowGrad = ctx.createLinearGradient(0, 0, 0, size * 0.15);
+  shadowGrad.addColorStop(0, 'rgba(0,0,0,0.12)');
+  shadowGrad.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = shadowGrad;
+  ctx.fillRect(size * 0.06, size * 0.06, size * 0.88, size * 0.3);
+
+  // Bottom edge highlight (light catches bottom lip of recess)
+  const highlightGrad = ctx.createLinearGradient(0, size * 0.88, 0, size * 0.94);
+  highlightGrad.addColorStop(0, 'rgba(255,255,255,0)');
+  highlightGrad.addColorStop(1, 'rgba(255,255,255,0.06)');
+  ctx.fillStyle = highlightGrad;
+  ctx.fillRect(size * 0.06, size * 0.82, size * 0.88, size * 0.12);
+
   // Icon
   const iconIdx = (Math.abs(gx * 7 + gy * 13 + gz * 19) + faceIdx * 3) % ICON_DRAWERS.length;
   ICON_DRAWERS[iconIdx](ctx, size);
@@ -379,6 +393,41 @@ function createFaceTexture(gx, gy, gz, faceIdx) {
   // Sandstone grain
   addGrain(ctx, size, size, 20);
 
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.anisotropy = 4;
+  return tex;
+}
+
+// ============================================================
+// BLANK FACE TEXTURE (for sides without decals)
+// ============================================================
+
+function createBlankFaceTexture(gx, gy, gz) {
+  const size = 256;
+  const canvas = document.createElement('canvas');
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d');
+  const seed = (gx + 2) * 100 + (gy + 2) * 10 + (gz + 2);
+  const r = 175 + ((seed * 7) % 10) - 5;
+  const g = 168 + ((seed * 11) % 10) - 5;
+  const b = 152 + ((seed * 13) % 8) - 4;
+  ctx.fillStyle = `rgb(${r},${g},${b})`;
+  ctx.fillRect(0, 0, size, size);
+
+  // Micro dot pattern (like ceramic surface texture)
+  ctx.fillStyle = `rgba(${r-15},${g-15},${b-15}, 0.3)`;
+  for (let py = 8; py < size; py += 16) {
+    for (let px = 8; px < size; px += 16) {
+      if ((px + py + seed) % 3 === 0) {
+        ctx.beginPath();
+        ctx.arc(px, py, 0.8, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+  }
+
+  addGrain(ctx, size, size, 20);
   const tex = new THREE.CanvasTexture(canvas);
   tex.anisotropy = 4;
   return tex;
@@ -433,6 +482,7 @@ const FACE_DEFS = [
 
 function CubePiece({ position, gx, gy, gz }) {
   const roughnessMap = useMemo(() => generateRoughnessMap(), []);
+  const bodyTexture = useMemo(() => createBlankFaceTexture(gx, gy, gz), [gx, gy, gz]);
 
   const decals = useMemo(() => {
     return FACE_DEFS
@@ -456,6 +506,7 @@ function CubePiece({ position, gx, gy, gz }) {
       >
         <meshPhysicalMaterial
           color="#ADA68E"
+          map={bodyTexture}
           roughness={0.72}
           roughnessMap={roughnessMap}
           metalness={0.0}
@@ -788,9 +839,9 @@ function Scene({ scrollRef }) {
 
       <ContactShadows
         position={[0, -2.1, 0]}
-        opacity={0.55}
+        opacity={0.65}
         scale={12}
-        blur={1.8}
+        blur={1.5}
         far={3}
       />
 

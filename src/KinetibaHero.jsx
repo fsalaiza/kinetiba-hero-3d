@@ -352,9 +352,9 @@ function createFaceTexture(gx, gy, gz, faceIdx) {
 
   // Base sandstone with slight variation
   const seed = (gx + 2) * 100 + (gy + 2) * 10 + (gz + 2) + faceIdx * 1000;
-  const r = 195 + ((seed * 7) % 10) - 5;
-  const g = 189 + ((seed * 11) % 10) - 5;
-  const b = 175 + ((seed * 13) % 8) - 4;
+  const r = 175 + ((seed * 7) % 10) - 5;
+  const g = 168 + ((seed * 11) % 10) - 5;
+  const b = 152 + ((seed * 13) % 8) - 4;
   ctx.fillStyle = `rgb(${r},${g},${b})`;
   ctx.fillRect(0, 0, size, size);
 
@@ -377,7 +377,7 @@ function createFaceTexture(gx, gy, gz, faceIdx) {
   ICON_DRAWERS[iconIdx](ctx, size);
 
   // Sandstone grain
-  addGrain(ctx, size, size, 14);
+  addGrain(ctx, size, size, 20);
 
   const tex = new THREE.CanvasTexture(canvas);
   tex.anisotropy = 4;
@@ -455,7 +455,7 @@ function CubePiece({ position, gx, gy, gz }) {
         receiveShadow
       >
         <meshPhysicalMaterial
-          color="#BFB9AA"
+          color="#B5AE9A"
           roughness={0.65}
           roughnessMap={roughnessMap}
           metalness={0.0}
@@ -475,13 +475,13 @@ function CubePiece({ position, gx, gy, gz }) {
           <planeGeometry args={[DECAL_SIZE, DECAL_SIZE]} />
           <meshPhysicalMaterial
             map={texture}
-            roughness={0.75}
+            roughness={0.85}
             metalness={0.0}
             clearcoat={0}
             ior={1.45}
             specularIntensity={0.2}
             specularColor={SPECULAR_COLOR}
-            envMapIntensity={0.4}
+            envMapIntensity={0.25}
           />
         </mesh>
       ))}
@@ -772,7 +772,7 @@ function RubiksCube({ scrollRef }) {
 function Scene({ scrollRef }) {
   return (
     <>
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={0.45} color="#fff5e6" />
       <directionalLight
         position={[8, 12, 6]}
         intensity={1.0}
@@ -1256,7 +1256,7 @@ export default function KinetibaHero() {
         gl={{
           antialias: true,
           toneMapping: THREE.ACESFilmicToneMapping,
-          toneMappingExposure: 0.92,
+          toneMappingExposure: 0.78,
         }}
         style={{ position: "fixed", inset: 0, zIndex: 1 }}
       >

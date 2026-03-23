@@ -682,11 +682,11 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
-      // ERP — pin section for reading time
+      // ERP — pin section for reading time (after text is visible)
       ScrollTrigger.create({
         trigger: sections[4],
-        start: 'center center',
-        end: '+=220%',
+        start: 'top 20%',
+        end: '+=180%',
         pin: true,
         pinSpacing: true,
       });
@@ -722,7 +722,7 @@ function RubiksCube({ scrollRef }) {
   // Rubik face rotation
   const doFaceRotation = useCallback(() => {
     const scrollProgress = ScrollTrigger.getAll()[0]?.progress || 0;
-    if (scrollProgress > 0.2) return;
+    if (scrollProgress > 0.2 && !(scrollProgress > 0.70 && scrollProgress < 0.92)) return;
     if (isRotating.current || !mainRef.current || !pivotRef.current) return;
     isRotating.current = true;
 
@@ -813,15 +813,27 @@ function RubiksCube({ scrollRef }) {
     tick();
   }, []);
 
-  // Periodic face rotations
+  // Periodic face rotations (faster during ERP section)
   useEffect(() => {
-    const timer = setInterval(doFaceRotation, 4000);
+    let timer = null;
+    let currentMs = 4000;
     const initial = setTimeout(doFaceRotation, 2200);
+    const schedule = () => {
+      const p = scrollRef?.current || 0;
+      const inERP = p > 0.70 && p < 0.92;
+      const desired = inERP ? 1200 : 4000;
+      if (desired !== currentMs) currentMs = desired;
+      timer = setTimeout(() => {
+        doFaceRotation();
+        schedule();
+      }, currentMs);
+    };
+    schedule();
     return () => {
-      clearInterval(timer);
+      clearTimeout(timer);
       clearTimeout(initial);
     };
-  }, [doFaceRotation]);
+  }, [doFaceRotation, scrollRef]);
 
   // Lerp actuals toward GSAP targets each frame (exponential decay)
   useFrame(({ clock }, delta) => {

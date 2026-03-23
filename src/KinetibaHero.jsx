@@ -42,7 +42,7 @@ const LAYER_COLORS = ["#8B3A3A", "#3A5A8B", "#3A8B5A"];
 
 // Ceramic material colors (pre-allocated to avoid re-creation per render)
 const SPECULAR_COLOR = new THREE.Color('#F5F0E8');
-const SHEEN_COLOR = new THREE.Color('#D4CFC4');
+const SHEEN_COLOR = new THREE.Color('#E2DDD5');
 const NORMAL_SCALE = new THREE.Vector2(0.15, 0.15);
 
 // ============================================================
@@ -358,9 +358,9 @@ function createFaceTexture(gx, gy, gz, faceIdx) {
 
   // Base sandstone with slight variation
   const seed = (gx + 2) * 100 + (gy + 2) * 10 + (gz + 2) + faceIdx * 1000;
-  const r = 175 + ((seed * 7) % 10) - 5;
-  const g = 168 + ((seed * 11) % 10) - 5;
-  const b = 152 + ((seed * 13) % 8) - 4;
+  const r = 210 + ((seed * 7) % 10) - 5;
+  const g = 205 + ((seed * 11) % 10) - 5;
+  const b = 195 + ((seed * 13) % 8) - 4;
   ctx.fillStyle = `rgb(${r},${g},${b})`;
   ctx.fillRect(0, 0, size, size);
 
@@ -485,7 +485,7 @@ function CubePiece({ position, gx, gy, gz }) {
         receiveShadow
       >
         <meshPhysicalMaterial
-          color="#ADA68E"
+          color="#D4CFC4"
           roughness={0.72}
           roughnessMap={roughnessMap}
           normalMap={ceramicNormalMap}
@@ -1346,7 +1346,7 @@ export default function KinetibaHero() {
         gl={{
           antialias: true,
           toneMapping: THREE.ACESFilmicToneMapping,
-          toneMappingExposure: 0.78,
+          toneMappingExposure: 0.90,
         }}
         style={{ position: "fixed", inset: 0, zIndex: 1 }}
       >

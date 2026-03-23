@@ -647,8 +647,8 @@ function RubiksCube({ scrollRef }) {
 
       // WhatsApp — cube moves far left, shrinks to highlight phone
       gsap.to(st, {
-        targetScale: 0.9,
-        targetX: -4,
+        targetScale: 0.75,
+        targetX: -5.5,
         targetExplode: 0,
         targetRotSpeed: 0,
         scrollTrigger: {

@@ -670,7 +670,7 @@ function RubiksCube({ scrollRef }) {
 
       // ERP — cube moves left with fast rotation
       gsap.to(st, {
-        targetScale: 1.3,
+        targetScale: 1.5,
         targetX: -3,
         targetExplode: 0,
         targetRotSpeed: 0.5,

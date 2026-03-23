@@ -644,7 +644,7 @@ function RubiksCube({ scrollRef }) {
         scrollTrigger: {
           trigger: sections[2],
           start: 'top 80%',
-          end: 'center center',
+          end: 'bottom center',
           scrub: 1,
         },
       });

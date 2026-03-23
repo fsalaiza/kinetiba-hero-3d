@@ -23,6 +23,7 @@ import {
   N8AO,
 } from "@react-three/postprocessing";
 import * as THREE from "three";
+import { generateCeramicNormalMap } from "./utils/generateNormalMap";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -42,6 +43,7 @@ const LAYER_COLORS = ["#8B3A3A", "#3A5A8B", "#3A8B5A"];
 // Ceramic material colors (pre-allocated to avoid re-creation per render)
 const SPECULAR_COLOR = new THREE.Color('#F5F0E8');
 const SHEEN_COLOR = new THREE.Color('#D4CFC4');
+const NORMAL_SCALE = new THREE.Vector2(0.3, 0.3);
 
 // ============================================================
 // SCROLL PROGRESS HOOK
@@ -456,6 +458,12 @@ function CubePiece({ position, gx, gy, gz }) {
 
   const roughnessMap = useMemo(() => generateRoughnessMap(), []);
 
+  // Per-piece ceramic grain normal map (seed from grid coords → 0-26)
+  const ceramicNormalMap = useMemo(() => {
+    const seed = (gx + 1) * 9 + (gy + 1) * 3 + (gz + 1);
+    return generateCeramicNormalMap(512, seed);
+  }, [gx, gy, gz]);
+
   const decals = useMemo(() => {
     return FACE_DEFS
       .filter(({ check }) => check(gx, gy, gz))
@@ -480,6 +488,8 @@ function CubePiece({ position, gx, gy, gz }) {
           color="#ADA68E"
           roughness={0.72}
           roughnessMap={roughnessMap}
+          normalMap={ceramicNormalMap}
+          normalScale={NORMAL_SCALE}
           metalness={0.0}
           clearcoat={0.1}
           clearcoatRoughness={0.4}

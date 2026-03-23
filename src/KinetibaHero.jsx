@@ -1308,7 +1308,7 @@ function ScrollSections({ scrollProgress }) {
           ...sectionStyle,
           justifyContent: "flex-start",
           padding: "0 clamp(48px, 8vw, 120px)",
-          opacity: sectionOpacity(scrollProgress, 0.3, 0.5),
+          opacity: sectionOpacity(scrollProgress, 0.38, 0.5),
         }}
       >
         <div style={{ maxWidth: 500 }}>
@@ -1366,7 +1366,7 @@ function ScrollSections({ scrollProgress }) {
           justifyContent: "center",
           padding: "0 clamp(48px, 8vw, 120px)",
           gap: "clamp(32px, 5vw, 80px)",
-          opacity: sectionOpacity(scrollProgress, 0.5, 0.7),
+          opacity: sectionOpacity(scrollProgress, 0.58, 0.7),
         }}
       >
         {/* Left: text content */}

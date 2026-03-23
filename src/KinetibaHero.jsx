@@ -818,7 +818,7 @@ function RubiksCube({ scrollRef }) {
   useFrame(({ clock }, delta) => {
     if (!outerRef.current) return;
     const st = scrollState.current;
-    const lf = 0.06;
+    const lf = 0.03;
 
     // Interpolate actuals toward targets
     st.cubeX += (st.targetX - st.cubeX) * lf;

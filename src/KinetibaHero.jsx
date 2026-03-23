@@ -682,10 +682,10 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
-      // ERP — pin section for reading time (after text is visible)
+      // ERP — pin section for reading time
       ScrollTrigger.create({
         trigger: sections[4],
-        start: 'bottom center',
+        start: 'center center',
         end: '+=220%',
         pin: true,
         pinSpacing: true,

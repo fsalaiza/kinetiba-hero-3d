@@ -610,7 +610,7 @@ function RubiksCube({ scrollRef }) {
     const ctx = gsap.context(() => {
       // Zoom In — cube fills the screen
       gsap.to(st, {
-        targetScale: 3.5,
+        targetScale: 2.0,
         targetRotSpeed: 0,
         scrollTrigger: {
           trigger: sections[1],
@@ -633,7 +633,7 @@ function RubiksCube({ scrollRef }) {
 
       // BI — cube pulls back and moves right
       gsap.to(st, {
-        targetScale: 1.5,
+        targetScale: 1.3,
         targetX: 3,
         targetExplode: 0.2,
         targetRotSpeed: 0.1,

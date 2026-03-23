@@ -1326,6 +1326,11 @@ function ScrollSections({ scrollProgress }) {
         pointerEvents: "none",
       }}
     >
+      {/* DEBUG: scroll progress overlay */}
+      <div style={{ position: 'fixed', top: 10, right: 10, color: 'white', zIndex: 9999, fontSize: 14, fontFamily: 'monospace', background: 'rgba(0,0,0,0.7)', padding: '4px 8px', borderRadius: 4 }}>
+        {scrollProgress.toFixed(3)}
+      </div>
+
       {/* Section 0: Hero spacer */}
       <div style={{ height: "100vh" }} />
 
@@ -1396,7 +1401,7 @@ function ScrollSections({ scrollProgress }) {
           justifyContent: "center",
           padding: "0 clamp(48px, 8vw, 120px)",
           gap: "clamp(32px, 5vw, 80px)",
-          opacity: sectionOpacity(scrollProgress, 0.58, 0.7),
+          opacity: sectionOpacity(scrollProgress, 0.40, 0.65),
         }}
       >
         {/* Left: text content */}
@@ -1590,7 +1595,7 @@ function ScrollSections({ scrollProgress }) {
           height: "120vh",
           justifyContent: "flex-end",
           padding: "0 clamp(48px, 8vw, 120px)",
-          opacity: sectionOpacity(scrollProgress, 0.73, 0.9),
+          opacity: sectionOpacity(scrollProgress, 0.60, 0.85),
         }}
       >
         <div style={{ maxWidth: 500 }}>
@@ -1649,7 +1654,7 @@ function ScrollSections({ scrollProgress }) {
           flexDirection: "column",
           textAlign: "center",
           gap: 28,
-          opacity: sectionOpacity(scrollProgress, 0.85, 1.0),
+          opacity: sectionOpacity(scrollProgress, 0.80, 1.0),
         }}
       >
         <h2

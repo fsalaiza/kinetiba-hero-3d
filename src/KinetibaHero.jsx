@@ -922,6 +922,116 @@ function Scene({ scrollRef }) {
 // ============================================================
 
 const monoFont = "'SF Mono', 'Fira Code', 'Cascadia Code', monospace";
+
+const LOCATIONS = [
+  { city: "CDMX — México", coords: "↕ 19.4326  · · ·  -99.1332" },
+  { city: "GDL — México", coords: "↕ 20.6597  · · ·  -103.3496" },
+];
+
+const GLITCH_CSS = `
+@keyframes glitch-clip {
+  0%   { clip-path: inset(0 0 85% 0); transform: translateX(-3px); }
+  10%  { clip-path: inset(15% 0 65% 0); transform: translateX(2px); }
+  20%  { clip-path: inset(40% 0 30% 0); transform: translateX(-2px); }
+  30%  { clip-path: inset(60% 0 15% 0); transform: translateX(3px); }
+  40%  { clip-path: inset(25% 0 50% 0); transform: translateX(-1px); }
+  50%  { clip-path: inset(75% 0 5% 0); transform: translateX(2px); }
+  60%  { clip-path: inset(10% 0 70% 0); transform: translateX(-3px); }
+  70%  { clip-path: inset(50% 0 25% 0); transform: translateX(1px); }
+  80%  { clip-path: inset(80% 0 0% 0); transform: translateX(-2px); }
+  90%  { clip-path: inset(5% 0 90% 0); transform: translateX(2px); }
+  100% { clip-path: inset(0 0 0 0); transform: translateX(0); }
+}
+@keyframes glitch-flicker {
+  0%, 20%, 40%, 60%, 80%, 100% { opacity: 1; }
+  10%, 30%, 50%, 70%, 90% { opacity: 0.7; }
+  15%, 55% { opacity: 0.3; }
+}
+@keyframes glitch-rgb {
+  0%   { text-shadow: 2px 0 #ff000040, -2px 0 #00ffff40; }
+  25%  { text-shadow: -2px 1px #ff000050, 2px -1px #00ffff50; }
+  50%  { text-shadow: 1px -1px #ff000040, -1px 1px #00ffff40; }
+  75%  { text-shadow: -3px 0 #ff000050, 3px 0 #00ffff50; }
+  100% { text-shadow: 0 0 transparent, 0 0 transparent; }
+}
+.loc-glitch-active {
+  animation: glitch-clip 0.15s steps(2) 3, glitch-flicker 0.45s linear, glitch-rgb 0.45s linear;
+}
+`;
+
+function LocationGlitch() {
+  const [idx, setIdx] = useState(0);
+  const [glitching, setGlitching] = useState(false);
+
+  useEffect(() => {
+    // Inject CSS once
+    const style = document.createElement('style');
+    style.textContent = GLITCH_CSS;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGlitching(true);
+      setTimeout(() => {
+        setIdx(prev => (prev + 1) % LOCATIONS.length);
+        setGlitching(false);
+      }, 450);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const loc = LOCATIONS[idx];
+  const glitchClass = glitching ? 'loc-glitch-active' : '';
+
+  return (
+    <>
+      <div
+        className={glitchClass}
+        style={{
+          color: "#d4d4c8",
+          fontSize: "clamp(9px, 1vw, 12px)",
+          fontFamily: monoFont,
+          letterSpacing: "0.15em",
+          textTransform: "uppercase",
+          marginBottom: 12,
+        }}
+      >
+        {loc.city}
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: 0, marginLeft: "calc(-1 * clamp(24px, 4vw, 50px))", marginRight: "calc(-1 * clamp(24px, 4vw, 50px))" }}>
+        <div style={{ flex: 1, height: 1, background: "linear-gradient(to right, rgba(230,230,220,0.18) 0%, rgba(230,230,220,0.18) 25%, rgba(230,230,220,0) 42%, rgba(230,230,220,0) 58%, rgba(230,230,220,0) 70%, rgba(230,230,220,0.1) 100%)" }} />
+        <div
+          style={{
+            color: "#c4c4b8",
+            fontSize: "clamp(9px, 1vw, 12px)",
+            fontFamily: monoFont,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            paddingLeft: 20,
+            paddingRight: "clamp(24px, 4vw, 50px)",
+            whiteSpace: "nowrap",
+          }}
+        >
+          Scroll to discover ⌄
+        </div>
+      </div>
+      <div
+        className={glitchClass}
+        style={{
+          color: "#bbbcab",
+          fontSize: "clamp(9px, 1vw, 11px)",
+          fontFamily: monoFont,
+          letterSpacing: "0.08em",
+          marginTop: 10,
+        }}
+      >
+        {loc.coords}
+      </div>
+    </>
+  );
+}
 const sansFont = "'SF Pro Display', -apple-system, 'Helvetica Neue', sans-serif";
 
 function Overlay({ scrollProgress }) {
@@ -994,46 +1104,7 @@ function Overlay({ scrollProgress }) {
 
       {/* MID */}
       <div style={{ position: "relative" }}>
-        <div
-          style={{
-            color: "#d4d4c8",
-            fontSize: "clamp(9px, 1vw, 12px)",
-            fontFamily: monoFont,
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            marginBottom: 12,
-          }}
-        >
-          CDMX — México
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 0, marginLeft: "calc(-1 * clamp(24px, 4vw, 50px))", marginRight: "calc(-1 * clamp(24px, 4vw, 50px))" }}>
-          <div style={{ flex: 1, height: 1, background: "linear-gradient(to right, rgba(230,230,220,0.18) 0%, rgba(230,230,220,0.18) 25%, rgba(230,230,220,0) 42%, rgba(230,230,220,0) 58%, rgba(230,230,220,0) 70%, rgba(230,230,220,0.1) 100%)" }} />
-          <div
-            style={{
-              color: "#c4c4b8",
-              fontSize: "clamp(9px, 1vw, 12px)",
-              fontFamily: monoFont,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              paddingLeft: 20,
-              paddingRight: "clamp(24px, 4vw, 50px)",
-              whiteSpace: "nowrap",
-            }}
-          >
-            Scroll to discover ⌄
-          </div>
-        </div>
-        <div
-          style={{
-            color: "#bbbcab",
-            fontSize: "clamp(9px, 1vw, 11px)",
-            fontFamily: monoFont,
-            letterSpacing: "0.08em",
-            marginTop: 10,
-          }}
-        >
-          ↕ 19.4326 ··· -99.1332
-        </div>
+        <LocationGlitch />
       </div>
 
       {/* BOTTOM */}

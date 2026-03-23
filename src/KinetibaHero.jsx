@@ -659,12 +659,12 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
-      // ERP — cube moves left, regroups
+      // ERP — cube centers with energetic rotation
       gsap.to(st, {
-        targetScale: 1.2,
-        targetX: -3,
+        targetScale: 1.3,
+        targetX: 0,
         targetExplode: 0,
-        targetRotSpeed: 0.15,
+        targetRotSpeed: 0.35,
         scrollTrigger: {
           trigger: sections[4],
           start: 'top bottom',
@@ -1557,9 +1557,10 @@ function ScrollSections({ scrollProgress }) {
       <div
         style={{
           ...sectionStyle,
+          height: "120vh",
           justifyContent: "flex-end",
           padding: "0 clamp(48px, 8vw, 120px)",
-          opacity: sectionOpacity(scrollProgress, 0.7, 0.9),
+          opacity: sectionOpacity(scrollProgress, 0.73, 0.9),
         }}
       >
         <div style={{ maxWidth: 500 }}>

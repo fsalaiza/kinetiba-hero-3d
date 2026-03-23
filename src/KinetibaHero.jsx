@@ -877,7 +877,7 @@ function RubiksCube({ scrollRef }) {
         if (dir.length() > 0) dir.normalize();
         const target = new THREE.Vector3(
           gx * CELL + dir.x * effectiveExplode,
-          gy * CELL + gy * st.flatten * 0.8 + dir.y * effectiveExplode,
+          gy * CELL + gy * st.flatten * 0.35 + dir.y * effectiveExplode,
           gz * CELL + dir.z * effectiveExplode
         );
         c.mesh.position.lerp(target, 0.08);

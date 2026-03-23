@@ -649,7 +649,7 @@ function RubiksCube({ scrollRef }) {
       ScrollTrigger.create({
         trigger: sections[2],
         start: 'center center',
-        end: '+=60%',
+        end: '+=120%',
         pin: true,
         pinSpacing: true,
       });

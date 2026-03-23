@@ -639,7 +639,7 @@ function RubiksCube({ scrollRef }) {
         targetRotSpeed: 0.1,
         scrollTrigger: {
           trigger: sections[2],
-          start: 'top bottom',
+          start: 'top 80%',
           end: 'center center',
           scrub: 1,
         },
@@ -722,7 +722,7 @@ function RubiksCube({ scrollRef }) {
   // Rubik face rotation
   const doFaceRotation = useCallback(() => {
     const scrollProgress = ScrollTrigger.getAll()[0]?.progress || 0;
-    if (scrollProgress > 0.2 && !(scrollProgress > 0.70 && scrollProgress < 0.92)) return;
+    if (scrollProgress > 0.02 && !(scrollProgress > 0.70 && scrollProgress < 0.92)) return;
     if (isRotating.current || !mainRef.current || !pivotRef.current) return;
     isRotating.current = true;
 
@@ -1330,7 +1330,7 @@ function ScrollSections({ scrollProgress }) {
       <div style={{ height: "100vh" }} />
 
       {/* Section 1: Zoom In spacer */}
-      <div style={{ height: "100vh" }} />
+      <div style={{ height: "40vh" }} />
 
       {/* Section 2: Kinetiba BI */}
       <div

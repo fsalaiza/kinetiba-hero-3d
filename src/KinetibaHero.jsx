@@ -1340,7 +1340,7 @@ function ScrollSections({ scrollProgress }) {
       <div style={{ height: "100vh" }} />
 
       {/* Section 1: Zoom In spacer */}
-      <div style={{ height: "60vh" }} />
+      <div style={{ height: "120vh" }} />
 
       {/* Section 2: Kinetiba BI */}
       <div

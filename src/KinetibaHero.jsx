@@ -668,7 +668,7 @@ function RubiksCube({ scrollRef }) {
         scrollTrigger: {
           trigger: sections[3],
           start: 'top bottom',
-          end: 'center center',
+          end: 'bottom center',
           scrub: 1,
         },
       });
@@ -846,7 +846,7 @@ function RubiksCube({ scrollRef }) {
   useFrame(({ clock }, delta) => {
     if (!outerRef.current) return;
     const st = scrollState.current;
-    const lf = 0.03;
+    const lf = 0.02;
 
     // Interpolate actuals toward targets
     st.cubeX += (st.targetX - st.cubeX) * lf;
@@ -1715,6 +1715,48 @@ function ScrollSections({ scrollProgress }) {
 
 export default function KinetibaHero() {
   const { progress, progressRef } = useScrollProgress();
+  const [frameStepPx, setFrameStepPx] = useState(8);
+
+  useEffect(() => {
+    const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+    const onKeyDown = (e) => {
+      // Frame-by-frame scroll stepping:
+      // [, ] = prev/next step
+      // - / = = decrease/increase step size
+      // 0 = reset to top
+      // This gives deterministic visual iteration over scroll-driven animation.
+      if (e.key === "]" || e.key === "[") {
+        e.preventDefault();
+        const maxScroll =
+          document.documentElement.scrollHeight - window.innerHeight;
+        if (maxScroll <= 0) return;
+        const dir = e.key === "]" ? 1 : -1;
+        const nextY = clamp(window.scrollY + dir * frameStepPx, 0, maxScroll);
+        window.scrollTo({ top: nextY, behavior: "auto" });
+        return;
+      }
+
+      if (e.key === "=" || e.key === "+") {
+        e.preventDefault();
+        setFrameStepPx((prev) => Math.min(64, prev + 1));
+        return;
+      }
+
+      if (e.key === "-" || e.key === "_") {
+        e.preventDefault();
+        setFrameStepPx((prev) => Math.max(1, prev - 1));
+        return;
+      }
+
+      if (e.key === "0") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "auto" });
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [frameStepPx]);
 
   return (
     <div style={{ minHeight: "100vh" }}>
@@ -1745,6 +1787,32 @@ export default function KinetibaHero() {
 
       {/* Fixed hero overlay — fades on scroll */}
       <Overlay scrollProgress={progress} />
+
+      {/* Frame stepping HUD (for visual iteration/debug) */}
+      <div
+        style={{
+          position: "fixed",
+          right: 14,
+          bottom: 14,
+          zIndex: 20,
+          pointerEvents: "none",
+          background: "rgba(0,0,0,0.4)",
+          color: "#f0f0e8",
+          border: "1px solid rgba(255,255,255,0.2)",
+          borderRadius: 8,
+          padding: "8px 10px",
+          fontFamily: monoFont,
+          fontSize: 10,
+          letterSpacing: "0.04em",
+          lineHeight: 1.5,
+          textTransform: "uppercase",
+        }}
+      >
+        <div>{`Progress: ${(progress * 100).toFixed(2)}%`}</div>
+        <div>{`Step: ${frameStepPx}px`}</div>
+        <div>[ / ] prev-next</div>
+        <div>- / + step size</div>
+      </div>
 
       {/* Scrollable content sections */}
       <ScrollSections scrollProgress={progress} />

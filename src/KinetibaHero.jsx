@@ -873,7 +873,7 @@ function Scene({ scrollRef }) {
         far={3}
       />
 
-      <Environment preset="studio" environmentIntensity={0.55} />
+      <Environment files="/hdri/studio_small_09_1k.hdr" environmentIntensity={0.55} />
 
       <EffectComposer>
         <Bloom

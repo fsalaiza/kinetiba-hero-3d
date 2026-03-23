@@ -1338,7 +1338,7 @@ function ScrollSections({ scrollProgress }) {
           ...sectionStyle,
           justifyContent: "flex-start",
           padding: "0 clamp(48px, 8vw, 120px)",
-          opacity: sectionOpacity(scrollProgress, 0.30, 0.5),
+          opacity: sectionOpacity(scrollProgress, 0.20, 0.38),
         }}
       >
         <div style={{ maxWidth: 500 }}>
@@ -1396,7 +1396,7 @@ function ScrollSections({ scrollProgress }) {
           justifyContent: "center",
           padding: "0 clamp(48px, 8vw, 120px)",
           gap: "clamp(32px, 5vw, 80px)",
-          opacity: sectionOpacity(scrollProgress, 0.58, 0.7),
+          opacity: sectionOpacity(scrollProgress, 0.38, 0.52),
         }}
       >
         {/* Left: text content */}
@@ -1590,7 +1590,7 @@ function ScrollSections({ scrollProgress }) {
           height: "120vh",
           justifyContent: "flex-end",
           padding: "0 clamp(48px, 8vw, 120px)",
-          opacity: sectionOpacity(scrollProgress, 0.73, 0.9),
+          opacity: sectionOpacity(scrollProgress, 0.52, 0.88),
         }}
       >
         <div style={{ maxWidth: 500 }}>
@@ -1649,7 +1649,7 @@ function ScrollSections({ scrollProgress }) {
           flexDirection: "column",
           textAlign: "center",
           gap: 28,
-          opacity: sectionOpacity(scrollProgress, 0.85, 1.0),
+          opacity: sectionOpacity(scrollProgress, 0.88, 1.0),
         }}
       >
         <h2

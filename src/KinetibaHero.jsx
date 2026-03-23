@@ -631,10 +631,10 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
-      // BI — cube pulls back and moves right
+      // BI — cube centers with semi-zoom presentation
       gsap.to(st, {
         targetScale: 1.3,
-        targetX: 3,
+        targetX: 0,
         targetExplode: 0.2,
         targetRotSpeed: 0.1,
         scrollTrigger: {
@@ -1307,11 +1307,11 @@ function ScrollSections({ scrollProgress }) {
         style={{
           ...sectionStyle,
           justifyContent: "flex-start",
-          padding: "0 clamp(48px, 8vw, 120px)",
+          padding: "0 5vw",
           opacity: sectionOpacity(scrollProgress, 0.38, 0.5),
         }}
       >
-        <div style={{ maxWidth: 500 }}>
+        <div style={{ maxWidth: "40vw" }}>
           <h2
             style={{
               color: "#eeeee4",

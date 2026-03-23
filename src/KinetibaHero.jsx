@@ -645,6 +645,20 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
+      // WhatsApp — cube moves far left, shrinks to highlight phone
+      gsap.to(st, {
+        targetScale: 0.9,
+        targetX: -4,
+        targetExplode: 0,
+        targetRotSpeed: 0,
+        scrollTrigger: {
+          trigger: sections[3],
+          start: 'top bottom',
+          end: 'center center',
+          scrub: 1,
+        },
+      });
+
       // ERP — cube moves left, regroups
       gsap.to(st, {
         targetScale: 1.2,
@@ -1420,7 +1434,7 @@ function ScrollSections({ scrollProgress }) {
             alignItems: "center",
             gap: 10,
             borderBottom: "1px solid rgba(0,0,0,0.15)",
-            background: "rgba(0,0,0,0.08)",
+            background: "#565949",
           }}>
             <div style={{
               width: 32, height: 32,
@@ -1523,10 +1537,10 @@ function ScrollSections({ scrollProgress }) {
           <div style={{
             padding: "8px 10px 12px",
             borderTop: "1px solid rgba(0,0,0,0.15)",
-            background: "rgba(0,0,0,0.08)",
+            background: "#565949",
           }}>
             <div style={{
-              background: "rgba(0,0,0,0.12)",
+              background: "#4A4D3E",
               borderRadius: 20,
               padding: "8px 14px",
               color: "#8B8A80",

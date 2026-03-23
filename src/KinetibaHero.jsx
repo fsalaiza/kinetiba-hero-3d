@@ -141,7 +141,7 @@ function drawBars(ctx, s) {
   const startX = (s - total) / 2;
 
   // Shadow under bars
-  ctx.fillStyle = "rgba(0,0,0,0.15)";
+  ctx.fillStyle = "rgba(0,0,0,0.25)";
   heights.forEach((h, i) => {
     const bh = h * (s - m * 2) * 0.8;
     const x = startX + i * (bw + gap) + 2;
@@ -151,7 +151,7 @@ function drawBars(ctx, s) {
     ctx.fill();
   });
 
-  ctx.fillStyle = "rgba(255,255,255,0.92)";
+  ctx.fillStyle = "rgba(255,255,255,1.0)";
   heights.forEach((h, i) => {
     const bh = h * (s - m * 2) * 0.8;
     const x = startX + i * (bw + gap);
@@ -174,8 +174,8 @@ function drawLine(ctx, s) {
 
   // Shadow line
   ctx.beginPath();
-  ctx.strokeStyle = "rgba(0,0,0,0.15)";
-  ctx.lineWidth = 5.6;
+  ctx.strokeStyle = "rgba(0,0,0,0.25)";
+  ctx.lineWidth = 6.6;
   pts.forEach(([px, py], i) => {
     const x = m + px * (s - m * 2) + 2;
     const y = m + py * (s - m * 2) + 2;
@@ -185,8 +185,8 @@ function drawLine(ctx, s) {
 
   // Main line
   ctx.beginPath();
-  ctx.strokeStyle = "rgba(255,255,255,0.92)";
-  ctx.lineWidth = 4.9;
+  ctx.strokeStyle = "rgba(255,255,255,1.0)";
+  ctx.lineWidth = 5.7;
   ctx.lineJoin = "round";
   ctx.lineCap = "round";
   pts.forEach(([px, py], i) => {
@@ -197,7 +197,7 @@ function drawLine(ctx, s) {
   ctx.stroke();
 
   // Dots
-  ctx.fillStyle = "rgba(255,255,255,0.92)";
+  ctx.fillStyle = "rgba(255,255,255,1.0)";
   pts.forEach(([px, py]) => {
     const x = m + px * (s - m * 2);
     const y = m + py * (s - m * 2);
@@ -214,11 +214,11 @@ function drawGauge(ctx, s) {
   const val = 0.72;
 
   // Track shadow
-  ctx.globalAlpha = 0.15;
+  ctx.globalAlpha = 0.25;
   ctx.beginPath();
   ctx.arc(cx + 2, cy + 2, r, 0, Math.PI * 2);
   ctx.strokeStyle = "#000";
-  ctx.lineWidth = 11;
+  ctx.lineWidth = 13;
   ctx.stroke();
 
   // Track
@@ -226,21 +226,21 @@ function drawGauge(ctx, s) {
   ctx.beginPath();
   ctx.arc(cx, cy, r, 0, Math.PI * 2);
   ctx.strokeStyle = "rgba(255,255,255,0.4)";
-  ctx.lineWidth = 11;
+  ctx.lineWidth = 13;
   ctx.stroke();
 
   // Value arc
-  ctx.globalAlpha = 0.92;
+  ctx.globalAlpha = 1.0;
   ctx.beginPath();
   ctx.arc(cx, cy, r, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * val);
-  ctx.strokeStyle = "rgba(255,255,255,0.92)";
-  ctx.lineWidth = 11;
+  ctx.strokeStyle = "rgba(255,255,255,1.0)";
+  ctx.lineWidth = 13;
   ctx.lineCap = "round";
   ctx.stroke();
 
   // Text
-  ctx.globalAlpha = 0.92;
-  ctx.fillStyle = "rgba(255,255,255,0.92)";
+  ctx.globalAlpha = 1.0;
+  ctx.fillStyle = "rgba(255,255,255,1.0)";
   ctx.font = `bold ${Math.floor(s * 0.14)}px monospace`;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
@@ -255,8 +255,8 @@ function drawGrid(ctx, s) {
   const cols = 3;
 
   // Shadow
-  ctx.strokeStyle = "rgba(0,0,0,0.15)";
-  ctx.lineWidth = 3.5;
+  ctx.strokeStyle = "rgba(0,0,0,0.25)";
+  ctx.lineWidth = 4.1;
   for (let r = 0; r <= rows; r++) {
     const y = m + (r / rows) * gs + 1.5;
     ctx.beginPath();
@@ -273,8 +273,8 @@ function drawGrid(ctx, s) {
   }
 
   // Lines
-  ctx.strokeStyle = "rgba(255,255,255,0.92)";
-  ctx.lineWidth = 2.8;
+  ctx.strokeStyle = "rgba(255,255,255,1.0)";
+  ctx.lineWidth = 3.3;
   for (let r = 0; r <= rows; r++) {
     const y = m + (r / rows) * gs;
     ctx.beginPath();
@@ -296,13 +296,13 @@ function drawChevron(ctx, s) {
   const cy = s / 2;
 
   // Double chevron >>
-  ctx.strokeStyle = "rgba(255,255,255,0.92)";
-  ctx.lineWidth = 7;
+  ctx.strokeStyle = "rgba(255,255,255,1.0)";
+  ctx.lineWidth = 8.2;
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
 
   // Shadow
-  ctx.strokeStyle = "rgba(0,0,0,0.15)";
+  ctx.strokeStyle = "rgba(0,0,0,0.25)";
   for (let offset of [-s * 0.08, s * 0.08]) {
     ctx.beginPath();
     ctx.moveTo(cx + offset - s * 0.08 + 2, cy - s * 0.14 + 2);
@@ -311,7 +311,7 @@ function drawChevron(ctx, s) {
     ctx.stroke();
   }
 
-  ctx.strokeStyle = "rgba(255,255,255,0.92)";
+  ctx.strokeStyle = "rgba(255,255,255,1.0)";
   for (let offset of [-s * 0.08, s * 0.08]) {
     ctx.beginPath();
     ctx.moveTo(cx + offset - s * 0.08, cy - s * 0.14);
@@ -326,7 +326,7 @@ function drawKPI(ctx, s) {
   const cy = s / 2;
 
   // Shadow
-  ctx.globalAlpha = 0.15;
+  ctx.globalAlpha = 0.25;
   ctx.fillStyle = "#000";
   ctx.font = `bold ${Math.floor(s * 0.28)}px monospace`;
   ctx.textAlign = "center";
@@ -334,8 +334,8 @@ function drawKPI(ctx, s) {
   ctx.fillText("42", cx + 2, cy - s * 0.03 + 2);
 
   // Number
-  ctx.globalAlpha = 0.92;
-  ctx.fillStyle = "rgba(255,255,255,0.92)";
+  ctx.globalAlpha = 1.0;
+  ctx.fillStyle = "rgba(255,255,255,1.0)";
   ctx.fillText("42", cx, cy - s * 0.03);
 
   // Label
@@ -378,7 +378,7 @@ function createFaceTexture(gx, gy, gz, faceIdx) {
 
   // Inner shadow to simulate recessed panel
   const shadowGrad = ctx.createLinearGradient(0, 0, 0, size * 0.15);
-  shadowGrad.addColorStop(0, 'rgba(0,0,0,0.08)');
+  shadowGrad.addColorStop(0, 'rgba(0,0,0,0.12)');
   shadowGrad.addColorStop(1, 'rgba(0,0,0,0)');
   ctx.fillStyle = shadowGrad;
   ctx.fillRect(size * 0.06, size * 0.06, size * 0.88, size * 0.3);
@@ -501,7 +501,7 @@ function CubePiece({ position, gx, gy, gz }) {
             metalness={0.0}
             clearcoat={0}
             ior={1.45}
-            specularIntensity={0.2}
+            specularIntensity={0.05}
             specularColor={SPECULAR_COLOR}
             envMapIntensity={0.25}
           />

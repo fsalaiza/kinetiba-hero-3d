@@ -645,6 +645,15 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
+      // BI — pin section for reading time
+      ScrollTrigger.create({
+        trigger: sections[2],
+        start: 'center center',
+        end: '+=60%',
+        pin: true,
+        pinSpacing: true,
+      });
+
       // WhatsApp — cube moves far left, shrinks to highlight phone
       gsap.to(st, {
         targetScale: 0.75,

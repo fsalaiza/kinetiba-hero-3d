@@ -608,10 +608,10 @@ function RubiksCube({ scrollRef }) {
     if (!sections.length) return;
 
     const ctx = gsap.context(() => {
-      // Hero → BI: cube moves left
+      // Zoom In — cube fills the screen
       gsap.to(st, {
-        targetX: -3,
-        targetRotSpeed: 0.08,
+        targetScale: 3.5,
+        targetRotSpeed: 0,
         scrollTrigger: {
           trigger: sections[1],
           start: 'top bottom',
@@ -620,11 +620,23 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
-      // BI → Close-up: cube centered, zoom in
+      // Fade out hero overlay during zoom in
+      gsap.to('#hero-overlay', {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: sections[1],
+          start: 'top bottom',
+          end: 'top center',
+          scrub: 1,
+        },
+      });
+
+      // BI — cube pulls back and moves right
       gsap.to(st, {
-        targetX: 0,
-        targetScale: 1.3,
-        targetRotSpeed: 0.02,
+        targetScale: 1.5,
+        targetX: 3,
+        targetExplode: 0.2,
+        targetRotSpeed: 0.1,
         scrollTrigger: {
           trigger: sections[2],
           start: 'top bottom',
@@ -633,26 +645,28 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
-      // Close-up → ERP: cube moves right
+      // ERP — cube moves left, regroups
       gsap.to(st, {
-        targetX: 3,
-        targetScale: 1.0,
-        targetRotSpeed: 0.08,
+        targetScale: 1.2,
+        targetX: -3,
+        targetExplode: 0,
+        targetRotSpeed: 0.15,
         scrollTrigger: {
-          trigger: sections[3],
+          trigger: sections[4],
           start: 'top bottom',
           end: 'center center',
           scrub: 1,
         },
       });
 
-      // ERP → CTA: cube centered, explode
+      // CTA — cube centers, dramatic explode
       gsap.to(st, {
+        targetScale: 1.0,
         targetX: 0,
-        targetRotSpeed: 0.05,
-        targetExplode: 0.5,
+        targetExplode: 0.7,
+        targetRotSpeed: 0,
         scrollTrigger: {
-          trigger: sections[4],
+          trigger: sections[5],
           start: 'top bottom',
           end: 'center center',
           scrub: 1,
@@ -913,13 +927,12 @@ const sansFont = "'SF Pro Display', -apple-system, 'Helvetica Neue', sans-serif"
 function Overlay({ scrollProgress }) {
   return (
     <div
+      id="hero-overlay"
       style={{
         position: "fixed",
         inset: 0,
         zIndex: 2,
         pointerEvents: "none",
-        opacity: scrollProgress !== undefined ? Math.max(0, 1 - scrollProgress * 6) : 1,
-        transition: "opacity 0.1s ease",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -1115,16 +1128,19 @@ function ScrollSections({ scrollProgress }) {
         pointerEvents: "none",
       }}
     >
-      {/* Section 1: Hero spacer */}
+      {/* Section 0: Hero spacer */}
       <div style={{ height: "100vh" }} />
 
-      {/* Section 2: Kinetiba BI (0.2–0.4) */}
+      {/* Section 1: Zoom In spacer */}
+      <div style={{ height: "100vh" }} />
+
+      {/* Section 2: Kinetiba BI */}
       <div
         style={{
           ...sectionStyle,
           justifyContent: "flex-end",
           padding: "0 clamp(48px, 8vw, 120px)",
-          opacity: sectionOpacity(scrollProgress, 0.2, 0.4),
+          opacity: sectionOpacity(scrollProgress, 0.3, 0.5),
         }}
       >
         <div style={{ maxWidth: 500 }}>
@@ -1175,42 +1191,16 @@ function ScrollSections({ scrollProgress }) {
         </div>
       </div>
 
-      {/* Section 3: Close-up (0.4–0.6) */}
-      <div
-        style={{
-          ...sectionStyle,
-          justifyContent: "center",
-          flexDirection: "column",
-          textAlign: "center",
-          opacity: sectionOpacity(scrollProgress, 0.4, 0.6),
-        }}
-      >
-        <p
-          style={{
-            color: "#eeeee4",
-            fontSize: "clamp(18px, 3vw, 40px)",
-            fontWeight: 300,
-            fontFamily: sansFont,
-            fontStyle: "italic",
-            letterSpacing: "-0.01em",
-            margin: 0,
-            maxWidth: 600,
-            lineHeight: 1.3,
-          }}
-        >
-          Cada cara, un KPI.
-          <br />
-          Cada dato, una decisión.
-        </p>
-      </div>
+      {/* Section 3: WhatsApp (placeholder) */}
+      <div style={{ height: "100vh" }} />
 
-      {/* Section 4: Kineti-ERP (0.6–0.8) */}
+      {/* Section 4: Kineti-ERP */}
       <div
         style={{
           ...sectionStyle,
           justifyContent: "flex-start",
           padding: "0 clamp(48px, 8vw, 120px)",
-          opacity: sectionOpacity(scrollProgress, 0.6, 0.8),
+          opacity: sectionOpacity(scrollProgress, 0.7, 0.9),
         }}
       >
         <div style={{ maxWidth: 500 }}>
@@ -1269,7 +1259,7 @@ function ScrollSections({ scrollProgress }) {
           flexDirection: "column",
           textAlign: "center",
           gap: 28,
-          opacity: sectionOpacity(scrollProgress, 0.8, 1.0),
+          opacity: sectionOpacity(scrollProgress, 0.85, 1.0),
         }}
       >
         <h2

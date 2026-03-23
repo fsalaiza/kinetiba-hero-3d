@@ -83,7 +83,7 @@ function simplex2D(x, y, perm) {
 
 export function generateCeramicNormalMap(size = 512, seed = 0) {
   const perm = buildPerm(seed * 7919 + 31);
-  const strength = 1.5;
+  const strength = 0.4;
 
   // Build heightmap with multi-octave noise
   const h = new Float32Array(size * size);
@@ -92,12 +92,12 @@ export function generateCeramicNormalMap(size = 512, seed = 0) {
       const nx = x / size;
       const ny = y / size;
       let val = 0;
-      // Octave 1: coarse grain (freq 35, amp 1.0)
-      val += simplex2D(nx * 35, ny * 35, perm) * 1.0;
-      // Octave 2: fine grain (freq 90, amp 0.4)
-      val += simplex2D(nx * 90, ny * 90, perm) * 0.4;
-      // Octave 3: micro-detail (freq 180, amp 0.15)
-      val += simplex2D(nx * 180, ny * 180, perm) * 0.15;
+      // Octave 1: coarse grain (freq 80, amp 1.0)
+      val += simplex2D(nx * 80, ny * 80, perm) * 1.0;
+      // Octave 2: fine grain (freq 180, amp 0.4)
+      val += simplex2D(nx * 180, ny * 180, perm) * 0.4;
+      // Octave 3: micro-detail (freq 350, amp 0.15)
+      val += simplex2D(nx * 350, ny * 350, perm) * 0.15;
       h[y * size + x] = val;
     }
   }

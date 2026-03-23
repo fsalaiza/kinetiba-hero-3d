@@ -43,7 +43,7 @@ const LAYER_COLORS = ["#8B3A3A", "#3A5A8B", "#3A8B5A"];
 // Ceramic material colors (pre-allocated to avoid re-creation per render)
 const SPECULAR_COLOR = new THREE.Color('#F5F0E8');
 const SHEEN_COLOR = new THREE.Color('#D4CFC4');
-const NORMAL_SCALE = new THREE.Vector2(0.3, 0.3);
+const NORMAL_SCALE = new THREE.Vector2(0.15, 0.15);
 
 // ============================================================
 // SCROLL PROGRESS HOOK

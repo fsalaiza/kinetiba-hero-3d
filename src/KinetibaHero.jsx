@@ -1396,7 +1396,7 @@ function ScrollSections({ scrollProgress }) {
           justifyContent: "center",
           padding: "0 clamp(48px, 8vw, 120px)",
           gap: "clamp(32px, 5vw, 80px)",
-          opacity: sectionOpacity(scrollProgress, 0.38, 0.52),
+          opacity: sectionOpacity(scrollProgress, 0.35, 0.55),
         }}
       >
         {/* Left: text content */}

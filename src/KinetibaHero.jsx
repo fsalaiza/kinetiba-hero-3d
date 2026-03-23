@@ -668,18 +668,27 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
-      // ERP — cube centers with energetic rotation
+      // ERP — cube moves left with fast rotation
       gsap.to(st, {
         targetScale: 1.3,
-        targetX: 0,
+        targetX: -3,
         targetExplode: 0,
-        targetRotSpeed: 0.35,
+        targetRotSpeed: 0.5,
         scrollTrigger: {
           trigger: sections[4],
           start: 'top bottom',
           end: 'center center',
           scrub: 1,
         },
+      });
+
+      // ERP — pin section for reading time
+      ScrollTrigger.create({
+        trigger: sections[4],
+        start: 'center center',
+        end: '+=220%',
+        pin: true,
+        pinSpacing: true,
       });
 
       // CTA — cube centers, dramatic explode

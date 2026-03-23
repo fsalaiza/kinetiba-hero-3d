@@ -654,7 +654,7 @@ function RubiksCube({ scrollRef }) {
         scrollTrigger: {
           trigger: sections[3],
           start: 'top bottom',
-          end: 'center center',
+          end: 'bottom center',
           scrub: 1,
         },
       });
@@ -1363,10 +1363,11 @@ function ScrollSections({ scrollProgress }) {
       <div
         style={{
           ...sectionStyle,
+          height: "150vh",
           justifyContent: "center",
           padding: "0 clamp(48px, 8vw, 120px)",
           gap: "clamp(32px, 5vw, 80px)",
-          opacity: sectionOpacity(scrollProgress, 0.58, 0.7),
+          opacity: sectionOpacity(scrollProgress, 0.56, 0.72),
         }}
       >
         {/* Left: text content */}
@@ -1559,7 +1560,7 @@ function ScrollSections({ scrollProgress }) {
           ...sectionStyle,
           justifyContent: "flex-end",
           padding: "0 clamp(48px, 8vw, 120px)",
-          opacity: sectionOpacity(scrollProgress, 0.7, 0.9),
+          opacity: sectionOpacity(scrollProgress, 0.73, 0.9),
         }}
       >
         <div style={{ maxWidth: 500 }}>

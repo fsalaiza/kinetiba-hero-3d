@@ -667,8 +667,8 @@ function RubiksCube({ scrollRef }) {
         targetFlatten: 0,
         scrollTrigger: {
           trigger: sections[3],
-          start: 'top 150%',
-          end: 'bottom center',
+          start: 'top 180%',
+          end: 'center center',
           scrub: 1,
         },
       });

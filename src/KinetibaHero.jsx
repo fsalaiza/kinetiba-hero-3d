@@ -925,7 +925,7 @@ const monoFont = "'SF Mono', 'Fira Code', 'Cascadia Code', monospace";
 
 const LOCATIONS = [
   { city: "CDMX — México", coords: "↕ 19.4326  · · ·  -99.1332" },
-  { city: "GDL — México", coords: "↕ 20.6597  · · ·  -103.3496" },
+  { city: "GDL — Guadalajara", coords: "↕ 20.6597  · · ·  -103.3496" },
 ];
 
 const GLITCH_CSS = `

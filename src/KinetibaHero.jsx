@@ -594,11 +594,13 @@ function RubiksCube({ scrollRef }) {
     targetScale: 1.0,
     targetRotSpeed: 0.10,
     targetExplode: 0,
+    targetFlatten: 0,
     // useFrame lerps these (actuals)
     cubeX: 0,
     cubeScale: 1.0,
     rotSpeed: 0.10,
     explode: 0,
+    flatten: 0,
   });
 
   // GSAP ScrollTrigger for cube 3D animation
@@ -612,6 +614,7 @@ function RubiksCube({ scrollRef }) {
       gsap.to(st, {
         targetScale: 2.0,
         targetRotSpeed: 0,
+        targetFlatten: 0.8,
         scrollTrigger: {
           trigger: sections[1],
           start: 'top bottom',
@@ -637,6 +640,7 @@ function RubiksCube({ scrollRef }) {
         targetX: 3,
         targetExplode: 0.2,
         targetRotSpeed: 0.1,
+        targetFlatten: 1.0,
         scrollTrigger: {
           trigger: sections[2],
           start: 'top 80%',
@@ -660,6 +664,7 @@ function RubiksCube({ scrollRef }) {
         targetX: -5.5,
         targetExplode: 0,
         targetRotSpeed: 0,
+        targetFlatten: 0,
         scrollTrigger: {
           trigger: sections[3],
           start: 'top bottom',
@@ -674,6 +679,7 @@ function RubiksCube({ scrollRef }) {
         targetX: -3,
         targetExplode: 0,
         targetRotSpeed: 0.5,
+        targetFlatten: 0,
         scrollTrigger: {
           trigger: sections[4],
           start: 'top bottom',
@@ -697,6 +703,7 @@ function RubiksCube({ scrollRef }) {
         targetX: 0,
         targetExplode: 0.7,
         targetRotSpeed: 0,
+        targetFlatten: 0,
         scrollTrigger: {
           trigger: sections[5],
           start: 'top bottom',
@@ -846,29 +853,32 @@ function RubiksCube({ scrollRef }) {
     st.cubeScale += (st.targetScale - st.cubeScale) * lf;
     st.rotSpeed += (st.targetRotSpeed - st.rotSpeed) * lf;
     st.explode += (st.targetExplode - st.explode) * lf;
+    st.flatten += (st.targetFlatten - st.flatten) * lf;
 
     // Apply
     outerRef.current.position.x = st.cubeX;
     const s = st.cubeScale;
     outerRef.current.scale.set(s, s, s);
 
-    rotYAccum.current += delta * st.rotSpeed;
+    const orbitalInfluence = Math.max(0.15, 1 - st.flatten * 1.5);
+    rotYAccum.current += delta * st.rotSpeed * orbitalInfluence;
     outerRef.current.rotation.y = rotYAccum.current;
     outerRef.current.rotation.x = Math.sin(clock.getElapsedTime() * 0.16) * 0.07;
     outerRef.current.rotation.z = Math.sin(clock.getElapsedTime() * 0.12) * 0.025;
 
-    // Explode
+    // Explode + Flatten
     explosionRef.current = st.explode;
     if (!isRotating.current) {
+      const effectiveExplode = st.explode * Math.max(0, 1 - st.flatten * 2);
       cubesRef.current.forEach((c) => {
         if (!c?.mesh) return;
         const { gx, gy, gz } = c.grid;
         const dir = new THREE.Vector3(gx, gy, gz);
         if (dir.length() > 0) dir.normalize();
         const target = new THREE.Vector3(
-          gx * CELL + dir.x * st.explode,
-          gy * CELL + dir.y * st.explode,
-          gz * CELL + dir.z * st.explode
+          gx * CELL + dir.x * effectiveExplode,
+          gy * CELL + gy * st.flatten * 0.8 + dir.y * effectiveExplode,
+          gz * CELL + dir.z * effectiveExplode
         );
         c.mesh.position.lerp(target, 0.08);
       });
@@ -1330,7 +1340,7 @@ function ScrollSections({ scrollProgress }) {
       <div style={{ height: "100vh" }} />
 
       {/* Section 1: Zoom In spacer */}
-      <div style={{ height: "40vh" }} />
+      <div style={{ height: "60vh" }} />
 
       {/* Section 2: Kinetiba BI */}
       <div

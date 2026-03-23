@@ -614,7 +614,7 @@ function RubiksCube({ scrollRef }) {
       gsap.to(st, {
         targetScale: 2.0,
         targetRotSpeed: 0,
-        targetFlatten: 0.8,
+        targetFlatten: 0.5,
         scrollTrigger: {
           trigger: sections[1],
           start: 'top bottom',
@@ -640,7 +640,7 @@ function RubiksCube({ scrollRef }) {
         targetX: 3,
         targetExplode: 0.2,
         targetRotSpeed: 0.1,
-        targetFlatten: 1.0,
+        targetFlatten: 0.7,
         scrollTrigger: {
           trigger: sections[2],
           start: 'top 80%',
@@ -877,7 +877,7 @@ function RubiksCube({ scrollRef }) {
         if (dir.length() > 0) dir.normalize();
         const target = new THREE.Vector3(
           gx * CELL + dir.x * effectiveExplode,
-          gy * CELL + gy * st.flatten * 0.35 + dir.y * effectiveExplode,
+          gy * CELL + gy * st.flatten * 0.15 + dir.y * effectiveExplode,
           gz * CELL + dir.z * effectiveExplode
         );
         c.mesh.position.lerp(target, 0.08);

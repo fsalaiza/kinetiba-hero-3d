@@ -610,7 +610,14 @@ function RubiksCube({ scrollRef }) {
     if (!sections.length) return;
 
     const ctx = gsap.context(() => {
-      // Zoom In — cube fills the screen
+      // ============================================================
+      // [S0] HERO — Idle rotation + face shuffles + glitch overlay
+      // ============================================================
+      // (default state — no ScrollTrigger needed, cube idles at origin)
+
+      // ============================================================
+      // [S1] ZOOM-IN — Scale up + flatten layers
+      // ============================================================
       gsap.to(st, {
         targetScale: 2.0,
         targetRotSpeed: 0,
@@ -634,7 +641,9 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
-      // BI — cube pulls back and moves right
+      // ============================================================
+      // [S2] BI — Cube right, text left, pinned
+      // ============================================================
       gsap.to(st, {
         targetScale: 1.3,
         targetX: 3,
@@ -658,7 +667,9 @@ function RubiksCube({ scrollRef }) {
         pinSpacing: true,
       });
 
-      // WhatsApp — cube moves far left, shrinks to highlight phone
+      // ============================================================
+      // [S3] WHATSAPP — Cube left, phone mockup right
+      // ============================================================
       gsap.to(st, {
         targetScale: 0.75,
         targetX: -5.5,
@@ -673,7 +684,9 @@ function RubiksCube({ scrollRef }) {
         },
       });
 
-      // ERP — cube moves left with fast rotation
+      // ============================================================
+      // [S4] ERP — Cube left, text right, pinned + fast shuffles
+      // ============================================================
       gsap.to(st, {
         targetScale: 1.5,
         targetX: -3,
@@ -697,7 +710,9 @@ function RubiksCube({ scrollRef }) {
         pinSpacing: true,
       });
 
-      // CTA — cube centers, dramatic explode
+      // ============================================================
+      // [S5] CTA — Cube centered, explode
+      // ============================================================
       gsap.to(st, {
         targetScale: 1.0,
         targetX: 0,
@@ -727,6 +742,7 @@ function RubiksCube({ scrollRef }) {
   }, []);
 
   // Rubik face rotation
+  // Active during [S0] HERO (< 0.02) and [S4] ERP (0.70–0.92)
   const doFaceRotation = useCallback(() => {
     const scrollProgress = scrollRef?.current || 0;
     if (scrollProgress > 0.02 && !(scrollProgress > 0.70 && scrollProgress < 0.92)) return;
@@ -1171,6 +1187,9 @@ function LocationGlitch() {
 }
 const sansFont = "'SF Pro Display', -apple-system, 'Helvetica Neue', sans-serif";
 
+// ============================================================
+// [S0] HERO — Idle rotation + face shuffles + glitch overlay
+// ============================================================
 function Overlay({ scrollProgress }) {
   return (
     <div
@@ -1336,13 +1355,19 @@ function ScrollSections({ scrollProgress }) {
         pointerEvents: "none",
       }}
     >
-      {/* Section 0: Hero spacer */}
+      {/* ============================================================ */}
+      {/* [S0] HERO — Idle rotation + face shuffles + glitch overlay  */}
+      {/* ============================================================ */}
       <div style={{ height: "100vh" }} />
 
-      {/* Section 1: Zoom In spacer */}
+      {/* ============================================================ */}
+      {/* [S1] ZOOM-IN — Scale up + flatten layers                     */}
+      {/* ============================================================ */}
       <div style={{ height: "120vh" }} />
 
-      {/* Section 2: Kinetiba BI */}
+      {/* ============================================================ */}
+      {/* [S2] BI — Cube right, text left, pinned                     */}
+      {/* ============================================================ */}
       <div
         style={{
           ...sectionStyle,
@@ -1399,7 +1424,9 @@ function ScrollSections({ scrollProgress }) {
         </div>
       </div>
 
-      {/* Section 3: WhatsApp */}
+      {/* ============================================================ */}
+      {/* [S3] WHATSAPP — Cube left, phone mockup right               */}
+      {/* ============================================================ */}
       <div
         style={{
           ...sectionStyle,
@@ -1593,7 +1620,9 @@ function ScrollSections({ scrollProgress }) {
         </div>
       </div>
 
-      {/* Section 4: Kineti-ERP */}
+      {/* ============================================================ */}
+      {/* [S4] ERP — Cube left, text right, pinned + fast shuffles    */}
+      {/* ============================================================ */}
       <div
         style={{
           ...sectionStyle,
@@ -1651,7 +1680,9 @@ function ScrollSections({ scrollProgress }) {
         </div>
       </div>
 
-      {/* Section 5: CTA Final (0.8–1.0) */}
+      {/* ============================================================ */}
+      {/* [S5] CTA — Cube centered, explode                           */}
+      {/* ============================================================ */}
       <div
         style={{
           ...sectionStyle,

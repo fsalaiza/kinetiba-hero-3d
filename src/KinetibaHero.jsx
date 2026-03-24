@@ -728,7 +728,7 @@ function RubiksCube({ scrollRef }) {
 
   // Rubik face rotation
   const doFaceRotation = useCallback(() => {
-    const scrollProgress = ScrollTrigger.getAll()[0]?.progress || 0;
+    const scrollProgress = scrollRef?.current || 0;
     if (scrollProgress > 0.02 && !(scrollProgress > 0.70 && scrollProgress < 0.92)) return;
     if (isRotating.current || !mainRef.current || !pivotRef.current) return;
     isRotating.current = true;

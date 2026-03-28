@@ -102,7 +102,11 @@ export default function WhatsAppSection({ scrollProgress, sectionStyle }) {
         opacity: sectionOpacity(scrollProgress, 0.35, 0.55),
       }}
     >
-      <div style={{ maxWidth: 400, flex: "0 1 400px" }}>
+      <div style={{
+        maxWidth: 400, flex: "0 1 400px",
+        transform: `translateY(${scrollProgress >= 0.35 && scrollProgress <= 0.55 ? (scrollProgress - 0.45) * -40 : 0}px)`,
+        transition: "transform 0.08s linear",
+      }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B9A6B" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />

@@ -8,6 +8,7 @@ import Overlay from "./overlay/Overlay";
 import ScrollSections from "./sections/ScrollSections";
 import FrameStepHUD from "./ui/FrameStepHUD";
 import HeroFallback from "./ui/HeroFallback";
+import ScrollProgressBar from "./ui/ScrollProgressBar";
 import { useScrollProgress } from "./utils/scrollHelpers";
 import useReducedMotion from "./utils/useReducedMotion";
 import useVisibility from "./utils/useVisibility";
@@ -48,6 +49,8 @@ function Root({ children, reducedMotion: reducedMotionProp }) {
   return (
     <HeroContext.Provider value={{ progress, progressRef, frameStepPx, reducedMotion, isMobile }}>
       <div style={{ minHeight: "100vh" }}>
+        {/* Global cursor styles */}
+        <style>{`button, a { cursor: pointer; }`}</style>
         {/* Skip link */}
         <a
           href="#scroll-container"
@@ -77,6 +80,28 @@ function Root({ children, reducedMotion: reducedMotionProp }) {
           background: "radial-gradient(ellipse at 50% 35%, #8a9684 0%, #7d8977 20%, #717e6e 42%, #667364 62%, #5c6a5b 80%, #535f52 100%)",
         }} />
         {children}
+        {/* Scroll progress bar — desktop only */}
+        <ScrollProgressBar scrollProgress={progress} />
+        {/* Watermark — desktop only */}
+        {!isMobile && (
+          <div
+            aria-hidden="true"
+            style={{
+              position: 'fixed',
+              bottom: 'clamp(12px, 2vw, 24px)',
+              right: 'clamp(12px, 2vw, 24px)',
+              color: 'rgba(230,230,220,0.12)',
+              fontSize: 10,
+              fontFamily: monoFont,
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              pointerEvents: 'none',
+              zIndex: 2,
+            }}
+          >
+            Kinetiba
+          </div>
+        )}
       </div>
     </HeroContext.Provider>
   );

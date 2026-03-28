@@ -12,7 +12,11 @@ export default function BiSection({ scrollProgress, sectionStyle }) {
         opacity: sectionOpacity(scrollProgress, 0.20, 0.38),
       }}
     >
-      <div style={{ maxWidth: 500 }}>
+      <div style={{
+        maxWidth: 500,
+        transform: `translateY(${scrollProgress >= 0.20 && scrollProgress <= 0.38 ? (scrollProgress - 0.29) * -40 : 0}px)`,
+        transition: "transform 0.08s linear",
+      }}>
         <h2 style={{
           color: "#eeeee4", fontSize: "clamp(28px, 4vw, 52px)",
           fontWeight: 800, fontFamily: sansFont,

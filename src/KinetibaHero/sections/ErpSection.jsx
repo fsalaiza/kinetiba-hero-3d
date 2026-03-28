@@ -13,7 +13,11 @@ export default function ErpSection({ scrollProgress, sectionStyle }) {
         opacity: sectionOpacity(scrollProgress, 0.52, 0.88),
       }}
     >
-      <div style={{ maxWidth: 500 }}>
+      <div style={{
+        maxWidth: 500,
+        transform: `translateY(${scrollProgress >= 0.52 && scrollProgress <= 0.88 ? (scrollProgress - 0.70) * -40 : 0}px)`,
+        transition: "transform 0.08s linear",
+      }}>
         <h2 style={{
           color: "#eeeee4", fontSize: "clamp(28px, 4vw, 52px)",
           fontWeight: 800, fontFamily: sansFont,

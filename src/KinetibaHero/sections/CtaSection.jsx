@@ -2,6 +2,32 @@ import React from "react";
 import { monoFont, sansFont } from "../utils/constants";
 import { sectionOpacity } from "../utils/scrollHelpers";
 
+const ctaStyleTag = `
+.kba-cta-button {
+  pointer-events: auto;
+  background: rgba(230,230,220,0.12);
+  border: 1.5px solid rgba(230,230,220,0.35);
+  border-radius: 6px;
+  padding: 14px 40px;
+  color: #eeeee4;
+  font-size: clamp(10px, 1.1vw, 13px);
+  font-family: ${monoFont};
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+.kba-cta-button:hover {
+  background: rgba(230,230,220,0.22);
+  border-color: rgba(230,230,220,0.55);
+  transform: translateY(-1px);
+}
+.kba-cta-button:active {
+  transform: translateY(0) scale(0.98);
+}
+`;
+
 export default function CtaSection({ scrollProgress, sectionStyle }) {
   return (
     <div
@@ -14,6 +40,7 @@ export default function CtaSection({ scrollProgress, sectionStyle }) {
         opacity: sectionOpacity(scrollProgress, 0.88, 1.0),
       }}
     >
+      <style>{ctaStyleTag}</style>
       <h2 style={{
         color: "#eeeee4", fontSize: "clamp(24px, 4vw, 52px)",
         fontWeight: 800, fontFamily: sansFont,
@@ -25,26 +52,8 @@ export default function CtaSection({ scrollProgress, sectionStyle }) {
         con datos?
       </h2>
       <button
+        className="kba-cta-button"
         aria-label="Solicitar demo de Kineti-BA por WhatsApp"
-        style={{
-          pointerEvents: "auto",
-          background: "rgba(230,230,220,0.12)",
-          border: "1.5px solid rgba(230,230,220,0.35)",
-          borderRadius: 6, padding: "14px 40px",
-          color: "#eeeee4", fontSize: "clamp(10px, 1.1vw, 13px)",
-          fontFamily: monoFont, letterSpacing: "0.15em",
-          textTransform: "uppercase", cursor: "pointer",
-          backdropFilter: "blur(6px)",
-          transition: "background 0.2s, border-color 0.2s",
-        }}
-        onMouseEnter={(e) => {
-          e.target.style.background = "rgba(230,230,220,0.22)";
-          e.target.style.borderColor = "rgba(230,230,220,0.55)";
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.background = "rgba(230,230,220,0.12)";
-          e.target.style.borderColor = "rgba(230,230,220,0.35)";
-        }}
       >
         Solicita tu demo &rsaquo;
       </button>

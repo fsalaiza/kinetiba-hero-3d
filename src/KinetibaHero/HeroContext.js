@@ -8,4 +8,8 @@ export function useHeroContext() {
   return ctx;
 }
 
+// Context shape:
+// { progress, progressRef, frameStepPx, reducedMotion, isMobile,
+//   debug, onCtaClick, cubeColor, accentColors }
+
 export default HeroContext;

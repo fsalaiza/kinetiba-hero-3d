@@ -22,7 +22,7 @@ const canvasDpr = Math.min(window.devicePixelRatio || 1, isMobile ? 1.5 : 2);
 
 // --- Compound sub-components ---
 
-function Root({ children, reducedMotion: reducedMotionProp }) {
+function Root({ children, reducedMotion: reducedMotionProp, debug, onCtaClick, cubeColor, accentColors }) {
   const { progress, progressRef } = useScrollProgress();
   const [frameStepPx, setFrameStepPx] = useState(8);
   const reducedMotion = useReducedMotion(reducedMotionProp);
@@ -47,7 +47,7 @@ function Root({ children, reducedMotion: reducedMotionProp }) {
   }, [frameStepPx]);
 
   return (
-    <HeroContext.Provider value={{ progress, progressRef, frameStepPx, reducedMotion, isMobile }}>
+    <HeroContext.Provider value={{ progress, progressRef, frameStepPx, reducedMotion, isMobile, debug, onCtaClick, cubeColor, accentColors }}>
       <div style={{ minHeight: "100vh" }}>
         {/* Global cursor styles */}
         <style>{`button, a { cursor: pointer; }`}</style>
@@ -147,20 +147,32 @@ function HeroOverlay() {
 }
 
 function HeroSections() {
-  const { progress, frameStepPx } = useHeroContext();
+  const { progress, frameStepPx, onCtaClick } = useHeroContext();
   return (
     <>
       <FrameStepHUD progress={progress} frameStepPx={frameStepPx} />
-      <ScrollSections scrollProgress={progress} />
+      <ScrollSections scrollProgress={progress} onCtaClick={onCtaClick} />
     </>
   );
 }
 
 // --- Default all-in-one component (backward compat) ---
 
-export default function KinetibaHero({ reducedMotion } = {}) {
+export default function KinetibaHero({
+  reducedMotion,
+  cubeColor = "#D4CFC4",
+  accentColors = ["#8B3A3A", "#3A5A8B", "#3A8B5A"],
+  debug = false,
+  onCtaClick,
+} = {}) {
   return (
-    <Root reducedMotion={reducedMotion}>
+    <Root
+      reducedMotion={reducedMotion}
+      cubeColor={cubeColor}
+      accentColors={accentColors}
+      debug={debug}
+      onCtaClick={onCtaClick}
+    >
       <HeroCanvas />
       <HeroOverlay />
       <HeroSections />

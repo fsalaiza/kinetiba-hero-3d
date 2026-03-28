@@ -28,7 +28,7 @@ const ctaStyleTag = `
 }
 `;
 
-export default function CtaSection({ scrollProgress, sectionStyle }) {
+export default function CtaSection({ scrollProgress, sectionStyle, onCtaClick }) {
   return (
     <div
       style={{
@@ -54,6 +54,13 @@ export default function CtaSection({ scrollProgress, sectionStyle }) {
       <button
         className="kba-cta-button"
         aria-label="Solicitar demo de Kineti-BA por WhatsApp"
+        onClick={() => {
+          if (onCtaClick) {
+            onCtaClick();
+          } else {
+            window.open('https://wa.me/5213331704724?text=Hola%2C%20me%20interesa%20Kinetiba', '_blank');
+          }
+        }}
       >
         Solicita tu demo &rsaquo;
       </button>

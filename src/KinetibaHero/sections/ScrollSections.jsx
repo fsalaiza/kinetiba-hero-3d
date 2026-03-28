@@ -11,7 +11,7 @@ const sectionStyle = {
   position: "relative",
 };
 
-export default function ScrollSections({ scrollProgress }) {
+export default function ScrollSections({ scrollProgress, onCtaClick }) {
   return (
     <div
       id="scroll-container"
@@ -37,7 +37,7 @@ export default function ScrollSections({ scrollProgress }) {
       <ErpSection scrollProgress={scrollProgress} sectionStyle={sectionStyle} />
 
       {/* [S5] CTA */}
-      <CtaSection scrollProgress={scrollProgress} sectionStyle={sectionStyle} />
+      <CtaSection scrollProgress={scrollProgress} sectionStyle={sectionStyle} onCtaClick={onCtaClick} />
     </div>
   );
 }

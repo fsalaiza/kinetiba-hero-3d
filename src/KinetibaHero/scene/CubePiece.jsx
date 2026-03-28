@@ -100,8 +100,8 @@ export default function CubePiece({ position, gx, gy, gz, isMobile }) {
           normalMap={ceramicNormalMap}
           normalScale={NORMAL_SCALE}
           metalness={0.0}
-          clearcoat={0.1}
-          clearcoatRoughness={0.4}
+          clearcoat={0.3}
+          clearcoatRoughness={0.25}
           ior={1.45}
           specularIntensity={0.4}
           specularColor={SPECULAR_COLOR}

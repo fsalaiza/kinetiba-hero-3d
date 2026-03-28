@@ -119,7 +119,7 @@ function HeroCanvas() {
           camera={{ position: [6.5, 4.5, 6.5], fov: 36, near: 0.1, far: 100 }}
           shadows
           dpr={canvasDpr}
-          gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 0.90 }}
+          gl={{ antialias: false, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 0.85 }}
           style={{ width: "100%", height: "100%" }}
           aria-label="Hero animado de Kineti-BA: cubo de datos empresariales que responde al scroll"
           role="img"

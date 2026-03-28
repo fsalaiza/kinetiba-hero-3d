@@ -8,12 +8,13 @@ import {
   Bloom,
   Vignette,
   N8AO,
+  SMAA,
 } from "@react-three/postprocessing";
 import RubiksCube from "./RubiksCube";
 
 export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile }) {
   const aoRadius = isMobile ? 0.15 : 0.25;
-  const aoIntensity = isMobile ? 1.5 : 3.0;
+  const aoIntensity = isMobile ? 1.5 : 2.0;
 
   return (
     <>
@@ -28,6 +29,8 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
       />
       <directionalLight position={[-6, 4, -4]} intensity={0.25} color="#d4e8d4" />
       <directionalLight position={[0, -4, 8]} intensity={0.25} color="#ffeedd" />
+      {/* D2C rim light — subtle backlight for edge separation */}
+      <directionalLight position={[0, 2, -8]} intensity={0.2} color="#e8e0d8" />
 
       <RubiksCube
         scrollRef={scrollRef}
@@ -54,7 +57,7 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
         <EffectComposer>
           <Bloom
             intensity={0.18}
-            luminanceThreshold={0.88}
+            luminanceThreshold={0.82}
             luminanceSmoothing={0.9}
             mipmapBlur
           />
@@ -64,6 +67,7 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
             distanceFalloff={0.3}
           />
           <Vignette offset={0.3} darkness={0.45} />
+          <SMAA />
         </EffectComposer>
       )}
     </>

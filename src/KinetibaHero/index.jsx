@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
+import HeroContext from "./HeroContext";
+import { useHeroContext } from "./HeroContext";
 import Scene from "./scene/Scene";
 import Overlay from "./overlay/Overlay";
 import ScrollSections from "./sections/ScrollSections";
 import FrameStepHUD from "./ui/FrameStepHUD";
 import { useScrollProgress } from "./utils/scrollHelpers";
 
-export default function KinetibaHero() {
+// --- Compound sub-components ---
+
+function Root({ children }) {
   const { progress, progressRef } = useScrollProgress();
   const [frameStepPx, setFrameStepPx] = useState(8);
 
@@ -16,72 +20,77 @@ export default function KinetibaHero() {
     const onKeyDown = (e) => {
       if (e.key === "]" || e.key === "[") {
         e.preventDefault();
-        const maxScroll =
-          document.documentElement.scrollHeight - window.innerHeight;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
         if (maxScroll <= 0) return;
         const dir = e.key === "]" ? 1 : -1;
-        const nextY = clamp(window.scrollY + dir * frameStepPx, 0, maxScroll);
-        window.scrollTo({ top: nextY, behavior: "auto" });
+        window.scrollTo({ top: clamp(window.scrollY + dir * frameStepPx, 0, maxScroll), behavior: "auto" });
         return;
       }
-
-      if (e.key === "=" || e.key === "+") {
-        e.preventDefault();
-        setFrameStepPx((prev) => Math.min(64, prev + 1));
-        return;
-      }
-
-      if (e.key === "-" || e.key === "_") {
-        e.preventDefault();
-        setFrameStepPx((prev) => Math.max(1, prev - 1));
-        return;
-      }
-
-      if (e.key === "0") {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "auto" });
-      }
+      if (e.key === "=" || e.key === "+") { e.preventDefault(); setFrameStepPx((p) => Math.min(64, p + 1)); return; }
+      if (e.key === "-" || e.key === "_") { e.preventDefault(); setFrameStepPx((p) => Math.max(1, p - 1)); return; }
+      if (e.key === "0") { e.preventDefault(); window.scrollTo({ top: 0, behavior: "auto" }); }
     };
-
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [frameStepPx]);
 
   return (
-    <div style={{ minHeight: "100vh" }}>
-      {/* Fixed background */}
-      <div
-        style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: 0,
-          background:
-            "radial-gradient(ellipse at 50% 35%, #8a9684 0%, #7d8977 20%, #717e6e 42%, #667364 62%, #5c6a5b 80%, #535f52 100%)",
-        }}
-      />
-
-      {/* Fixed 3D Canvas */}
-      <Canvas
-        camera={{ position: [6.5, 4.5, 6.5], fov: 36, near: 0.1, far: 100 }}
-        shadows
-        gl={{
-          antialias: true,
-          toneMapping: THREE.ACESFilmicToneMapping,
-          toneMappingExposure: 0.90,
-        }}
-        style={{ position: "fixed", inset: 0, zIndex: 1 }}
-      >
-        <Scene scrollRef={progressRef} />
-      </Canvas>
-
-      {/* Fixed hero overlay */}
-      <Overlay scrollProgress={progress} />
-
-      {/* Frame stepping HUD */}
-      <FrameStepHUD progress={progress} frameStepPx={frameStepPx} />
-
-      {/* Scrollable content sections */}
-      <ScrollSections scrollProgress={progress} />
-    </div>
+    <HeroContext.Provider value={{ progress, progressRef, frameStepPx }}>
+      <div style={{ minHeight: "100vh" }}>
+        {/* Fixed background */}
+        <div style={{
+          position: "fixed", inset: 0, zIndex: 0,
+          background: "radial-gradient(ellipse at 50% 35%, #8a9684 0%, #7d8977 20%, #717e6e 42%, #667364 62%, #5c6a5b 80%, #535f52 100%)",
+        }} />
+        {children}
+      </div>
+    </HeroContext.Provider>
   );
 }
+
+function HeroCanvas() {
+  const { progressRef } = useHeroContext();
+  return (
+    <Canvas
+      camera={{ position: [6.5, 4.5, 6.5], fov: 36, near: 0.1, far: 100 }}
+      shadows
+      gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 0.90 }}
+      style={{ position: "fixed", inset: 0, zIndex: 1 }}
+    >
+      <Scene scrollRef={progressRef} />
+    </Canvas>
+  );
+}
+
+function HeroOverlay() {
+  const { progress } = useHeroContext();
+  return <Overlay scrollProgress={progress} />;
+}
+
+function HeroSections() {
+  const { progress, frameStepPx } = useHeroContext();
+  return (
+    <>
+      <FrameStepHUD progress={progress} frameStepPx={frameStepPx} />
+      <ScrollSections scrollProgress={progress} />
+    </>
+  );
+}
+
+// --- Default all-in-one component (backward compat) ---
+
+export default function KinetibaHero() {
+  return (
+    <Root>
+      <HeroCanvas />
+      <HeroOverlay />
+      <HeroSections />
+    </Root>
+  );
+}
+
+// Attach compound sub-components
+KinetibaHero.Root = Root;
+KinetibaHero.Canvas = HeroCanvas;
+KinetibaHero.Overlay = HeroOverlay;
+KinetibaHero.Sections = HeroSections;

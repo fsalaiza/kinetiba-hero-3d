@@ -33,10 +33,10 @@ export default function BiSection({ scrollProgress, sectionStyle }) {
           Business Intelligence en tiempo real
         </p>
         {[
-          "996K transacciones procesadas",
-          "10 dashboards configurables",
-          "Alertas por WhatsApp",
-          "Desde $299 MXN/mes",
+          "Lectura en lenguaje natural (no SQL)",
+          "Alertas automáticas por WhatsApp",
+          "Conexión con tu ERP en 3 minutos",
+          "Desde $299 MXN/mes por empresa",
         ].map((item, i) => (
           <div key={i} style={{
             color: "#d4d4c8", fontSize: "clamp(10px, 1.1vw, 13px)",

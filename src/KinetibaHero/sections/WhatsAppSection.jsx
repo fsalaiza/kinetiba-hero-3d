@@ -21,7 +21,7 @@ function PhoneMockup() {
           display: "flex", alignItems: "center", justifyContent: "center",
           border: "1px solid rgba(255,255,255,0.08)",
         }}>
-          <span style={{ color: "#D4CFC4", fontSize: 13, fontWeight: 700, fontFamily: monoFont }}>K</span>
+          <span style={{ color: "#8B9A6B", fontSize: 13, fontWeight: 700, fontFamily: monoFont }}>K</span>
         </div>
         <div>
           <div style={{ color: "#D4CFC4", fontSize: 13, fontFamily: sansFont, fontWeight: 600 }}>Kinetiba Bot</div>
@@ -37,13 +37,13 @@ function PhoneMockup() {
         <UserBubble text="¿Cuánto vendimos este mes?" time="14:32" />
         <BotBubble
           label="Ventas marzo 2026:"
-          amount="$847,320" delta="↑ 12%" deltaColor="#8B9A6B"
+          amount="$847,320 MXN" delta="↑ 12%" deltaColor="#8B9A6B"
           detail="vs $756,536 feb · 4 sucursales" time="14:32"
         />
         <UserBubble text="¿Y la sucursal GDL?" time="14:33" />
         <BotBubble
           label="GDL · Marzo 2026"
-          amount="$312,480" delta="↓ 3%" deltaColor="#C4886B"
+          amount="$312,480 MXN" delta="↓ 3%" deltaColor="#C4886B"
           detail="37% del total · ticket prom $1,240" time="14:33"
         />
       </div>

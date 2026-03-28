@@ -48,6 +48,15 @@ export default function ErpSection({ scrollProgress, sectionStyle }) {
             → {item}
           </div>
         ))}
+        <div style={{
+          marginTop: 20,
+          color: "#8B8A80",
+          fontSize: "clamp(9px, 1vw, 11px)",
+          fontFamily: monoFont,
+          letterSpacing: "0.04em",
+        }}>
+          Compatible con: AdminPAQ, Alpha ERP
+        </div>
       </div>
     </div>
   );

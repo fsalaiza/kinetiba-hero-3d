@@ -49,8 +49,8 @@ function drawFrame(ctx, size, fg) {
   ctx.globalAlpha = 1;
 }
 
-export function createFaceTexture(gx, gy, gz, faceIdx) {
-  const size = 512;
+export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
+  const size = textureSize;
   const canvas = document.createElement("canvas");
   canvas.width = size;
   canvas.height = size;

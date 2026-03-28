@@ -2,7 +2,7 @@ import { useRef, useEffect, useCallback } from "react";
 import * as THREE from "three";
 import { CELL } from "../utils/constants";
 
-export default function useFaceRotation(scrollRef, mainRef, pivotRef, cubesRef) {
+export default function useFaceRotation(scrollRef, mainRef, pivotRef, cubesRef, reducedMotion) {
   const isRotating = useRef(false);
 
   const doFaceRotation = useCallback(() => {
@@ -96,6 +96,9 @@ export default function useFaceRotation(scrollRef, mainRef, pivotRef, cubesRef) 
   }, [scrollRef, mainRef, pivotRef, cubesRef]);
 
   useEffect(() => {
+    // When reduced motion is active, disable face rotation entirely
+    if (reducedMotion) return;
+
     let timer = null;
     let currentMs = 4000;
     const initial = setTimeout(doFaceRotation, 2200);
@@ -114,7 +117,7 @@ export default function useFaceRotation(scrollRef, mainRef, pivotRef, cubesRef) 
       clearTimeout(timer);
       clearTimeout(initial);
     };
-  }, [doFaceRotation, scrollRef]);
+  }, [doFaceRotation, scrollRef, reducedMotion]);
 
   return isRotating;
 }

@@ -7,7 +7,7 @@ import {
 import { createFaceTexture, generateRoughnessMap } from "../utils/generateTextures";
 import { generateCeramicNormalMap } from "../utils/generateNormalMap";
 
-export default function CubePiece({ position, gx, gy, gz }) {
+export default function CubePiece({ position, gx, gy, gz, isMobile }) {
   const { nodes } = useGLTF('/models/cube_piece.glb');
 
   const geometry = useMemo(() => {
@@ -26,14 +26,16 @@ export default function CubePiece({ position, gx, gy, gz }) {
     return generateCeramicNormalMap(512, seed);
   }, [gx, gy, gz]);
 
+  const texSize = isMobile ? 256 : 512;
+
   const decals = useMemo(() => {
     return FACE_DEFS
       .filter(({ check }) => check(gx, gy, gz))
       .map(({ axis, idx, pos, rot }) => ({
         axis, pos, rot,
-        texture: createFaceTexture(gx, gy, gz, idx),
+        texture: createFaceTexture(gx, gy, gz, idx, texSize),
       }));
-  }, [gx, gy, gz]);
+  }, [gx, gy, gz, texSize]);
 
   if (!geometry) return null;
 

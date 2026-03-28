@@ -4,7 +4,7 @@ import * as THREE from "three";
 import { CELL } from "../utils/constants";
 import { setupScrollTriggers } from "./scrollTriggers";
 
-export default function useScrollAnimation(outerRef, cubesRef, isRotating) {
+export default function useScrollAnimation(outerRef, cubesRef, isRotating, isVisible) {
   const rotYAccum = useRef(0);
   const explosionRef = useRef(0);
 
@@ -25,11 +25,15 @@ export default function useScrollAnimation(outerRef, cubesRef, isRotating) {
     const st = scrollState.current;
     const lf = 0.02;
 
+    // Always run lerps so there's no jump when scrolling back into view
     st.cubeX += (st.targetX - st.cubeX) * lf;
     st.cubeScale += (st.targetScale - st.cubeScale) * lf;
     st.rotSpeed += (st.targetRotSpeed - st.rotSpeed) * lf;
     st.explode += (st.targetExplode - st.explode) * lf;
     st.flatten += (st.targetFlatten - st.flatten) * lf;
+
+    // Skip expensive 3D transforms when not visible
+    if (isVisible && !isVisible.current) return;
 
     outerRef.current.position.x = st.cubeX;
     const s = st.cubeScale;

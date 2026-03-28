@@ -2,7 +2,7 @@ import React from "react";
 import { monoFont, sansFont } from "../utils/constants";
 import LocationGlitch from "./LocationGlitch";
 
-export default function Overlay({ scrollProgress }) {
+export default function Overlay({ scrollProgress, reducedMotion }) {
   return (
     <div
       id="hero-overlay"
@@ -57,7 +57,7 @@ export default function Overlay({ scrollProgress }) {
 
       {/* MID */}
       <div style={{ position: "relative" }}>
-        <LocationGlitch />
+        <LocationGlitch reducedMotion={reducedMotion} />
       </div>
 
       {/* BOTTOM */}

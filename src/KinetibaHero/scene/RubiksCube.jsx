@@ -5,14 +5,14 @@ import CubePiece from "./CubePiece";
 import useScrollAnimation from "./useScrollAnimation";
 import useFaceRotation from "./useFaceRotation";
 
-export default function RubiksCube({ scrollRef }) {
+export default function RubiksCube({ scrollRef, isVisible, reducedMotion, isMobile }) {
   const outerRef = useRef();
   const mainRef = useRef();
   const pivotRef = useRef();
   const cubesRef = useRef([]);
 
-  const isRotating = useFaceRotation(scrollRef, mainRef, pivotRef, cubesRef);
-  useScrollAnimation(outerRef, cubesRef, isRotating);
+  const isRotating = useFaceRotation(scrollRef, mainRef, pivotRef, cubesRef, reducedMotion);
+  useScrollAnimation(outerRef, cubesRef, isRotating, isVisible);
 
   const grid = useMemo(() => {
     const arr = [];
@@ -42,7 +42,7 @@ export default function RubiksCube({ scrollRef }) {
             ref={(el) => registerPiece(el, g)}
             position={[g.gx * CELL, g.gy * CELL, g.gz * CELL]}
           >
-            <CubePiece position={[0, 0, 0]} gx={g.gx} gy={g.gy} gz={g.gz} />
+            <CubePiece position={[0, 0, 0]} gx={g.gx} gy={g.gy} gz={g.gz} isMobile={isMobile} />
           </group>
         ))}
       </group>

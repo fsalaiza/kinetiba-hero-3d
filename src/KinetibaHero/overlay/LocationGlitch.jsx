@@ -45,7 +45,7 @@ function useScrambleText(target, active, duration = 450) {
   return display;
 }
 
-export default function LocationGlitch() {
+export default function LocationGlitch({ reducedMotion }) {
   const [idx, setIdx] = useState(0);
   const [glitching, setGlitching] = useState(false);
   const [resolving, setResolving] = useState(false);
@@ -73,6 +73,9 @@ export default function LocationGlitch() {
   }, []);
 
   useEffect(() => {
+    // When reduced motion is active, show static text — no glitch cycling
+    if (reducedMotion) return;
+
     const interval = setInterval(() => {
       setGlitching(true);
       setResolving(true);
@@ -83,9 +86,9 @@ export default function LocationGlitch() {
       }, 450);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [reducedMotion]);
 
-  const glitchClass = glitching ? 'loc-glitch-active' : '';
+  const glitchClass = (glitching && !reducedMotion) ? 'loc-glitch-active' : '';
   const noiseOverlay = glitching ? {
     position: 'absolute',
     inset: '-4px -8px',

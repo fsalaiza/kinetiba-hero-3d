@@ -11,7 +11,10 @@ import {
 } from "@react-three/postprocessing";
 import RubiksCube from "./RubiksCube";
 
-export default function Scene({ scrollRef }) {
+export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile }) {
+  const aoRadius = isMobile ? 0.15 : 0.25;
+  const aoIntensity = isMobile ? 1.5 : 3.0;
+
   return (
     <>
       <ambientLight intensity={0.45} color="#fff5e6" />
@@ -26,7 +29,12 @@ export default function Scene({ scrollRef }) {
       <directionalLight position={[-6, 4, -4]} intensity={0.25} color="#d4e8d4" />
       <directionalLight position={[0, -4, 8]} intensity={0.25} color="#ffeedd" />
 
-      <RubiksCube scrollRef={scrollRef} />
+      <RubiksCube
+        scrollRef={scrollRef}
+        isVisible={isVisible}
+        reducedMotion={reducedMotion}
+        isMobile={isMobile}
+      />
 
       <ContactShadows
         position={[0, -2.1, 0]}
@@ -38,20 +46,26 @@ export default function Scene({ scrollRef }) {
 
       <Environment files="/hdri/studio_small_09_1k.hdr" environmentIntensity={0.55} />
 
-      <EffectComposer>
-        <Bloom
-          intensity={0.18}
-          luminanceThreshold={0.88}
-          luminanceSmoothing={0.9}
-          mipmapBlur
-        />
-        <N8AO
-          aoRadius={0.25}
-          intensity={3.0}
-          distanceFalloff={0.3}
-        />
-        <Vignette offset={0.3} darkness={0.45} />
-      </EffectComposer>
+      {reducedMotion ? (
+        <EffectComposer>
+          <Vignette offset={0.3} darkness={0.45} />
+        </EffectComposer>
+      ) : (
+        <EffectComposer>
+          <Bloom
+            intensity={0.18}
+            luminanceThreshold={0.88}
+            luminanceSmoothing={0.9}
+            mipmapBlur
+          />
+          <N8AO
+            aoRadius={aoRadius}
+            intensity={aoIntensity}
+            distanceFalloff={0.3}
+          />
+          <Vignette offset={0.3} darkness={0.45} />
+        </EffectComposer>
+      )}
     </>
   );
 }

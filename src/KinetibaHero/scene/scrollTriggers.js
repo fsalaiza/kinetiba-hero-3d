@@ -8,6 +8,9 @@ export function setupScrollTriggers(scrollState) {
   const sections = document.querySelectorAll('#scroll-container > div');
   if (!sections.length) return null;
 
+  // Offset cube to the right in the hero so it doesn't block the headline
+  st.targetX = 2.0;
+
   return gsap.context(() => {
     // [S1] ZOOM-IN
     gsap.to(st, {

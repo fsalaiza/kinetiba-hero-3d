@@ -27,7 +27,10 @@ function Root({ children, reducedMotion: reducedMotionProp, debug, onCtaClick, c
   const [frameStepPx, setFrameStepPx] = useState(8);
   const reducedMotion = useReducedMotion(reducedMotionProp);
 
+  // Debug keyboard shortcuts — only in dev mode or with ?debug query param
+  const isDebug = import.meta.env.DEV || (typeof window !== 'undefined' && window.location.search.includes('debug'));
   useEffect(() => {
+    if (!isDebug) return;
     const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
     const onKeyDown = (e) => {
       if (e.key === "]" || e.key === "[") {
@@ -44,7 +47,7 @@ function Root({ children, reducedMotion: reducedMotionProp, debug, onCtaClick, c
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [frameStepPx]);
+  }, [frameStepPx, isDebug]);
 
   return (
     <HeroContext.Provider value={{ progress, progressRef, frameStepPx, reducedMotion, isMobile, debug, onCtaClick, cubeColor, accentColors }}>
@@ -117,7 +120,7 @@ function HeroCanvas() {
       <Suspense fallback={<HeroFallback />}>
         <Canvas
           camera={{ position: [6.5, 4.5, 6.5], fov: 36, near: 0.1, far: 100 }}
-          shadows
+          shadows={{ type: THREE.VSMShadowMap }}
           dpr={canvasDpr}
           gl={{ antialias: false, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 0.85 }}
           style={{ width: "100%", height: "100%" }}
@@ -142,15 +145,16 @@ function HeroCanvas() {
 }
 
 function HeroOverlay() {
-  const { progress, reducedMotion } = useHeroContext();
-  return <Overlay scrollProgress={progress} reducedMotion={reducedMotion} />;
+  const { progress, reducedMotion, onCtaClick } = useHeroContext();
+  return <Overlay scrollProgress={progress} reducedMotion={reducedMotion} onCtaClick={onCtaClick} />;
 }
 
 function HeroSections() {
   const { progress, frameStepPx, onCtaClick } = useHeroContext();
+  const showDebugHUD = import.meta.env.DEV || (typeof window !== 'undefined' && window.location.search.includes('debug'));
   return (
     <>
-      <FrameStepHUD progress={progress} frameStepPx={frameStepPx} />
+      {showDebugHUD && <FrameStepHUD progress={progress} frameStepPx={frameStepPx} />}
       <ScrollSections scrollProgress={progress} onCtaClick={onCtaClick} />
     </>
   );

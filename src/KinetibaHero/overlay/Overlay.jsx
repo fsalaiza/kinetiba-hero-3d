@@ -1,8 +1,35 @@
 import React from "react";
 import { monoFont, sansFont } from "../utils/constants";
-import LocationGlitch from "./LocationGlitch";
 
-export default function Overlay({ scrollProgress, reducedMotion }) {
+const heroCTAStyles = `
+.kba-hero-cta {
+  pointer-events: auto;
+  display: inline-block;
+  background: rgba(230,230,220,0.12);
+  border: 1.5px solid rgba(230,230,220,0.35);
+  border-radius: 6px;
+  padding: 14px 36px;
+  color: #eeeee4;
+  font-size: clamp(10px, 1.1vw, 13px);
+  font-family: ${monoFont};
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+.kba-hero-cta:hover {
+  background: rgba(230,230,220,0.22);
+  border-color: rgba(230,230,220,0.55);
+  transform: translateY(-1px);
+}
+.kba-hero-cta:active {
+  transform: translateY(0) scale(0.98);
+}
+`;
+
+export default function Overlay({ scrollProgress, reducedMotion, onCtaClick }) {
   return (
     <div
       id="hero-overlay"
@@ -17,6 +44,8 @@ export default function Overlay({ scrollProgress, reducedMotion }) {
         padding: "clamp(24px, 4vw, 50px)",
       }}
     >
+      <style>{heroCTAStyles}</style>
+
       {/* NAV */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -55,52 +84,73 @@ export default function Overlay({ scrollProgress, reducedMotion }) {
         </div>
       </div>
 
-      {/* MID */}
-      <div style={{ position: "relative" }}>
-        <LocationGlitch reducedMotion={reducedMotion} />
+      {/* HERO CONTENT — headline dominates, cube sits behind/beside */}
+      <div style={{
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        maxWidth: "55%",
+        gap: "clamp(16px, 2.5vw, 32px)",
+      }}>
+        <h1 style={{
+          color: "#eeeee4",
+          fontSize: "clamp(36px, 5.5vw, 72px)",
+          fontWeight: 800,
+          lineHeight: 0.95,
+          margin: 0,
+          letterSpacing: "-0.02em",
+          textTransform: "uppercase",
+          fontFamily: sansFont,
+        }}>
+          Tus datos.
+          <br />
+          Tu ventaja.
+        </h1>
+        <p style={{
+          color: "#c8c8bc",
+          fontSize: "clamp(10px, 1.05vw, 13px)",
+          fontFamily: monoFont,
+          lineHeight: 1.7,
+          letterSpacing: "0.04em",
+          textTransform: "uppercase",
+          maxWidth: 420,
+          margin: 0,
+        }}>
+          Business Intelligence y ERP diseñados para la PyME mexicana.
+          Datos en tiempo real para optimizar operaciones y crecer con impacto.
+        </p>
+        <a
+          className="kba-hero-cta"
+          href="https://wa.me/5213331704724?text=Hola%2C%20me%20interesa%20Kinetiba"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => {
+            if (onCtaClick) {
+              e.preventDefault();
+              onCtaClick();
+            }
+          }}
+        >
+          Solicita tu demo &rsaquo;
+        </a>
       </div>
 
-      {/* BOTTOM */}
-      <div>
-        <ul style={{ display: "flex", gap: 10, marginBottom: 20, listStyle: "none", padding: 0, margin: "0 0 20px 0" }} aria-label="Indicadores visuales">
-          {["⊞⊞⊞", "▦▦▦", "⫾⫿⫾"].map((icon, i) => (
-            <li key={i} style={{
-              border: "1px solid rgba(230,230,220,0.18)",
-              borderRadius: 4, padding: "5px 10px",
-              color: "#d4d4c8", fontSize: 10, fontFamily: monoFont,
-            }} aria-hidden="true">
-              {icon}
-            </li>
-          ))}
-        </ul>
+      {/* BOTTOM — scroll hint */}
+      <div style={{
+        display: "flex", alignItems: "center", gap: 0,
+        marginLeft: "calc(-1 * clamp(24px, 4vw, 50px))",
+        marginRight: "calc(-1 * clamp(24px, 4vw, 50px))",
+      }}>
+        <div style={{ flex: 1, height: 1, background: "linear-gradient(to right, rgba(230,230,220,0.18) 0%, rgba(230,230,220,0.18) 25%, rgba(230,230,220,0) 50%, rgba(230,230,220,0) 70%, rgba(230,230,220,0.1) 100%)" }} />
         <div style={{
-          display: "flex", justifyContent: "space-between",
-          alignItems: "flex-end", flexWrap: "wrap", gap: 24,
+          color: "#c4c4b8", fontSize: "clamp(9px, 1vw, 12px)",
+          fontFamily: monoFont, letterSpacing: "0.12em",
+          textTransform: "uppercase", paddingLeft: 20,
+          paddingRight: "clamp(24px, 4vw, 50px)", whiteSpace: "nowrap",
         }}>
-          <h1 style={{
-            color: "#eeeee4", fontSize: "clamp(28px, 5vw, 64px)",
-            fontWeight: 800, lineHeight: 0.95, margin: 0,
-            letterSpacing: "-0.02em", textTransform: "uppercase",
-            fontFamily: sansFont, maxWidth: "60%",
-          }}>
-            Tus datos.
-            <br />
-            Tu ventaja.
-          </h1>
-          <p style={{
-            color: "#c8c8bc", fontSize: "clamp(9px, 1vw, 12px)",
-            fontFamily: monoFont, lineHeight: 1.7,
-            letterSpacing: "0.04em", textTransform: "uppercase",
-            maxWidth: 380, margin: 0,
-          }}>
-            * Business Intelligence y ERP diseñados
-            <br />
-            para la PyME mexicana. A través de datos
-            <br />
-            en tiempo real, empoderamos negocios para
-            <br />
-            optimizar operaciones y crecer con impacto.
-          </p>
+          Scroll to discover ⌄
         </div>
       </div>
     </div>

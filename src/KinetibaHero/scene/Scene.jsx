@@ -50,11 +50,11 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
       <Environment files="/hdri/studio_small_09_1k.hdr" environmentIntensity={0.55} />
 
       {reducedMotion ? (
-        <EffectComposer>
+        <EffectComposer multisampling={0}>
           <Vignette offset={0.3} darkness={0.45} />
         </EffectComposer>
       ) : (
-        <EffectComposer>
+        <EffectComposer multisampling={0}>
           <Bloom
             intensity={0.18}
             luminanceThreshold={0.82}

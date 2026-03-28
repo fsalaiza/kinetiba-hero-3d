@@ -1,5 +1,7 @@
 import React, { useRef, useMemo, useCallback } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 import { CELL } from "../utils/constants";
 import CubePiece from "./CubePiece";
 import useScrollAnimation from "./useScrollAnimation";
@@ -13,6 +15,18 @@ export default function RubiksCube({ scrollRef, isVisible, reducedMotion, isMobi
 
   const isRotating = useFaceRotation(scrollRef, mainRef, pivotRef, cubesRef, reducedMotion);
   useScrollAnimation(outerRef, cubesRef, isRotating, isVisible);
+
+  // 6.2 — Idle float animation (breathing)
+  useFrame(({ clock }) => {
+    if (!outerRef.current) return;
+    const t = clock.getElapsedTime();
+    const isIdle = scrollRef.current < 0.05;
+    if (isIdle) {
+      outerRef.current.position.y = Math.sin(t * 0.5) * 0.04;
+    } else {
+      outerRef.current.position.y = THREE.MathUtils.lerp(outerRef.current.position.y, 0, 0.05);
+    }
+  });
 
   const grid = useMemo(() => {
     const arr = [];

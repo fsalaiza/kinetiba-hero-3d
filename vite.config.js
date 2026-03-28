@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/KinetibaHero/index.jsx'),
+      entry: resolve(__dirname, 'src/index.js'),
       name: 'KinetibaHero',
       fileName: 'kinetiba-hero',
     },
@@ -23,6 +23,7 @@ export default defineConfig({
         'gsap/ScrollTrigger',
       ],
       output: {
+        exports: 'named',
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',

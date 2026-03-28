@@ -108,7 +108,7 @@ export default function CubePiece({ position, gx, gy, gz, isMobile }) {
           sheen={0.05}
           sheenColor={SHEEN_COLOR}
           sheenRoughness={0.8}
-          envMapIntensity={0.55}
+          envMapIntensity={0.65}
         />
       </mesh>
       {decals.map(({ axis, pos, rot, texture }) => (

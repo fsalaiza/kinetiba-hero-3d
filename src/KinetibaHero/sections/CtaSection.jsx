@@ -25,6 +25,7 @@ export default function CtaSection({ scrollProgress, sectionStyle }) {
         con datos?
       </h2>
       <button
+        aria-label="Solicitar demo de Kineti-BA por WhatsApp"
         style={{
           pointerEvents: "auto",
           background: "rgba(230,230,220,0.12)",

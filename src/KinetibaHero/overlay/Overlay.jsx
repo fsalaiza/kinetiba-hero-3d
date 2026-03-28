@@ -62,17 +62,17 @@ export default function Overlay({ scrollProgress, reducedMotion }) {
 
       {/* BOTTOM */}
       <div>
-        <div style={{ display: "flex", gap: 10, marginBottom: 20 }}>
+        <ul style={{ display: "flex", gap: 10, marginBottom: 20, listStyle: "none", padding: 0, margin: "0 0 20px 0" }} aria-label="Indicadores visuales">
           {["⊞⊞⊞", "▦▦▦", "⫾⫿⫾"].map((icon, i) => (
-            <div key={i} style={{
+            <li key={i} style={{
               border: "1px solid rgba(230,230,220,0.18)",
               borderRadius: 4, padding: "5px 10px",
               color: "#d4d4c8", fontSize: 10, fontFamily: monoFont,
-            }}>
+            }} aria-hidden="true">
               {icon}
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
         <div style={{
           display: "flex", justifyContent: "space-between",
           alignItems: "flex-end", flexWrap: "wrap", gap: 24,

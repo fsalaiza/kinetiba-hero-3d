@@ -11,6 +11,7 @@ import HeroFallback from "./ui/HeroFallback";
 import { useScrollProgress } from "./utils/scrollHelpers";
 import useReducedMotion from "./utils/useReducedMotion";
 import useVisibility from "./utils/useVisibility";
+import { monoFont } from "./utils/constants";
 
 const isMobile = typeof navigator !== "undefined"
   ? /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
@@ -47,6 +48,29 @@ function Root({ children, reducedMotion: reducedMotionProp }) {
   return (
     <HeroContext.Provider value={{ progress, progressRef, frameStepPx, reducedMotion, isMobile }}>
       <div style={{ minHeight: "100vh" }}>
+        {/* Skip link */}
+        <a
+          href="#scroll-container"
+          style={{
+            position: 'fixed',
+            top: '-100%',
+            left: 0,
+            zIndex: 9999,
+            padding: '8px 16px',
+            background: '#535f52',
+            color: '#eeeee4',
+            fontFamily: monoFont,
+            fontSize: 12,
+            letterSpacing: '0.1em',
+            textDecoration: 'none',
+            borderRadius: '0 0 4px 0',
+            transition: 'top 0.2s',
+          }}
+          onFocus={(e) => { e.currentTarget.style.top = '0'; }}
+          onBlur={(e) => { e.currentTarget.style.top = '-100%'; }}
+        >
+          Saltar al contenido
+        </a>
         {/* Fixed background */}
         <div style={{
           position: "fixed", inset: 0, zIndex: 0,
@@ -72,6 +96,13 @@ function HeroCanvas() {
           dpr={canvasDpr}
           gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 0.90 }}
           style={{ width: "100%", height: "100%" }}
+          aria-label="Hero animado de Kineti-BA: cubo de datos empresariales que responde al scroll"
+          role="img"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'ArrowDown') window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+            if (e.key === 'ArrowUp') window.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+          }}
         >
           <Scene
             scrollRef={progressRef}

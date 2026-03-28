@@ -102,13 +102,14 @@ export default function LocationGlitch({ reducedMotion }) {
   return (
     <>
       <div style={{ position: 'relative' }}>
-        <div className={glitchClass} style={{
+        <p className={glitchClass} aria-label={`Ubicación: ${loc.city}`} style={{
           color: "#d4d4c8", fontSize: "clamp(9px, 1vw, 12px)",
           fontFamily: monoFont, letterSpacing: "0.15em",
           textTransform: "uppercase", marginBottom: 12,
+          margin: "0 0 12px 0",
         }}>
           {cityText}
-        </div>
+        </p>
         {noiseOverlay && <div style={noiseOverlay} />}
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: 0, marginLeft: "calc(-1 * clamp(24px, 4vw, 50px))", marginRight: "calc(-1 * clamp(24px, 4vw, 50px))" }}>

@@ -1,0 +1,57 @@
+import React from "react";
+import {
+  Environment,
+  ContactShadows,
+} from "@react-three/drei";
+import {
+  EffectComposer,
+  Bloom,
+  Vignette,
+  N8AO,
+} from "@react-three/postprocessing";
+import RubiksCube from "./RubiksCube";
+
+export default function Scene({ scrollRef }) {
+  return (
+    <>
+      <ambientLight intensity={0.45} color="#fff5e6" />
+      <directionalLight
+        position={[8, 12, 6]}
+        intensity={1.0}
+        color="#fff8ee"
+        castShadow
+        shadow-mapSize={[1024, 1024]}
+        shadow-bias={-0.002}
+      />
+      <directionalLight position={[-6, 4, -4]} intensity={0.25} color="#d4e8d4" />
+      <directionalLight position={[0, -4, 8]} intensity={0.25} color="#ffeedd" />
+
+      <RubiksCube scrollRef={scrollRef} />
+
+      <ContactShadows
+        position={[0, -2.1, 0]}
+        opacity={0.65}
+        scale={12}
+        blur={1.5}
+        far={3}
+      />
+
+      <Environment files="/hdri/studio_small_09_1k.hdr" environmentIntensity={0.55} />
+
+      <EffectComposer>
+        <Bloom
+          intensity={0.18}
+          luminanceThreshold={0.88}
+          luminanceSmoothing={0.9}
+          mipmapBlur
+        />
+        <N8AO
+          aoRadius={0.25}
+          intensity={3.0}
+          distanceFalloff={0.3}
+        />
+        <Vignette offset={0.3} darkness={0.45} />
+      </EffectComposer>
+    </>
+  );
+}

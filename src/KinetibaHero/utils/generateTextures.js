@@ -20,8 +20,8 @@ function drawFrame(ctx, size, fg) {
   const screwOff = size * 0.1;
 
   ctx.strokeStyle = fg;
-  ctx.lineWidth = 2.5;
-  ctx.globalAlpha = 0.3;
+  ctx.lineWidth = 3;
+  ctx.globalAlpha = 0.4;
   ctx.beginPath();
   ctx.moveTo(pad + rr, pad);
   ctx.lineTo(size - pad - rr, pad);
@@ -34,7 +34,7 @@ function drawFrame(ctx, size, fg) {
   ctx.quadraticCurveTo(pad, pad, pad + rr, pad);
   ctx.stroke();
 
-  ctx.globalAlpha = 0.3;
+  ctx.globalAlpha = 0.4;
   ctx.fillStyle = fg;
   [
     [screwOff, screwOff],
@@ -63,7 +63,7 @@ export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
   ctx.fillStyle = `rgb(${r},${g},${b})`;
   ctx.fillRect(0, 0, size, size);
 
-  ctx.globalAlpha = 0.04;
+  ctx.globalAlpha = 0.06;
   ctx.strokeStyle = `rgb(${r - 30},${g - 30},${b - 30})`;
   ctx.lineWidth = 0.5;
   for (let i = 0; i < size; i += 24) {
@@ -72,7 +72,7 @@ export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
   }
   ctx.globalAlpha = 1;
 
-  const fg = `rgb(${r - 40},${g - 40},${b - 40})`;
+  const fg = `rgb(${r - 55},${g - 55},${b - 55})`;
   drawFrame(ctx, size, fg);
 
   const shadowGrad = ctx.createLinearGradient(0, 0, 0, size * 0.15);
@@ -87,7 +87,7 @@ export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
   addGrain(ctx, size, size, 20);
 
   const tex = new THREE.CanvasTexture(canvas);
-  tex.anisotropy = 4;
+  tex.anisotropy = 8;
   return tex;
 }
 

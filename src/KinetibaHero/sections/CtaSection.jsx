@@ -37,7 +37,7 @@ export default function CtaSection({ scrollProgress, sectionStyle, onCtaClick })
         flexDirection: "column",
         textAlign: "center",
         gap: 28,
-        opacity: sectionOpacity(scrollProgress, 0.88, 1.0),
+        opacity: sectionOpacity(scrollProgress, 0.84, 1.0),
       }}
     >
       <style>{ctaStyleTag}</style>
@@ -51,6 +51,16 @@ export default function CtaSection({ scrollProgress, sectionStyle, onCtaClick })
         <br />
         con datos?
       </h2>
+      <div style={{
+        color: "#9A998F",
+        fontSize: "clamp(10px, 1vw, 13px)",
+        fontFamily: monoFont,
+        letterSpacing: "0.06em",
+        textAlign: "center",
+        marginTop: -8,
+      }}>
+        Setup en 3 min · Sin tarjeta de crédito · 300+ PyMEs en México
+      </div>
       <button
         className="kba-cta-button"
         aria-label="Solicitar demo de Kineti-BA por WhatsApp"

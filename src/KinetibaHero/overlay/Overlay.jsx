@@ -93,7 +93,20 @@ export default function Overlay({ scrollProgress, reducedMotion, onCtaClick }) {
         alignItems: "flex-start",
         maxWidth: "55%",
         gap: "clamp(16px, 2.5vw, 32px)",
+        position: "relative",
+        zIndex: 1,
       }}>
+        {/* Backdrop gradient para contraste del texto */}
+        <div
+          style={{
+            position: "absolute",
+            inset: "clamp(-24px, -3vw, -50px)",
+            background: "linear-gradient(to right, rgba(60,68,58,0.55) 0%, rgba(60,68,58,0.3) 50%, transparent 100%)",
+            borderRadius: "0 12px 12px 0",
+            zIndex: -1,
+            pointerEvents: "none",
+          }}
+        />
         <h1 style={{
           color: "#eeeee4",
           fontSize: "clamp(36px, 5.5vw, 72px)",

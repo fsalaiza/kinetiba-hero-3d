@@ -25,7 +25,7 @@ export default function ScrollSections({ scrollProgress, onCtaClick }) {
       <div style={{ height: "100vh" }} />
 
       {/* [S1] ZOOM-IN */}
-      <div style={{ height: "120vh" }} />
+      <div style={{ height: "60vh" }} />
 
       {/* [S2] BI */}
       <BiSection scrollProgress={scrollProgress} sectionStyle={sectionStyle} />

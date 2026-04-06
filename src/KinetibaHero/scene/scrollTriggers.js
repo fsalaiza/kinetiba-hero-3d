@@ -25,7 +25,7 @@ export function setupScrollTriggers(scrollState) {
     // [S2] BI
     gsap.to(st, {
       targetScale: 1.3, targetX: 3, targetExplode: 0.2, targetRotSpeed: 0.1, targetFlatten: 0.7,
-      scrollTrigger: { trigger: sections[2], start: 'top 150%', end: 'bottom center', scrub: 1 },
+      scrollTrigger: { trigger: sections[2], start: 'top 120%', end: 'bottom center', scrub: 1 },
     });
     ScrollTrigger.create({
       trigger: sections[2], start: 'center center', end: '+=150%', pin: true, pinSpacing: true,
@@ -34,7 +34,7 @@ export function setupScrollTriggers(scrollState) {
     // [S3] WHATSAPP
     gsap.to(st, {
       targetScale: 0.75, targetX: -5.5, targetExplode: 0, targetRotSpeed: 0, targetFlatten: 0,
-      scrollTrigger: { trigger: sections[3], start: 'top 180%', end: 'center center', scrub: 1 },
+      scrollTrigger: { trigger: sections[3], start: 'top 160%', end: 'center center', scrub: 1 },
     });
 
     // [S4] ERP

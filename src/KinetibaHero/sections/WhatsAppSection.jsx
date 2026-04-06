@@ -99,12 +99,12 @@ export default function WhatsAppSection({ scrollProgress, sectionStyle }) {
         justifyContent: "center",
         padding: "0 clamp(48px, 8vw, 120px)",
         gap: "clamp(32px, 5vw, 80px)",
-        opacity: sectionOpacity(scrollProgress, 0.35, 0.55),
+        opacity: sectionOpacity(scrollProgress, 0.32, 0.50),
       }}
     >
       <div style={{
         maxWidth: 400, flex: "0 1 400px",
-        transform: `translateY(${scrollProgress >= 0.35 && scrollProgress <= 0.55 ? (scrollProgress - 0.45) * -40 : 0}px)`,
+        transform: `translateY(${scrollProgress >= 0.32 && scrollProgress <= 0.50 ? (scrollProgress - 0.41) * -40 : 0}px)`,
         transition: "transform 0.08s linear",
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>

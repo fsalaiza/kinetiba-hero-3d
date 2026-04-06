@@ -1,20 +1,23 @@
 import React from "react";
 import { monoFont, sansFont } from "../utils/constants";
 import { sectionOpacity } from "../utils/scrollHelpers";
+import MiniDashboard from "./MiniDashboard";
 
 export default function BiSection({ scrollProgress, sectionStyle }) {
   return (
     <div
       style={{
         ...sectionStyle,
-        justifyContent: "flex-start",
+        justifyContent: "center",
         padding: "0 clamp(48px, 8vw, 120px)",
-        opacity: sectionOpacity(scrollProgress, 0.20, 0.38),
+        gap: "clamp(32px, 5vw, 72px)",
+        opacity: sectionOpacity(scrollProgress, 0.16, 0.34),
       }}
     >
+      {/* Left: text */}
       <div style={{
-        maxWidth: 500,
-        transform: `translateY(${scrollProgress >= 0.20 && scrollProgress <= 0.38 ? (scrollProgress - 0.29) * -40 : 0}px)`,
+        maxWidth: 400, flex: "0 1 400px",
+        transform: `translateY(${scrollProgress >= 0.16 && scrollProgress <= 0.34 ? (scrollProgress - 0.25) * -40 : 0}px)`,
         transition: "transform 0.08s linear",
       }}>
         <h2 style={{
@@ -47,6 +50,15 @@ export default function BiSection({ scrollProgress, sectionStyle }) {
             → {item}
           </div>
         ))}
+      </div>
+
+      {/* Right: Mini Dashboard visual */}
+      <div style={{
+        flex: "0 1 340px",
+        maxWidth: 340,
+        opacity: 0.9,
+      }}>
+        <MiniDashboard />
       </div>
     </div>
   );

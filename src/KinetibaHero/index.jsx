@@ -119,7 +119,7 @@ function HeroCanvas() {
     <div ref={canvasContainerRef} style={{ position: "fixed", inset: 0, zIndex: 1 }}>
       <Suspense fallback={<HeroFallback />}>
         <Canvas
-          camera={{ position: [6.5, 4.5, 6.5], fov: 36, near: 0.1, far: 100 }}
+          camera={{ position: [6.5, 4.5, 6.5], fov: 42, near: 0.1, far: 100 }}
           shadows={{ type: THREE.VSMShadowMap }}
           dpr={canvasDpr}
           gl={{ antialias: false, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 0.85 }}

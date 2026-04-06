@@ -1,6 +1,7 @@
 import React from "react";
 import { monoFont, sansFont } from "../utils/constants";
 import { sectionOpacity } from "../utils/scrollHelpers";
+import CfdiVisual from "./CfdiVisual";
 
 export default function ErpSection({ scrollProgress, sectionStyle }) {
   return (
@@ -8,14 +9,16 @@ export default function ErpSection({ scrollProgress, sectionStyle }) {
       style={{
         ...sectionStyle,
         height: "120vh",
-        justifyContent: "flex-end",
+        justifyContent: "center",
         padding: "0 clamp(48px, 8vw, 120px)",
-        opacity: sectionOpacity(scrollProgress, 0.52, 0.88),
+        gap: "clamp(32px, 5vw, 72px)",
+        opacity: sectionOpacity(scrollProgress, 0.48, 0.84),
       }}
     >
+      {/* Left: text */}
       <div style={{
-        maxWidth: 500,
-        transform: `translateY(${scrollProgress >= 0.52 && scrollProgress <= 0.88 ? (scrollProgress - 0.70) * -40 : 0}px)`,
+        maxWidth: 400, flex: "0 1 400px",
+        transform: `translateY(${scrollProgress >= 0.48 && scrollProgress <= 0.84 ? (scrollProgress - 0.66) * -40 : 0}px)`,
         transition: "transform 0.08s linear",
       }}>
         <h2 style={{
@@ -57,6 +60,15 @@ export default function ErpSection({ scrollProgress, sectionStyle }) {
         }}>
           Compatible con: AdminPAQ, Alpha ERP
         </div>
+      </div>
+
+      {/* Right: CFDI visual */}
+      <div style={{
+        flex: "0 1 300px",
+        maxWidth: 300,
+        opacity: 0.9,
+      }}>
+        <CfdiVisual />
       </div>
     </div>
   );

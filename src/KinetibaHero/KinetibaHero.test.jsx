@@ -26,6 +26,7 @@ vi.mock('@react-three/postprocessing', () => ({
   Bloom: () => null,
   Vignette: () => null,
   N8AO: () => null,
+  SMAA: () => null,
 }))
 vi.mock('gsap', () => {
   const gsap = {

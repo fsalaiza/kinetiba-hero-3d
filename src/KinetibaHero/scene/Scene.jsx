@@ -21,16 +21,16 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
       <ambientLight intensity={0.45} color="#fff5e6" />
       <directionalLight
         position={[8, 12, 6]}
-        intensity={1.0}
+        intensity={1.2}
         color="#fff8ee"
         castShadow
         shadow-mapSize={[1024, 1024]}
         shadow-bias={-0.002}
       />
-      <directionalLight position={[-6, 4, -4]} intensity={0.25} color="#d4e8d4" />
-      <directionalLight position={[0, -4, 8]} intensity={0.25} color="#ffeedd" />
+      <directionalLight position={[-6, 4, -4]} intensity={0.35} color="#d4e8d4" />
+      <directionalLight position={[0, -4, 8]} intensity={0.35} color="#ffeedd" />
       {/* D2C rim light — subtle backlight for edge separation */}
-      <directionalLight position={[0, 2, -8]} intensity={0.2} color="#e8e0d8" />
+      <directionalLight position={[0, 2, -8]} intensity={0.35} color="#e8e0d8" />
 
       <RubiksCube
         scrollRef={scrollRef}
@@ -47,7 +47,7 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
         far={3}
       />
 
-      <Environment files="/hdri/studio_small_09_1k.hdr" environmentIntensity={0.55} />
+      <Environment files="/hdri/studio_small_09_1k.hdr" environmentIntensity={0.75} />
 
       {reducedMotion ? (
         <EffectComposer multisampling={0}>
@@ -56,15 +56,15 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
       ) : (
         <EffectComposer multisampling={0}>
           <Bloom
-            intensity={0.18}
-            luminanceThreshold={0.82}
-            luminanceSmoothing={0.9}
+            intensity={0.32}
+            luminanceThreshold={0.72}
+            luminanceSmoothing={0.92}
             mipmapBlur
           />
           <N8AO
             aoRadius={aoRadius}
             intensity={aoIntensity}
-            distanceFalloff={0.3}
+            distanceFalloff={0.35}
           />
           <Vignette offset={0.3} darkness={0.45} />
           <SMAA />

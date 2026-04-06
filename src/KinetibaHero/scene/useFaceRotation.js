@@ -104,7 +104,7 @@ export default function useFaceRotation(scrollRef, mainRef, pivotRef, cubesRef, 
     const initial = setTimeout(doFaceRotation, 2200);
     const schedule = () => {
       const p = scrollRef?.current || 0;
-      const inERP = p > 0.70 && p < 0.92;
+      const inERP = p > 0.66 && p < 0.88;
       const desired = inERP ? 1200 : 4000;
       if (desired !== currentMs) currentMs = desired;
       timer = setTimeout(() => {

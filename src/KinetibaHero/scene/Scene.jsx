@@ -15,7 +15,7 @@ import RubiksCube from "./RubiksCube";
 import { getCameraOrbit } from "../utils/scrollHelpers";
 
 export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile }) {
-  const cameraTargetRef = useRef({ x: 6.5, y: 4.5, z: 6.5 });
+  const cameraTargetRef = useRef({ x: 0, y: 4.5, z: 6.5 });
   const aoRadius = isMobile ? 0.15 : 0.25;
   const aoIntensity = isMobile ? 1.5 : 2.0;
 

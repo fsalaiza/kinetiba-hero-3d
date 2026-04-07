@@ -8,8 +8,8 @@ export function setupScrollTriggers(scrollState) {
   const sections = document.querySelectorAll('#scroll-container > div');
   if (!sections.length) return null;
 
-  // Offset cube to the right in the hero so it doesn't block the headline
-  st.targetX = 2.0;
+  // Cube centered in the hero — protagonist layout
+  st.targetX = 0;
 
   return gsap.context(() => {
     // [S1] ZOOM-IN — cube zooms in, overlay fades
@@ -48,7 +48,7 @@ export function setupScrollTriggers(scrollState) {
 
     // [S5] CTA — cube centers, dramatic burst/explode, stops rotating
     gsap.to(st, {
-      targetScale: 1.0, targetX: 0, targetExplode: 1.8, targetRotSpeed: 0, targetFlatten: 0,
+      targetScale: 1.0, targetX: 0, targetExplode: 3.5, targetRotSpeed: 0, targetFlatten: 0,
       scrollTrigger: { trigger: sections[5], start: 'top bottom', end: 'bottom top', scrub: true },
     });
   });

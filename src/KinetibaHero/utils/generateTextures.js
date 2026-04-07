@@ -13,28 +13,12 @@ function addGrain(ctx, w, h, intensity = 8) {
   ctx.putImageData(imgData, 0, 0);
 }
 
-function drawFrame(ctx, size, fg) {
-  const pad = size * 0.06;
-  const rr = size * 0.05;
+function drawFrame(ctx, size, fg, alpha = 0.3) {
   const screwR = size * 0.02;
   const screwOff = size * 0.1;
 
-  ctx.strokeStyle = fg;
-  ctx.lineWidth = 3;
-  ctx.globalAlpha = 0.4;
-  ctx.beginPath();
-  ctx.moveTo(pad + rr, pad);
-  ctx.lineTo(size - pad - rr, pad);
-  ctx.quadraticCurveTo(size - pad, pad, size - pad, pad + rr);
-  ctx.lineTo(size - pad, size - pad - rr);
-  ctx.quadraticCurveTo(size - pad, size - pad, size - pad - rr, size - pad);
-  ctx.lineTo(pad + rr, size - pad);
-  ctx.quadraticCurveTo(pad, size - pad, pad, size - pad - rr);
-  ctx.lineTo(pad, pad + rr);
-  ctx.quadraticCurveTo(pad, pad, pad + rr, pad);
-  ctx.stroke();
-
-  ctx.globalAlpha = 0.4;
+  // Screw dots
+  ctx.globalAlpha = alpha;
   ctx.fillStyle = fg;
   [
     [screwOff, screwOff],
@@ -56,13 +40,51 @@ export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
   canvas.height = size;
   const ctx = canvas.getContext("2d");
 
-  // Darker base color for more contrast
+  // Cream/off-white base color (D2C style)
   const seed = (gx + 2) * 100 + (gy + 2) * 10 + (gz + 2) + faceIdx * 1000;
-  const r = 175 + ((seed * 7) % 12) - 6;
-  const g = 170 + ((seed * 11) % 12) - 6;
-  const b = 160 + ((seed * 13) % 10) - 5;
+  const r = 228 + ((seed * 7) % 12) - 6;
+  const g = 224 + ((seed * 11) % 12) - 6;
+  const b = 216 + ((seed * 13) % 10) - 5;
   ctx.fillStyle = `rgb(${r},${g},${b})`;
   ctx.fillRect(0, 0, size, size);
+
+  // Speckled/grainy texture (terrazo-like)
+  for (let i = 0; i < 3000; i++) {
+    const x = Math.random() * size;
+    const y = Math.random() * size;
+    const brightness = 180 + Math.random() * 40;
+    ctx.fillStyle = `rgba(${brightness},${brightness - 5},${brightness - 10},0.12)`;
+    ctx.fillRect(x, y, 1, 1);
+  }
+
+  // Colored edge/border (green, purple, blue, orange — D2C style)
+  const edgeColors = ['#8B9A6B', '#6B5A8B', '#5A7B8B', '#8B6B5A'];
+  const edgeIdx = ((gx + 1) * 3 + (gy + 1) * 5 + (gz + 1) * 7 + faceIdx) % edgeColors.length;
+  const edgeHex = edgeColors[edgeIdx];
+
+  // Convert hex to rgb for the border
+  const edgeR = parseInt(edgeHex.slice(1, 3), 16);
+  const edgeG = parseInt(edgeHex.slice(3, 5), 16);
+  const edgeB = parseInt(edgeHex.slice(5, 7), 16);
+
+  const pad = size * 0.06;
+  const rr = size * 0.05;
+  ctx.strokeStyle = `rgb(${edgeR},${edgeG},${edgeB})`;
+  ctx.lineWidth = 3;
+  ctx.globalAlpha = 0.3;
+  ctx.beginPath();
+  ctx.moveTo(pad + rr, pad);
+  ctx.lineTo(size - pad - rr, pad);
+  ctx.quadraticCurveTo(size - pad, pad, size - pad, pad + rr);
+  ctx.lineTo(size - pad, size - pad - rr);
+  ctx.quadraticCurveTo(size - pad, size - pad, size - pad - rr, size - pad);
+  ctx.lineTo(pad + rr, size - pad);
+  ctx.quadraticCurveTo(pad, size - pad, pad, size - pad - rr);
+  ctx.lineTo(pad, pad + rr);
+  ctx.quadraticCurveTo(pad, pad, pad + rr, pad);
+  ctx.closePath();
+  ctx.stroke();
+  ctx.globalAlpha = 1;
 
   // Subtle grid pattern
   ctx.globalAlpha = 0.08;
@@ -74,16 +96,22 @@ export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
   }
   ctx.globalAlpha = 1;
 
-  // Much darker, more visible frame
-  const fg = `rgb(${r - 70},${g - 70},${b - 70})`;
-  drawFrame(ctx, size, fg);
+  // Subtle frame/border on cream background — just the screw dots
+  const frameColor = `rgb(${r - 30},${g - 30},${b - 30})`;
+  drawFrame(ctx, size, frameColor, 0.2);
 
-  // Stronger inner shadow for depth
-  const shadowGrad = ctx.createLinearGradient(0, 0, 0, size * 0.2);
-  shadowGrad.addColorStop(0, 'rgba(0,0,0,0.2)');
-  shadowGrad.addColorStop(1, 'rgba(0,0,0,0)');
+  // Emboss inner shadow — subtle, top-left highlight, bottom-right shadow
+  const shadowGrad = ctx.createLinearGradient(0, 0, 0, size * 0.15);
+  shadowGrad.addColorStop(0, 'rgba(255,255,255,0.15)');
+  shadowGrad.addColorStop(1, 'rgba(255,255,255,0)');
   ctx.fillStyle = shadowGrad;
-  ctx.fillRect(size * 0.06, size * 0.06, size * 0.88, size * 0.4);
+  ctx.fillRect(size * 0.06, size * 0.06, size * 0.88, size * 0.3);
+
+  const shadowGrad2 = ctx.createLinearGradient(0, size * 0.7, 0, size);
+  shadowGrad2.addColorStop(0, 'rgba(0,0,0,0)');
+  shadowGrad2.addColorStop(1, 'rgba(0,0,0,0.06)');
+  ctx.fillStyle = shadowGrad2;
+  ctx.fillRect(size * 0.06, size * 0.7, size * 0.88, size * 0.24);
 
   const iconIdx = (Math.abs(gx * 7 + gy * 13 + gz * 19) + faceIdx * 3) % ICON_DRAWERS.length;
   ICON_DRAWERS[iconIdx](ctx, size);

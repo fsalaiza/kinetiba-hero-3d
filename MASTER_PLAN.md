@@ -607,6 +607,8 @@ Comparar con los frames de referencia de D2C:
 
 | Fecha | Fase | Cambios | Commit |
 |-------|------|---------|--------|
+| 2026-04-06 | FASE 1 | Cubo cream, iconos embossados, textura speckled, bordes, cámara dramática, explosión 3.5 | `96504aa` |
+| 2026-04-06 | FASE 1 fix | Bloom threshold 1.0, emissive quitado, reflejos reducidos (clearcoat, specular, sheen) | `45f761c` |
 | 2026-04-06 | A | Social proof, backdrop, FOV, scroll reducido, MiniDashboard, CfdiVisual, bloom, texturas | `7342470` |
 | 2026-04-06 | P | Pinning, scroll flow, material contrast | `c24685e` |
 | 2026-04-06 | D2C | Iluminación estudio, materiales oscuros, cámara orbital, burst, post-processing cinematográfico | `d2137c6` |

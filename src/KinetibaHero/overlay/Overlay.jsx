@@ -91,17 +91,17 @@ export default function Overlay({ scrollProgress, reducedMotion, onCtaClick }) {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "flex-start",
-        maxWidth: "55%",
+        maxWidth: "42%",
         gap: "clamp(16px, 2.5vw, 32px)",
         position: "relative",
         zIndex: 1,
       }}>
-        {/* Backdrop gradient para contraste del texto */}
+        {/* Backdrop gradient para contraste del texto — más sutil */}
         <div
           style={{
             position: "absolute",
             inset: "clamp(-24px, -3vw, -50px)",
-            background: "linear-gradient(to right, rgba(60,68,58,0.55) 0%, rgba(60,68,58,0.3) 50%, transparent 100%)",
+            background: "linear-gradient(to right, rgba(60,68,58,0.4) 0%, rgba(60,68,58,0.15) 50%, transparent 100%)",
             borderRadius: "0 12px 12px 0",
             zIndex: -1,
             pointerEvents: "none",

@@ -12,14 +12,14 @@ export function setupScrollTriggers(scrollState) {
   st.targetX = 0;
 
   return gsap.context(() => {
-    // [S1] ZOOM-IN — cube zooms in, overlay fades
+    // [S1] ZOOM-IN — cube zooms in, overlay fades fast
     gsap.to(st, {
       targetScale: 2.0, targetRotSpeed: 0, targetFlatten: 0.5,
       scrollTrigger: { trigger: sections[1], start: 'top bottom', end: 'center center', scrub: true },
     });
     gsap.to('#hero-overlay', {
       opacity: 0,
-      scrollTrigger: { trigger: sections[1], start: 'top bottom', end: 'top center', scrub: true },
+      scrollTrigger: { trigger: sections[1], start: 'top 80%', end: 'top 40%', scrub: true },
     });
 
     // [S2] BI — cube moves right, smaller, slight explode, pinned
@@ -46,10 +46,16 @@ export function setupScrollTriggers(scrollState) {
       trigger: sections[4], start: 'center center', end: '+=180%', pin: true, pinSpacing: false,
     });
 
-    // [S5] CTA — cube centers, dramatic burst/explode, stops rotating
+    // [S5] AGENTES — cube moves right, medium size
+    gsap.to(st, {
+      targetScale: 1.2, targetX: 3, targetExplode: 0, targetRotSpeed: 0.15, targetFlatten: 0,
+      scrollTrigger: { trigger: sections[5], start: 'top bottom', end: 'bottom top', scrub: true },
+    });
+
+    // [S6] CTA — cube centers, dramatic burst/explode, stops rotating
     gsap.to(st, {
       targetScale: 1.0, targetX: 0, targetExplode: 3.5, targetRotSpeed: 0, targetFlatten: 0,
-      scrollTrigger: { trigger: sections[5], start: 'top bottom', end: 'bottom top', scrub: true },
+      scrollTrigger: { trigger: sections[6], start: 'top bottom', end: 'bottom top', scrub: true },
     });
   });
 }

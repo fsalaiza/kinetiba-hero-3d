@@ -100,15 +100,15 @@ export default function CubePiece({ position, gx, gy, gz, isMobile }) {
           normalMap={ceramicNormalMap}
           normalScale={new THREE.Vector2(0.3, 0.3)}
           metalness={0.0}
-          clearcoat={0.08}
+          clearcoat={0.01}
           clearcoatRoughness={0.4}
           ior={1.52}
-          specularIntensity={0.2}
+          specularIntensity={0.05}
           specularColor={SPECULAR_COLOR}
-          sheen={0.15}
+          sheen={0.05}
           sheenColor={SHEEN_COLOR}
           sheenRoughness={0.6}
-          envMapIntensity={0.4}
+          envMapIntensity={0.1}
         />
       </mesh>
       {decals.map(({ axis, pos, rot, texture }) => (

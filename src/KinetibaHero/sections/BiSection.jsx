@@ -17,8 +17,8 @@ export default function BiSection({ scrollProgress, sectionStyle }) {
       {/* Left: text */}
       <div style={{
         maxWidth: 400, flex: "0 1 400px",
-        transform: `translateY(${scrollProgress >= 0.16 && scrollProgress <= 0.34 ? (scrollProgress - 0.25) * -40 : 0}px)`,
-        transition: "transform 0.08s linear",
+        transform: `translateY(${scrollProgress >= 0.15 && scrollProgress <= 0.34 ? (scrollProgress - 0.25) * -40 : 0}px)`,
+        transition: "transform 0.12s ease-out, opacity 0.3s ease",
       }}>
         <h2 style={{
           color: "#eeeee4", fontSize: "clamp(32px, 5vw, 64px)",

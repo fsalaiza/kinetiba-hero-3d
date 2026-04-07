@@ -16,12 +16,14 @@ const ctaStyleTag = `
   text-transform: uppercase;
   cursor: pointer;
   backdrop-filter: blur(6px);
-  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 0 rgba(139,154,107,0);
 }
 .kba-cta-button:hover {
   background: rgba(230,230,220,0.22);
   border-color: rgba(230,230,220,0.55);
   transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(139,154,107,0.2);
 }
 .kba-cta-button:active {
   transform: translateY(0) scale(0.98);

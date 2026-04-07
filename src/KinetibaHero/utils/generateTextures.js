@@ -1,40 +1,10 @@
 import * as THREE from "three";
 import { ICON_DRAWERS } from "./iconDrawers";
 
-function addGrain(ctx, w, h, intensity = 8) {
-  const imgData = ctx.getImageData(0, 0, w, h);
-  const d = imgData.data;
-  for (let i = 0; i < d.length; i += 4) {
-    const n = (Math.random() - 0.5) * intensity;
-    d[i] = Math.max(0, Math.min(255, d[i] + n));
-    d[i + 1] = Math.max(0, Math.min(255, d[i + 1] + n));
-    d[i + 2] = Math.max(0, Math.min(255, d[i + 2] + n));
-  }
-  ctx.putImageData(imgData, 0, 0);
-}
-
-function drawFrame(ctx, size, fg) {
-  const pad = size * 0.06;
-  const rr = size * 0.05;
+function drawFrame(ctx, size, fg, alpha = 0.3) {
   const screwR = size * 0.02;
   const screwOff = size * 0.1;
-
-  ctx.strokeStyle = fg;
-  ctx.lineWidth = 3;
-  ctx.globalAlpha = 0.4;
-  ctx.beginPath();
-  ctx.moveTo(pad + rr, pad);
-  ctx.lineTo(size - pad - rr, pad);
-  ctx.quadraticCurveTo(size - pad, pad, size - pad, pad + rr);
-  ctx.lineTo(size - pad, size - pad - rr);
-  ctx.quadraticCurveTo(size - pad, size - pad, size - pad - rr, size - pad);
-  ctx.lineTo(pad + rr, size - pad);
-  ctx.quadraticCurveTo(pad, size - pad, pad, size - pad - rr);
-  ctx.lineTo(pad, pad + rr);
-  ctx.quadraticCurveTo(pad, pad, pad + rr, pad);
-  ctx.stroke();
-
-  ctx.globalAlpha = 0.4;
+  ctx.globalAlpha = alpha;
   ctx.fillStyle = fg;
   [
     [screwOff, screwOff],
@@ -64,9 +34,45 @@ export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
   ctx.fillStyle = `rgb(${r},${g},${b})`;
   ctx.fillRect(0, 0, size, size);
 
+  // Speckled/grainy texture (terrazo-like)
+  for (let i = 0; i < 3000; i++) {
+    const x = Math.random() * size;
+    const y = Math.random() * size;
+    const brightness = 180 + Math.random() * 40;
+    ctx.fillStyle = `rgba(${brightness},${brightness - 5},${brightness - 10},0.12)`;
+    ctx.fillRect(x, y, 1, 1);
+  }
+
+  // Colored edge/border (green, purple, blue, orange)
+  const edgeColors = ['#8B9A6B', '#6B5A8B', '#5A7B8B', '#8B6B5A'];
+  const edgeIdx = ((gx + 1) * 3 + (gy + 1) * 5 + (gz + 1) * 7 + faceIdx) % edgeColors.length;
+  const edgeHex = edgeColors[edgeIdx];
+  const edgeR = parseInt(edgeHex.slice(1, 3), 16);
+  const edgeG = parseInt(edgeHex.slice(3, 5), 16);
+  const edgeB = parseInt(edgeHex.slice(5, 7), 16);
+
+  const pad = size * 0.06;
+  const rr = size * 0.05;
+  ctx.strokeStyle = `rgb(${edgeR},${edgeG},${edgeB})`;
+  ctx.lineWidth = 3;
+  ctx.globalAlpha = 0.3;
+  ctx.beginPath();
+  ctx.moveTo(pad + rr, pad);
+  ctx.lineTo(size - pad - rr, pad);
+  ctx.quadraticCurveTo(size - pad, pad, size - pad, pad + rr);
+  ctx.lineTo(size - pad, size - pad - rr);
+  ctx.quadraticCurveTo(size - pad, size - pad, size - pad - rr, size - pad);
+  ctx.lineTo(pad + rr, size - pad);
+  ctx.quadraticCurveTo(pad, size - pad, pad, size - pad - rr);
+  ctx.lineTo(pad, pad + rr);
+  ctx.quadraticCurveTo(pad, pad, pad + rr, pad);
+  ctx.closePath();
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+
   // Subtle grid pattern
   ctx.globalAlpha = 0.08;
-  ctx.strokeStyle = `rgb(${r - 25},${g - 25},${b - 25})`;
+  ctx.strokeStyle = `rgb(${r - 30},${g - 30},${b - 30})`;
   ctx.lineWidth = 0.5;
   for (let i = 0; i < size; i += 24) {
     ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, size); ctx.stroke();
@@ -74,21 +80,19 @@ export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
   }
   ctx.globalAlpha = 1;
 
-  // Much darker, more visible frame
-  const fg = `rgb(${r - 70},${g - 70},${b - 70})`;
-  drawFrame(ctx, size, fg);
+  // Screw dots
+  const frameColor = `rgb(${r - 30},${g - 30},${b - 30})`;
+  drawFrame(ctx, size, frameColor, 0.2);
 
-  // Stronger inner shadow for depth
-  const shadowGrad = ctx.createLinearGradient(0, 0, 0, size * 0.2);
-  shadowGrad.addColorStop(0, 'rgba(0,0,0,0.2)');
-  shadowGrad.addColorStop(1, 'rgba(0,0,0,0)');
+  // Emboss inner shadow
+  const shadowGrad = ctx.createLinearGradient(0, 0, 0, size * 0.15);
+  shadowGrad.addColorStop(0, 'rgba(255,255,255,0.15)');
+  shadowGrad.addColorStop(1, 'rgba(255,255,255,0)');
   ctx.fillStyle = shadowGrad;
-  ctx.fillRect(size * 0.06, size * 0.06, size * 0.88, size * 0.4);
+  ctx.fillRect(size * 0.06, size * 0.06, size * 0.88, size * 0.3);
 
   const iconIdx = (Math.abs(gx * 7 + gy * 13 + gz * 19) + faceIdx * 3) % ICON_DRAWERS.length;
   ICON_DRAWERS[iconIdx](ctx, size);
-
-  addGrain(ctx, size, size, 15);
 
   const tex = new THREE.CanvasTexture(canvas);
   tex.anisotropy = 8;

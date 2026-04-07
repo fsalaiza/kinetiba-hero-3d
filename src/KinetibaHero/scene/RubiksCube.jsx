@@ -48,7 +48,7 @@ export default function RubiksCube({ scrollRef, isVisible, reducedMotion, isMobi
   }, []);
 
   return (
-    <group ref={outerRef} scale={0.85}>
+    <group ref={outerRef} scale={1.2}>
       <group ref={mainRef}>
         {grid.map((g, i) => (
           <group

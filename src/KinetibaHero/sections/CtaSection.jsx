@@ -52,12 +52,12 @@ export default function CtaSection({ scrollProgress, sectionStyle, onCtaClick })
         con datos?
       </h2>
       <div style={{
-        color: "#9A998F",
-        fontSize: "clamp(10px, 1vw, 13px)",
+        color: "#b8b8ac",
+        fontSize: "clamp(11px, 1.1vw, 14px)",
         fontFamily: monoFont,
-        letterSpacing: "0.06em",
+        letterSpacing: "0.08em",
         textAlign: "center",
-        marginTop: -8,
+        marginTop: -4,
       }}>
         Setup en 3 min · Sin tarjeta de crédito · 300+ PyMEs en México
       </div>

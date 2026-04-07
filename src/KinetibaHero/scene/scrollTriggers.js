@@ -12,44 +12,44 @@ export function setupScrollTriggers(scrollState) {
   st.targetX = 2.0;
 
   return gsap.context(() => {
-    // [S1] ZOOM-IN
+    // [S1] ZOOM-IN — cube zooms in, overlay fades
     gsap.to(st, {
       targetScale: 2.0, targetRotSpeed: 0, targetFlatten: 0.5,
-      scrollTrigger: { trigger: sections[1], start: 'top bottom', end: 'center center', scrub: 1 },
+      scrollTrigger: { trigger: sections[1], start: 'top bottom', end: 'center center', scrub: true },
     });
     gsap.to('#hero-overlay', {
       opacity: 0,
-      scrollTrigger: { trigger: sections[1], start: 'top bottom', end: 'top center', scrub: 1 },
+      scrollTrigger: { trigger: sections[1], start: 'top bottom', end: 'top center', scrub: true },
     });
 
-    // [S2] BI
+    // [S2] BI — cube moves right, smaller, slight explode, pinned
     gsap.to(st, {
       targetScale: 1.3, targetX: 3, targetExplode: 0.2, targetRotSpeed: 0.1, targetFlatten: 0.7,
-      scrollTrigger: { trigger: sections[2], start: 'top 120%', end: 'bottom center', scrub: 1 },
+      scrollTrigger: { trigger: sections[2], start: 'top bottom', end: 'bottom top', scrub: true },
     });
     ScrollTrigger.create({
-      trigger: sections[2], start: 'center center', end: '+=150%', pin: true, pinSpacing: true,
+      trigger: sections[2], start: 'center center', end: '+=180%', pin: true, pinSpacing: false,
     });
 
-    // [S3] WHATSAPP
+    // [S3] WHATSAPP — cube moves left, smaller, no pin
     gsap.to(st, {
       targetScale: 0.75, targetX: -5.5, targetExplode: 0, targetRotSpeed: 0, targetFlatten: 0,
-      scrollTrigger: { trigger: sections[3], start: 'top 160%', end: 'center center', scrub: 1 },
+      scrollTrigger: { trigger: sections[3], start: 'top bottom', end: 'bottom top', scrub: true },
     });
 
-    // [S4] ERP
+    // [S4] ERP — cube center-right, larger, fast rotation, pinned
     gsap.to(st, {
       targetScale: 1.5, targetX: -3, targetExplode: 0, targetRotSpeed: 0.5, targetFlatten: 0,
-      scrollTrigger: { trigger: sections[4], start: 'top bottom', end: 'bottom center', scrub: 1 },
+      scrollTrigger: { trigger: sections[4], start: 'top bottom', end: 'bottom top', scrub: true },
     });
     ScrollTrigger.create({
-      trigger: sections[4], start: 'top 20%', end: '+=150%', pin: true, pinSpacing: true,
+      trigger: sections[4], start: 'center center', end: '+=180%', pin: true, pinSpacing: false,
     });
 
-    // [S5] CTA
+    // [S5] CTA — cube centers, explodes, stops rotating
     gsap.to(st, {
       targetScale: 1.0, targetX: 0, targetExplode: 0.7, targetRotSpeed: 0, targetFlatten: 0,
-      scrollTrigger: { trigger: sections[5], start: 'top bottom', end: 'center center', scrub: 1 },
+      scrollTrigger: { trigger: sections[5], start: 'top bottom', end: 'bottom top', scrub: true },
     });
   });
 }

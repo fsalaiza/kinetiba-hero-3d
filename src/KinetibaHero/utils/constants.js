@@ -14,7 +14,7 @@ export const LAYER_COLORS = ["#8B3A3A", "#3A5A8B", "#3A8B5A"];
 // Ceramic material colors (pre-allocated to avoid re-creation per render)
 export const SPECULAR_COLOR = new THREE.Color('#F5F0E8');
 export const SHEEN_COLOR = new THREE.Color('#E2DDD5');
-export const NORMAL_SCALE = new THREE.Vector2(0.15, 0.15);
+export const NORMAL_SCALE = new THREE.Vector2(0.25, 0.25);
 
 // Decal positioning
 export const DECAL_SIZE = PIECE_SIZE * 0.72;

@@ -19,7 +19,7 @@ export default function ErpSection({ scrollProgress, sectionStyle }) {
       <div style={{
         maxWidth: 400, flex: "0 1 400px",
         transform: `translateY(${scrollProgress >= 0.48 && scrollProgress <= 0.84 ? (scrollProgress - 0.66) * -40 : 0}px)`,
-        transition: "transform 0.12s ease-out, opacity 0.3s ease",
+        transition: "transform 0.08s linear",
       }}>
         <h2 style={{
           color: "#eeeee4", fontSize: "clamp(32px, 5vw, 64px)",

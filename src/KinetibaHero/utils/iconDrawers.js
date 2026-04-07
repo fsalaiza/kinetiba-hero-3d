@@ -1,8 +1,8 @@
 // Icon drawers — white embossed on cream face textures
 // Emboss effect: subtle shadow (down-right, alpha 0.12) + white icon (alpha 0.92)
 
-const SHADOW_COLOR = "rgba(0,0,0,0.12)";
-const ICON_COLOR = "rgba(255,255,255,0.92)";
+const SHADOW_COLOR = "rgba(0,0,0,0.18)";
+const ICON_COLOR = "rgba(255,255,255,0.95)";
 const SHADOW_OFFSET = 2;
 
 export function drawBars(ctx, s) {

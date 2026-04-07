@@ -26,11 +26,11 @@ export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
   canvas.height = size;
   const ctx = canvas.getContext("2d");
 
-  // Cream/off-white base color
+  // Warm off-white base color — slightly darker for contrast
   const seed = (gx + 2) * 100 + (gy + 2) * 10 + (gz + 2) + faceIdx * 1000;
-  const r = 228 + ((seed * 7) % 12) - 6;
-  const g = 224 + ((seed * 11) % 12) - 6;
-  const b = 216 + ((seed * 13) % 10) - 5;
+  const r = 210 + ((seed * 7) % 12) - 6;
+  const g = 206 + ((seed * 11) % 12) - 6;
+  const b = 196 + ((seed * 13) % 10) - 5;
   ctx.fillStyle = `rgb(${r},${g},${b})`;
   ctx.fillRect(0, 0, size, size);
 

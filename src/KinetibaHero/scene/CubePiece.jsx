@@ -92,7 +92,7 @@ export default function CubePiece({ position, gx, gy, gz, isMobile }) {
       >
         <meshPhysicalMaterial
           ref={matRef}
-          color="#E8E4D8"
+          color="#D4CFC4"
           emissive="#000000"
           emissiveIntensity={0}
           roughness={0.82}

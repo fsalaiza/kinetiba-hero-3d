@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import {
   Environment,
-  ContactShadows,
 } from "@react-three/drei";
 import {
   EffectComposer,
@@ -67,15 +66,6 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
       />
 
       {!reducedMotion && <Particles scrollRef={scrollRef} count={isMobile ? 100 : 200} reducedMotion={reducedMotion} />}
-
-      <ContactShadows
-        position={[0, -2.1, 0]}
-        opacity={0.4}
-        scale={12}
-        blur={2.5}
-        far={3}
-        color="#2a2a28"
-      />
 
       <Environment files="/hdri/studio_small_09_1k.hdr" environmentIntensity={0.75} />
 

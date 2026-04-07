@@ -31,9 +31,9 @@ export function setupScrollTriggers(scrollState) {
       trigger: sections[2], start: 'center center', end: '+=180%', pin: true, pinSpacing: false,
     });
 
-    // [S3] WHATSAPP — cube moves left, smaller, no pin
+    // [S3] WHATSAPP — cube moves left, smaller, unfold into flat grid
     gsap.to(st, {
-      targetScale: 0.75, targetX: -5.5, targetExplode: 0, targetRotSpeed: 0, targetFlatten: 0,
+      targetScale: 0.75, targetX: -5.5, targetExplode: 0, targetRotSpeed: 0, targetFlatten: 0.8,
       scrollTrigger: { trigger: sections[3], start: 'top bottom', end: 'bottom top', scrub: 0.5, ease: 'power2.inOut' },
     });
 

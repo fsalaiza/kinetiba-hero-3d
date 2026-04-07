@@ -48,16 +48,41 @@ export default function useScrollAnimation(outerRef, cubesRef, isRotating, isVis
     explosionRef.current = st.explode;
     if (!isRotating.current) {
       const effectiveExplode = st.explode * Math.max(0, 1 - st.flatten * 2);
+      const unfold = Math.max(0, (st.flatten - 0.5) / 0.5);
+
       cubesRef.current.forEach((c) => {
         if (!c?.mesh) return;
         const { gx, gy, gz } = c.grid;
         const dir = new THREE.Vector3(gx, gy, gz);
         if (dir.length() > 0) dir.normalize();
-        const target = new THREE.Vector3(
+
+        // Unfold: spread pieces into flat grid when flatten is high
+        const spread = 1.4;
+        let unfoldX, unfoldY;
+        if (gx === 0 && gz === 0) {
+          unfoldX = 0;
+          unfoldY = gy;
+        } else if (gx === 0) {
+          unfoldX = gz * spread;
+          unfoldY = 1 + gy * spread;
+        } else if (gz === 0) {
+          unfoldX = -gx * spread;
+          unfoldY = 1 + gy * spread;
+        } else {
+          unfoldX = gx > 0 ? 2 * spread : -2 * spread;
+          unfoldY = 1 + gy * spread;
+        }
+
+        const cubeTarget = new THREE.Vector3(
           gx * CELL + dir.x * effectiveExplode,
           gy * CELL + gy * st.flatten * 0.07 + dir.y * effectiveExplode,
           gz * CELL + dir.z * effectiveExplode
         );
+
+        const unfoldTarget = new THREE.Vector3(unfoldX, unfoldY, 0);
+        const target = new THREE.Vector3();
+        target.lerpVectors(cubeTarget, unfoldTarget, unfold);
+
         c.mesh.position.lerp(target, 0.08);
       });
     }

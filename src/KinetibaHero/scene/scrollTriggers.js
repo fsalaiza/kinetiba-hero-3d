@@ -46,10 +46,16 @@ export function setupScrollTriggers(scrollState) {
       trigger: sections[4], start: 'center center', end: '+=180%', pin: true, pinSpacing: false,
     });
 
-    // [S5] CTA — cube centers, dramatic burst/explode, stops rotating
+    // [S5] AGENTES — cube moves right, medium size
+    gsap.to(st, {
+      targetScale: 1.2, targetX: 3, targetExplode: 0, targetRotSpeed: 0.15, targetFlatten: 0,
+      scrollTrigger: { trigger: sections[5], start: 'top bottom', end: 'bottom top', scrub: true },
+    });
+
+    // [S6] CTA — cube centers, dramatic burst/explode, stops rotating
     gsap.to(st, {
       targetScale: 1.0, targetX: 0, targetExplode: 3.5, targetRotSpeed: 0, targetFlatten: 0,
-      scrollTrigger: { trigger: sections[5], start: 'top bottom', end: 'bottom top', scrub: true },
+      scrollTrigger: { trigger: sections[6], start: 'top bottom', end: 'bottom top', scrub: true },
     });
   });
 }

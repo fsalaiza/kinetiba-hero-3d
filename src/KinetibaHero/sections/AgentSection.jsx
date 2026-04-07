@@ -4,12 +4,8 @@ import { sectionOpacity } from "../utils/scrollHelpers";
 
 function NetworkVisual() {
   return (
-    <div style={{
-      width: 200, height: 200, position: "relative",
-      flex: "0 0 200px",
-    }}>
+    <div style={{ width: 200, height: 200, flex: "0 0 200px" }}>
       <svg width="200" height="200" viewBox="0 0 200 200">
-        {/* Nodes */}
         {[
           [100, 40], [50, 90], [150, 90], [80, 150], [130, 150],
         ].map(([cx, cy], i) => (
@@ -18,20 +14,13 @@ function NetworkVisual() {
             <circle cx={cx} cy={cy} r="2.5" fill="rgba(230,230,220,0.6)" />
           </g>
         ))}
-        {/* Connections */}
         {[
           [[100, 40], [50, 90]], [[100, 40], [150, 90]],
           [[50, 90], [80, 150]], [[150, 90], [130, 150]],
-          [[80, 150], [130, 150]], [[100, 40], [100, 100]],
+          [[80, 150], [130, 150]],
         ].map(([a, b], i) => (
-          <line
-            key={i}
-            x1={a[0]} y1={a[1]} x2={b[0]} y2={b[1]}
-            stroke="rgba(230,230,220,0.12)"
-            strokeWidth="1"
-          />
+          <line key={i} x1={a[0]} y1={a[1]} x2={b[0]} y2={b[1]} stroke="rgba(230,230,220,0.12)" strokeWidth="1" />
         ))}
-        {/* Central node */}
         <circle cx="100" cy="100" r="6" fill="rgba(230,230,220,0.2)" />
         <circle cx="100" cy="100" r="3.5" fill="rgba(230,230,220,0.7)" />
       </svg>
@@ -41,15 +30,13 @@ function NetworkVisual() {
 
 export default function AgentSection({ scrollProgress, sectionStyle }) {
   return (
-    <div
-      style={{
-        ...sectionStyle,
-        justifyContent: "center",
-        padding: "0 clamp(48px, 8vw, 120px)",
-        gap: "clamp(32px, 5vw, 72px)",
-        opacity: sectionOpacity(scrollProgress, 0.60, 0.82),
-      }}
-    >
+    <div style={{
+      ...sectionStyle,
+      justifyContent: "center",
+      padding: "0 clamp(48px, 8vw, 120px)",
+      gap: "clamp(32px, 5vw, 72px)",
+      opacity: sectionOpacity(scrollProgress, 0.60, 0.82),
+    }}>
       <div style={{
         maxWidth: 400, flex: "0 1 400px",
         transform: `translateY(${scrollProgress >= 0.60 && scrollProgress <= 0.82 ? (scrollProgress - 0.71) * -40 : 0}px)`,
@@ -60,9 +47,7 @@ export default function AgentSection({ scrollProgress, sectionStyle }) {
             <circle cx="12" cy="12" r="3" />
             <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
           </svg>
-          <span style={{ color: "#8B8A80", fontSize: 10, fontFamily: monoFont, letterSpacing: "0.3em", textTransform: "uppercase" }}>
-            Agentes
-          </span>
+          <span style={{ color: "#8B8A80", fontSize: 10, fontFamily: monoFont, letterSpacing: "0.3em", textTransform: "uppercase" }}>Agentes</span>
         </div>
         <h2 style={{
           color: "#eeeee4", fontSize: "clamp(32px, 5vw, 64px)",

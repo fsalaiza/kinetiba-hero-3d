@@ -83,8 +83,8 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
       ) : (
         <EffectComposer multisampling={0}>
           <Bloom
-            intensity={0.25}
-            luminanceThreshold={0.75}
+            intensity={0.15}
+            luminanceThreshold={0.9}
             luminanceSmoothing={0.92}
             mipmapBlur
           />

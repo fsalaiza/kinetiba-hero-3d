@@ -79,7 +79,7 @@ function Root({ children, reducedMotion: reducedMotionProp, debug, onCtaClick, c
           Saltar al contenido
         </a>
         {/* Fixed background */}
-        <div style={{
+        <div aria-hidden="true" style={{
           position: "fixed", inset: 0, zIndex: 0,
           background: "radial-gradient(ellipse at 50% 35%, #8a9684 0%, #7d8977 20%, #717e6e 42%, #667364 62%, #5c6a5b 80%, #535f52 100%)",
         }} />

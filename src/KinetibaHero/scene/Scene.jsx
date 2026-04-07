@@ -12,10 +12,11 @@ import {
   SMAA,
 } from "@react-three/postprocessing";
 import RubiksCube from "./RubiksCube";
+import Particles from "./Particles";
 import { getCameraOrbit } from "../utils/scrollHelpers";
 
 export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile }) {
-  const cameraTargetRef = useRef({ x: 6.5, y: 4.5, z: 6.5 });
+  const cameraTargetRef = useRef({ x: 0, y: 4.5, z: 6.5 });
   const aoRadius = isMobile ? 0.15 : 0.25;
   const aoIntensity = isMobile ? 1.5 : 2.0;
 
@@ -64,6 +65,8 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
         reducedMotion={reducedMotion}
         isMobile={isMobile}
       />
+
+      {!reducedMotion && <Particles scrollRef={scrollRef} count={isMobile ? 100 : 200} reducedMotion={reducedMotion} />}
 
       <ContactShadows
         position={[0, -2.1, 0]}

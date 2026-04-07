@@ -6,9 +6,7 @@ export default function Particles({ scrollRef, count = 200, reducedMotion }) {
   const meshRef = useRef();
   const velocities = useMemo(() => {
     const v = [];
-    for (let i = 0; i < count; i++) {
-      v.push(0.02 + Math.random() * 0.04);
-    }
+    for (let i = 0; i < count; i++) v.push(0.02 + Math.random() * 0.04);
     return v;
   }, [count]);
 
@@ -32,9 +30,7 @@ export default function Particles({ scrollRef, count = 200, reducedMotion }) {
 
     for (let i = 0; i < count; i++) {
       positions[i * 3 + 1] += velocities[i] * delta * 60;
-      if (positions[i * 3 + 1] > 8) {
-        positions[i * 3 + 1] = -8;
-      }
+      if (positions[i * 3 + 1] > 8) positions[i * 3 + 1] = -8;
     }
     meshRef.current.geometry.attributes.position.needsUpdate = true;
     meshRef.current.position.y = -parallaxY * 0.3;

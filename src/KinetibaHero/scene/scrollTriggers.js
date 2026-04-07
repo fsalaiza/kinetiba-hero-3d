@@ -24,7 +24,7 @@ export function setupScrollTriggers(scrollState) {
 
     // [S2] BI — cube moves right, smaller, slight explode, pinned
     gsap.to(st, {
-      targetScale: 1.3, targetX: 3, targetExplode: 0.2, targetRotSpeed: 0.1, targetFlatten: 0.7,
+      targetScale: 1.3, targetX: 3, targetExplode: 0.3, targetRotSpeed: 0.1, targetFlatten: 0.7,
       scrollTrigger: { trigger: sections[2], start: 'top bottom', end: 'bottom top', scrub: true },
     });
     ScrollTrigger.create({
@@ -46,9 +46,9 @@ export function setupScrollTriggers(scrollState) {
       trigger: sections[4], start: 'center center', end: '+=180%', pin: true, pinSpacing: false,
     });
 
-    // [S5] CTA — cube centers, explodes, stops rotating
+    // [S5] CTA — cube centers, dramatic burst/explode, stops rotating
     gsap.to(st, {
-      targetScale: 1.0, targetX: 0, targetExplode: 0.7, targetRotSpeed: 0, targetFlatten: 0,
+      targetScale: 1.0, targetX: 0, targetExplode: 1.8, targetRotSpeed: 0, targetFlatten: 0,
       scrollTrigger: { trigger: sections[5], start: 'top bottom', end: 'bottom top', scrub: true },
     });
   });

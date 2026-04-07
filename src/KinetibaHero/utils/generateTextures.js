@@ -56,15 +56,17 @@ export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
   canvas.height = size;
   const ctx = canvas.getContext("2d");
 
+  // Darker base color for more contrast
   const seed = (gx + 2) * 100 + (gy + 2) * 10 + (gz + 2) + faceIdx * 1000;
-  const r = 210 + ((seed * 7) % 10) - 5;
-  const g = 205 + ((seed * 11) % 10) - 5;
-  const b = 195 + ((seed * 13) % 8) - 4;
+  const r = 175 + ((seed * 7) % 12) - 6;
+  const g = 170 + ((seed * 11) % 12) - 6;
+  const b = 160 + ((seed * 13) % 10) - 5;
   ctx.fillStyle = `rgb(${r},${g},${b})`;
   ctx.fillRect(0, 0, size, size);
 
-  ctx.globalAlpha = 0.06;
-  ctx.strokeStyle = `rgb(${r - 30},${g - 30},${b - 30})`;
+  // Subtle grid pattern
+  ctx.globalAlpha = 0.08;
+  ctx.strokeStyle = `rgb(${r - 25},${g - 25},${b - 25})`;
   ctx.lineWidth = 0.5;
   for (let i = 0; i < size; i += 24) {
     ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, size); ctx.stroke();
@@ -72,19 +74,21 @@ export function createFaceTexture(gx, gy, gz, faceIdx, textureSize = 512) {
   }
   ctx.globalAlpha = 1;
 
-  const fg = `rgb(${r - 55},${g - 55},${b - 55})`;
+  // Much darker, more visible frame
+  const fg = `rgb(${r - 70},${g - 70},${b - 70})`;
   drawFrame(ctx, size, fg);
 
-  const shadowGrad = ctx.createLinearGradient(0, 0, 0, size * 0.15);
-  shadowGrad.addColorStop(0, 'rgba(0,0,0,0.12)');
+  // Stronger inner shadow for depth
+  const shadowGrad = ctx.createLinearGradient(0, 0, 0, size * 0.2);
+  shadowGrad.addColorStop(0, 'rgba(0,0,0,0.2)');
   shadowGrad.addColorStop(1, 'rgba(0,0,0,0)');
   ctx.fillStyle = shadowGrad;
-  ctx.fillRect(size * 0.06, size * 0.06, size * 0.88, size * 0.3);
+  ctx.fillRect(size * 0.06, size * 0.06, size * 0.88, size * 0.4);
 
   const iconIdx = (Math.abs(gx * 7 + gy * 13 + gz * 19) + faceIdx * 3) % ICON_DRAWERS.length;
   ICON_DRAWERS[iconIdx](ctx, size);
 
-  addGrain(ctx, size, size, 20);
+  addGrain(ctx, size, size, 15);
 
   const tex = new THREE.CanvasTexture(canvas);
   tex.anisotropy = 8;

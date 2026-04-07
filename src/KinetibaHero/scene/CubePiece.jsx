@@ -92,23 +92,23 @@ export default function CubePiece({ position, gx, gy, gz, isMobile }) {
       >
         <meshPhysicalMaterial
           ref={matRef}
-          color="#C8C3B8"
-          emissive="#C8C3B8"
+          color="#B8B3A8"
+          emissive="#B8B3A8"
           emissiveIntensity={0}
-          roughness={0.78}
+          roughness={0.82}
           roughnessMap={roughnessMap}
           normalMap={ceramicNormalMap}
-          normalScale={new THREE.Vector2(0.25, 0.25)}
+          normalScale={new THREE.Vector2(0.3, 0.3)}
           metalness={0.0}
-          clearcoat={0.15}
-          clearcoatRoughness={0.35}
-          ior={1.5}
-          specularIntensity={0.3}
+          clearcoat={0.08}
+          clearcoatRoughness={0.4}
+          ior={1.52}
+          specularIntensity={0.2}
           specularColor={SPECULAR_COLOR}
-          sheen={0.1}
+          sheen={0.15}
           sheenColor={SHEEN_COLOR}
-          sheenRoughness={0.7}
-          envMapIntensity={0.5}
+          sheenRoughness={0.6}
+          envMapIntensity={0.4}
         />
       </mesh>
       {decals.map(({ axis, pos, rot, texture }) => (

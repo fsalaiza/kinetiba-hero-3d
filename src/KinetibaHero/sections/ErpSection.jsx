@@ -22,24 +22,25 @@ export default function ErpSection({ scrollProgress, sectionStyle }) {
         transition: "transform 0.08s linear",
       }}>
         <h2 style={{
-          color: "#eeeee4", fontSize: "clamp(32px, 5vw, 64px)",
+          color: "#eeeee4", fontSize: "clamp(28px, 4vw, 52px)",
           fontWeight: 800, fontFamily: sansFont,
           letterSpacing: "-0.02em", textTransform: "uppercase",
-          margin: "0 0 16px 0", lineHeight: 1,
+          margin: "0 0 8px 0",
         }}>
-          Kineti<br />ERP
+          Kineti-ERP
         </h2>
         <p style={{
-          color: "#9A998F", fontSize: "clamp(11px, 1.1vw, 13px)",
-          fontFamily: monoFont, letterSpacing: "0.02em",
-          lineHeight: 1.6, margin: "0 0 24px 0",
+          color: "#c8c8bc", fontSize: "clamp(11px, 1.2vw, 14px)",
+          fontFamily: monoFont, letterSpacing: "0.06em",
+          margin: "0 0 24px 0",
         }}>
-          CFDI 4.0 integrado a tu operación. Sin doble captura.
+          Facturación CFDI 4.0 integrada
         </p>
         {[
-          "Multi-PAC integrado",
-          "Compatible AdminPAQ",
-          "100% validado SAT",
+          "Multi-PAC (Solución Factible, SW Sapien)",
+          "Compatible con AdminPAQ",
+          "100% validado vs SAT",
+          "Sellado local con CSD",
         ].map((item, i) => (
           <div key={i} style={{
             color: "#d4d4c8", fontSize: "clamp(10px, 1.1vw, 13px)",
@@ -50,6 +51,15 @@ export default function ErpSection({ scrollProgress, sectionStyle }) {
             → {item}
           </div>
         ))}
+        <div style={{
+          marginTop: 20,
+          color: "#8B8A80",
+          fontSize: "clamp(9px, 1vw, 11px)",
+          fontFamily: monoFont,
+          letterSpacing: "0.04em",
+        }}>
+          Compatible con: AdminPAQ, Alpha ERP
+        </div>
       </div>
 
       {/* Right: CFDI visual */}

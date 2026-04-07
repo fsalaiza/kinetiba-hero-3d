@@ -116,18 +116,18 @@ export default function WhatsAppSection({ scrollProgress, sectionStyle }) {
           </span>
         </div>
         <h2 style={{
-          color: "#eeeee4", fontSize: "clamp(32px, 5vw, 64px)",
+          color: "#eeeee4", fontSize: "clamp(24px, 3.5vw, 44px)",
           fontWeight: 800, fontFamily: sansFont,
-          letterSpacing: "-0.02em", lineHeight: 1, margin: "0 0 16px 0",
+          letterSpacing: "-0.02em", lineHeight: 1.05, margin: "0 0 16px 0",
         }}>
           Pregúntale<br />a tu negocio
         </h2>
         <p style={{
           color: "#9A998F", fontSize: "clamp(11px, 1.1vw, 13px)",
-          fontFamily: monoFont, lineHeight: 1.6,
+          fontFamily: monoFont, lineHeight: 1.7,
           letterSpacing: "0.02em", margin: "0 0 20px 0",
         }}>
-          Tu equipo pregunta por WhatsApp. Kinetiba responde con datos reales. Sin apps, sin dashboards.
+          Tu equipo pregunta por WhatsApp. Kinetiba responde con datos reales de tu operación. Sin apps, sin dashboards, sin capacitación.
         </p>
         {["→ Text-to-SQL", "→ Reportes semanales"].map((tag, i) => (
           <div key={i} style={{

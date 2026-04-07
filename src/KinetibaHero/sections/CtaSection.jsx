@@ -37,7 +37,7 @@ export default function CtaSection({ scrollProgress, sectionStyle, onCtaClick })
         flexDirection: "column",
         textAlign: "center",
         gap: 28,
-        opacity: sectionOpacity(scrollProgress, 0.86, 1.0),
+        opacity: sectionOpacity(scrollProgress, 0.84, 1.0),
       }}
     >
       <style>{ctaStyleTag}</style>

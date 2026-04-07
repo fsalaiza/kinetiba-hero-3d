@@ -1,9 +1,4 @@
-// Icon drawers — white embossed on cream face textures
-// Emboss effect: subtle shadow (down-right, alpha 0.12) + white icon (alpha 0.92)
-
-const SHADOW_COLOR = "rgba(0,0,0,0.12)";
-const ICON_COLOR = "rgba(255,255,255,0.92)";
-const SHADOW_OFFSET = 2;
+// Icon drawers — white/light on cream face textures
 
 export function drawBars(ctx, s) {
   const m = s * 0.18;
@@ -13,16 +8,16 @@ export function drawBars(ctx, s) {
   const total = heights.length * bw + (heights.length - 1) * gap;
   const startX = (s - total) / 2;
 
-  // Shadow
-  ctx.fillStyle = SHADOW_COLOR;
+  // Darker shadow for contrast
+  ctx.fillStyle = "rgba(0,0,0,0.35)";
   heights.forEach((h, i) => {
     const bh = h * (s - m * 2) * 0.8;
-    const x = startX + i * (bw + gap) + SHADOW_OFFSET;
-    const y = s - m - bh + SHADOW_OFFSET;
+    const x = startX + i * (bw + gap) + 2;
+    const y = s - m - bh + 2;
     ctx.beginPath(); ctx.roundRect(x, y, bw, bh, 3); ctx.fill();
   });
-  // Icon
-  ctx.fillStyle = ICON_COLOR;
+  // Brighter white for the bars
+  ctx.fillStyle = "rgba(255,255,255,0.95)";
   heights.forEach((h, i) => {
     const bh = h * (s - m * 2) * 0.8;
     const x = startX + i * (bw + gap);
@@ -36,43 +31,33 @@ export function drawLine(ctx, s) {
   const pts = [[0, 0.55], [0.22, 0.25], [0.45, 0.45], [0.68, 0.1], [1, 0.3]];
   const map = ([px, py], dx = 0, dy = 0) => [m + px * (s - m * 2) + dx, m + py * (s - m * 2) + dy];
 
-  // Shadow
   ctx.beginPath();
-  ctx.strokeStyle = SHADOW_COLOR; ctx.lineWidth = 7;
-  pts.forEach(([px, py], i) => { const [x, y] = map([px, py], SHADOW_OFFSET, SHADOW_OFFSET); i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y); });
+  ctx.strokeStyle = "rgba(0,0,0,0.35)"; ctx.lineWidth = 7;
+  pts.forEach(([px, py], i) => { const [x, y] = map([px, py], 2, 2); i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y); });
   ctx.stroke();
 
-  // Icon
   ctx.beginPath();
-  ctx.strokeStyle = ICON_COLOR; ctx.lineWidth = 6;
+  ctx.strokeStyle = "rgba(255,255,255,0.95)"; ctx.lineWidth = 6;
   ctx.lineJoin = "round"; ctx.lineCap = "round";
   pts.forEach(([px, py], i) => { const [x, y] = map([px, py]); i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y); });
   ctx.stroke();
 
-  ctx.fillStyle = ICON_COLOR;
+  ctx.fillStyle = "rgba(255,255,255,0.95)";
   pts.forEach(([px, py]) => { const [x, y] = map([px, py]); ctx.beginPath(); ctx.arc(x, y, 5.5, 0, Math.PI * 2); ctx.fill(); });
 }
 
 export function drawGauge(ctx, s) {
   const cx = s / 2, cy = s / 2, r = s * 0.28, val = 0.72;
-
-  // Shadow
-  ctx.globalAlpha = 0.12;
-  ctx.beginPath(); ctx.arc(cx + SHADOW_OFFSET, cy + SHADOW_OFFSET, r, 0, Math.PI * 2);
+  ctx.globalAlpha = 0.35;
+  ctx.beginPath(); ctx.arc(cx + 2, cy + 2, r, 0, Math.PI * 2);
   ctx.strokeStyle = "#000"; ctx.lineWidth = 14; ctx.stroke();
-
-  // Track
-  ctx.globalAlpha = 0.1;
+  ctx.globalAlpha = 0.15;
   ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2);
-  ctx.strokeStyle = "rgba(0,0,0,0.15)"; ctx.lineWidth = 14; ctx.stroke();
-
-  // Value arc
-  ctx.globalAlpha = 0.92;
+  ctx.strokeStyle = "rgba(255,255,255,0.3)"; ctx.lineWidth = 14; ctx.stroke();
+  ctx.globalAlpha = 0.95;
   ctx.beginPath(); ctx.arc(cx, cy, r, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * val);
-  ctx.strokeStyle = ICON_COLOR; ctx.lineWidth = 14; ctx.lineCap = "round"; ctx.stroke();
-
-  // Text
-  ctx.fillStyle = ICON_COLOR;
+  ctx.strokeStyle = "rgba(255,255,255,0.95)"; ctx.lineWidth = 14; ctx.lineCap = "round"; ctx.stroke();
+  ctx.fillStyle = "rgba(255,255,255,0.95)";
   ctx.font = `bold ${Math.floor(s * 0.14)}px monospace`;
   ctx.textAlign = "center"; ctx.textBaseline = "middle";
   ctx.fillText(Math.floor(val * 100) + "%", cx, cy);
@@ -92,8 +77,8 @@ export function drawGrid(ctx, s) {
       ctx.beginPath(); ctx.moveTo(x, m + dy); ctx.lineTo(x, m + gs + dy); ctx.stroke();
     }
   };
-  drawLines(SHADOW_COLOR, 4.5, SHADOW_OFFSET, SHADOW_OFFSET);
-  drawLines(ICON_COLOR, 3.8, 0, 0);
+  drawLines("rgba(0,0,0,0.35)", 4.5, 1.5, 1.5);
+  drawLines("rgba(255,255,255,0.95)", 3.8, 0, 0);
 }
 
 export function drawChevron(ctx, s) {
@@ -109,20 +94,19 @@ export function drawChevron(ctx, s) {
       ctx.stroke();
     }
   };
-  draw(SHADOW_COLOR, SHADOW_OFFSET, SHADOW_OFFSET);
-  draw(ICON_COLOR, 0, 0);
+  draw("rgba(0,0,0,0.35)", 2, 2);
+  draw("rgba(255,255,255,0.95)", 0, 0);
 }
 
 export function drawKPI(ctx, s) {
   const cx = s / 2, cy = s / 2;
   ctx.font = `bold ${Math.floor(s * 0.28)}px monospace`;
   ctx.textAlign = "center"; ctx.textBaseline = "middle";
-  ctx.globalAlpha = 0.12; ctx.fillStyle = "#000";
-  ctx.fillText("42", cx + SHADOW_OFFSET, cy - s * 0.03 + SHADOW_OFFSET);
-  ctx.globalAlpha = 0.92; ctx.fillStyle = ICON_COLOR;
+  ctx.globalAlpha = 0.35; ctx.fillStyle = "#000";
+  ctx.fillText("42", cx + 2, cy - s * 0.03 + 2);
+  ctx.globalAlpha = 0.95; ctx.fillStyle = "rgba(255,255,255,0.95)";
   ctx.fillText("42", cx, cy - s * 0.03);
   ctx.globalAlpha = 0.5; ctx.font = `${Math.floor(s * 0.08)}px monospace`;
-  ctx.fillStyle = ICON_COLOR;
   ctx.fillText("MRR", cx, cy + s * 0.17);
   ctx.globalAlpha = 1;
 }

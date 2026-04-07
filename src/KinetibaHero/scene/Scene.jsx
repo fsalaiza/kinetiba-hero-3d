@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import {
   Environment,
+  ContactShadows,
 } from "@react-three/drei";
 import {
   EffectComposer,
@@ -11,11 +12,10 @@ import {
   SMAA,
 } from "@react-three/postprocessing";
 import RubiksCube from "./RubiksCube";
-import Particles from "./Particles";
 import { getCameraOrbit } from "../utils/scrollHelpers";
 
 export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile }) {
-  const cameraTargetRef = useRef({ x: 0, y: 4.5, z: 6.5 });
+  const cameraTargetRef = useRef({ x: 6.5, y: 4.5, z: 6.5 });
   const aoRadius = isMobile ? 0.15 : 0.25;
   const aoIntensity = isMobile ? 1.5 : 2.0;
 
@@ -65,18 +65,14 @@ export default function Scene({ scrollRef, isVisible, reducedMotion, isMobile })
         isMobile={isMobile}
       />
 
-      {!reducedMotion && <Particles scrollRef={scrollRef} count={isMobile ? 100 : 200} reducedMotion={reducedMotion} />}
-
-      {/* Simple ground shadow — no visible plane */}
-      <mesh position={[0, -2.1, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-        <circleGeometry args={[3.5, 32]} />
-        <meshBasicMaterial
-          color="#000000"
-          transparent
-          opacity={0.2}
-          depthWrite={false}
-        />
-      </mesh>
+      <ContactShadows
+        position={[0, -2.1, 0]}
+        opacity={0.4}
+        scale={12}
+        blur={2.5}
+        far={3}
+        color="#2a2a28"
+      />
 
       <Environment files="/hdri/studio_small_09_1k.hdr" environmentIntensity={0.75} />
 

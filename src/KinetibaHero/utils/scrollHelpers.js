@@ -35,9 +35,12 @@ export function sectionOpacity(scrollProgress, sectionStart, sectionEnd) {
  * Returns { theta, phi, radius } for spherical camera positioning.
  */
 export function getCameraOrbit(scrollProgress) {
-  // D2C-style dramatic camera orbit with zoom and rotation
-  const theta = Math.PI * 0.25 + scrollProgress * Math.PI * 0.5;
-  const phi = Math.PI * 0.35 - Math.sin(scrollProgress * Math.PI) * 0.15;
-  const radius = 10 - scrollProgress * 4;
+  // D2C-style subtle camera orbit throughout the scroll
+  // Theta: horizontal orbit (left to right and back)
+  const theta = Math.PI * 0.25 + scrollProgress * Math.PI * 0.3;
+  // Phi: vertical orbit (slight up/down)
+  const phi = Math.PI * 0.35 - Math.sin(scrollProgress * Math.PI) * 0.1;
+  // Radius: slight zoom in/out
+  const radius = 9.5 - Math.sin(scrollProgress * Math.PI) * 0.8;
   return { theta, phi, radius };
 }

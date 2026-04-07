@@ -5,7 +5,6 @@ import HeroContext from "./HeroContext";
 import { useHeroContext } from "./HeroContext";
 import Scene from "./scene/Scene";
 import Overlay from "./overlay/Overlay";
-import SectionNav from "./overlay/SectionNav";
 import ScrollSections from "./sections/ScrollSections";
 import FrameStepHUD from "./ui/FrameStepHUD";
 import HeroFallback from "./ui/HeroFallback";
@@ -147,12 +146,7 @@ function HeroCanvas() {
 
 function HeroOverlay() {
   const { progress, reducedMotion, onCtaClick } = useHeroContext();
-  return (
-    <>
-      <Overlay scrollProgress={progress} reducedMotion={reducedMotion} onCtaClick={onCtaClick} />
-      <SectionNav scrollProgress={progress} />
-    </>
-  );
+  return <Overlay scrollProgress={progress} reducedMotion={reducedMotion} onCtaClick={onCtaClick} />;
 }
 
 function HeroSections() {

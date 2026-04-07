@@ -2,7 +2,6 @@ import React from "react";
 import BiSection from "./BiSection";
 import WhatsAppSection from "./WhatsAppSection";
 import ErpSection from "./ErpSection";
-import AgentSection from "./AgentSection";
 import CtaSection from "./CtaSection";
 
 const sectionStyle = {
@@ -37,10 +36,7 @@ export default function ScrollSections({ scrollProgress, onCtaClick }) {
       {/* [S4] ERP */}
       <ErpSection scrollProgress={scrollProgress} sectionStyle={sectionStyle} />
 
-      {/* [S5] AGENTES */}
-      <AgentSection scrollProgress={scrollProgress} sectionStyle={sectionStyle} />
-
-      {/* [S6] CTA */}
+      {/* [S5] CTA */}
       <CtaSection scrollProgress={scrollProgress} sectionStyle={sectionStyle} onCtaClick={onCtaClick} />
     </div>
   );

@@ -9,9 +9,9 @@ export default function useScrollAnimation(outerRef, cubesRef, isRotating, isVis
   const explosionRef = useRef(0);
 
   const scrollState = useRef({
-    targetX: 0, targetScale: 1.0, targetRotSpeed: 0.10,
+    targetX: 2.0, targetScale: 1.0, targetRotSpeed: 0.10,
     targetExplode: 0, targetFlatten: 0,
-    cubeX: 0, cubeScale: 1.0, rotSpeed: 0.10,
+    cubeX: 2.0, cubeScale: 1.0, rotSpeed: 0.10,
     explode: 0, flatten: 0,
   });
 

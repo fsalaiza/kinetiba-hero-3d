@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "main": "dist/kinetiba-hero.umd.cjs",
-  "module": "dist/kinetiba-hero.js",
+  "main": "dist-library/kinetiba-hero.umd.cjs",
+  "module": "dist-library/kinetiba-hero.js",
   "exports": {
     ".": {
-      "import": "./dist/kinetiba-hero.js",
-      "require": "./dist/kinetiba-hero.umd.cjs"
+      "import": "./dist-library/kinetiba-hero.js",
+      "require": "./dist-library/kinetiba-hero.umd.cjs"
     }
   },
   "files": [
-    "dist"
+    "dist-library"
   ],
   "devDependencies": {
     "@react-three/drei": "^10.7.7",
@@ -30,7 +30,7 @@
     "puppeteer": "^24.40.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "three": "^0.183.2",
+    "three": "0.185.1",
     "vite": "^8.0.3",
     "vitest": "^4.1.2"
   },
@@ -39,7 +39,16 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "build:lab": "vite build --config vite.research.config.js",
+    "preview:lab": "vite preview --config vite.research.config.js",
+    "build:library": "vite build --config vite.library.config.js",
+    "qa:scene": "node scripts/qa-kineti.mjs",
+    "precompress": "node scripts/precompress.mjs",
+    "serve": "node scripts/serve-dist.mjs",
+    "qa:regression": "node scripts/qa-premium-regression.mjs",
+    "qa:controls": "node scripts/qa-controls.mjs",
+    "qa:comparison": "node scripts/compare-renderers.mjs"
   },
   "peerDependencies": {
     "@react-three/drei": ">=9",
@@ -49,5 +58,11 @@
     "react": ">=18",
     "react-dom": ">=18",
     "three": ">=0.150"
+  },
+  "dependencies": {
+    "@babylonjs/core": "9.25.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "playcanvas": "2.22.0"
   }
 }

@@ -1,0 +1,150 @@
+{
+  "checks": [
+    {
+      "name": "actual-queue-wave-writes-are-uniform-only",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              0.96,
+              0.96
+            ],
+            "world": [
+              1.0368,
+              1.1368,
+              1.0368
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368,
+              -0.9368,
+              -1.0368
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.27,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 432,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 1,
+          "heroMatrixVersion": 2,
+          "instanceBytesUploaded": 131456,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "Own WGSL vertex shader; shared per-instance world centre; uniform-only changes; same displacement in shadow caster"
+          },
+          "postEffect": 0,
+          "exposure": 1.06,
+          "normals": "Per-instance inverse-transpose 3x3; normalized per fragment",
+          "alphaMode": "opaque",
+          "clearcoatRoughness": 0.26
+        },
+        "after": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              0.96,
+              0.96
+            ],
+            "world": [
+              1.0368,
+              1.1368,
+              1.0368
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368,
+              -0.9368,
+              -1.0368
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.27,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 432,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 1,
+          "heroMatrixVersion": 2,
+          "instanceBytesUploaded": 131456,
+          "gpuWave": {
+            "amplitude": 0.55,
+            "phase": 2,
+            "path": "Own WGSL vertex shader; shared per-instance world centre; uniform-only changes; same displacement in shadow caster"
+          },
+          "postEffect": 0,
+          "exposure": 1.06,
+          "normals": "Per-instance inverse-transpose 3x3; normalized per fragment",
+          "alphaMode": "opaque",
+          "clearcoatRoughness": 0.26
+        },
+        "writes": [
+          {
+            "label": "Scene uniforms / no per-instance wave uploads"
+          },
+          {
+            "label": "Optional RGB post strength"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize-and-restore",
+      "passed": true,
+      "evidence": {
+        "resized": {
+          "width": 980,
+          "height": 700,
+          "pixelRatio": 1
+        },
+        "restored": {
+          "width": 1440,
+          "height": 900,
+          "pixelRatio": 1
+        },
+        "instanceMatrixVersion": 3
+      }
+    },
+    {
+      "name": "dispose-stops-frames",
+      "passed": true,
+      "evidence": {
+        "beforeDispose": 21,
+        "afterDispose": 21
+      }
+    },
+    {
+      "name": "simulated-missing-navigator-gpu-is-explicit",
+      "passed": true,
+      "evidence": {
+        "error": "Error: WebGPU directo no está disponible: navigator.gpu ausente. Requiere navegador compatible y contexto seguro.",
+        "appCreated": false
+      }
+    }
+  ],
+  "errors": []
+}

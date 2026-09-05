@@ -1,0 +1,479 @@
+{
+  "errors": [],
+  "warnings": [
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127"
+  ],
+  "initial": {
+    "ready": true,
+    "engine": "WebGPU directo",
+    "version": "custom WGSL fixture v1",
+    "backend": "WebGPU",
+    "progress": 0,
+    "stage": "hero",
+    "referenceViewport": [
+      1440,
+      900
+    ],
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "pixelRatio": 1
+    },
+    "camera": {
+      "perspective": true,
+      "verticalFovDegrees": 37,
+      "positionZ": 10.535114493668699
+    },
+    "geometry": {
+      "cubies": 27,
+      "exteriorSymbols": 54,
+      "mosaicTiles": 432,
+      "mosaicSymbolInstances": 432,
+      "heroDrawBatches": 7,
+      "mosaicDrawBatches": 12,
+      "source": "Shared BufferGeometry authoring; uploaded to native GPU vertex/index buffers; no engine renderer"
+    },
+    "effects": {
+      "shadows": false,
+      "shadowMapSize": 1024,
+      "shadowFilter": "3x3 PCF plus hardware bilinear depth comparisons",
+      "customPostPasses": 0,
+      "bloom": false,
+      "ssao": false,
+      "antialiasing": "4x MSAA",
+      "toneMapping": "Own ACES fitted curve + explicit linear-to-sRGB",
+      "exposure": 1.06
+    },
+    "controls": {
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "rotation": [
+        0.3,
+        0.53,
+        -0.045
+      ],
+      "cameraFov": 37,
+      "roughness": 0.27,
+      "metalness": 0.08,
+      "clearcoat": 0.46,
+      "environmentIntensity": 0.68,
+      "keyIntensity": 3.8,
+      "exposure": 1.06,
+      "glyphColor": "#354330",
+      "shadows": false,
+      "postEffect": 0,
+      "waveAmplitude": 0,
+      "wavePhase": 0,
+      "density": 432
+    },
+    "probe": {
+      "selected": {
+        "index": 26,
+        "local": [
+          0.96,
+          0.96,
+          0.96
+        ],
+        "world": [
+          3.158031293306122,
+          0.9422770530002295,
+          0.6241609037174037
+        ]
+      },
+      "other": {
+        "index": 0,
+        "local": [
+          -0.96,
+          -0.96,
+          -0.96
+        ],
+        "world": [
+          0.24196870669387804,
+          -0.7422770530002295,
+          -0.6241609037174037
+        ]
+      },
+      "cameraFov": 37,
+      "material": {
+        "roughness": 0.27,
+        "metalness": 0.08,
+        "clearcoat": 0.46
+      },
+      "density": 432,
+      "shadowEnabled": false,
+      "instanceMatrixVersion": 1,
+      "heroMatrixVersion": 1,
+      "instanceBytesUploaded": 121088,
+      "gpuWave": {
+        "amplitude": 0,
+        "phase": 0,
+        "path": "Own WGSL vertex shader; shared per-instance world centre; uniform-only changes; same displacement in shadow caster"
+      },
+      "postEffect": 0,
+      "exposure": 1.06,
+      "normals": "Per-instance inverse-transpose 3x3; normalized per fragment",
+      "alphaMode": "opaque",
+      "clearcoatRoughness": 0.26
+    },
+    "environment": {
+      "url": "/hdri/studio_small_09_1k.hdr",
+      "status": "loaded",
+      "width": 1024,
+      "height": 512,
+      "mipLevels": 11,
+      "specular": "Native WGSL GGX importance sampling, 128 samples per texel per roughness mip; analytic split-sum BRDF",
+      "diffuse": "9 RGB spherical harmonics, HDR sample stride 4, solid-angle weighted Lambert convolution"
+    },
+    "environmentLoaded": true,
+    "rawControl": {
+      "device": "GPUDevice returned by API",
+      "commandEncoding": "Explicit native render and compute passes",
+      "shaderLanguage": "WGSL",
+      "bindGroupLayouts": "Explicit",
+      "normalMatrices": "CPU inverse-transpose per instance",
+      "alphaMode": "opaque scene; independent alpha blending measured by runRawControlProbe",
+      "optionalTimestampQuery": true,
+      "features": [
+        "core-features-and-limits",
+        "timestamp-query"
+      ],
+      "limits": {
+        "maxTextureDimension2D": 8192,
+        "maxColorAttachments": 8,
+        "maxVertexAttributes": 16,
+        "maxComputeInvocationsPerWorkgroup": 256
+      },
+      "adapter": {
+        "vendor": "nvidia",
+        "architecture": "blackwell",
+        "device": "",
+        "description": ""
+      }
+    },
+    "frames": 12,
+    "frameNumber": 12,
+    "frame": {
+      "drawCalls": 7,
+      "submittedTriangles": 128244,
+      "sceneDrawCalls": 7,
+      "shadowDrawCalls": 0,
+      "postDrawCalls": 0,
+      "cpuEncodeSubmitMs": 0.20000000298023224
+    },
+    "drawCalls": 7,
+    "triangles": 128244,
+    "errors": [],
+    "missingFeatures": [],
+    "timing": {
+      "samples": 11,
+      "averageFrameMs": 31.227272727272727,
+      "fps": 32.02328966521107,
+      "p95FrameMs": 31.800000000000068,
+      "gpuFrameMs": null,
+      "method": "Latest 240 requestAnimationFrame intervals, including browser scheduling. cpuEncodeSubmitMs is CPU encoding/submission time, not GPU time."
+    },
+    "comparisonLimits": "Shared meshes, pose, camera, counts and control values; custom GGX, HDR integration and tone mapping differ from Three/Babylon/PlayCanvas. This is a functional rendering prototype, not identical pixels or an isolated speed benchmark."
+  },
+  "compute": {
+    "supported": true,
+    "passed": true,
+    "backend": "WebGPU",
+    "path": "Raw GPUDevice + own WGSL compute + dispatchWorkgroups + copyBufferToBuffer + mapAsync; no engine and no CPU evaluation",
+    "count": 64,
+    "values": [
+      7,
+      10,
+      13,
+      16,
+      19,
+      22,
+      25,
+      28,
+      31,
+      34,
+      37,
+      40,
+      43,
+      46,
+      49,
+      52,
+      55,
+      58,
+      61,
+      64,
+      67,
+      70,
+      73,
+      76,
+      79,
+      82,
+      85,
+      88,
+      91,
+      94,
+      97,
+      100,
+      103,
+      106,
+      109,
+      112,
+      115,
+      118,
+      121,
+      124,
+      127,
+      130,
+      133,
+      136,
+      139,
+      142,
+      145,
+      148,
+      151,
+      154,
+      157,
+      160,
+      163,
+      166,
+      169,
+      172,
+      175,
+      178,
+      181,
+      184,
+      187,
+      190,
+      193,
+      196
+    ]
+  },
+  "raw": {
+    "supported": true,
+    "passed": true,
+    "backend": "WebGPU",
+    "mrt": {
+      "passed": true,
+      "attachments": 2,
+      "actual": [
+        [
+          44,
+          89,
+          133,
+          255
+        ],
+        [
+          204,
+          51,
+          25,
+          255
+        ]
+      ],
+      "expected": [
+        [
+          45,
+          89,
+          134,
+          255
+        ],
+        [
+          204,
+          51,
+          26,
+          255
+        ]
+      ],
+      "firstTarget": "src-alpha / one-minus-src-alpha over explicit clear RGBA",
+      "secondTarget": "replacement; independent attachment state"
+    },
+    "atomics": {
+      "passed": true,
+      "actual": [
+        64,
+        2016
+      ],
+      "expected": [
+        64,
+        2016
+      ],
+      "path": "64 GPU invocations atomicAdd(storage count,1) and atomicAdd(storage sum,id)"
+    },
+    "timestamp": {
+      "supported": true,
+      "elapsedNanoseconds": 0,
+      "method": "GPU timestamp-query around the isolated 4x4 MRT pass; browser may quantize timestamps; not a scene performance benchmark"
+    }
+  },
+  "final": {
+    "ready": true,
+    "engine": "WebGPU directo",
+    "version": "custom WGSL fixture v1",
+    "backend": "WebGPU",
+    "progress": 0.6,
+    "stage": "mosaic",
+    "referenceViewport": [
+      1440,
+      900
+    ],
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "pixelRatio": 1
+    },
+    "camera": {
+      "perspective": true,
+      "verticalFovDegrees": 37,
+      "positionZ": 10.535114493668699
+    },
+    "geometry": {
+      "cubies": 27,
+      "exteriorSymbols": 54,
+      "mosaicTiles": 432,
+      "mosaicSymbolInstances": 432,
+      "heroDrawBatches": 7,
+      "mosaicDrawBatches": 12,
+      "source": "Shared BufferGeometry authoring; uploaded to native GPU vertex/index buffers; no engine renderer"
+    },
+    "effects": {
+      "shadows": false,
+      "shadowMapSize": 1024,
+      "shadowFilter": "3x3 PCF plus hardware bilinear depth comparisons",
+      "customPostPasses": 0,
+      "bloom": false,
+      "ssao": false,
+      "antialiasing": "4x MSAA",
+      "toneMapping": "Own ACES fitted curve + explicit linear-to-sRGB",
+      "exposure": 1.06
+    },
+    "controls": {
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "rotation": [
+        0.3,
+        0.53,
+        -0.045
+      ],
+      "cameraFov": 37,
+      "roughness": 0.27,
+      "metalness": 0.08,
+      "clearcoat": 0.46,
+      "environmentIntensity": 0.68,
+      "keyIntensity": 3.8,
+      "exposure": 1.06,
+      "glyphColor": "#354330",
+      "shadows": false,
+      "postEffect": 0,
+      "waveAmplitude": 0.6,
+      "wavePhase": 1.8,
+      "density": 432
+    },
+    "probe": {
+      "selected": {
+        "index": 26,
+        "local": [
+          0.96,
+          0.96,
+          0.96
+        ],
+        "world": [
+          1.0368,
+          1.1368,
+          1.0368
+        ]
+      },
+      "other": {
+        "index": 0,
+        "local": [
+          -0.96,
+          -0.96,
+          -0.96
+        ],
+        "world": [
+          -1.0368,
+          -0.9368,
+          -1.0368
+        ]
+      },
+      "cameraFov": 37,
+      "material": {
+        "roughness": 0.27,
+        "metalness": 0.08,
+        "clearcoat": 0.46
+      },
+      "density": 432,
+      "shadowEnabled": false,
+      "instanceMatrixVersion": 1,
+      "heroMatrixVersion": 2,
+      "instanceBytesUploaded": 131456,
+      "gpuWave": {
+        "amplitude": 0.6,
+        "phase": 1.8,
+        "path": "Own WGSL vertex shader; shared per-instance world centre; uniform-only changes; same displacement in shadow caster"
+      },
+      "postEffect": 0,
+      "exposure": 1.06,
+      "normals": "Per-instance inverse-transpose 3x3; normalized per fragment",
+      "alphaMode": "opaque",
+      "clearcoatRoughness": 0.26
+    },
+    "environment": {
+      "url": "/hdri/studio_small_09_1k.hdr",
+      "status": "loaded",
+      "width": 1024,
+      "height": 512,
+      "mipLevels": 11,
+      "specular": "Native WGSL GGX importance sampling, 128 samples per texel per roughness mip; analytic split-sum BRDF",
+      "diffuse": "9 RGB spherical harmonics, HDR sample stride 4, solid-angle weighted Lambert convolution"
+    },
+    "environmentLoaded": true,
+    "rawControl": {
+      "device": "GPUDevice returned by API",
+      "commandEncoding": "Explicit native render and compute passes",
+      "shaderLanguage": "WGSL",
+      "bindGroupLayouts": "Explicit",
+      "normalMatrices": "CPU inverse-transpose per instance",
+      "alphaMode": "opaque scene; independent alpha blending measured by runRawControlProbe",
+      "optionalTimestampQuery": true,
+      "features": [
+        "core-features-and-limits",
+        "timestamp-query"
+      ],
+      "limits": {
+        "maxTextureDimension2D": 8192,
+        "maxColorAttachments": 8,
+        "maxVertexAttributes": 16,
+        "maxComputeInvocationsPerWorkgroup": 256
+      },
+      "adapter": {
+        "vendor": "nvidia",
+        "architecture": "blackwell",
+        "device": "",
+        "description": ""
+      }
+    },
+    "frames": 84,
+    "frameNumber": 84,
+    "frame": {
+      "drawCalls": 12,
+      "submittedTriangles": 1099776,
+      "sceneDrawCalls": 12,
+      "shadowDrawCalls": 0,
+      "postDrawCalls": 0,
+      "cpuEncodeSubmitMs": 0.10000000894069672
+    },
+    "drawCalls": 12,
+    "triangles": 1099776,
+    "errors": [],
+    "missingFeatures": [],
+    "timing": {
+      "samples": 21,
+      "averageFrameMs": 31.261904761904763,
+      "fps": 31.98781416603199,
+      "p95FrameMs": 31.600000000000364,
+      "gpuFrameMs": null,
+      "method": "Latest 240 requestAnimationFrame intervals, including browser scheduling. cpuEncodeSubmitMs is CPU encoding/submission time, not GPU time."
+    },
+    "comparisonLimits": "Shared meshes, pose, camera, counts and control values; custom GGX, HDR integration and tone mapping differ from Three/Babylon/PlayCanvas. This is a functional rendering prototype, not identical pixels or an isolated speed benchmark."
+  }
+}

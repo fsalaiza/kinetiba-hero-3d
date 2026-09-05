@@ -1,0 +1,1869 @@
+{
+  "testedAt": "2026-09-05T04:11:49.040Z",
+  "engine": "Unreal Engine 5.7.4 / PixelStreaming2",
+  "delivery": "Real H.264 video over loopback WebRTC; custom minimal loopback signalling",
+  "scene": "27 engine cubes, two directional lights, floor, 5 controls; different fixture from browser engines",
+  "limitations": "Functional smoke checks on Windows RTX 5080. Concurrent GPU work; no fair FPS comparison. Control ACK round trip is not input-to-visible-pixel latency. No Internet/mobile/scaling test.",
+  "checks": [
+    {
+      "name": "real-video-frames-and-engine-state",
+      "passed": true,
+      "evidence": {
+        "baseline": {
+          "kind": "kineti-state",
+          "sequence": 2,
+          "pieces": 27,
+          "progress": 0,
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0,
+          "cameraFov": 38,
+          "selected": [
+            98,
+            98,
+            98
+          ],
+          "other": [
+            -98,
+            -98,
+            -98
+          ],
+          "ackMs": 7.9000000059604645,
+          "receivedAt": 1094.2999999970198,
+          "videoFramesAtAck": 10
+        },
+        "raster": {
+          "variance": 9464.57019911618,
+          "quantizedColors": 149
+        }
+      }
+    },
+    {
+      "name": "single-piece-isolation-confirmed-by-unreal",
+      "passed": true,
+      "evidence": {
+        "baseline": {
+          "kind": "kineti-state",
+          "sequence": 2,
+          "pieces": 27,
+          "progress": 0,
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0,
+          "cameraFov": 38,
+          "selected": [
+            98,
+            98,
+            98
+          ],
+          "other": [
+            -98,
+            -98,
+            -98
+          ],
+          "ackMs": 7.9000000059604645,
+          "receivedAt": 1094.2999999970198,
+          "videoFramesAtAck": 10
+        },
+        "selected": {
+          "kind": "kineti-state",
+          "sequence": 3,
+          "pieces": 27,
+          "progress": 0,
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.625,
+          "cameraFov": 38,
+          "selected": [
+            98,
+            98,
+            160.5
+          ],
+          "other": [
+            -98,
+            -98,
+            -98
+          ],
+          "ackMs": 2.0999999940395355,
+          "receivedAt": 1861.0999999940395,
+          "videoFramesAtAck": 32
+        }
+      }
+    },
+    {
+      "name": "single-piece-changes-video-pixels",
+      "passed": true,
+      "evidence": {
+        "meanAbsolute": 3.5478395061728394,
+        "changedFraction": 0.03660300925925926
+      }
+    },
+    {
+      "name": "separation-confirmed-by-unreal",
+      "passed": true,
+      "evidence": {
+        "kind": "kineti-state",
+        "sequence": 4,
+        "pieces": 27,
+        "progress": 0,
+        "explode": 0.7,
+        "selectedPiece": 26,
+        "pieceOffset": 0,
+        "cameraFov": 38,
+        "selected": [
+          150.5,
+          150.5,
+          150.5
+        ],
+        "other": [
+          -150.5,
+          -150.5,
+          -150.5
+        ],
+        "ackMs": 12.900000005960464,
+        "receivedAt": 2627.7999999970198,
+        "videoFramesAtAck": 53
+      }
+    },
+    {
+      "name": "progress-midpoint-changes-video-pixels",
+      "passed": true,
+      "evidence": {
+        "meanAbsolute": 21.43918788580247,
+        "changedFraction": 0.19560185185185186
+      }
+    },
+    {
+      "name": "progress-endpoint-confirmed-by-unreal",
+      "passed": true,
+      "evidence": {
+        "kind": "kineti-state",
+        "sequence": 6,
+        "pieces": 27,
+        "progress": 1,
+        "explode": 0,
+        "selectedPiece": 26,
+        "pieceOffset": 0,
+        "cameraFov": 38,
+        "selected": [
+          420,
+          105,
+          -101.815353
+        ],
+        "other": [
+          -420,
+          -105,
+          -95
+        ],
+        "ackMs": 17,
+        "receivedAt": 4077.7999999970198,
+        "videoFramesAtAck": 93
+      }
+    },
+    {
+      "name": "native-scroll-controls-unreal",
+      "passed": true,
+      "evidence": {
+        "scrollY": 729,
+        "dom": 0.45,
+        "engine": {
+          "kind": "kineti-state",
+          "sequence": 7,
+          "pieces": 27,
+          "progress": 0.45,
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0,
+          "cameraFov": 38,
+          "selected": [
+            242.899996,
+            101.15,
+            8.083093
+          ],
+          "other": [
+            -242.899996,
+            -101.15,
+            -96.65
+          ],
+          "ackMs": 6.399999991059303,
+          "receivedAt": 4811.199999988079,
+          "videoFramesAtAck": 114
+        }
+      }
+    },
+    {
+      "name": "progress-is-reversible-in-unreal-state",
+      "passed": true,
+      "evidence": {
+        "baseline": {
+          "kind": "kineti-state",
+          "sequence": 2,
+          "pieces": 27,
+          "progress": 0,
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0,
+          "cameraFov": 38,
+          "selected": [
+            98,
+            98,
+            98
+          ],
+          "other": [
+            -98,
+            -98,
+            -98
+          ],
+          "ackMs": 7.9000000059604645,
+          "receivedAt": 1094.2999999970198,
+          "videoFramesAtAck": 10
+        },
+        "restored": {
+          "kind": "kineti-state",
+          "sequence": 9,
+          "pieces": 27,
+          "progress": 0,
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0,
+          "cameraFov": 38,
+          "selected": [
+            98,
+            98,
+            98
+          ],
+          "other": [
+            -98,
+            -98,
+            -98
+          ],
+          "ackMs": 11.900000005960464,
+          "receivedAt": 4911,
+          "videoFramesAtAck": 115
+        }
+      }
+    },
+    {
+      "name": "restored-video-matches-baseline-with-compression-tolerance",
+      "passed": true,
+      "evidence": {
+        "meanAbsolute": 0.23919753086419754,
+        "changedFraction": 0.0033275462962962963
+      }
+    },
+    {
+      "name": "camera-control-changes-video",
+      "passed": true,
+      "evidence": {
+        "kind": "kineti-state",
+        "sequence": 10,
+        "pieces": 27,
+        "progress": 0,
+        "explode": 0,
+        "selectedPiece": 26,
+        "pieceOffset": 0,
+        "cameraFov": 52,
+        "selected": [
+          98,
+          98,
+          98
+        ],
+        "other": [
+          -98,
+          -98,
+          -98
+        ],
+        "ackMs": 7.799999997019768,
+        "receivedAt": 5677.79999999702,
+        "videoFramesAtAck": 136
+      }
+    },
+    {
+      "name": "continuous-native-scroll-forward-and-reverse",
+      "passed": true,
+      "evidence": {
+        "samples": 48,
+        "progress": [
+          0.083333,
+          0.125309,
+          0.166667,
+          0.208642,
+          0.25,
+          0.291975,
+          0.333333,
+          0.375309,
+          0.416667,
+          0.458642,
+          0.5,
+          0.541975,
+          0.583333,
+          0.625309,
+          0.666667,
+          0.708642,
+          0.75,
+          0.791975,
+          0.833333,
+          0.875309,
+          0.916667,
+          0.958642,
+          1,
+          1,
+          0.916667,
+          0.875309,
+          0.833333,
+          0.791975,
+          0.75,
+          0.708642,
+          0.666667,
+          0.625309,
+          0.583333,
+          0.541975,
+          0.5,
+          0.458642,
+          0.416667,
+          0.375309,
+          0.333333,
+          0.291975,
+          0.25,
+          0.208642,
+          0.166667,
+          0.125309,
+          0.083333,
+          0.041975,
+          0,
+          0
+        ],
+        "videoFrames": 26
+      }
+    },
+    {
+      "name": "webrtc-video-decoded",
+      "passed": true,
+      "evidence": [
+        {
+          "type": "codec",
+          "id": "CIT01_127_level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f",
+          "mimeType": "video/H264"
+        },
+        {
+          "type": "candidate-pair",
+          "currentRoundTripTime": 0
+        },
+        {
+          "type": "candidate-pair",
+          "currentRoundTripTime": 0.001
+        },
+        {
+          "type": "candidate-pair",
+          "currentRoundTripTime": 0.001
+        },
+        {
+          "type": "inbound-rtp",
+          "codecId": "CIT01_127_level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f",
+          "framesReceived": 503,
+          "framesDecoded": 503,
+          "framesDropped": 0,
+          "framesPerSecond": 60,
+          "bytesReceived": 16950390,
+          "jitter": 0.013,
+          "totalDecodeTime": 0.242882,
+          "frameWidth": 1280,
+          "frameHeight": 720
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "states": [
+    {
+      "connection": "connected",
+      "channel": "open",
+      "frames": 27,
+      "lastVideoFrame": {
+        "now": 1616.2,
+        "mediaTime": 0.982,
+        "presentedFrames": 33,
+        "width": 1280,
+        "height": 720,
+        "processingDuration": 0.0003
+      },
+      "ack": {
+        "kind": "kineti-state",
+        "sequence": 2,
+        "pieces": 27,
+        "progress": 0,
+        "explode": 0,
+        "selectedPiece": 26,
+        "pieceOffset": 0,
+        "cameraFov": 38,
+        "selected": [
+          98,
+          98,
+          98
+        ],
+        "other": [
+          -98,
+          -98,
+          -98
+        ],
+        "ackMs": 7.9000000059604645,
+        "receivedAt": 1094.2999999970198,
+        "videoFramesAtAck": 10
+      },
+      "errors": []
+    },
+    {
+      "connection": "connected",
+      "channel": "open",
+      "frames": 47,
+      "lastVideoFrame": {
+        "now": 2366.4,
+        "mediaTime": 1.734,
+        "presentedFrames": 57,
+        "width": 1280,
+        "height": 720,
+        "processingDuration": 0.0004
+      },
+      "ack": {
+        "kind": "kineti-state",
+        "sequence": 3,
+        "pieces": 27,
+        "progress": 0,
+        "explode": 0,
+        "selectedPiece": 26,
+        "pieceOffset": 0.625,
+        "cameraFov": 38,
+        "selected": [
+          98,
+          98,
+          160.5
+        ],
+        "other": [
+          -98,
+          -98,
+          -98
+        ],
+        "ackMs": 2.0999999940395355,
+        "receivedAt": 1861.0999999940395,
+        "videoFramesAtAck": 32
+      },
+      "errors": []
+    },
+    {
+      "connection": "connected",
+      "channel": "open",
+      "frames": 68,
+      "lastVideoFrame": {
+        "now": 3147.4,
+        "mediaTime": 2.509,
+        "presentedFrames": 82,
+        "width": 1280,
+        "height": 720,
+        "processingDuration": 0.0003
+      },
+      "ack": {
+        "kind": "kineti-state",
+        "sequence": 4,
+        "pieces": 27,
+        "progress": 0,
+        "explode": 0.7,
+        "selectedPiece": 26,
+        "pieceOffset": 0,
+        "cameraFov": 38,
+        "selected": [
+          150.5,
+          150.5,
+          150.5
+        ],
+        "other": [
+          -150.5,
+          -150.5,
+          -150.5
+        ],
+        "ackMs": 12.900000005960464,
+        "receivedAt": 2627.7999999970198,
+        "videoFramesAtAck": 53
+      },
+      "errors": []
+    },
+    {
+      "connection": "connected",
+      "channel": "open",
+      "frames": 89,
+      "lastVideoFrame": {
+        "now": 3866.2,
+        "mediaTime": 3.227,
+        "presentedFrames": 105,
+        "width": 1280,
+        "height": 720,
+        "processingDuration": 0.0002
+      },
+      "ack": {
+        "kind": "kineti-state",
+        "sequence": 5,
+        "pieces": 27,
+        "progress": 0.5,
+        "explode": 0,
+        "selectedPiece": 26,
+        "pieceOffset": 0,
+        "cameraFov": 38,
+        "selected": [
+          259,
+          101.5,
+          -1.907677
+        ],
+        "other": [
+          -259,
+          -101.5,
+          -96.5
+        ],
+        "ackMs": 1.7000000029802322,
+        "receivedAt": 3362.2999999970198,
+        "videoFramesAtAck": 73
+      },
+      "errors": []
+    },
+    {
+      "connection": "connected",
+      "channel": "open",
+      "frames": 108,
+      "lastVideoFrame": {
+        "now": 4585,
+        "mediaTime": 3.944,
+        "presentedFrames": 127,
+        "width": 1280,
+        "height": 720,
+        "processingDuration": 0.0003
+      },
+      "ack": {
+        "kind": "kineti-state",
+        "sequence": 6,
+        "pieces": 27,
+        "progress": 1,
+        "explode": 0,
+        "selectedPiece": 26,
+        "pieceOffset": 0,
+        "cameraFov": 38,
+        "selected": [
+          420,
+          105,
+          -101.815353
+        ],
+        "other": [
+          -420,
+          -105,
+          -95
+        ],
+        "ackMs": 17,
+        "receivedAt": 4077.7999999970198,
+        "videoFramesAtAck": 93
+      },
+      "errors": []
+    },
+    {
+      "connection": "connected",
+      "channel": "open",
+      "frames": 131,
+      "lastVideoFrame": {
+        "now": 5428.8,
+        "mediaTime": 4.776,
+        "presentedFrames": 154,
+        "width": 1280,
+        "height": 720,
+        "processingDuration": 0.0002
+      },
+      "ack": {
+        "kind": "kineti-state",
+        "sequence": 9,
+        "pieces": 27,
+        "progress": 0,
+        "explode": 0,
+        "selectedPiece": 26,
+        "pieceOffset": 0,
+        "cameraFov": 38,
+        "selected": [
+          98,
+          98,
+          98
+        ],
+        "other": [
+          -98,
+          -98,
+          -98
+        ],
+        "ackMs": 11.900000005960464,
+        "receivedAt": 4911,
+        "videoFramesAtAck": 115
+      },
+      "errors": []
+    },
+    {
+      "connection": "connected",
+      "channel": "open",
+      "frames": 152,
+      "lastVideoFrame": {
+        "now": 6178.9,
+        "mediaTime": 5.527,
+        "presentedFrames": 178,
+        "width": 1280,
+        "height": 720,
+        "processingDuration": 0.0003
+      },
+      "ack": {
+        "kind": "kineti-state",
+        "sequence": 10,
+        "pieces": 27,
+        "progress": 0,
+        "explode": 0,
+        "selectedPiece": 26,
+        "pieceOffset": 0,
+        "cameraFov": 52,
+        "selected": [
+          98,
+          98,
+          98
+        ],
+        "other": [
+          -98,
+          -98,
+          -98
+        ],
+        "ackMs": 7.799999997019768,
+        "receivedAt": 5677.79999999702,
+        "videoFramesAtAck": 136
+      },
+      "errors": []
+    },
+    {
+      "connection": "connected",
+      "channel": "open",
+      "frames": 173,
+      "lastVideoFrame": {
+        "now": 6897.2,
+        "mediaTime": 6.26,
+        "presentedFrames": 201,
+        "width": 1280,
+        "height": 720,
+        "processingDuration": 0.0002
+      },
+      "ack": {
+        "kind": "kineti-state",
+        "sequence": 11,
+        "pieces": 27,
+        "progress": 0,
+        "explode": 0,
+        "selectedPiece": 26,
+        "pieceOffset": 0,
+        "cameraFov": 38,
+        "selected": [
+          98,
+          98,
+          98
+        ],
+        "other": [
+          -98,
+          -98,
+          -98
+        ],
+        "ackMs": 0.6000000089406967,
+        "receivedAt": 6411,
+        "videoFramesAtAck": 157
+      },
+      "errors": []
+    }
+  ],
+  "screenshots": [
+    "unreal-assembled.png",
+    "unreal-one-piece.png",
+    "unreal-exploded.png",
+    "unreal-progress-050.png",
+    "unreal-progress-100.png",
+    "unreal-restored.png",
+    "unreal-camera.png",
+    "unreal-browser-controls.png"
+  ],
+  "browser": "Chrome/152.0.7977.76",
+  "continuousScrub": [
+    {
+      "kind": "kineti-state",
+      "sequence": 12,
+      "pieces": 27,
+      "progress": 0.083333,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        124.833334,
+        98.583333,
+        81.34872
+      ],
+      "other": [
+        -124.833334,
+        -98.583333,
+        -97.75
+      ],
+      "ackMs": 17.600000008940697,
+      "receivedAt": 6977.79999999702,
+      "videoFramesAtAck": 174
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 13,
+      "pieces": 27,
+      "progress": 0.125309,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        138.349385,
+        98.877161,
+        72.961408
+      ],
+      "other": [
+        -138.349385,
+        -98.877161,
+        -97.624074
+      ],
+      "ackMs": 2.7000000029802322,
+      "receivedAt": 6994.5,
+      "videoFramesAtAck": 174
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 14,
+      "pieces": 27,
+      "progress": 0.166667,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        151.666668,
+        99.166667,
+        64.69744
+      ],
+      "other": [
+        -151.666668,
+        -99.166667,
+        -97.5
+      ],
+      "ackMs": 4.799999997019768,
+      "receivedAt": 7027.899999991059,
+      "videoFramesAtAck": 175
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 15,
+      "pieces": 27,
+      "progress": 0.208642,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        165.182716,
+        99.460494,
+        56.31013
+      ],
+      "other": [
+        -165.182716,
+        -99.460494,
+        -97.374074
+      ],
+      "ackMs": 6.799999997019768,
+      "receivedAt": 7061.0999999940395,
+      "videoFramesAtAck": 175
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 16,
+      "pieces": 27,
+      "progress": 0.25,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        178.5,
+        99.75,
+        48.046162
+      ],
+      "other": [
+        -178.5,
+        -99.75,
+        -97.25
+      ],
+      "ackMs": 9,
+      "receivedAt": 7094.5,
+      "videoFramesAtAck": 176
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 17,
+      "pieces": 27,
+      "progress": 0.291975,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        192.016053,
+        100.043827,
+        39.658848
+      ],
+      "other": [
+        -192.016053,
+        -100.043827,
+        -97.124074
+      ],
+      "ackMs": 11.099999994039536,
+      "receivedAt": 7127.899999991059,
+      "videoFramesAtAck": 176
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 18,
+      "pieces": 27,
+      "progress": 0.333333,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        205.333337,
+        100.333333,
+        31.39488
+      ],
+      "other": [
+        -205.333337,
+        -100.333333,
+        -97
+      ],
+      "ackMs": 13.400000005960464,
+      "receivedAt": 7161.29999999702,
+      "videoFramesAtAck": 177
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 19,
+      "pieces": 27,
+      "progress": 0.375309,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        218.84938,
+        100.62716,
+        23.007573
+      ],
+      "other": [
+        -218.84938,
+        -100.62716,
+        -96.874074
+      ],
+      "ackMs": 15.200000002980232,
+      "receivedAt": 7194.5,
+      "videoFramesAtAck": 177
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 20,
+      "pieces": 27,
+      "progress": 0.416667,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        232.166663,
+        100.916667,
+        14.743605
+      ],
+      "other": [
+        -232.166663,
+        -100.916667,
+        -96.75
+      ],
+      "ackMs": 17.5,
+      "receivedAt": 7227.79999999702,
+      "videoFramesAtAck": 178
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 21,
+      "pieces": 27,
+      "progress": 0.458642,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        245.682716,
+        101.210494,
+        6.356291
+      ],
+      "other": [
+        -245.682716,
+        -101.210494,
+        -96.624074
+      ],
+      "ackMs": 2.7000000029802322,
+      "receivedAt": 7244.399999991059,
+      "videoFramesAtAck": 178
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 22,
+      "pieces": 27,
+      "progress": 0.5,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        259,
+        101.5,
+        -1.907677
+      ],
+      "other": [
+        -259,
+        -101.5,
+        -96.5
+      ],
+      "ackMs": 4.799999997019768,
+      "receivedAt": 7277.79999999702,
+      "videoFramesAtAck": 179
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 23,
+      "pieces": 27,
+      "progress": 0.541975,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        272.516053,
+        101.793827,
+        -10.29499
+      ],
+      "other": [
+        -272.516053,
+        -101.793827,
+        -96.374074
+      ],
+      "ackMs": 6.5,
+      "receivedAt": 7311.0999999940395,
+      "videoFramesAtAck": 179
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 24,
+      "pieces": 27,
+      "progress": 0.583333,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        285.833327,
+        102.083333,
+        -18.558952
+      ],
+      "other": [
+        -285.833327,
+        -102.083333,
+        -96.25
+      ],
+      "ackMs": 8.800000011920929,
+      "receivedAt": 7344.5,
+      "videoFramesAtAck": 180
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 25,
+      "pieces": 27,
+      "progress": 0.625309,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        299.34938,
+        102.37716,
+        -26.946265
+      ],
+      "other": [
+        -299.34938,
+        -102.37716,
+        -96.124074
+      ],
+      "ackMs": 11.400000005960464,
+      "receivedAt": 7377.899999991059,
+      "videoFramesAtAck": 181
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 26,
+      "pieces": 27,
+      "progress": 0.666667,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        312.666673,
+        102.666667,
+        -35.21024
+      ],
+      "other": [
+        -312.666673,
+        -102.666667,
+        -96
+      ],
+      "ackMs": 13.099999994039536,
+      "receivedAt": 7411.199999988079,
+      "videoFramesAtAck": 181
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 27,
+      "pieces": 27,
+      "progress": 0.708642,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        326.182707,
+        102.960494,
+        -43.597541
+      ],
+      "other": [
+        -326.182707,
+        -102.960494,
+        -95.874074
+      ],
+      "ackMs": 14.899999991059303,
+      "receivedAt": 7444.399999991059,
+      "videoFramesAtAck": 182
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 28,
+      "pieces": 27,
+      "progress": 0.75,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        339.5,
+        103.25,
+        -51.861515
+      ],
+      "other": [
+        -339.5,
+        -103.25,
+        -95.75
+      ],
+      "ackMs": 1.5,
+      "receivedAt": 7462.0999999940395,
+      "videoFramesAtAck": 182
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 29,
+      "pieces": 27,
+      "progress": 0.791975,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        353.016053,
+        103.543827,
+        -60.248828
+      ],
+      "other": [
+        -353.016053,
+        -103.543827,
+        -95.624074
+      ],
+      "ackMs": 2.9000000059604645,
+      "receivedAt": 7494.5,
+      "videoFramesAtAck": 183
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 30,
+      "pieces": 27,
+      "progress": 0.833333,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        366.333327,
+        103.833333,
+        -68.512791
+      ],
+      "other": [
+        -366.333327,
+        -103.833333,
+        -95.5
+      ],
+      "ackMs": 5.100000008940697,
+      "receivedAt": 7527.79999999702,
+      "videoFramesAtAck": 183
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 31,
+      "pieces": 27,
+      "progress": 0.875309,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        379.84938,
+        104.12716,
+        -76.900104
+      ],
+      "other": [
+        -379.84938,
+        -104.12716,
+        -95.374074
+      ],
+      "ackMs": 6.5999999940395355,
+      "receivedAt": 7561.0999999940395,
+      "videoFramesAtAck": 184
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 32,
+      "pieces": 27,
+      "progress": 0.916667,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        393.166673,
+        104.416667,
+        -85.164078
+      ],
+      "other": [
+        -393.166673,
+        -104.416667,
+        -95.25
+      ],
+      "ackMs": 9.100000008940697,
+      "receivedAt": 7594.5,
+      "videoFramesAtAck": 184
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 33,
+      "pieces": 27,
+      "progress": 0.958642,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        406.682707,
+        104.710494,
+        -93.551379
+      ],
+      "other": [
+        -406.682707,
+        -104.710494,
+        -95.124074
+      ],
+      "ackMs": 11.299999997019768,
+      "receivedAt": 7627.899999991059,
+      "videoFramesAtAck": 185
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 34,
+      "pieces": 27,
+      "progress": 1,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        420,
+        105,
+        -101.815353
+      ],
+      "other": [
+        -420,
+        -105,
+        -95
+      ],
+      "ackMs": 13,
+      "receivedAt": 7661.199999988079,
+      "videoFramesAtAck": 185
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 35,
+      "pieces": 27,
+      "progress": 1,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        420,
+        105,
+        -101.815353
+      ],
+      "other": [
+        -420,
+        -105,
+        -95
+      ],
+      "ackMs": 15.300000011920929,
+      "receivedAt": 7694.5,
+      "videoFramesAtAck": 186
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 36,
+      "pieces": 27,
+      "progress": 0.916667,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        393.166673,
+        104.416667,
+        -85.164078
+      ],
+      "other": [
+        -393.166673,
+        -104.416667,
+        -95.25
+      ],
+      "ackMs": 3,
+      "receivedAt": 7744.5,
+      "videoFramesAtAck": 187
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 37,
+      "pieces": 27,
+      "progress": 0.875309,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        379.84938,
+        104.12716,
+        -76.900104
+      ],
+      "other": [
+        -379.84938,
+        -104.12716,
+        -95.374074
+      ],
+      "ackMs": 5.4000000059604645,
+      "receivedAt": 7778,
+      "videoFramesAtAck": 187
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 38,
+      "pieces": 27,
+      "progress": 0.833333,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        366.333327,
+        103.833333,
+        -68.512791
+      ],
+      "other": [
+        -366.333327,
+        -103.833333,
+        -95.5
+      ],
+      "ackMs": 6.899999991059303,
+      "receivedAt": 7811.199999988079,
+      "videoFramesAtAck": 188
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 39,
+      "pieces": 27,
+      "progress": 0.791975,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        353.016053,
+        103.543827,
+        -60.248828
+      ],
+      "other": [
+        -353.016053,
+        -103.543827,
+        -95.624074
+      ],
+      "ackMs": 9.200000002980232,
+      "receivedAt": 7844.5,
+      "videoFramesAtAck": 188
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 40,
+      "pieces": 27,
+      "progress": 0.75,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        339.5,
+        103.25,
+        -51.861515
+      ],
+      "other": [
+        -339.5,
+        -103.25,
+        -95.75
+      ],
+      "ackMs": 11,
+      "receivedAt": 7877.79999999702,
+      "videoFramesAtAck": 189
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 41,
+      "pieces": 27,
+      "progress": 0.708642,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        326.182707,
+        102.960494,
+        -43.597541
+      ],
+      "other": [
+        -326.182707,
+        -102.960494,
+        -95.874074
+      ],
+      "ackMs": 13.199999988079071,
+      "receivedAt": 7911.199999988079,
+      "videoFramesAtAck": 189
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 42,
+      "pieces": 27,
+      "progress": 0.666667,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        312.666673,
+        102.666667,
+        -35.21024
+      ],
+      "other": [
+        -312.666673,
+        -102.666667,
+        -96
+      ],
+      "ackMs": 15.300000011920929,
+      "receivedAt": 7944.5999999940395,
+      "videoFramesAtAck": 190
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 43,
+      "pieces": 27,
+      "progress": 0.625309,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        299.34938,
+        102.37716,
+        -26.946265
+      ],
+      "other": [
+        -299.34938,
+        -102.37716,
+        -96.124074
+      ],
+      "ackMs": 17.5,
+      "receivedAt": 7977.79999999702,
+      "videoFramesAtAck": 190
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 44,
+      "pieces": 27,
+      "progress": 0.583333,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        285.833327,
+        102.083333,
+        -18.558952
+      ],
+      "other": [
+        -285.833327,
+        -102.083333,
+        -96.25
+      ],
+      "ackMs": 2.6000000089406967,
+      "receivedAt": 7994.5,
+      "videoFramesAtAck": 191
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 45,
+      "pieces": 27,
+      "progress": 0.541975,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        272.516053,
+        101.793827,
+        -10.29499
+      ],
+      "other": [
+        -272.516053,
+        -101.793827,
+        -96.374074
+      ],
+      "ackMs": 4.799999997019768,
+      "receivedAt": 8027.899999991059,
+      "videoFramesAtAck": 191
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 46,
+      "pieces": 27,
+      "progress": 0.5,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        259,
+        101.5,
+        -1.907677
+      ],
+      "other": [
+        -259,
+        -101.5,
+        -96.5
+      ],
+      "ackMs": 7,
+      "receivedAt": 8061.199999988079,
+      "videoFramesAtAck": 192
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 47,
+      "pieces": 27,
+      "progress": 0.458642,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        245.682716,
+        101.210494,
+        6.356291
+      ],
+      "other": [
+        -245.682716,
+        -101.210494,
+        -96.624074
+      ],
+      "ackMs": 8.800000011920929,
+      "receivedAt": 8094.5,
+      "videoFramesAtAck": 192
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 48,
+      "pieces": 27,
+      "progress": 0.416667,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        232.166663,
+        100.916667,
+        14.743605
+      ],
+      "other": [
+        -232.166663,
+        -100.916667,
+        -96.75
+      ],
+      "ackMs": 11.100000008940697,
+      "receivedAt": 8127.79999999702,
+      "videoFramesAtAck": 193
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 49,
+      "pieces": 27,
+      "progress": 0.375309,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        218.84938,
+        100.62716,
+        23.007573
+      ],
+      "other": [
+        -218.84938,
+        -100.62716,
+        -96.874074
+      ],
+      "ackMs": 13.199999988079071,
+      "receivedAt": 8161.199999988079,
+      "videoFramesAtAck": 193
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 50,
+      "pieces": 27,
+      "progress": 0.333333,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        205.333337,
+        100.333333,
+        31.39488
+      ],
+      "other": [
+        -205.333337,
+        -100.333333,
+        -97
+      ],
+      "ackMs": 15.5,
+      "receivedAt": 8194.5,
+      "videoFramesAtAck": 194
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 51,
+      "pieces": 27,
+      "progress": 0.291975,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        192.016053,
+        100.043827,
+        39.658848
+      ],
+      "other": [
+        -192.016053,
+        -100.043827,
+        -97.124074
+      ],
+      "ackMs": 1.800000011920929,
+      "receivedAt": 8212.5,
+      "videoFramesAtAck": 194
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 52,
+      "pieces": 27,
+      "progress": 0.25,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        178.5,
+        99.75,
+        48.046162
+      ],
+      "other": [
+        -178.5,
+        -99.75,
+        -97.25
+      ],
+      "ackMs": 2.7999999970197678,
+      "receivedAt": 8244.59999999404,
+      "videoFramesAtAck": 195
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 53,
+      "pieces": 27,
+      "progress": 0.208642,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        165.182716,
+        99.460494,
+        56.31013
+      ],
+      "other": [
+        -165.182716,
+        -99.460494,
+        -97.374074
+      ],
+      "ackMs": 4.9000000059604645,
+      "receivedAt": 8277.79999999702,
+      "videoFramesAtAck": 195
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 54,
+      "pieces": 27,
+      "progress": 0.166667,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        151.666668,
+        99.166667,
+        64.69744
+      ],
+      "other": [
+        -151.666668,
+        -99.166667,
+        -97.5
+      ],
+      "ackMs": 7.0999999940395355,
+      "receivedAt": 8311.199999988079,
+      "videoFramesAtAck": 196
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 55,
+      "pieces": 27,
+      "progress": 0.125309,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        138.349385,
+        98.877161,
+        72.961408
+      ],
+      "other": [
+        -138.349385,
+        -98.877161,
+        -97.624074
+      ],
+      "ackMs": 8.700000002980232,
+      "receivedAt": 8344.39999999106,
+      "videoFramesAtAck": 196
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 56,
+      "pieces": 27,
+      "progress": 0.083333,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        124.833334,
+        98.583333,
+        81.34872
+      ],
+      "other": [
+        -124.833334,
+        -98.583333,
+        -97.75
+      ],
+      "ackMs": 11.299999997019768,
+      "receivedAt": 8377.89999999106,
+      "videoFramesAtAck": 197
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 57,
+      "pieces": 27,
+      "progress": 0.041975,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        111.516049,
+        98.293827,
+        89.612689
+      ],
+      "other": [
+        -111.516049,
+        -98.293827,
+        -97.874074
+      ],
+      "ackMs": 13.199999988079071,
+      "receivedAt": 8411.199999988079,
+      "videoFramesAtAck": 197
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 58,
+      "pieces": 27,
+      "progress": 0,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        98,
+        98,
+        98
+      ],
+      "other": [
+        -98,
+        -98,
+        -98
+      ],
+      "ackMs": 15.5,
+      "receivedAt": 8444.5,
+      "videoFramesAtAck": 198
+    },
+    {
+      "kind": "kineti-state",
+      "sequence": 59,
+      "pieces": 27,
+      "progress": 0,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        98,
+        98,
+        98
+      ],
+      "other": [
+        -98,
+        -98,
+        -98
+      ],
+      "ackMs": 17.299999997019768,
+      "receivedAt": 8477.89999999106,
+      "videoFramesAtAck": 198
+    }
+  ],
+  "webrtc": [
+    {
+      "type": "codec",
+      "id": "CIT01_127_level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f",
+      "mimeType": "video/H264"
+    },
+    {
+      "type": "candidate-pair",
+      "currentRoundTripTime": 0
+    },
+    {
+      "type": "candidate-pair",
+      "currentRoundTripTime": 0.001
+    },
+    {
+      "type": "candidate-pair",
+      "currentRoundTripTime": 0.001
+    },
+    {
+      "type": "inbound-rtp",
+      "codecId": "CIT01_127_level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f",
+      "framesReceived": 503,
+      "framesDecoded": 503,
+      "framesDropped": 0,
+      "framesPerSecond": 60,
+      "bytesReceived": 16950390,
+      "jitter": 0.013,
+      "totalDecodeTime": 0.242882,
+      "frameWidth": 1280,
+      "frameHeight": 720
+    }
+  ],
+  "finalState": {
+    "connection": "connected",
+    "channel": "open",
+    "frames": 215,
+    "lastVideoFrame": {
+      "now": 9022.6,
+      "mediaTime": 8.377,
+      "presentedFrames": 269,
+      "width": 1280,
+      "height": 720,
+      "processingDuration": 0.0003
+    },
+    "ack": {
+      "kind": "kineti-state",
+      "sequence": 59,
+      "pieces": 27,
+      "progress": 0,
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "cameraFov": 38,
+      "selected": [
+        98,
+        98,
+        98
+      ],
+      "other": [
+        -98,
+        -98,
+        -98
+      ],
+      "ackMs": 17.299999997019768,
+      "receivedAt": 8477.89999999106,
+      "videoFramesAtAck": 198
+    },
+    "errors": []
+  },
+  "controlAck": {
+    "samples": 59,
+    "medianMs": 8.800000011920929,
+    "minMs": 0.6000000089406967,
+    "maxMs": 17.600000008940697,
+    "measurement": "JS command sent -> Unreal handler applies state -> JSON acknowledgement returns; excludes video path"
+  },
+  "pass": true
+}

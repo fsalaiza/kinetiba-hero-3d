@@ -1,0 +1,138 @@
+[
+  {
+    "renderer": "webgpu",
+    "width": 390,
+    "pair": [
+      "final-direct",
+      "final-sequential"
+    ],
+    "fullPageChangedPixels": 9,
+    "changedBounds": [
+      136,
+      804,
+      250,
+      808
+    ],
+    "footerTop": 770,
+    "changedPixelsAboveFooter": 0
+  },
+  {
+    "renderer": "webgpu",
+    "width": 390,
+    "pair": [
+      "hero",
+      "hero-reverse"
+    ],
+    "fullPageChangedPixels": 33,
+    "changedBounds": [
+      111,
+      804,
+      249,
+      808
+    ],
+    "footerTop": 770,
+    "changedPixelsAboveFooter": 0
+  },
+  {
+    "renderer": "webgpu",
+    "width": 1440,
+    "pair": [
+      "final-direct",
+      "final-sequential"
+    ],
+    "fullPageChangedPixels": 38,
+    "changedBounds": [
+      662,
+      859,
+      808,
+      862
+    ],
+    "footerTop": 823,
+    "changedPixelsAboveFooter": 0
+  },
+  {
+    "renderer": "webgpu",
+    "width": 1440,
+    "pair": [
+      "hero",
+      "hero-reverse"
+    ],
+    "fullPageChangedPixels": 52,
+    "changedBounds": [
+      629,
+      859,
+      807,
+      862
+    ],
+    "footerTop": 823,
+    "changedPixelsAboveFooter": 0
+  },
+  {
+    "renderer": "webgl",
+    "width": 390,
+    "pair": [
+      "final-direct",
+      "final-sequential"
+    ],
+    "fullPageChangedPixels": 9,
+    "changedBounds": [
+      136,
+      804,
+      250,
+      808
+    ],
+    "footerTop": 770,
+    "changedPixelsAboveFooter": 0
+  },
+  {
+    "renderer": "webgl",
+    "width": 390,
+    "pair": [
+      "hero",
+      "hero-reverse"
+    ],
+    "fullPageChangedPixels": 34,
+    "changedBounds": [
+      111,
+      804,
+      250,
+      808
+    ],
+    "footerTop": 770,
+    "changedPixelsAboveFooter": 0
+  },
+  {
+    "renderer": "webgl",
+    "width": 1440,
+    "pair": [
+      "final-direct",
+      "final-sequential"
+    ],
+    "fullPageChangedPixels": 38,
+    "changedBounds": [
+      662,
+      859,
+      808,
+      862
+    ],
+    "footerTop": 823,
+    "changedPixelsAboveFooter": 0
+  },
+  {
+    "renderer": "webgl",
+    "width": 1440,
+    "pair": [
+      "hero",
+      "hero-reverse"
+    ],
+    "fullPageChangedPixels": 52,
+    "changedBounds": [
+      629,
+      859,
+      807,
+      862
+    ],
+    "footerTop": 823,
+    "changedPixelsAboveFooter": 0
+  }
+]

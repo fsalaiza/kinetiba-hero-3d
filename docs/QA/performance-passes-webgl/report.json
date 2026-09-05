@@ -1,0 +1,399 @@
+{
+  "url": "http://127.0.0.1:4174",
+  "query": "profile=1",
+  "coldBrowserCache": true,
+  "physicalMobile": false,
+  "runs": [
+    {
+      "name": "mobile-webgl",
+      "errors": [],
+      "browser": "Chrome/152.0.7977.76",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 1
+      },
+      "cpuRate": 1,
+      "startup": {
+        "readyMs": 3391,
+        "longTasks": [
+          {
+            "start": 80.69999998807907,
+            "duration": 295
+          },
+          {
+            "start": 385.09999999403954,
+            "duration": 60
+          },
+          {
+            "start": 466.69999998807907,
+            "duration": 390
+          },
+          {
+            "start": 1975.5,
+            "duration": 1352
+          }
+        ],
+        "gpu": [],
+        "webgl": {
+          "compileShader": {
+            "calls": 40,
+            "totalMs": 0,
+            "maxMs": 0
+          },
+          "linkProgram": {
+            "calls": 22,
+            "totalMs": 0.5999999642372131,
+            "maxMs": 0.19999998807907104
+          },
+          "getProgramParameter": {
+            "calls": 206,
+            "totalMs": 1573.4000000059605,
+            "maxMs": 421.19999998807907
+          },
+          "getUniformLocation": {
+            "calls": 50,
+            "totalMs": 0.09999999403953552,
+            "maxMs": 0.09999999403953552
+          },
+          "drawArrays": {
+            "calls": 1657,
+            "totalMs": 0.699999988079071,
+            "maxMs": 0.10000002384185791
+          },
+          "drawElements": {
+            "calls": 5,
+            "totalMs": 0,
+            "maxMs": 0
+          }
+        },
+        "diagnostics": {
+          "ready": true,
+          "backend": "WebGL2",
+          "progress": 0,
+          "targetProgress": 0,
+          "phase": 0,
+          "cubePieces": 27,
+          "exteriorPlates": 54,
+          "modeledPlates": 72,
+          "tileCount": 162,
+          "activeTiles": 0,
+          "fieldMaterials": 5,
+          "drawCalls": 393,
+          "triangles": 759478,
+          "frameMs": 16.40316875,
+          "renderCpuMs": 0.3332799988269806,
+          "pixelRatio": 1,
+          "adapted": false,
+          "reducedMotion": false,
+          "width": 390,
+          "height": 844,
+          "frameNumber": 3,
+          "scrollRange": 5570,
+          "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+          "threeRevision": "185",
+          "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+          "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+          "environmentLoaded": true,
+          "ambientOcclusion": true,
+          "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+          "depthOfField": false,
+          "bloom": true,
+          "choreographyDeterministic": true,
+          "renderError": null,
+          "renderOnDemand": true,
+          "idle": true,
+          "variants": {
+            "idleSpin": false,
+            "chromaticAberration": false,
+            "hoverLift": false
+          },
+          "precompiledPasses": true,
+          "initialLoadMs": 3308.100000023842,
+          "startupTimings": {
+            "renderObjects": {
+              "PMREM_equirect": {
+                "calls": 1,
+                "exclusiveMs": 19.400000005960464,
+                "maxMs": 19.400000005960464
+              },
+              "PMREM_ggx": {
+                "calls": 20,
+                "exclusiveMs": 356.6000000834465,
+                "maxMs": 351.90000000596046
+              },
+              "Background.material": {
+                "calls": 3,
+                "exclusiveMs": 1,
+                "maxMs": 1
+              },
+              "Kineti premium glyph": {
+                "calls": 120,
+                "exclusiveMs": 505.7000000178814,
+                "maxMs": 468.09999999403954
+              },
+              "Kineti premium face": {
+                "calls": 120,
+                "exclusiveMs": 373.69999998807907,
+                "maxMs": 355.30000001192093
+              },
+              "Kineti premium rim": {
+                "calls": 120,
+                "exclusiveMs": 33.19999998807907,
+                "maxMs": 9.5
+              },
+              "Kineti premium shell": {
+                "calls": 90,
+                "exclusiveMs": 13.900000005960464,
+                "maxMs": 10.299999982118607
+              },
+              "Kineti premium core": {
+                "calls": 3,
+                "exclusiveMs": 10.200000017881393,
+                "maxMs": 10.200000017881393
+              },
+              "RenderPipeline": {
+                "calls": 3,
+                "exclusiveMs": 474.2999999821186,
+                "maxMs": 448
+              }
+            },
+            "rendererInitMs": 194,
+            "geometryMs": 97.09999999403954,
+            "environmentFetchDecodeMs": 345.89999997615814,
+            "sceneCompileMs": 1541.0999999940395,
+            "fieldFirstRenderMs": 1352.5,
+            "heroFirstRenderMs": 31.100000023841858
+          }
+        },
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+            "startTime": 5.799999982118607,
+            "responseEnd": 20.400000005960464,
+            "duration": 14.600000023841858,
+            "transferSize": 1056899,
+            "encodedBodySize": 1056599,
+            "decodedBodySize": 1056599,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+            "startTime": 6,
+            "responseEnd": 10.5,
+            "duration": 4.5,
+            "transferSize": 25136,
+            "encodedBodySize": 24836,
+            "decodedBodySize": 24836,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/website-D-yiEWFH.js",
+            "startTime": 6,
+            "responseEnd": 13.900000005960464,
+            "duration": 7.9000000059604645,
+            "transferSize": 81529,
+            "encodedBodySize": 81229,
+            "decodedBodySize": 291280,
+            "initiatorType": "script"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+            "startTime": 6.0999999940395355,
+            "responseEnd": 11.099999994039536,
+            "duration": 5,
+            "transferSize": 669,
+            "encodedBodySize": 369,
+            "decodedBodySize": 685,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+            "startTime": 6.0999999940395355,
+            "responseEnd": 11.400000005960464,
+            "duration": 5.300000011920929,
+            "transferSize": 628,
+            "encodedBodySize": 328,
+            "decodedBodySize": 698,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/HDRLoader-CrqzOtfS.js",
+            "startTime": 6.199999988079071,
+            "responseEnd": 15.299999982118607,
+            "duration": 9.099999994039536,
+            "transferSize": 1682,
+            "encodedBodySize": 1382,
+            "decodedBodySize": 3282,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/three.tsl-BttmkIl0.js",
+            "startTime": 6.199999988079071,
+            "responseEnd": 16,
+            "duration": 9.800000011920929,
+            "transferSize": 3588,
+            "encodedBodySize": 3288,
+            "decodedBodySize": 10161,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/symbols-BjuGL6Lt.js",
+            "startTime": 6.199999988079071,
+            "responseEnd": 19.099999994039536,
+            "duration": 12.900000005960464,
+            "transferSize": 195926,
+            "encodedBodySize": 195626,
+            "decodedBodySize": 890446,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+            "startTime": 6.299999982118607,
+            "responseEnd": 16,
+            "duration": 9.700000017881393,
+            "transferSize": 5714,
+            "encodedBodySize": 5414,
+            "decodedBodySize": 26348,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+            "startTime": 64,
+            "responseEnd": 66.19999998807907,
+            "duration": 2.199999988079071,
+            "transferSize": 15008,
+            "encodedBodySize": 14708,
+            "decodedBodySize": 14708,
+            "initiatorType": "css"
+          },
+          {
+            "name": "http://127.0.0.1:4174/kineti.svg",
+            "startTime": 384.69999998807907,
+            "responseEnd": 387.59999999403954,
+            "duration": 2.9000000059604645,
+            "transferSize": 472,
+            "encodedBodySize": 172,
+            "decodedBodySize": 195,
+            "initiatorType": "other"
+          }
+        ],
+        "navigation": {
+          "name": "http://127.0.0.1:4174/?renderer=webgl&profile=1",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 55,
+          "navigationId": 8110,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "br",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.5,
+          "domainLookupStart": 0.5,
+          "domainLookupEnd": 0.5,
+          "connectStart": 0.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.5,
+          "requestStart": 1.4000000059604645,
+          "responseStart": 2.5999999940395355,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 2.5999999940395355,
+          "responseEnd": 3.199999988079071,
+          "transferSize": 898,
+          "encodedBodySize": 598,
+          "decodedBodySize": 1770,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 10.199999988079071,
+          "domContentLoadedEventStart": 54.900000005960464,
+          "domContentLoadedEventEnd": 54.900000005960464,
+          "domComplete": 55,
+          "loadEventStart": 55,
+          "loadEventEnd": 55,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {}
+        },
+        "paints": [
+          {
+            "name": "first-paint",
+            "entryType": "paint",
+            "startTime": 140,
+            "duration": 0,
+            "navigationId": 8110,
+            "paintTime": 25.400000005960464,
+            "presentationTime": 140
+          },
+          {
+            "name": "first-contentful-paint",
+            "entryType": "paint",
+            "startTime": 408,
+            "duration": 0,
+            "navigationId": 8110,
+            "paintTime": 378.7999999821186,
+            "presentationTime": 408
+          }
+        ],
+        "marks": [
+          {
+            "name": "kineti:environmentFetchDecodeMs",
+            "entryType": "measure",
+            "startTime": 82.90000000596046,
+            "duration": 345.89999997615814,
+            "navigationId": 8110
+          },
+          {
+            "name": "kineti:rendererInitMs",
+            "entryType": "measure",
+            "startTime": 84.5,
+            "duration": 194,
+            "navigationId": 8110
+          },
+          {
+            "name": "kineti:geometryMs",
+            "entryType": "measure",
+            "startTime": 279,
+            "duration": 97.09999999403954,
+            "navigationId": 8110
+          },
+          {
+            "name": "kineti:sceneCompileMs",
+            "entryType": "measure",
+            "startTime": 434.5,
+            "duration": 1541.0999999940395,
+            "navigationId": 8110
+          },
+          {
+            "name": "kineti:fieldFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 1975.699999988079,
+            "duration": 1352.5,
+            "navigationId": 8110
+          },
+          {
+            "name": "kineti:heroFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 3358.7999999821186,
+            "duration": 31.100000023841858,
+            "navigationId": 8110
+          }
+        ],
+        "bodyBytes": 1384549
+      }
+    }
+  ]
+}

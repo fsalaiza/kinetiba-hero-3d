@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kineti · comparación PlayCanvas</title>
+<style>html,body{margin:0;background:#10130f;color:#f2f0e9;font:14px system-ui}canvas{position:fixed;inset:0;width:100%;height:100%}.runway{height:760vh}aside{position:fixed;left:28px;top:28px;max-width:340px;z-index:1;background:#10130fdd;padding:18px;border:1px solid #4b5740}a{color:#c6f85c}p{line-height:1.6}output{font:12px monospace;white-space:pre-wrap}button{font:inherit;background:#25321d;color:#f2f0e9;border:1px solid #607448;padding:6px 12px;margin:0 8px 8px 0;cursor:pointer}</style></head>
+<body><canvas aria-label="Cubo de 27 piezas y mosaico renderizados por PlayCanvas"></canvas><div class="runway"></div><aside><strong>PlayCanvas / motor independiente</strong><p>27 piezas · 54 glifos en relieve.<br>Mosaico de 432 o 162 baldosas.</p><p>Desplázate para explorar el mosaico.</p><button id="hero">Cubo</button><button id="field">Mosaico</button><p><a href="/research/ab.html">Laboratorio</a> · <a href="/">Kineti</a></p><output>Preparando…</output></aside>
+<script type="module">
+import {createPlayCanvasComparison} from '/src/kineti/research/playcanvasScene.js';
+try {
+ const experience = await createPlayCanvasComparison(document.querySelector('canvas'));
+ window.__COMPARISON__ = experience;
+ const scroll = () => experience.setProgress(scrollY / Math.max(1,document.documentElement.scrollHeight-innerHeight));
+ addEventListener('scroll', scroll, {passive:true}); scroll();
+ document.querySelector('#hero').onclick = () => scrollTo({top:0,behavior:'instant'});
+ document.querySelector('#field').onclick = () => scrollTo({top:.6*(document.documentElement.scrollHeight-innerHeight),behavior:'instant'});
+ const interval = setInterval(()=>{const d=experience.getDiagnostics();document.querySelector('output').textContent=`${d.backend} · PlayCanvas ${d.version}\n${d.width} × ${d.height} · DPR ${d.pixelRatio}\nHDR ${d.environment.status}\n${d.drawCalls} draw calls · ${Math.round(d.triangles).toLocaleString('es')} triángulos\n${d.frameMs.toFixed(1)} ms entre frames\n${d.activeTiles ? `${d.activeTiles} baldosas` : '27 piezas · 54 glifos'}`},500);
+ addEventListener('pagehide',()=>{clearInterval(interval);experience.dispose()},{once:true});
+} catch(error) { document.querySelector('output').textContent=error.stack; console.error(error); }
+</script></body></html>

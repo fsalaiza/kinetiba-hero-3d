@@ -1,0 +1,52 @@
+{
+  "errors": [],
+  "warnings": [
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127"
+  ],
+  "hero": {
+    "ready": true,
+    "backend": "WebGPU",
+    "progress": 0,
+    "targetProgress": 0,
+    "phase": 0,
+    "cubePieces": 27,
+    "tileCount": 432,
+    "activeTiles": 0,
+    "drawCalls": 177,
+    "triangles": 256631,
+    "frameMs": 18.465401929613638,
+    "renderCpuMs": 0.9936623474280419,
+    "pixelRatio": 1,
+    "adapted": false,
+    "reducedMotion": true,
+    "width": 1440,
+    "height": 900,
+    "frameNumber": 34,
+    "scrollRange": 5940,
+    "shaderAnimation": "TSL instance attributes + scroll uniforms",
+    "threeRevision": "185"
+  },
+  "macro": {
+    "ready": true,
+    "backend": "WebGPU",
+    "progress": 0.7400673400673401,
+    "targetProgress": 0.7400673400673401,
+    "phase": 4,
+    "cubePieces": 27,
+    "tileCount": 432,
+    "activeTiles": 432,
+    "drawCalls": 25,
+    "triangles": 1099789,
+    "frameMs": 18.80635438115065,
+    "renderCpuMs": 1.0676008628881986,
+    "pixelRatio": 1,
+    "adapted": false,
+    "reducedMotion": true,
+    "width": 1440,
+    "height": 900,
+    "frameNumber": 116,
+    "scrollRange": 5940,
+    "shaderAnimation": "TSL instance attributes + scroll uniforms",
+    "threeRevision": "185"
+  }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kineti · Prueba independiente Babylon.js</title>
+  <style>
+    *{box-sizing:border-box}html{color-scheme:dark;background:#10130f}body{margin:0;min-height:760vh;font:14px/1.5 system-ui,sans-serif;color:#e9ebdc}canvas{display:block;position:fixed;inset:0;width:100%;height:100%;outline:none}header{position:fixed;z-index:2;top:25px;left:32px;right:32px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;pointer-events:none}.brand{font-size:15px;font-weight:650;letter-spacing:.02em}.brand small{display:block;font-size:11px;font-weight:400;color:#b5bfa9;margin-top:4px}nav{display:flex;gap:8px;pointer-events:auto}button{font:inherit;font-size:12px;border:1px solid #526146;border-radius:99px;background:#182014df;color:#e9ebdc;padding:9px 15px;cursor:pointer}button:hover,button[aria-pressed=true]{background:#c6f85c;color:#15200c;border-color:#c6f85c}.intro{position:fixed;top:36%;left:7%;width:25%;max-width:340px;z-index:1;pointer-events:none}.intro h1{font-size:clamp(28px,3vw,48px);line-height:1.08;letter-spacing:-.035em;font-weight:550;margin:0 0 18px}.intro p{color:#b5bfa9;font-size:13px}.intro.hidden{visibility:hidden}footer{position:fixed;z-index:2;left:25px;right:25px;bottom:18px;display:flex;justify-content:space-between;gap:25px;align-items:flex-end;pointer-events:none}.note{max-width:500px;font-size:10px;color:#bac5b0;background:#10130fbd;border-radius:10px;padding:10px 12px}.stats{font:11px/1.65 ui-monospace,monospace;white-space:pre-wrap;text-align:right;color:#d6e5c4;background:#10130fbd;border-radius:10px;padding:10px 12px}.error{color:#ffd6ad}@media(max-width:700px){header{left:18px;right:18px;top:18px}.intro{top:17%;left:7%;width:65%}.intro h1{font-size:29px}.intro p{font-size:11px}footer{left:12px;right:12px;gap:12px}.note{max-width:55%;font-size:9px}.stats{font-size:9px}button{padding:8px 11px}}
+  </style>
+</head>
+<body>
+  <canvas id="scene" aria-label="Prueba Babylon: cubo de 27 piezas y mosaico de 432 baldosas"></canvas>
+  <header><div class="brand">Kineti / Babylon.js<small id="backend">Inicializando motor independiente…</small></div><nav aria-label="Vista de comparación"><button id="hero" aria-pressed="true">Cubo</button><button id="mosaic" aria-pressed="false">432 piezas</button></nav></header>
+  <div class="intro" id="intro"><h1>El mismo objeto.<br>Otro motor.</h1><p>Geometría real compartida. Renderizado Babylon.js. Desplázate para explorar el mosaico.</p></div>
+  <footer><div class="note">Base sin bloom, SSAO, sombras ni efecto de pantalla; las sombras y el efecto personalizado pueden activarse desde los controles. PBR, luces, HDR y tone mapping varían entre motores: compartir valores no produce imágenes idénticas ni aísla su rendimiento.</div><div class="stats" id="stats">Esperando el primer fotograma medido…</div></footer>
+  <script type="module">
+    import { createBabylonComparison } from '/src/kineti/research/babylonScene.js';
+    const backend=document.querySelector('#backend'),stats=document.querySelector('#stats'),intro=document.querySelector('#intro');
+    const hero=document.querySelector('#hero'),mosaic=document.querySelector('#mosaic');
+    const progress=()=>scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight);
+    const scrollToProgress=(p)=>scrollTo({top:p*(document.documentElement.scrollHeight-innerHeight),behavior:'instant'});
+    try {
+      const experience=await createBabylonComparison(document.querySelector('#scene'));
+      function applyProgress(p){experience.setProgress(p);const grid=p>=.49;intro.classList.toggle('hidden',grid);hero.setAttribute('aria-pressed',String(!grid));mosaic.setAttribute('aria-pressed',String(grid));}
+      window.__kinetiBabylon={...experience,setProgress:applyProgress};
+      window.__COMPARISON__=window.__kinetiBabylon;
+      function sync(){applyProgress(progress());}
+      addEventListener('scroll',sync,{passive:true});
+      hero.onclick=()=>scrollToProgress(0);mosaic.onclick=()=>scrollToProgress(.6);
+      const queryProgress=Number(new URLSearchParams(location.search).get('progress')||0);
+      if(Number.isFinite(queryProgress))scrollToProgress(Math.min(1,Math.max(0,queryProgress)));
+      sync();
+      const formatter=new Intl.NumberFormat('es',{maximumFractionDigits:1});
+      const interval=setInterval(()=>{const d=experience.getDiagnostics();backend.textContent=`${d.backend} · Babylon ${d.version} · HDR ${d.environment.status==='loaded'?'activo':'no disponible'}`;stats.textContent=d.frame?`${d.viewport.width} × ${d.viewport.height} · ${d.stage}\n${formatter.format(d.frame.drawCalls)} draw calls · ${formatter.format(d.frame.submittedTriangles)} triángulos enviados\n${d.timing.fps?formatter.format(d.timing.fps)+' FPS medidos':'Midiendo…'} · ${d.timing.samples} muestras`:'Esperando el primer fotograma medido…';},250);
+      addEventListener('pagehide',()=>{clearInterval(interval);experience.dispose();},{once:true});
+    }catch(error){backend.textContent='No se pudo iniciar Babylon';stats.classList.add('error');stats.textContent=String(error);console.error(error);}
+  </script>
+</body>
+</html>

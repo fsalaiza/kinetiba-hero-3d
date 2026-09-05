@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kineti · Visor de referencia D2C</title>
+  <style>
+    :root{color-scheme:dark;font:15px/1.5 system-ui,sans-serif;background:#111610;color:#edf1e8}*{box-sizing:border-box}body{margin:0}header{padding:18px 28px;border-bottom:1px solid #35402e;display:flex;justify-content:space-between;align-items:center;gap:20px}h1{font-size:18px;font-weight:600;margin:0}a{color:#caf080}button,select,input{font:inherit}button,select{border:1px solid #536447;background:#263320;color:#f0f6e6;border-radius:7px;padding:8px 12px}button{cursor:pointer}button:hover{background:#3d5030}button:disabled{opacity:.4;cursor:default}main{max-width:1440px;margin:auto;padding:22px 28px}.notice{color:#acb8a2;font-size:13px;margin:0 0 16px}.controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0}.controls label{display:flex;align-items:center;gap:10px}.controls input[type=range]{width:clamp(140px,29vw,450px);accent-color:#c6ef85}.controls input[type=number]{width:74px;background:#182014;color:#eff5e8;border:1px solid #526245;padding:6px;border-radius:5px}figure{margin:0}.primary{display:block;width:100%;height:auto;max-height:74vh;object-fit:contain;background:#050805;border:1px solid #425039}.caption{display:grid;grid-template-columns:1fr 2fr;gap:28px;margin:18px 0}.caption h2{font-size:20px;font-weight:550;margin:0 0 8px}.caption p{color:#b9c5ae;margin:0 0 8px}.strip{display:grid;grid-template-columns:repeat(9,1fr);gap:8px;margin-top:24px}.strip button{padding:0;overflow:hidden;background:#182014;border:2px solid transparent}.strip button[aria-current=true]{border-color:#c6ef85}.strip img{display:block;width:100%;height:auto}.strip span{display:block;font:11px monospace;padding:4px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.grid figure{background:#1e291a}.grid img{display:block;width:100%;height:auto}.grid figcaption{font:13px/1.4 ui-monospace,monospace;padding:5px 8px;color:#ebf6db}.sheet main{max-width:none;padding:12px}.sheet header{padding:9px 16px}.sheet .notice{margin:0 0 8px}.sheet .viewer{display:none}.sheet .grid{gap:8px}.sheet h1{font-size:15px}#sheetControls{display:none}.sheet #sheetControls{display:flex}body:not(.sheet) .grid{display:none}.details{color:#abbba0;font-size:12px}@media(max-width:700px){header{padding:15px;align-items:flex-start}main{padding:16px}.caption{grid-template-columns:1fr;gap:5px}.strip{grid-template-columns:repeat(5,1fr)}.grid{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <header><h1>D2C Life Science · archivo visual de referencia</h1><div><a href="../docs/D2C_SCENE_ANALYSIS.md">Análisis completo</a> · <a href="./ab.html">Laboratorio de Kineti</a></div></header>
+  <main>
+    <p class="notice">188 imágenes locales, conservadas sin cambios. El índice identifica una captura: no equivale a porcentaje de scroll ni a tiempo. Estudio de referencia para crear una dirección propia de Kineti.</p>
+    <div id="sheetControls" class="controls"><button id="prevSheet">← Grupo anterior</button><button id="nextSheet">Grupo siguiente →</button><a id="detailLink">Ver fotograma</a></div>
+    <div class="viewer">
+      <div class="controls">
+        <button id="previous" aria-label="Fotograma anterior">←</button><button id="next" aria-label="Fotograma siguiente">→</button>
+        <label for="frame">Fotograma <input id="frame" type="range" min="1" max="188" value="1"></label>
+        <input id="number" aria-label="Número de fotograma" type="number" min="1" max="188" value="1"><span>/ 188</span>
+        <label for="phase">Escena <select id="phase"></select></label><a id="sheetLink">Ver secuencia en cuadrícula</a>
+      </div>
+      <figure><img id="primary" class="primary" alt="Fotograma de la referencia D2C Life Science"><figcaption class="caption"><div><h2 id="title"></h2><p id="range"></p><a id="original" target="_blank" rel="noopener">Abrir imagen original</a></div><div><p id="observation"></p><p id="limit" class="details"></p></div></figcaption></figure>
+      <div class="strip" id="strip" aria-label="Fotogramas cercanos"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </main>
+  <script>
+    const PHASES = [
+      {start:1,end:14,title:'Presentación del cubo',observation:'Cubo crema con tres piezas por lado, varias caras visibles, placas frontales y símbolos claros. El titular ocupa la zona inferior y el fondo verde concentra la luz detrás del objeto. La pose comienza a cambiar antes de desaparecer el titular.',limit:'La retícula visible es compatible con 3×3×3. Las capturas no permiten contar piezas internas ni identificar el motor.'},
+      {start:15,end:48,title:'Giro y acercamiento',observation:'El cubo crece en pantalla, gira y llega a recortarse. Los laterales, las separaciones, los biseles y los cantos de las placas hacen legible su volumen. Todavía conserva la estructura de cubo.',limit:'El cambio aparente de tamaño no revela por sí solo si se anima la cámara, la escala del objeto o ambas. No hay aquí un desplegado plano 3×6.'},
+      {start:49,end:79,title:'Cubo a la derecha · Insights',observation:'Una fila pequeña de símbolos precede al bloque editorial de la izquierda. El cubo se desplaza a la derecha; alrededor del 066 aparece el texto y después se enfatiza DATA-DRIVEN INSIGHTS, con botones y grandes símbolos de contorno al fondo.',limit:'El 060 muestra una cara 3×3 en perspectiva, no un mosaico desplegado. Los rangos son grupos de observación, no marcas de tiempo.'},
+      {start:80,end:116,title:'Cubo a la izquierda · Six Pillars',observation:'El cubo vuelve por el centro hacia la izquierda y continúa girando. En 109–110 aparece SIX PILLARS a la derecha con seis iconos. En 114–116 la cara dominante repite un mismo símbolo, después de varios estados de giro.',limit:'Los botones y los cambios de símbolos son visibles; las imágenes no prueban qué interacción los activa ni un algoritmo de resolución del cubo.'},
+      {start:117,end:130,title:'Separación de placas',observation:'Las placas se separan de los cuerpos que las sostienen y se acercan al encuadre. Hay caras vistas de canto, piezas a varias profundidades y oclusiones. Tres métricas aparecen en la zona inferior durante la entrada al acercamiento.',limit:'Se distingue una placa delgada de su soporte. El orden de las imágenes no proporciona la duración, la trayectoria tridimensional exacta ni el número total de piezas animadas.'},
+      {start:131,end:136,title:'Macro de material y relieve',observation:'El plano cercano revela moteado fino en la placa crema, esquinas cortadas, muescas semicirculares, espesor y un símbolo claro con bordes y relieve aparente. Las métricas permanecen sobre el plano 3D.',limit:'El relieve y la textura se ven; una imagen no permite separar con certeza malla, mapas normales, desplazamiento o iluminación horneada.'},
+      {start:137,end:148,title:'Placa protagonista entre piezas',observation:'Una placa conserva el protagonismo mientras otros soportes y caras giran y se apartan a distintas profundidades. La placa recupera una silueta completa y presenta su espesor durante el cambio de pose.',limit:'El efecto depende de superposición, perspectiva y cantos visibles. No se deduce una curva de interpolación concreta de estas capturas.'},
+      {start:149,end:160,title:'Entrada del mosaico',observation:'Un campo de placas entra desde la derecha en un plano oblicuo. La placa protagonista queda en primer término a la izquierda; el campo va ocupando el encuadre y aparece un hueco de destino.',limit:'La composición muestra muchas placas próximas y una perspectiva rasante. No permite contar una cuadrícula completa ni afirmar que el campo sea infinito.'},
+      {start:161,end:173,title:'Encaje y superficie continua',observation:'La placa se acerca al hueco y desciende hasta incorporarse al campo. Alrededor del 169–170 queda casi al nivel de sus vecinas. Los símbolos, los cantos de color, las pequeñas juntas y los brillos hacen legible una superficie modular con profundidad.',limit:'La retícula se recorta fuera de pantalla; no se atribuye una cantidad exacta de instancias ni una fórmula de onda a la referencia.'},
+      {start:174,end:177,title:'Intertítulo sin objeto',observation:'El mosaico deja de verse y aparece MAKE DATA-BACKED DECISIONS centrado sobre el fondo verde. Este intervalo funciona visualmente como una pausa entre el campo de placas y el siguiente apartado.',limit:'El salto entre capturas no prueba un corte de edición ni excluye una transición no muestreada. No se ve una transformación directa de mosaico a ADN.'},
+      {start:178,end:180,title:'Entrada de Audit',observation:'El título AUDIT, el cuerpo de texto y el botón ocupan la izquierda. A la derecha queda aire con un halo verde; hacia el 180 comienza a entrar la siguiente forma desde el borde.',limit:'Es una nueva composición editorial. Las capturas no establecen por sí solas un cambio de ruta, canvas o escena técnica.'},
+      {start:181,end:188,title:'Doble hélice y placas',observation:'Entra una doble hélice blanca con dos bandas torsionadas y numerosos travesaños. Varias placas flotan a su alrededor y algunas aparecen desenfocadas. La estructura vertical se recorta arriba y abajo junto al texto de AUDIT.',limit:'La forma visible es una doble hélice, no una píldora. El archivo acaba en el 188 dentro de este apartado: no demuestra el final del sitio. El desenfoque no identifica una técnica de posprocesado concreta.'},
+    ];
+    const path = (i) => `../screenshots/d2c_reference/frame_${String(i).padStart(3,'0')}.jpg`;
+    const query = new URLSearchParams(location.search), sheet = query.get('sheet')==='1';
+    const bound = (i) => Math.min(188,Math.max(1,Math.round(Number(i)||1)));
+    let current = bound(query.get('frame')||query.get('start')||1);
+    const phaseAt = (i) => PHASES.find((phase)=>i>=phase.start&&i<=phase.end);
+    const phaseInput=document.querySelector('#phase');
+    PHASES.forEach((phase)=>{const option=document.createElement('option');option.value=phase.start;option.textContent=`${phase.start}–${phase.end} · ${phase.title}`;phaseInput.append(option);});
+    function showFrame(value){
+      current=bound(value);const phase=phaseAt(current);
+      document.querySelector('#frame').value=current;document.querySelector('#number').value=current;
+      document.querySelector('#primary').src=path(current);document.querySelector('#primary').alt=`D2C, fotograma ${current}: ${phase.title}`;
+      document.querySelector('#title').textContent=phase.title;document.querySelector('#range').textContent=`Fotograma ${String(current).padStart(3,'0')} · grupo ${phase.start}–${phase.end}`;
+      document.querySelector('#observation').textContent=phase.observation;document.querySelector('#limit').textContent=phase.limit;
+      document.querySelector('#original').href=path(current);phaseInput.value=phase.start;
+      document.querySelector('#previous').disabled=current===1;document.querySelector('#next').disabled=current===188;
+      document.querySelector('#sheetLink').href=`?sheet=1&start=${Math.floor((current-1)/24)*24+1}&count=24`;
+      const strip=document.querySelector('#strip');strip.replaceChildren();
+      const start=Math.max(1,Math.min(180,current-4));
+      for(let i=start;i<Math.min(189,start+9);i++){const button=document.createElement('button');button.setAttribute('aria-current',String(i===current));button.setAttribute('aria-label',`Ver fotograma ${i}`);const img=document.createElement('img');img.src=path(i);img.alt='';const label=document.createElement('span');label.textContent=String(i).padStart(3,'0');button.append(img,label);button.onclick=()=>showFrame(i);strip.append(button);}
+      history.replaceState(null,'',`?frame=${current}`);
+    }
+    if(sheet){
+      document.body.classList.add('sheet');const count=Math.min(48,Math.max(1,Number(query.get('count'))||24));const end=Math.min(188,current+count-1);document.querySelector('h1').textContent=`D2C Life Science · fotogramas ${current}–${end} de 188`;
+      const grid=document.querySelector('#grid');
+      for(let i=current;i<=end;i++){const figure=document.createElement('figure');const img=document.createElement('img');img.src=path(i);img.alt=`Fotograma ${i}`;const caption=document.createElement('figcaption');caption.textContent=`${String(i).padStart(3,'0')} · ${phaseAt(i).title}`;figure.append(img,caption);grid.append(figure);}
+      document.querySelector('#prevSheet').disabled=current===1;document.querySelector('#nextSheet').disabled=end===188;
+      document.querySelector('#prevSheet').onclick=()=>location.href=`?sheet=1&start=${Math.max(1,current-count)}&count=${count}`;
+      document.querySelector('#nextSheet').onclick=()=>location.href=`?sheet=1&start=${end+1}&count=${count}`;
+      document.querySelector('#detailLink').href=`?frame=${current}`;
+    }else{
+      showFrame(current);document.querySelector('#previous').onclick=()=>showFrame(current-1);document.querySelector('#next').onclick=()=>showFrame(current+1);
+      document.querySelector('#frame').oninput=(event)=>showFrame(event.target.value);document.querySelector('#number').onchange=(event)=>showFrame(event.target.value);phaseInput.onchange=(event)=>showFrame(event.target.value);
+      addEventListener('keydown',(event)=>{if(event.target.matches('input,select'))return;if(event.key==='ArrowLeft'){event.preventDefault();showFrame(current-1)}if(event.key==='ArrowRight'){event.preventDefault();showFrame(current+1)}});
+    }
+  </script>
+</body>
+</html>

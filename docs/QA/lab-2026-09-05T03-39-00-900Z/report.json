@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "name": "production-load",
+      "pass": true
+    },
+    {
+      "name": "switch-preserves-controls",
+      "pass": true
+    },
+    {
+      "name": "one-canvas-after-switch",
+      "pass": true
+    },
+    {
+      "name": "mosaic-preset",
+      "pass": true
+    },
+    {
+      "name": "unsupported-compute-visible",
+      "pass": true
+    },
+    {
+      "name": "compute-readback-visible",
+      "pass": true
+    },
+    {
+      "name": "rapid-switch-settles-on-request",
+      "pass": true
+    },
+    {
+      "name": "download-contains-real-diagnostics",
+      "pass": true
+    },
+    {
+      "name": "no-browser-errors",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

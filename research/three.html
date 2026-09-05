@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kineti — comparación Three.js</title>
+<style>html,body{margin:0;background:#10130f;color:#f2f0e9;font:14px system-ui}canvas{position:fixed;inset:0;width:100%;height:100%}.runway{height:760vh}aside{position:fixed;left:28px;top:28px;max-width:340px;z-index:1;background:#10130fdd;padding:18px;border:1px solid #4b5740}a{color:#c6f85c}p{line-height:1.6}output{font:12px monospace;white-space:pre-wrap}</style></head>
+<body><canvas></canvas><div class="runway"></div><aside><strong>Three.js / WebGPU</strong><p>27 piezas · 54 símbolos.<br>Mosaico de 432 piezas.<br>Sin sombras ni posprocesado.</p><p>Desplázate para ver el mosaico.<br><a href="/research/babylon.html">Comparar con Babylon.js</a> · <a href="/">Kineti</a></p><output>Preparando…</output></aside>
+<script type="module">
+import {createThreeComparison} from '/src/kineti/research/threeScene.js';
+try {
+ const app = await createThreeComparison(document.querySelector('canvas'));
+ window.__COMPARISON__ = app;
+ const scroll = () => app.setProgress(scrollY / Math.max(1,document.documentElement.scrollHeight-innerHeight));
+ addEventListener('scroll', scroll, {passive:true}); scroll();
+ setInterval(()=>{const d=app.getDiagnostics();document.querySelector('output').textContent=JSON.stringify(d,null,2)},500);
+}catch(e){document.querySelector('output').textContent=e.stack;console.error(e)}
+</script></body></html>

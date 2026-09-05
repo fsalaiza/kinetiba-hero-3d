@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kineti · WebGPU directo</title>
+  <style>
+    *{box-sizing:border-box}html{color-scheme:dark;background:#10130f}body{margin:0;min-height:760vh;color:#e9ebdc;font:14px/1.5 system-ui,sans-serif}canvas{position:fixed;inset:0;display:block;width:100%;height:100%}header{position:fixed;z-index:2;top:25px;left:32px;right:32px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;pointer-events:none}.brand{font-weight:650}.brand small{display:block;font-size:11px;font-weight:400;color:#b5bfa9;margin-top:4px}nav{display:flex;gap:8px;pointer-events:auto}button{font:12px system-ui;border:1px solid #526146;border-radius:99px;background:#182014e8;color:#e9ebdc;padding:9px 15px;cursor:pointer}button:hover,button[aria-pressed=true]{background:#c6f85c;color:#15200c;border-color:#c6f85c}.intro{position:fixed;top:36%;left:7%;width:25%;max-width:340px;z-index:1;pointer-events:none}.intro h1{font-size:clamp(28px,3vw,48px);line-height:1.08;letter-spacing:-.035em;font-weight:550;margin:0 0 18px}.intro p{color:#b5bfa9;font-size:13px}.intro.hidden{visibility:hidden}footer{position:fixed;z-index:2;left:25px;right:25px;bottom:18px;display:flex;align-items:flex-end;justify-content:space-between;gap:25px;pointer-events:none}.note,.stats{background:#10130fce;border-radius:10px;padding:10px 12px;color:#bac5b0}.note{max-width:485px;font-size:10px}.stats{font:11px/1.65 ui-monospace,monospace;white-space:pre-wrap;text-align:right}.error{color:#ffd6ad;max-width:60vw;overflow-wrap:anywhere}@media(max-width:700px){header{left:18px;right:18px;top:18px}.intro{top:17%;left:7%;width:65%}.intro h1{font-size:29px}footer{left:12px;right:12px;gap:12px}.note{max-width:55%;font-size:9px}.stats{font-size:9px}button{padding:8px 11px}}
+  </style>
+</head>
+<body>
+  <canvas id="scene" aria-label="Cubo de 27 piezas y mosaico 3D renderizados con WebGPU directo"></canvas>
+  <header><div class="brand">Kineti / WebGPU directo<small id="backend">Preparando geometría e iluminación…</small></div><nav aria-label="Vista"><button id="hero" aria-pressed="true">Cubo</button><button id="mosaic" aria-pressed="false">432 piezas</button></nav></header>
+  <div class="intro" id="intro"><h1>Cada detalle.<br>Bajo tu control.</h1><p>27 piezas, 54 símbolos y un mosaico de 432 baldosas. Desplázate para explorarlos.</p></div>
+  <footer><div class="note">Prueba comparativa con geometría, cámara y controles compartidos. La iluminación y el acabado propios producen diferencias visibles. Las sombras y el efecto de pantalla se activan desde el laboratorio.</div><div class="stats" id="stats">Esperando el primer fotograma…</div></footer>
+  <script type="module">
+    import { createNativeWebGPUComparison } from '/src/kineti/research/nativeWebGPUScene.js';
+    const backend=document.querySelector('#backend'),stats=document.querySelector('#stats'),intro=document.querySelector('#intro');
+    const hero=document.querySelector('#hero'),mosaic=document.querySelector('#mosaic');
+    const scrollToProgress=p=>scrollTo({top:p*(document.documentElement.scrollHeight-innerHeight),behavior:'instant'});
+    try {
+      const app=await createNativeWebGPUComparison(document.querySelector('#scene'));
+      const applyProgress=p=>{app.setProgress(p);const grid=p>=.49;intro.classList.toggle('hidden',grid);hero.setAttribute('aria-pressed',String(!grid));mosaic.setAttribute('aria-pressed',String(grid));};
+      window.__COMPARISON__={...app,setProgress:applyProgress};
+      const sync=()=>applyProgress(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight));
+      addEventListener('scroll',sync,{passive:true});hero.onclick=()=>scrollToProgress(0);mosaic.onclick=()=>scrollToProgress(.6);
+      const requested=Number(new URLSearchParams(location.search).get('progress')||0);if(Number.isFinite(requested))scrollToProgress(Math.min(1,Math.max(0,requested)));sync();
+      const formatter=new Intl.NumberFormat('es',{maximumFractionDigits:1});
+      const interval=setInterval(()=>{const d=app.getDiagnostics();backend.textContent=`WebGPU directo · HDR ${d.environmentLoaded?'activo':'no disponible'}`;stats.textContent=d.frame?`${d.viewport.width} × ${d.viewport.height} · ${d.stage}\n${d.frame.drawCalls} draw calls · ${formatter.format(d.frame.submittedTriangles)} triángulos\n${d.timing.fps?formatter.format(d.timing.fps)+' FPS medidos':'Midiendo…'} · ${d.timing.samples} muestras`:'Esperando el primer fotograma…';},250);
+      addEventListener('pagehide',()=>{clearInterval(interval);app.dispose();},{once:true});
+    }catch(error){backend.textContent='WebGPU directo no disponible';stats.classList.add('error');stats.textContent=String(error);window.__COMPARISON_ERROR__=String(error);console.error(error);}
+  </script>
+</body>
+</html>

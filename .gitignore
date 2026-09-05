@@ -11,6 +11,20 @@
 # production
 /build
 /dist
+/dist-lab
+/dist-library
+/backups
+/qa-kineti
+/npm-install.log
+/kineti-server.log
+/kineti-server-error.log
+/build-kineti.log
+/build-lab.log
+/kineti-lab-server.log
+/kineti-lab-server-error.log
+/qa-preflight.png
+/qa-control-three.png
+/qa-control-three-webgl.png
 
 # misc
 .DS_Store

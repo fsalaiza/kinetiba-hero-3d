@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kineti / Unreal Pixel Streaming 2</title>
+  <style>
+    :root{color-scheme:dark;font-family:Arial,sans-serif;background:#12130f;color:#edeee2}*{box-sizing:border-box}body{margin:0;min-height:280vh}main{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:20px;padding:28px}article{display:flex;flex-direction:column;min-width:0}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:12px;letter-spacing:.1em}h1{font-size:22px;letter-spacing:-.04em;margin:0}h2{font-size:14px;line-height:1.5;font-weight:400}#stage{position:relative;flex:1;min-height:0;background:#070806;border:1px solid #3a3d30;border-radius:14px;overflow:hidden}video{width:100%;height:100%;object-fit:contain;display:block}#status{position:absolute;bottom:18px;left:18px;font-size:12px;padding:9px 12px;background:#111d;border-radius:8px}aside{padding:18px;border:1px solid #3a3d30;border-radius:14px;overflow:auto}label{display:block;margin:18px 0 8px;font-size:12px}input{width:100%;accent-color:#c9e36a}output{float:right;font-variant-numeric:tabular-nums}p{font-size:12px;color:#b7bca9;line-height:1.6}pre{white-space:pre-wrap;word-break:break-word;font-size:11px;line-height:1.45;color:#c9e36a}button{background:#c9e36a;color:#171b0f;border:0;padding:10px 12px;border-radius:6px;cursor:pointer;font-weight:600}small{display:block;margin-top:14px;color:#b7bca9;line-height:1.6}a{color:#c9e36a}@media(max-width:780px){main{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) 245px;padding:12px;gap:12px}aside{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;padding:12px}aside h2,aside p,pre,small{display:none}aside button{align-self:center}header{margin-bottom:10px}}
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <header><h1>Kineti / Unreal</h1><span>PIXEL STREAMING 2 · 27 PIEZAS</span></header>
+      <div id="stage"><video id="video" autoplay muted playsinline></video><div id="status">Esperando el render de Unreal…</div></div>
+      <p>Desplaza la página para transformar el cubo. Este panel recibe vídeo de Unreal ejecutado en la misma máquina.</p>
+    </article>
+    <aside>
+      <h2>Control directo del render de Unreal</h2>
+      <div><label for="progress">Progreso <output id="progressValue">0.000</output></label><input id="progress" type="range" min="0" max="1" step="0.001" value="0" /></div>
+      <div><label for="explode">Separación <output id="explodeValue">0.00</output></label><input id="explode" type="range" min="0" max="2" step="0.01" value="0" /></div>
+      <div><label for="selectedPiece">Pieza seleccionada <output id="selectedPieceValue">26</output></label><input id="selectedPiece" type="range" min="0" max="26" step="1" value="26" /></div>
+      <div><label for="pieceOffset">Altura de una pieza <output id="pieceOffsetValue">0.00</output></label><input id="pieceOffset" type="range" min="-2" max="2" step="0.01" value="0" /></div>
+      <div><label for="cameraFov">Campo de visión <output id="cameraFovValue">38</output></label><input id="cameraFov" type="range" min="20" max="80" step="1" value="38" /></div>
+      <button id="reset">Restablecer</button>
+      <p id="metrics">Conectando el canal de control…</p>
+      <pre id="ack">El estado se confirmará desde Unreal.</pre>
+      <small>Prueba funcional aislada. Materiales, geometría y luces de esta escena no equivalen a las otras escenas del laboratorio.</small>
+    </aside>
+  </main>
+  <script type="module" src="/client.js"></script>
+</body>
+</html>

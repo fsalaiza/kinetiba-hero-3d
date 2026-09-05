@@ -1,0 +1,2551 @@
+{
+  "url": "http://127.0.0.1:4174",
+  "query": "profile=1",
+  "coldBrowserCache": true,
+  "physicalMobile": false,
+  "runs": [
+    {
+      "name": "desktop",
+      "errors": [],
+      "browser": "Chrome/152.0.7977.76",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "cpuRate": 1,
+      "startup": {
+        "readyMs": 2045.5,
+        "longTasks": [
+          {
+            "start": 406.09999999403954,
+            "duration": 129
+          },
+          {
+            "start": 1708.7999999821186,
+            "duration": 142
+          },
+          {
+            "start": 1859.0999999940395,
+            "duration": 69
+          }
+        ],
+        "gpu": [
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Background.material_274",
+            "vertex": {
+              "label": "vertex_Background.material",
+              "bytes": 1800,
+              "hash": 2829546960
+            },
+            "fragment": {
+              "label": "fragment_Background.material",
+              "bytes": 1819,
+              "hash": 600239531
+            },
+            "start": 541.6999999880791,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": false,
+              "depthCompare": "always"
+            },
+            "callMs": 0,
+            "completeMs": 32.900000005960464
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_PMREM_equirect_277",
+            "vertex": {
+              "label": "vertex_PMREM_equirect",
+              "bytes": 1480,
+              "hash": 2195370176
+            },
+            "fragment": {
+              "label": "fragment_PMREM_equirect",
+              "bytes": 2266,
+              "hash": 2488158185
+            },
+            "start": 588.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_PMREM_ggx_276",
+            "vertex": {
+              "label": "vertex_PMREM_ggx",
+              "bytes": 1525,
+              "hash": 1602037511
+            },
+            "fragment": {
+              "label": "fragment_PMREM_ggx",
+              "bytes": 9302,
+              "hash": 994583320
+            },
+            "start": 594,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "mipmap-rgba8unorm-2d-array",
+            "vertex": {
+              "label": "mipmap",
+              "bytes": 1827,
+              "hash": 1972005773
+            },
+            "fragment": {
+              "label": "mipmap",
+              "bytes": 1827,
+              "hash": 1972005773
+            },
+            "start": 616,
+            "targets": [
+              {
+                "format": "rgba8unorm"
+              }
+            ],
+            "primitive": {},
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_14",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 3077,
+              "hash": 3716998456
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 46993,
+              "hash": 1548753040
+            },
+            "start": 617.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 235.90000000596046
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_15",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 2861,
+              "hash": 2211497093
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 45043,
+              "hash": 1128951121
+            },
+            "start": 864.1999999880791,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 148.90000000596046
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_260",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 4774,
+              "hash": 2777148201
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43804,
+              "hash": 1176511326
+            },
+            "start": 1072.8999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.10000002384185791,
+            "completeMs": 158.90000000596046
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_261",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 4561,
+              "hash": 3536289407
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2544859253
+            },
+            "start": 1242.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 148.5
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_263",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 4611,
+              "hash": 3317997454
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 3379841822
+            },
+            "start": 1410.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 146.09999999403954
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_257",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 2578,
+              "hash": 3208507158
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 41562,
+              "hash": 3464050648
+            },
+            "start": 1576.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "blend": {
+                  "color": {
+                    "srcFactor": "src-alpha",
+                    "dstFactor": "one-minus-src-alpha",
+                    "operation": "add"
+                  },
+                  "alpha": {
+                    "srcFactor": "one",
+                    "dstFactor": "one-minus-src-alpha",
+                    "operation": "add"
+                  }
+                },
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": false,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 132.09999999403954
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_ShadowMaterial_285",
+            "vertex": {
+              "label": "vertex_ShadowMaterial",
+              "bytes": 1325,
+              "hash": 2830975371
+            },
+            "fragment": {
+              "label": "fragment_ShadowMaterial",
+              "bytes": 802,
+              "hash": 428199296
+            },
+            "start": 1765.5,
+            "targets": [
+              {
+                "format": "rgba8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_ShadowMaterial_285",
+            "vertex": {
+              "label": "vertex_ShadowMaterial",
+              "bytes": 1457,
+              "hash": 2229628432
+            },
+            "fragment": {
+              "label": "fragment_ShadowMaterial",
+              "bytes": 1185,
+              "hash": 4058046765
+            },
+            "start": 1766.199999988079,
+            "targets": [
+              {
+                "format": "rgba8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_22",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 3077,
+              "hash": 2973678880
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium face",
+              "bytes": 46993,
+              "hash": 2596146824
+            },
+            "start": 1800.8999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_GTAO_265",
+            "vertex": {
+              "label": "vertex_GTAO",
+              "bytes": 1645,
+              "hash": 352776072
+            },
+            "fragment": {
+              "label": "fragment_GTAO",
+              "bytes": 8804,
+              "hash": 2963881023
+            },
+            "start": 1842,
+            "targets": [
+              {
+                "format": "r8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_highPass_278",
+            "vertex": {
+              "label": "vertex_Bloom_highPass",
+              "bytes": 1640,
+              "hash": 3813253470
+            },
+            "fragment": {
+              "label": "fragment_Bloom_highPass",
+              "bytes": 7105,
+              "hash": 1441626238
+            },
+            "start": 1844.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_279",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1838,
+              "hash": 2161882632
+            },
+            "start": 1845.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_280",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1840,
+              "hash": 242877343
+            },
+            "start": 1846.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_281",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1840,
+              "hash": 2128798286
+            },
+            "start": 1847.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_282",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1840,
+              "hash": 2523750150
+            },
+            "start": 1848.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0.10000002384185791
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_283",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1840,
+              "hash": 2926234629
+            },
+            "start": 1849.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_comp_284",
+            "vertex": {
+              "label": "vertex_Bloom_comp",
+              "bytes": 1567,
+              "hash": 623120811
+            },
+            "fragment": {
+              "label": "fragment_Bloom_comp",
+              "bytes": 3375,
+              "hash": 402593939
+            },
+            "start": 1850.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_RenderPipeline_266",
+            "vertex": {
+              "label": "vertex_RenderPipeline",
+              "bytes": 1618,
+              "hash": 1413794076
+            },
+            "fragment": {
+              "label": "fragment_RenderPipeline",
+              "bytes": 8962,
+              "hash": 3429745717
+            },
+            "start": 1850.7999999821186,
+            "targets": [
+              {
+                "format": "bgra8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_GTAO_265",
+            "vertex": {
+              "label": "vertex_GTAO",
+              "bytes": 1645,
+              "hash": 352776072
+            },
+            "fragment": {
+              "label": "fragment_GTAO",
+              "bytes": 8804,
+              "hash": 2963881023
+            },
+            "start": 1857.7999999821186,
+            "targets": [
+              {
+                "format": "r8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_NodeMaterial_268",
+            "vertex": {
+              "label": "vertex",
+              "bytes": 1480,
+              "hash": 3483091315
+            },
+            "fragment": {
+              "label": "fragment",
+              "bytes": 2013,
+              "hash": 4092398513
+            },
+            "start": 1913,
+            "targets": [
+              {
+                "format": "r16float",
+                "writeMask": 15
+              },
+              {
+                "format": "r16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Gaussian_blur_286",
+            "vertex": {
+              "label": "vertex_Gaussian_blur",
+              "bytes": 1817,
+              "hash": 2874350943
+            },
+            "fragment": {
+              "label": "fragment_Gaussian_blur",
+              "bytes": 4753,
+              "hash": 4043197024
+            },
+            "start": 1915,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_NodeMaterial_269",
+            "vertex": {
+              "label": "vertex",
+              "bytes": 1396,
+              "hash": 4256465518
+            },
+            "fragment": {
+              "label": "fragment",
+              "bytes": 1128,
+              "hash": 4012644938
+            },
+            "start": 1915.199999988079,
+            "targets": [
+              {
+                "format": "r16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_comp_284",
+            "vertex": {
+              "label": "vertex_Bloom_comp",
+              "bytes": 1567,
+              "hash": 623120811
+            },
+            "fragment": {
+              "label": "fragment_Bloom_comp",
+              "bytes": 3375,
+              "hash": 1845336255
+            },
+            "start": 1924.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_RTT_267",
+            "vertex": {
+              "label": "vertex_RTT",
+              "bytes": 1596,
+              "hash": 3260020646
+            },
+            "fragment": {
+              "label": "fragment_RTT",
+              "bytes": 7139,
+              "hash": 2167539679
+            },
+            "start": 1924.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_NodeMaterial_270",
+            "vertex": {
+              "label": "vertex",
+              "bytes": 1452,
+              "hash": 1020243102
+            },
+            "fragment": {
+              "label": "fragment",
+              "bytes": 1620,
+              "hash": 553494656
+            },
+            "start": 1924.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_NodeMaterial_271",
+            "vertex": {
+              "label": "vertex",
+              "bytes": 1481,
+              "hash": 2548982190
+            },
+            "fragment": {
+              "label": "fragment",
+              "bytes": 1642,
+              "hash": 35838699
+            },
+            "start": 1925.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_RTT_267",
+            "vertex": {
+              "label": "vertex_RTT",
+              "bytes": 1596,
+              "hash": 3260020646
+            },
+            "fragment": {
+              "label": "fragment_RTT",
+              "bytes": 7139,
+              "hash": 2167539679
+            },
+            "start": 1927.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_NodeMaterial_272",
+            "vertex": {
+              "label": "vertex",
+              "bytes": 1433,
+              "hash": 2207991222
+            },
+            "fragment": {
+              "label": "fragment",
+              "bytes": 1852,
+              "hash": 1432632002
+            },
+            "start": 1927.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_RenderPipeline_273",
+            "vertex": {
+              "label": "vertex_RenderPipeline",
+              "bytes": 1425,
+              "hash": 857048369
+            },
+            "fragment": {
+              "label": "fragment_RenderPipeline",
+              "bytes": 2623,
+              "hash": 1658811103
+            },
+            "start": 1927.8999999761581,
+            "targets": [
+              {
+                "format": "bgra8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_comp_284",
+            "vertex": {
+              "label": "vertex_Bloom_comp",
+              "bytes": 1567,
+              "hash": 623120811
+            },
+            "fragment": {
+              "label": "fragment_Bloom_comp",
+              "bytes": 3391,
+              "hash": 2087422355
+            },
+            "start": 2012.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          }
+        ],
+        "webgl": {},
+        "shaderSources": {
+          "3208507158": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform14 : vec3<f32>,\n\tnodeUniform16 : vec3<f32>,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform24 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : vec3<f32>,\n\tnodeUniform22 : vec3<f32>,\n\tnodeUniform23 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tnodeUniform36 : f32,\n\tnodeUniform37 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\nstruct objectStruct {\n\tnodeUniform0 : vec3<f32>,\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform5 : mat3x3<f32>,\n\tnodeUniform6 : f32,\n\tnodeUniform7 : vec3<f32>,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform10 : f32,\n\tnodeUniform11 : vec3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform20 : mat4x4<f32>,\n\tnodeUniform28 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform31 : f32,\n\tnodeUniform32 : f32,\n\tnodeUniform34 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar253 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\n\n@vertex\nfn main( @location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = positionLocal;\n\tnormalLocal = normal;\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform5 * normalLocal ), 0.0 ) ).xyz );\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform20 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar253 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar253;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "3317997454": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct objectStruct {\n\tnodeUniform0 : f32,\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : vec3<f32>,\n\tnodeUniform6 : f32,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform10 : mat3x3<f32>,\n\tnodeUniform11 : f32,\n\tnodeUniform12 : vec3<f32>,\n\tnodeUniform13 : f32,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : vec3<f32>,\n\tnodeUniform17 : f32,\n\tnodeUniform20 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform28 : mat4x4<f32>,\n\tnodeUniform36 : f32,\n\tnodeUniform37 : mat4x4<f32>,\n\tnodeUniform39 : f32,\n\tnodeUniform40 : f32,\n\tnodeUniform42 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform24 : vec3<f32>,\n\tnodeUniform18 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform30 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform43 : vec3<f32>,\n\tnodeUniform44 : f32,\n\tnodeUniform45 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> normalLocal : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\n\n@vertex\nfn main( @location( 0 ) position : vec3<f32>,\n\t@location( 1 ) aDestination : vec3<f32>,\n\t@location( 2 ) aSeed : f32,\n\t@location( 3 ) aOrigin : vec3<f32>,\n\t@location( 4 ) normal : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform1 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform0 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform0 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform2 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform3 * smoothstep( 0.0, 0.1, object.nodeUniform1 ) ) * object.nodeUniform4 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform4 ), ( aDestination.y * object.nodeUniform4 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform2 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tnormalLocal = normal;\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform10 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform28 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n"
+        },
+        "diagnostics": {
+          "ready": true,
+          "backend": "WebGPU",
+          "progress": 0,
+          "targetProgress": 0,
+          "phase": 0,
+          "cubePieces": 27,
+          "exteriorPlates": 54,
+          "modeledPlates": 72,
+          "tileCount": 432,
+          "activeTiles": 0,
+          "fieldMaterials": 5,
+          "drawCalls": 393,
+          "triangles": 859702,
+          "frameMs": 16.55316875,
+          "renderCpuMs": 0.3817600004673004,
+          "pixelRatio": 1,
+          "adapted": false,
+          "reducedMotion": false,
+          "width": 1440,
+          "height": 900,
+          "frameNumber": 3,
+          "scrollRange": 5940,
+          "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+          "threeRevision": "185",
+          "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+          "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+          "environmentLoaded": true,
+          "ambientOcclusion": true,
+          "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+          "depthOfField": false,
+          "bloom": true,
+          "choreographyDeterministic": true,
+          "renderError": null,
+          "renderOnDemand": true,
+          "idle": true,
+          "variants": {
+            "idleSpin": false,
+            "chromaticAberration": false,
+            "hoverLift": false
+          },
+          "precompiledPasses": true,
+          "initialLoadMs": 1965.5999999940395,
+          "startupTimings": {
+            "renderObjects": {
+              "PMREM_equirect": {
+                "calls": 1,
+                "exclusiveMs": 5.300000011920929,
+                "maxMs": 5.300000011920929
+              },
+              "PMREM_ggx": {
+                "calls": 20,
+                "exclusiveMs": 9.299999982118607,
+                "maxMs": 5
+              },
+              "Background.material": {
+                "calls": 3,
+                "exclusiveMs": 1.199999988079071,
+                "maxMs": 1
+              },
+              "Kineti premium glyph": {
+                "calls": 120,
+                "exclusiveMs": 66.60000011324883,
+                "maxMs": 32.70000001788139
+              },
+              "Kineti premium face": {
+                "calls": 120,
+                "exclusiveMs": 26,
+                "maxMs": 11.800000011920929
+              },
+              "Kineti premium rim": {
+                "calls": 120,
+                "exclusiveMs": 36.699999928474426,
+                "maxMs": 12.599999994039536
+              },
+              "Kineti premium shell": {
+                "calls": 90,
+                "exclusiveMs": 13.199999988079071,
+                "maxMs": 10.099999994039536
+              },
+              "Kineti premium core": {
+                "calls": 3,
+                "exclusiveMs": 9,
+                "maxMs": 8.800000011920929
+              },
+              "RenderPipeline": {
+                "calls": 5,
+                "exclusiveMs": 102.09999993443489,
+                "maxMs": 68.19999998807907
+              }
+            },
+            "environmentFetchDecodeMs": 86.69999998807907,
+            "rendererInitMs": 325.40000000596046,
+            "geometryMs": 110.09999999403954,
+            "sceneCompileMs": 1187.2999999821186,
+            "fieldFirstRenderMs": 142,
+            "macroFirstRenderMs": 68.69999998807907,
+            "heroFirstRenderMs": 30.899999976158142
+          }
+        },
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+            "startTime": 5.799999982118607,
+            "responseEnd": 18.399999976158142,
+            "duration": 12.599999994039536,
+            "transferSize": 1056899,
+            "encodedBodySize": 1056599,
+            "decodedBodySize": 1056599,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+            "startTime": 5.899999976158142,
+            "responseEnd": 9.899999976158142,
+            "duration": 4,
+            "transferSize": 25136,
+            "encodedBodySize": 24836,
+            "decodedBodySize": 24836,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+            "startTime": 6,
+            "responseEnd": 9.799999982118607,
+            "duration": 3.7999999821186066,
+            "transferSize": 628,
+            "encodedBodySize": 328,
+            "decodedBodySize": 698,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+            "startTime": 6,
+            "responseEnd": 10.199999988079071,
+            "duration": 4.199999988079071,
+            "transferSize": 669,
+            "encodedBodySize": 369,
+            "decodedBodySize": 685,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/website-D-yiEWFH.js",
+            "startTime": 6,
+            "responseEnd": 14,
+            "duration": 8,
+            "transferSize": 81529,
+            "encodedBodySize": 81229,
+            "decodedBodySize": 291280,
+            "initiatorType": "script"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/symbols-BjuGL6Lt.js",
+            "startTime": 6,
+            "responseEnd": 17.19999998807907,
+            "duration": 11.199999988079071,
+            "transferSize": 195926,
+            "encodedBodySize": 195626,
+            "decodedBodySize": 890446,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+            "startTime": 6.0999999940395355,
+            "responseEnd": 13.599999994039536,
+            "duration": 7.5,
+            "transferSize": 5714,
+            "encodedBodySize": 5414,
+            "decodedBodySize": 26348,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/HDRLoader-CrqzOtfS.js",
+            "startTime": 6.0999999940395355,
+            "responseEnd": 13.899999976158142,
+            "duration": 7.799999982118607,
+            "transferSize": 1682,
+            "encodedBodySize": 1382,
+            "decodedBodySize": 3282,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/three.tsl-BttmkIl0.js",
+            "startTime": 6.0999999940395355,
+            "responseEnd": 13.799999982118607,
+            "duration": 7.699999988079071,
+            "transferSize": 3588,
+            "encodedBodySize": 3288,
+            "decodedBodySize": 10161,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+            "startTime": 61.099999994039536,
+            "responseEnd": 63.89999997615814,
+            "duration": 2.7999999821186066,
+            "transferSize": 15008,
+            "encodedBodySize": 14708,
+            "decodedBodySize": 14708,
+            "initiatorType": "css"
+          },
+          {
+            "name": "http://127.0.0.1:4174/kineti.svg",
+            "startTime": 119.5,
+            "responseEnd": 122.39999997615814,
+            "duration": 2.899999976158142,
+            "transferSize": 472,
+            "encodedBodySize": 172,
+            "decodedBodySize": 195,
+            "initiatorType": "other"
+          }
+        ],
+        "navigation": {
+          "name": "http://127.0.0.1:4174/?renderer=webgpu&profile=1",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 53.5,
+          "navigationId": 8570,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "br",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.3999999761581421,
+          "domainLookupStart": 0.3999999761581421,
+          "domainLookupEnd": 0.3999999761581421,
+          "connectStart": 0.3999999761581421,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.3999999761581421,
+          "requestStart": 1.5,
+          "responseStart": 2.7999999821186066,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 2.7999999821186066,
+          "responseEnd": 3.399999976158142,
+          "transferSize": 898,
+          "encodedBodySize": 598,
+          "decodedBodySize": 1770,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 9.699999988079071,
+          "domContentLoadedEventStart": 53.39999997615814,
+          "domContentLoadedEventEnd": 53.5,
+          "domComplete": 53.5,
+          "loadEventStart": 53.5,
+          "loadEventEnd": 53.5,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {}
+        },
+        "paints": [
+          {
+            "name": "first-paint",
+            "entryType": "paint",
+            "startTime": 128,
+            "duration": 0,
+            "navigationId": 8570,
+            "paintTime": 26.599999994039536,
+            "presentationTime": 128
+          },
+          {
+            "name": "first-contentful-paint",
+            "entryType": "paint",
+            "startTime": 296,
+            "duration": 0,
+            "navigationId": 8570,
+            "paintTime": 167,
+            "presentationTime": 296
+          }
+        ],
+        "marks": [
+          {
+            "name": "kineti:environmentFetchDecodeMs",
+            "entryType": "measure",
+            "startTime": 79.5,
+            "duration": 86.69999998807907,
+            "navigationId": 8570
+          },
+          {
+            "name": "kineti:rendererInitMs",
+            "entryType": "measure",
+            "startTime": 81.09999999403954,
+            "duration": 325.40000000596046,
+            "navigationId": 8570
+          },
+          {
+            "name": "kineti:geometryMs",
+            "entryType": "measure",
+            "startTime": 406.7999999821186,
+            "duration": 110.09999999403954,
+            "navigationId": 8570
+          },
+          {
+            "name": "kineti:sceneCompileMs",
+            "entryType": "measure",
+            "startTime": 521.5999999940395,
+            "duration": 1187.2999999821186,
+            "navigationId": 8570
+          },
+          {
+            "name": "kineti:fieldFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 1708.8999999761581,
+            "duration": 142,
+            "navigationId": 8570
+          },
+          {
+            "name": "kineti:macroFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 1859.199999988079,
+            "duration": 68.69999998807907,
+            "navigationId": 8570
+          },
+          {
+            "name": "kineti:heroFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 2013.5,
+            "duration": 30.899999976158142,
+            "navigationId": 8570
+          }
+        ],
+        "bodyBytes": 1384549
+      }
+    },
+    {
+      "name": "mobile",
+      "errors": [],
+      "browser": "Chrome/152.0.7977.76",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 1
+      },
+      "cpuRate": 1,
+      "startup": {
+        "readyMs": 1939.7999999821186,
+        "longTasks": [
+          {
+            "start": 443,
+            "duration": 128
+          },
+          {
+            "start": 1752.8999999761581,
+            "duration": 142
+          }
+        ],
+        "gpu": [
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Background.material_274",
+            "vertex": {
+              "label": "vertex_Background.material",
+              "bytes": 1800,
+              "hash": 2829546960
+            },
+            "fragment": {
+              "label": "fragment_Background.material",
+              "bytes": 1819,
+              "hash": 600239531
+            },
+            "start": 577.1999999880791,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": false,
+              "depthCompare": "always"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 32.30000001192093
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_PMREM_equirect_277",
+            "vertex": {
+              "label": "vertex_PMREM_equirect",
+              "bytes": 1480,
+              "hash": 2195370176
+            },
+            "fragment": {
+              "label": "fragment_PMREM_equirect",
+              "bytes": 2266,
+              "hash": 2488158185
+            },
+            "start": 622.8999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0.10000002384185791
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_PMREM_ggx_276",
+            "vertex": {
+              "label": "vertex_PMREM_ggx",
+              "bytes": 1525,
+              "hash": 1602037511
+            },
+            "fragment": {
+              "label": "fragment_PMREM_ggx",
+              "bytes": 9302,
+              "hash": 994583320
+            },
+            "start": 629,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "mipmap-rgba8unorm-2d-array",
+            "vertex": {
+              "label": "mipmap",
+              "bytes": 1827,
+              "hash": 1972005773
+            },
+            "fragment": {
+              "label": "mipmap",
+              "bytes": 1827,
+              "hash": 1972005773
+            },
+            "start": 651.5,
+            "targets": [
+              {
+                "format": "rgba8unorm"
+              }
+            ],
+            "primitive": {},
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_14",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 3077,
+              "hash": 3716998456
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 46993,
+              "hash": 1548753040
+            },
+            "start": 652.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 239.09999999403954
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_15",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 2861,
+              "hash": 2211497093
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 45043,
+              "hash": 1128951121
+            },
+            "start": 903,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 146.69999998807907
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_260",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 4774,
+              "hash": 2777148201
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43804,
+              "hash": 1176511326
+            },
+            "start": 1113.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 157.59999999403954
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_261",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 4561,
+              "hash": 3536289407
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2544859253
+            },
+            "start": 1282.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 148.30000001192093
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_263",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 4611,
+              "hash": 3317997454
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 3379841822
+            },
+            "start": 1450.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 149
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_257",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 2578,
+              "hash": 3208507158
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 41562,
+              "hash": 3464050648
+            },
+            "start": 1619.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "blend": {
+                  "color": {
+                    "srcFactor": "src-alpha",
+                    "dstFactor": "one-minus-src-alpha",
+                    "operation": "add"
+                  },
+                  "alpha": {
+                    "srcFactor": "one",
+                    "dstFactor": "one-minus-src-alpha",
+                    "operation": "add"
+                  }
+                },
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": false,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 133.09999999403954
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_ShadowMaterial_285",
+            "vertex": {
+              "label": "vertex_ShadowMaterial",
+              "bytes": 1325,
+              "hash": 2830975371
+            },
+            "fragment": {
+              "label": "fragment_ShadowMaterial",
+              "bytes": 802,
+              "hash": 428199296
+            },
+            "start": 1809,
+            "targets": [
+              {
+                "format": "rgba8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_ShadowMaterial_285",
+            "vertex": {
+              "label": "vertex_ShadowMaterial",
+              "bytes": 1457,
+              "hash": 2229628432
+            },
+            "fragment": {
+              "label": "fragment_ShadowMaterial",
+              "bytes": 1185,
+              "hash": 4058046765
+            },
+            "start": 1809.7999999821186,
+            "targets": [
+              {
+                "format": "rgba8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_22",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 3077,
+              "hash": 2973678880
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium face",
+              "bytes": 46993,
+              "hash": 2596146824
+            },
+            "start": 1845.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_GTAO_265",
+            "vertex": {
+              "label": "vertex_GTAO",
+              "bytes": 1645,
+              "hash": 352776072
+            },
+            "fragment": {
+              "label": "fragment_GTAO",
+              "bytes": 8804,
+              "hash": 2963881023
+            },
+            "start": 1886.5,
+            "targets": [
+              {
+                "format": "r8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_highPass_278",
+            "vertex": {
+              "label": "vertex_Bloom_highPass",
+              "bytes": 1640,
+              "hash": 3813253470
+            },
+            "fragment": {
+              "label": "fragment_Bloom_highPass",
+              "bytes": 7105,
+              "hash": 1441626238
+            },
+            "start": 1888.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_279",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1838,
+              "hash": 2161882632
+            },
+            "start": 1889.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_280",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1840,
+              "hash": 242877343
+            },
+            "start": 1890.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_281",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1840,
+              "hash": 2128798286
+            },
+            "start": 1891.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_282",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1840,
+              "hash": 2523750150
+            },
+            "start": 1892.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_283",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1840,
+              "hash": 2926234629
+            },
+            "start": 1893.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_comp_284",
+            "vertex": {
+              "label": "vertex_Bloom_comp",
+              "bytes": 1567,
+              "hash": 623120811
+            },
+            "fragment": {
+              "label": "fragment_Bloom_comp",
+              "bytes": 3375,
+              "hash": 402593939
+            },
+            "start": 1894.8999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0.10000002384185791
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_RenderPipeline_266",
+            "vertex": {
+              "label": "vertex_RenderPipeline",
+              "bytes": 1618,
+              "hash": 1413794076
+            },
+            "fragment": {
+              "label": "fragment_RenderPipeline",
+              "bytes": 8962,
+              "hash": 3429745717
+            },
+            "start": 1895.199999988079,
+            "targets": [
+              {
+                "format": "bgra8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_GTAO_265",
+            "vertex": {
+              "label": "vertex_GTAO",
+              "bytes": 1645,
+              "hash": 352776072
+            },
+            "fragment": {
+              "label": "fragment_GTAO",
+              "bytes": 8804,
+              "hash": 2963881023
+            },
+            "start": 1902.199999988079,
+            "targets": [
+              {
+                "format": "r8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0.09999999403953552
+          }
+        ],
+        "webgl": {},
+        "shaderSources": {
+          "3208507158": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform14 : vec3<f32>,\n\tnodeUniform16 : vec3<f32>,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform24 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : vec3<f32>,\n\tnodeUniform22 : vec3<f32>,\n\tnodeUniform23 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tnodeUniform36 : f32,\n\tnodeUniform37 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\nstruct objectStruct {\n\tnodeUniform0 : vec3<f32>,\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform5 : mat3x3<f32>,\n\tnodeUniform6 : f32,\n\tnodeUniform7 : vec3<f32>,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform10 : f32,\n\tnodeUniform11 : vec3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform20 : mat4x4<f32>,\n\tnodeUniform28 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform31 : f32,\n\tnodeUniform32 : f32,\n\tnodeUniform34 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar253 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\n\n@vertex\nfn main( @location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = positionLocal;\n\tnormalLocal = normal;\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform5 * normalLocal ), 0.0 ) ).xyz );\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform20 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar253 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar253;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "3317997454": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct objectStruct {\n\tnodeUniform0 : f32,\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : vec3<f32>,\n\tnodeUniform6 : f32,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform10 : mat3x3<f32>,\n\tnodeUniform11 : f32,\n\tnodeUniform12 : vec3<f32>,\n\tnodeUniform13 : f32,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : vec3<f32>,\n\tnodeUniform17 : f32,\n\tnodeUniform20 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform28 : mat4x4<f32>,\n\tnodeUniform36 : f32,\n\tnodeUniform37 : mat4x4<f32>,\n\tnodeUniform39 : f32,\n\tnodeUniform40 : f32,\n\tnodeUniform42 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform24 : vec3<f32>,\n\tnodeUniform18 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform30 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform43 : vec3<f32>,\n\tnodeUniform44 : f32,\n\tnodeUniform45 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> normalLocal : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\n\n@vertex\nfn main( @location( 0 ) position : vec3<f32>,\n\t@location( 1 ) aDestination : vec3<f32>,\n\t@location( 2 ) aSeed : f32,\n\t@location( 3 ) aOrigin : vec3<f32>,\n\t@location( 4 ) normal : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform1 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform0 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform0 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform2 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform3 * smoothstep( 0.0, 0.1, object.nodeUniform1 ) ) * object.nodeUniform4 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform4 ), ( aDestination.y * object.nodeUniform4 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform2 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tnormalLocal = normal;\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform10 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform28 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n"
+        },
+        "diagnostics": {
+          "ready": true,
+          "backend": "WebGPU",
+          "progress": 0,
+          "targetProgress": 0,
+          "phase": 0,
+          "cubePieces": 27,
+          "exteriorPlates": 54,
+          "modeledPlates": 72,
+          "tileCount": 162,
+          "activeTiles": 0,
+          "fieldMaterials": 5,
+          "drawCalls": 393,
+          "triangles": 759478,
+          "frameMs": 16.40316875,
+          "renderCpuMs": 0.2897599990844727,
+          "pixelRatio": 1,
+          "adapted": false,
+          "reducedMotion": false,
+          "width": 390,
+          "height": 844,
+          "frameNumber": 3,
+          "scrollRange": 5570,
+          "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+          "threeRevision": "185",
+          "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+          "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+          "environmentLoaded": true,
+          "ambientOcclusion": true,
+          "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+          "depthOfField": false,
+          "bloom": true,
+          "choreographyDeterministic": true,
+          "renderError": null,
+          "renderOnDemand": true,
+          "idle": true,
+          "variants": {
+            "idleSpin": false,
+            "chromaticAberration": false,
+            "hoverLift": false
+          },
+          "precompiledPasses": true,
+          "initialLoadMs": 1857.7999999821186,
+          "startupTimings": {
+            "renderObjects": {
+              "PMREM_equirect": {
+                "calls": 1,
+                "exclusiveMs": 5.0999999940395355,
+                "maxMs": 5.0999999940395355
+              },
+              "PMREM_ggx": {
+                "calls": 20,
+                "exclusiveMs": 9.800000011920929,
+                "maxMs": 5.300000011920929
+              },
+              "Background.material": {
+                "calls": 3,
+                "exclusiveMs": 1.2999999821186066,
+                "maxMs": 1.199999988079071
+              },
+              "Kineti premium glyph": {
+                "calls": 120,
+                "exclusiveMs": 74.49999997019768,
+                "maxMs": 33.89999997615814
+              },
+              "Kineti premium face": {
+                "calls": 120,
+                "exclusiveMs": 25.00000011920929,
+                "maxMs": 10.900000005960464
+              },
+              "Kineti premium rim": {
+                "calls": 120,
+                "exclusiveMs": 37.29999992251396,
+                "maxMs": 12.900000005960464
+              },
+              "Kineti premium shell": {
+                "calls": 90,
+                "exclusiveMs": 13.499999970197678,
+                "maxMs": 9.5
+              },
+              "Kineti premium core": {
+                "calls": 3,
+                "exclusiveMs": 9.5,
+                "maxMs": 9.5
+              },
+              "RenderPipeline": {
+                "calls": 3,
+                "exclusiveMs": 22.30000004172325,
+                "maxMs": 17.30000001192093
+              }
+            },
+            "environmentFetchDecodeMs": 50,
+            "rendererInitMs": 360.19999998807907,
+            "geometryMs": 108,
+            "sceneCompileMs": 1196.6000000238419,
+            "fieldFirstRenderMs": 142.19999998807907,
+            "heroFirstRenderMs": 34.900000005960464
+          }
+        },
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+            "startTime": 5.5,
+            "responseEnd": 17.599999994039536,
+            "duration": 12.099999994039536,
+            "transferSize": 1056899,
+            "encodedBodySize": 1056599,
+            "decodedBodySize": 1056599,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+            "startTime": 5.699999988079071,
+            "responseEnd": 11.599999994039536,
+            "duration": 5.9000000059604645,
+            "transferSize": 25136,
+            "encodedBodySize": 24836,
+            "decodedBodySize": 24836,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+            "startTime": 5.799999982118607,
+            "responseEnd": 10.899999976158142,
+            "duration": 5.0999999940395355,
+            "transferSize": 669,
+            "encodedBodySize": 369,
+            "decodedBodySize": 685,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/website-D-yiEWFH.js",
+            "startTime": 5.799999982118607,
+            "responseEnd": 13,
+            "duration": 7.200000017881393,
+            "transferSize": 81529,
+            "encodedBodySize": 81229,
+            "decodedBodySize": 291280,
+            "initiatorType": "script"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+            "startTime": 5.899999976158142,
+            "responseEnd": 11.799999982118607,
+            "duration": 5.9000000059604645,
+            "transferSize": 628,
+            "encodedBodySize": 328,
+            "decodedBodySize": 698,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/HDRLoader-CrqzOtfS.js",
+            "startTime": 5.899999976158142,
+            "responseEnd": 15.899999976158142,
+            "duration": 10,
+            "transferSize": 1682,
+            "encodedBodySize": 1382,
+            "decodedBodySize": 3282,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/three.tsl-BttmkIl0.js",
+            "startTime": 5.899999976158142,
+            "responseEnd": 15.5,
+            "duration": 9.600000023841858,
+            "transferSize": 3588,
+            "encodedBodySize": 3288,
+            "decodedBodySize": 10161,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/symbols-BjuGL6Lt.js",
+            "startTime": 5.899999976158142,
+            "responseEnd": 19,
+            "duration": 13.100000023841858,
+            "transferSize": 195926,
+            "encodedBodySize": 195626,
+            "decodedBodySize": 890446,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+            "startTime": 6,
+            "responseEnd": 16,
+            "duration": 10,
+            "transferSize": 5714,
+            "encodedBodySize": 5414,
+            "decodedBodySize": 26348,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+            "startTime": 62.19999998807907,
+            "responseEnd": 64.7999999821186,
+            "duration": 2.5999999940395355,
+            "transferSize": 15008,
+            "encodedBodySize": 14708,
+            "decodedBodySize": 14708,
+            "initiatorType": "css"
+          },
+          {
+            "name": "http://127.0.0.1:4174/kineti.svg",
+            "startTime": 88.7999999821186,
+            "responseEnd": 92.19999998807907,
+            "duration": 3.4000000059604645,
+            "transferSize": 472,
+            "encodedBodySize": 172,
+            "decodedBodySize": 195,
+            "initiatorType": "other"
+          }
+        ],
+        "navigation": {
+          "name": "http://127.0.0.1:4174/?renderer=webgpu&profile=1",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 53.89999997615814,
+          "navigationId": 1559,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "br",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.29999998211860657,
+          "domainLookupStart": 0.29999998211860657,
+          "domainLookupEnd": 0.29999998211860657,
+          "connectStart": 0.29999998211860657,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.29999998211860657,
+          "requestStart": 1.5,
+          "responseStart": 2.7999999821186066,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 2.7999999821186066,
+          "responseEnd": 3.5,
+          "transferSize": 898,
+          "encodedBodySize": 598,
+          "decodedBodySize": 1770,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 9.899999976158142,
+          "domContentLoadedEventStart": 53.29999998211861,
+          "domContentLoadedEventEnd": 53.29999998211861,
+          "domComplete": 53.89999997615814,
+          "loadEventStart": 53.89999997615814,
+          "loadEventEnd": 53.89999997615814,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {}
+        },
+        "paints": [
+          {
+            "name": "first-paint",
+            "entryType": "paint",
+            "startTime": 148,
+            "duration": 0,
+            "navigationId": 1559,
+            "paintTime": 54.39999997615814,
+            "presentationTime": 148
+          },
+          {
+            "name": "first-contentful-paint",
+            "entryType": "paint",
+            "startTime": 240,
+            "duration": 0,
+            "navigationId": 1559,
+            "paintTime": 79.59999999403954,
+            "presentationTime": 240
+          }
+        ],
+        "marks": [
+          {
+            "name": "kineti:environmentFetchDecodeMs",
+            "entryType": "measure",
+            "startTime": 81.7999999821186,
+            "duration": 50,
+            "navigationId": 1559
+          },
+          {
+            "name": "kineti:rendererInitMs",
+            "entryType": "measure",
+            "startTime": 83.19999998807907,
+            "duration": 360.19999998807907,
+            "navigationId": 1559
+          },
+          {
+            "name": "kineti:geometryMs",
+            "entryType": "measure",
+            "startTime": 443.69999998807907,
+            "duration": 108,
+            "navigationId": 1559
+          },
+          {
+            "name": "kineti:sceneCompileMs",
+            "entryType": "measure",
+            "startTime": 556.3999999761581,
+            "duration": 1196.6000000238419,
+            "navigationId": 1559
+          },
+          {
+            "name": "kineti:fieldFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 1753,
+            "duration": 142.19999998807907,
+            "navigationId": 1559
+          },
+          {
+            "name": "kineti:heroFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 1903.7999999821186,
+            "duration": 34.900000005960464,
+            "navigationId": 1559
+          }
+        ],
+        "bodyBytes": 1384549
+      }
+    }
+  ]
+}

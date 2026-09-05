@@ -1,0 +1,44 @@
+[
+  {
+    "name": "pipeline",
+    "meanAbs": 0,
+    "changedPixels": 0,
+    "poseIdentical": true,
+    "uniformMismatches": []
+  },
+  {
+    "name": "force-refresh",
+    "meanAbs": 0,
+    "changedPixels": 0,
+    "poseIdentical": true,
+    "uniformMismatches": []
+  },
+  {
+    "name": "no-sort",
+    "meanAbs": 0,
+    "changedPixels": 0,
+    "poseIdentical": true,
+    "uniformMismatches": []
+  },
+  {
+    "name": "direct",
+    "meanAbs": 0,
+    "changedPixels": 0,
+    "poseIdentical": true,
+    "uniformMismatches": []
+  },
+  {
+    "name": "basic-pipeline",
+    "meanAbs": 0,
+    "changedPixels": 0,
+    "poseIdentical": true,
+    "uniformMismatches": []
+  },
+  {
+    "name": "basic-direct",
+    "meanAbs": 0,
+    "changedPixels": 0,
+    "poseIdentical": true,
+    "uniformMismatches": []
+  }
+]

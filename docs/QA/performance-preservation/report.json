@@ -1,0 +1,573 @@
+{
+  "url": "http://127.0.0.1:4174",
+  "checks": [
+    {
+      "name": "grain=1/ready",
+      "passed": true
+    },
+    {
+      "name": "grain/visible",
+      "passed": true
+    },
+    {
+      "name": "grain=1/single-environment-request",
+      "passed": true
+    },
+    {
+      "name": "grain=1/no-page-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "fx=rgb/ready",
+      "passed": true
+    },
+    {
+      "name": "rgb/active",
+      "passed": true
+    },
+    {
+      "name": "rgb/mosaic",
+      "passed": true
+    },
+    {
+      "name": "fx=rgb/single-environment-request",
+      "passed": true
+    },
+    {
+      "name": "fx=rgb/no-page-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "hover=1/ready",
+      "passed": true
+    },
+    {
+      "name": "hover/piece-lifts",
+      "passed": true
+    },
+    {
+      "name": "hover/releases",
+      "passed": true
+    },
+    {
+      "name": "hover=1/single-environment-request",
+      "passed": true
+    },
+    {
+      "name": "hover=1/no-page-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "idle=1/ready",
+      "passed": true
+    },
+    {
+      "name": "idle/rotates",
+      "passed": true
+    },
+    {
+      "name": "idle=1/no-page-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "hdr-fallback/ready",
+      "passed": true
+    },
+    {
+      "name": "hdr-fallback/original-loaded",
+      "passed": true
+    },
+    {
+      "name": "hdr-fallback/no-page-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "webgl-fallback/ready",
+      "passed": true
+    },
+    {
+      "name": "webgl-fallback/automatic",
+      "passed": true
+    },
+    {
+      "name": "webgl-fallback/single-environment-request",
+      "passed": true
+    },
+    {
+      "name": "webgl-fallback/no-page-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "static-fallback/visible",
+      "passed": true
+    },
+    {
+      "name": "static-fallback/navigation",
+      "passed": true
+    },
+    {
+      "name": "static-fallback/no-page-errors",
+      "passed": true,
+      "evidence": []
+    }
+  ],
+  "runs": [
+    {
+      "variant": "grain=1",
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:4174/?grain=1",
+        "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+        "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+        "http://127.0.0.1:4174/assets/website-D-yiEWFH.js",
+        "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+        "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+        "http://127.0.0.1:4174/assets/symbols-BjuGL6Lt.js",
+        "http://127.0.0.1:4174/assets/three.tsl-BttmkIl0.js",
+        "http://127.0.0.1:4174/assets/HDRLoader-CrqzOtfS.js",
+        "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E",
+        "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+        "http://127.0.0.1:4174/kineti.svg"
+      ],
+      "diagnostics": {
+        "ready": true,
+        "backend": "WebGPU",
+        "progress": 0,
+        "targetProgress": 0,
+        "phase": 0,
+        "cubePieces": 27,
+        "exteriorPlates": 54,
+        "modeledPlates": 72,
+        "tileCount": 432,
+        "activeTiles": 0,
+        "fieldMaterials": 5,
+        "drawCalls": 393,
+        "triangles": 859702,
+        "frameMs": 16.405668749999997,
+        "renderCpuMs": 0.4212799993038177,
+        "pixelRatio": 1,
+        "adapted": false,
+        "reducedMotion": false,
+        "width": 1440,
+        "height": 900,
+        "frameNumber": 3,
+        "scrollRange": 5940,
+        "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+        "threeRevision": "185",
+        "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+        "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+        "environmentLoaded": true,
+        "ambientOcclusion": true,
+        "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+        "depthOfField": false,
+        "bloom": true,
+        "choreographyDeterministic": true,
+        "renderError": null,
+        "renderOnDemand": true,
+        "idle": true,
+        "variants": {
+          "idleSpin": false,
+          "chromaticAberration": false,
+          "hoverLift": false
+        },
+        "precompiledPasses": true,
+        "initialLoadMs": 2031.4000000059605,
+        "startupTimings": {
+          "environmentFetchDecodeMs": 48.69999998807907,
+          "rendererInitMs": 363.5,
+          "geometryMs": 109.2000000178814,
+          "sceneCompileMs": 1207.0999999940395,
+          "fieldFirstRenderMs": 147.40000000596046,
+          "macroFirstRenderMs": 71.5,
+          "heroFirstRenderMs": 30.5
+        }
+      }
+    },
+    {
+      "variant": "fx=rgb",
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:4174/?fx=rgb",
+        "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+        "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+        "http://127.0.0.1:4174/assets/website-D-yiEWFH.js",
+        "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+        "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+        "http://127.0.0.1:4174/assets/symbols-BjuGL6Lt.js",
+        "http://127.0.0.1:4174/assets/three.tsl-BttmkIl0.js",
+        "http://127.0.0.1:4174/assets/HDRLoader-CrqzOtfS.js",
+        "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+        "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+        "http://127.0.0.1:4174/kineti.svg"
+      ],
+      "diagnostics": {
+        "ready": true,
+        "backend": "WebGPU",
+        "progress": 0,
+        "targetProgress": 0,
+        "phase": 0,
+        "cubePieces": 27,
+        "exteriorPlates": 54,
+        "modeledPlates": 72,
+        "tileCount": 432,
+        "activeTiles": 0,
+        "fieldMaterials": 5,
+        "drawCalls": 393,
+        "triangles": 859702,
+        "frameMs": 16.405668750000004,
+        "renderCpuMs": 0.26591999931335447,
+        "pixelRatio": 1,
+        "adapted": false,
+        "reducedMotion": false,
+        "width": 1440,
+        "height": 900,
+        "frameNumber": 3,
+        "scrollRange": 5940,
+        "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+        "threeRevision": "185",
+        "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+        "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+        "environmentLoaded": true,
+        "ambientOcclusion": true,
+        "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+        "depthOfField": false,
+        "bloom": true,
+        "choreographyDeterministic": true,
+        "renderError": null,
+        "renderOnDemand": true,
+        "idle": true,
+        "variants": {
+          "idleSpin": false,
+          "chromaticAberration": true,
+          "hoverLift": false
+        },
+        "precompiledPasses": true,
+        "initialLoadMs": 1774.7999999821186,
+        "startupTimings": {
+          "environmentFetchDecodeMs": 52,
+          "rendererInitMs": 100.69999998807907,
+          "geometryMs": 119.40000000596046,
+          "sceneCompileMs": 1205.5999999940395,
+          "fieldFirstRenderMs": 144.30000001192093,
+          "macroFirstRenderMs": 71.80000001192093,
+          "heroFirstRenderMs": 30.299999982118607
+        }
+      }
+    },
+    {
+      "variant": "hover=1",
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:4174/?hover=1",
+        "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+        "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+        "http://127.0.0.1:4174/assets/website-D-yiEWFH.js",
+        "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+        "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+        "http://127.0.0.1:4174/assets/symbols-BjuGL6Lt.js",
+        "http://127.0.0.1:4174/assets/three.tsl-BttmkIl0.js",
+        "http://127.0.0.1:4174/assets/HDRLoader-CrqzOtfS.js",
+        "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+        "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+        "http://127.0.0.1:4174/kineti.svg"
+      ],
+      "diagnostics": {
+        "ready": true,
+        "backend": "WebGPU",
+        "progress": 0,
+        "targetProgress": 0,
+        "phase": 0,
+        "cubePieces": 27,
+        "exteriorPlates": 54,
+        "modeledPlates": 72,
+        "tileCount": 432,
+        "activeTiles": 0,
+        "fieldMaterials": 5,
+        "drawCalls": 393,
+        "triangles": 859702,
+        "frameMs": 16.55566875,
+        "renderCpuMs": 0.37391999974250795,
+        "pixelRatio": 1,
+        "adapted": false,
+        "reducedMotion": false,
+        "width": 1440,
+        "height": 900,
+        "frameNumber": 3,
+        "scrollRange": 5940,
+        "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+        "threeRevision": "185",
+        "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+        "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+        "environmentLoaded": true,
+        "ambientOcclusion": true,
+        "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+        "depthOfField": false,
+        "bloom": true,
+        "choreographyDeterministic": true,
+        "renderError": null,
+        "renderOnDemand": true,
+        "idle": true,
+        "variants": {
+          "idleSpin": false,
+          "chromaticAberration": false,
+          "hoverLift": true
+        },
+        "precompiledPasses": true,
+        "initialLoadMs": 1741.7000000178814,
+        "startupTimings": {
+          "environmentFetchDecodeMs": 52.19999998807907,
+          "rendererInitMs": 100.09999999403954,
+          "geometryMs": 120.59999999403954,
+          "sceneCompileMs": 1170.800000011921,
+          "fieldFirstRenderMs": 144.2999999821186,
+          "macroFirstRenderMs": 69.7999999821186,
+          "heroFirstRenderMs": 31.599999994039536
+        }
+      }
+    },
+    {
+      "variant": "idle=1",
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:4174/?idle=1",
+        "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+        "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+        "http://127.0.0.1:4174/assets/website-D-yiEWFH.js",
+        "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+        "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+        "http://127.0.0.1:4174/assets/symbols-BjuGL6Lt.js",
+        "http://127.0.0.1:4174/assets/three.tsl-BttmkIl0.js",
+        "http://127.0.0.1:4174/assets/HDRLoader-CrqzOtfS.js",
+        "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+        "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+        "http://127.0.0.1:4174/kineti.svg"
+      ],
+      "diagnostics": {
+        "ready": true,
+        "backend": "WebGPU",
+        "progress": 0,
+        "targetProgress": 0,
+        "phase": 0,
+        "cubePieces": 27,
+        "exteriorPlates": 54,
+        "modeledPlates": 72,
+        "tileCount": 432,
+        "activeTiles": 0,
+        "fieldMaterials": 5,
+        "drawCalls": 393,
+        "triangles": 859702,
+        "frameMs": 11.480728011182197,
+        "renderCpuMs": 2.2610741384712765,
+        "pixelRatio": 1,
+        "adapted": false,
+        "reducedMotion": false,
+        "width": 1440,
+        "height": 900,
+        "frameNumber": 36,
+        "scrollRange": 5940,
+        "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+        "threeRevision": "185",
+        "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+        "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+        "environmentLoaded": true,
+        "ambientOcclusion": true,
+        "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+        "depthOfField": false,
+        "bloom": true,
+        "choreographyDeterministic": true,
+        "renderError": null,
+        "renderOnDemand": true,
+        "idle": true,
+        "variants": {
+          "idleSpin": true,
+          "chromaticAberration": false,
+          "hoverLift": false
+        },
+        "precompiledPasses": true,
+        "initialLoadMs": 1739.4000000059605,
+        "startupTimings": {
+          "environmentFetchDecodeMs": 50.400000005960464,
+          "rendererInitMs": 97.69999998807907,
+          "geometryMs": 116.69999998807907,
+          "sceneCompileMs": 1178.7000000178814,
+          "fieldFirstRenderMs": 142.19999998807907,
+          "macroFirstRenderMs": 68.2000000178814,
+          "heroFirstRenderMs": 31.900000005960464
+        }
+      }
+    },
+    {
+      "variant": "hdr-fallback",
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:4174/?",
+        "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+        "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+        "http://127.0.0.1:4174/assets/website-D-yiEWFH.js",
+        "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+        "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+        "http://127.0.0.1:4174/assets/symbols-BjuGL6Lt.js",
+        "http://127.0.0.1:4174/assets/three.tsl-BttmkIl0.js",
+        "http://127.0.0.1:4174/assets/HDRLoader-CrqzOtfS.js",
+        "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+        "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+        "http://127.0.0.1:4174/kineti.svg",
+        "http://127.0.0.1:4174/hdri/studio_small_09_1k.hdr",
+        "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2"
+      ],
+      "diagnostics": {
+        "ready": true,
+        "backend": "WebGPU",
+        "progress": 0,
+        "targetProgress": 0,
+        "phase": 0,
+        "cubePieces": 27,
+        "exteriorPlates": 54,
+        "modeledPlates": 72,
+        "tileCount": 432,
+        "activeTiles": 0,
+        "fieldMaterials": 5,
+        "drawCalls": 393,
+        "triangles": 859702,
+        "frameMs": 16.40316875,
+        "renderCpuMs": 0.3667200002193451,
+        "pixelRatio": 1,
+        "adapted": false,
+        "reducedMotion": false,
+        "width": 1440,
+        "height": 900,
+        "frameNumber": 3,
+        "scrollRange": 5940,
+        "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+        "threeRevision": "185",
+        "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+        "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+        "environmentLoaded": true,
+        "ambientOcclusion": true,
+        "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+        "depthOfField": false,
+        "bloom": true,
+        "choreographyDeterministic": true,
+        "renderError": null,
+        "renderOnDemand": true,
+        "idle": true,
+        "variants": {
+          "idleSpin": false,
+          "chromaticAberration": false,
+          "hoverLift": false
+        },
+        "precompiledPasses": true,
+        "initialLoadMs": 1744.2999999821186,
+        "startupTimings": {
+          "environmentFetchDecodeMs": 42.70000001788139,
+          "rendererInitMs": 101.09999999403954,
+          "geometryMs": 122.30000001192093,
+          "sceneCompileMs": 1164.9000000059605,
+          "fieldFirstRenderMs": 142.59999999403954,
+          "macroFirstRenderMs": 69.59999999403954,
+          "heroFirstRenderMs": 35.30000001192093
+        }
+      }
+    },
+    {
+      "variant": "webgl-fallback",
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:4174/?",
+        "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+        "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+        "http://127.0.0.1:4174/assets/website-D-yiEWFH.js",
+        "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+        "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+        "http://127.0.0.1:4174/assets/symbols-BjuGL6Lt.js",
+        "http://127.0.0.1:4174/assets/three.tsl-BttmkIl0.js",
+        "http://127.0.0.1:4174/assets/HDRLoader-CrqzOtfS.js",
+        "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+        "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+        "http://127.0.0.1:4174/kineti.svg"
+      ],
+      "diagnostics": {
+        "ready": true,
+        "backend": "WebGL2",
+        "progress": 0,
+        "targetProgress": 0,
+        "phase": 0,
+        "cubePieces": 27,
+        "exteriorPlates": 54,
+        "modeledPlates": 72,
+        "tileCount": 432,
+        "activeTiles": 0,
+        "fieldMaterials": 5,
+        "drawCalls": 393,
+        "triangles": 859702,
+        "frameMs": 16.558168749999997,
+        "renderCpuMs": 0.3742399997711182,
+        "pixelRatio": 1,
+        "adapted": false,
+        "reducedMotion": false,
+        "width": 1440,
+        "height": 900,
+        "frameNumber": 3,
+        "scrollRange": 5940,
+        "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+        "threeRevision": "185",
+        "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+        "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+        "environmentLoaded": true,
+        "ambientOcclusion": true,
+        "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+        "depthOfField": false,
+        "bloom": true,
+        "choreographyDeterministic": true,
+        "renderError": null,
+        "renderOnDemand": true,
+        "idle": true,
+        "variants": {
+          "idleSpin": false,
+          "chromaticAberration": false,
+          "hoverLift": false
+        },
+        "precompiledPasses": true,
+        "initialLoadMs": 3432.9000000059605,
+        "startupTimings": {
+          "rendererInitMs": 8.299999982118607,
+          "geometryMs": 104.30000001192093,
+          "environmentFetchDecodeMs": 165.5,
+          "sceneCompileMs": 1536.5999999940395,
+          "fieldFirstRenderMs": 1366.9000000059605,
+          "macroFirstRenderMs": 272.09999999403954,
+          "heroFirstRenderMs": 32.19999998807907
+        }
+      }
+    },
+    {
+      "variant": "static-fallback",
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:4174/?",
+        "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+        "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+        "http://127.0.0.1:4174/assets/website-D-yiEWFH.js",
+        "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+        "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+        "http://127.0.0.1:4174/assets/symbols-BjuGL6Lt.js",
+        "http://127.0.0.1:4174/assets/three.tsl-BttmkIl0.js",
+        "http://127.0.0.1:4174/assets/HDRLoader-CrqzOtfS.js",
+        "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+        "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+        "http://127.0.0.1:4174/kineti.svg"
+      ]
+    }
+  ],
+  "summary": {
+    "passed": 27,
+    "failed": 0
+  }
+}

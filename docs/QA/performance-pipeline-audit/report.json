@@ -1,0 +1,2725 @@
+{
+  "url": "http://127.0.0.1:4174",
+  "query": "",
+  "coldBrowserCache": true,
+  "physicalMobile": false,
+  "runs": [
+    {
+      "name": "mobile",
+      "errors": [],
+      "browser": "Chrome/152.0.7977.76",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 1
+      },
+      "cpuRate": 1,
+      "startup": {
+        "readyMs": 2627.7999999821186,
+        "longTasks": [
+          {
+            "start": 420.89999997615814,
+            "duration": 112
+          },
+          {
+            "start": 2273.7999999821186,
+            "duration": 313
+          }
+        ],
+        "gpu": [
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Background.material_108",
+            "vertex": {
+              "label": "vertex_Background.material",
+              "bytes": 1800,
+              "hash": 2829546960
+            },
+            "fragment": {
+              "label": "fragment_Background.material",
+              "bytes": 1819,
+              "hash": 600239531
+            },
+            "start": 539.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": false,
+              "depthCompare": "always"
+            },
+            "callMs": 0.20000001788139343,
+            "completeMs": 29.400000005960464
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_PMREM_equirect_111",
+            "vertex": {
+              "label": "vertex_PMREM_equirect",
+              "bytes": 1480,
+              "hash": 2195370176
+            },
+            "fragment": {
+              "label": "fragment_PMREM_equirect",
+              "bytes": 2266,
+              "hash": 2488158185
+            },
+            "start": 582.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_PMREM_ggx_110",
+            "vertex": {
+              "label": "vertex_PMREM_ggx",
+              "bytes": 1525,
+              "hash": 1602037511
+            },
+            "fragment": {
+              "label": "fragment_PMREM_ggx",
+              "bytes": 9302,
+              "hash": 994583320
+            },
+            "start": 588,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "mipmap-rgba8unorm-2d-array",
+            "vertex": {
+              "label": "mipmap",
+              "bytes": 1827,
+              "hash": 1972005773
+            },
+            "fragment": {
+              "label": "mipmap",
+              "bytes": 1827,
+              "hash": 1972005773
+            },
+            "start": 610.2999999821186,
+            "targets": [
+              {
+                "format": "rgba8unorm"
+              }
+            ],
+            "primitive": {},
+            "samples": 1,
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_14",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 3077,
+              "hash": 3716998456
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 46993,
+              "hash": 1548753040
+            },
+            "start": 611.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 228.2999999821186
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_15",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 2861,
+              "hash": 2211497093
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 45043,
+              "hash": 1128951121
+            },
+            "start": 852.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 144.2999999821186
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 3258558505
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1048.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 162.59999999403954
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 410801689
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 1222.8999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 153.60000002384186
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5974,
+              "hash": 3786571911
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1385.8999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.10000002384185791,
+            "completeMs": 18
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5810,
+              "hash": 2341986258
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 1413.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 155.2999999821186
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 1081461549
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1579.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 19.5
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 618920349
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 1608.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.799999982118607
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5974,
+              "hash": 173093752
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1635.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 18.69999998807907
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5810,
+              "hash": 582961143
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 1663.8999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.10000002384185791,
+            "completeMs": 19.30000001192093
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 1752506868
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1694.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.5
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_98",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 686650722
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 1723.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.299999982118607
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5974,
+              "hash": 1475591362
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1749.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.30000001192093
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5810,
+              "hash": 4238578976
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 1776.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.30000001192093
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 2749211054
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1802.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.299999982118607
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 3911806776
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 1830.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 17.30000001192093
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5974,
+              "hash": 1431132896
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1857.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.19999998807907
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5810,
+              "hash": 2524973354
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 1884.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.5
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 2555076938
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1913,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.799999982118607
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 1801137403
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 1941.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 17.599999994039536
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5974,
+              "hash": 1593483569
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1968.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.30000001192093
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5810,
+              "hash": 3295133934
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 1996.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 17.69999998807907
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 290004970
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2022.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 19.5
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_98",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 3124887867
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2051.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.80000001192093
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 59404610
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2078.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.30000001192093
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 3710926944
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2106.399999976158,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.10000002384185791,
+            "completeMs": 18.200000017881393
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_91",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 2578,
+              "hash": 3208507158
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 41562,
+              "hash": 3464050648
+            },
+            "start": 2133.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "blend": {
+                  "color": {
+                    "srcFactor": "src-alpha",
+                    "dstFactor": "one-minus-src-alpha",
+                    "operation": "add"
+                  },
+                  "alpha": {
+                    "srcFactor": "one",
+                    "dstFactor": "one-minus-src-alpha",
+                    "operation": "add"
+                  }
+                },
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": false,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 140.09999999403954
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 3846727490
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2289.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 1338677954
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2298,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 2599465743
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2306.399999976158,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 176122985
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2315.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 582756570
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2328.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 2881458700
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2336.899999976158,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 3160429739
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2346.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 2727781496
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2355,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 827039446
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2364.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 3661694872
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2373.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 637807440
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2386.399999976158,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.10000002384185791
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 1772624849
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2395.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 683544761
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2403.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 3341310259
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2412.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_98",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 1902935945
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2421.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 3497005658
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2434.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 3106188115
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2443.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_98",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 2042546840
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2451.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_ShadowMaterial_119",
+            "vertex": {
+              "label": "vertex_ShadowMaterial",
+              "bytes": 1325,
+              "hash": 2830975371
+            },
+            "fragment": {
+              "label": "fragment_ShadowMaterial",
+              "bytes": 802,
+              "hash": 428199296
+            },
+            "start": 2462.699999988079,
+            "targets": [
+              {
+                "format": "rgba8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_ShadowMaterial_119",
+            "vertex": {
+              "label": "vertex_ShadowMaterial",
+              "bytes": 1457,
+              "hash": 2229628432
+            },
+            "fragment": {
+              "label": "fragment_ShadowMaterial",
+              "bytes": 1185,
+              "hash": 4058046765
+            },
+            "start": 2463.5,
+            "targets": [
+              {
+                "format": "rgba8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_19",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 3077,
+              "hash": 2973678880
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium face",
+              "bytes": 46993,
+              "hash": 2596146824
+            },
+            "start": 2495.899999976158,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 1226717442
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2528.399999976158,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.10000002384185791
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 3362333880
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2537.399999976158,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 2408373708
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2546.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 3020690980
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2555.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 3760915462
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2567,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 3054791863
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2576.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_GTAO_99",
+            "vertex": {
+              "label": "vertex_GTAO",
+              "bytes": 1645,
+              "hash": 352776072
+            },
+            "fragment": {
+              "label": "fragment_GTAO",
+              "bytes": 8804,
+              "hash": 2963881023
+            },
+            "start": 2579.399999976158,
+            "targets": [
+              {
+                "format": "r8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_highPass_112",
+            "vertex": {
+              "label": "vertex_Bloom_highPass",
+              "bytes": 1640,
+              "hash": 3813253470
+            },
+            "fragment": {
+              "label": "fragment_Bloom_highPass",
+              "bytes": 7105,
+              "hash": 1441626238
+            },
+            "start": 2581.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_113",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1843,
+              "hash": 287037723
+            },
+            "start": 2582.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_114",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1845,
+              "hash": 1706828812
+            },
+            "start": 2583.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_115",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1845,
+              "hash": 3007534281
+            },
+            "start": 2584,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_116",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1845,
+              "hash": 931723130
+            },
+            "start": 2584.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_117",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1845,
+              "hash": 1812223367
+            },
+            "start": 2585.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_comp_118",
+            "vertex": {
+              "label": "vertex_Bloom_comp",
+              "bytes": 1567,
+              "hash": 623120811
+            },
+            "fragment": {
+              "label": "fragment_Bloom_comp",
+              "bytes": 3391,
+              "hash": 2154701835
+            },
+            "start": 2586.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_RenderPipeline_100",
+            "vertex": {
+              "label": "vertex_RenderPipeline",
+              "bytes": 1618,
+              "hash": 1413794076
+            },
+            "fragment": {
+              "label": "fragment_RenderPipeline",
+              "bytes": 8962,
+              "hash": 3429745717
+            },
+            "start": 2586.7999999821186,
+            "targets": [
+              {
+                "format": "bgra8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_GTAO_99",
+            "vertex": {
+              "label": "vertex_GTAO",
+              "bytes": 1645,
+              "hash": 352776072
+            },
+            "fragment": {
+              "label": "fragment_GTAO",
+              "bytes": 8804,
+              "hash": 2963881023
+            },
+            "start": 2593.2999999821186,
+            "targets": [
+              {
+                "format": "r8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          }
+        ],
+        "webgl": {},
+        "diagnostics": {
+          "ready": true,
+          "backend": "WebGPU",
+          "progress": 0,
+          "targetProgress": 0,
+          "phase": 0,
+          "cubePieces": 27,
+          "exteriorPlates": 54,
+          "modeledPlates": 72,
+          "tileCount": 162,
+          "activeTiles": 0,
+          "fieldMaterials": 5,
+          "drawCalls": 393,
+          "triangles": 759478,
+          "frameMs": 16.405668749999997,
+          "renderCpuMs": 0.23440000000000003,
+          "pixelRatio": 1,
+          "adapted": false,
+          "reducedMotion": false,
+          "width": 390,
+          "height": 844,
+          "frameNumber": 3,
+          "scrollRange": 5570,
+          "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+          "threeRevision": "185",
+          "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+          "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+          "environmentLoaded": true,
+          "ambientOcclusion": true,
+          "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+          "depthOfField": false,
+          "bloom": true,
+          "choreographyDeterministic": true,
+          "renderError": null,
+          "renderOnDemand": true,
+          "idle": true,
+          "variants": {
+            "idleSpin": false,
+            "chromaticAberration": false,
+            "hoverLift": false
+          },
+          "precompiledPasses": true,
+          "initialLoadMs": 2539.2000000178814,
+          "startupTimings": {
+            "rendererInitMs": 323.69999998807907,
+            "environmentFetchDecodeMs": 49.69999998807907,
+            "geometryMs": 59.599999994039536,
+            "sceneCompileMs": 1747.5,
+            "fieldFirstRenderMs": 313,
+            "heroFirstRenderMs": 31.700000017881393
+          }
+        },
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4174/assets/website-CGhAIJBE.js",
+            "startTime": 6.699999988079071,
+            "responseEnd": 11.299999982118607,
+            "duration": 4.5999999940395355,
+            "transferSize": 81387,
+            "encodedBodySize": 81087,
+            "decodedBodySize": 290841,
+            "initiatorType": "script"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+            "startTime": 6.799999982118607,
+            "responseEnd": 10.299999982118607,
+            "duration": 3.5,
+            "transferSize": 669,
+            "encodedBodySize": 369,
+            "decodedBodySize": 685,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+            "startTime": 6.899999976158142,
+            "responseEnd": 12.899999976158142,
+            "duration": 6,
+            "transferSize": 628,
+            "encodedBodySize": 328,
+            "decodedBodySize": 698,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/three.tsl-C_0HqBY5.js",
+            "startTime": 6.899999976158142,
+            "responseEnd": 12.5,
+            "duration": 5.600000023841858,
+            "transferSize": 3589,
+            "encodedBodySize": 3289,
+            "decodedBodySize": 10161,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/symbols-CTgmpTlO.js",
+            "startTime": 6.899999976158142,
+            "responseEnd": 16.399999976158142,
+            "duration": 9.5,
+            "transferSize": 195715,
+            "encodedBodySize": 195415,
+            "decodedBodySize": 890126,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+            "startTime": 7,
+            "responseEnd": 12.599999994039536,
+            "duration": 5.5999999940395355,
+            "transferSize": 5714,
+            "encodedBodySize": 5414,
+            "decodedBodySize": 26348,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/HDRLoader-D7G2HILi.js",
+            "startTime": 7,
+            "responseEnd": 13.699999988079071,
+            "duration": 6.699999988079071,
+            "transferSize": 1680,
+            "encodedBodySize": 1380,
+            "decodedBodySize": 3282,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+            "startTime": 58.89999997615814,
+            "responseEnd": 61.39999997615814,
+            "duration": 2.5,
+            "transferSize": 15008,
+            "encodedBodySize": 14708,
+            "decodedBodySize": 14708,
+            "initiatorType": "css"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+            "startTime": 58.89999997615814,
+            "responseEnd": 61.5,
+            "duration": 2.600000023841858,
+            "transferSize": 25136,
+            "encodedBodySize": 24836,
+            "decodedBodySize": 24836,
+            "initiatorType": "css"
+          },
+          {
+            "name": "http://127.0.0.1:4174/kineti.svg",
+            "startTime": 114,
+            "responseEnd": 117,
+            "duration": 3,
+            "transferSize": 472,
+            "encodedBodySize": 172,
+            "decodedBodySize": 195,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+            "startTime": 413.89999997615814,
+            "responseEnd": 419.19999998807907,
+            "duration": 5.300000011920929,
+            "transferSize": 1056899,
+            "encodedBodySize": 1056599,
+            "decodedBodySize": 1056599,
+            "initiatorType": "fetch"
+          }
+        ],
+        "navigation": {
+          "name": "http://127.0.0.1:4174/?renderer=webgpu&",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 49.89999997615814,
+          "navigationId": 4787,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "br",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.3999999761581421,
+          "domainLookupStart": 0.3999999761581421,
+          "domainLookupEnd": 0.3999999761581421,
+          "connectStart": 0.3999999761581421,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.3999999761581421,
+          "requestStart": 1.899999976158142,
+          "responseStart": 3.199999988079071,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 3.199999988079071,
+          "responseEnd": 3.699999988079071,
+          "transferSize": 808,
+          "encodedBodySize": 508,
+          "decodedBodySize": 1549,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 10.699999988079071,
+          "domContentLoadedEventStart": 49.79999998211861,
+          "domContentLoadedEventEnd": 49.79999998211861,
+          "domComplete": 49.89999997615814,
+          "loadEventStart": 49.89999997615814,
+          "loadEventEnd": 49.89999997615814,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {}
+        },
+        "marks": [
+          {
+            "name": "kineti:rendererInitMs",
+            "entryType": "measure",
+            "startTime": 88.59999999403954,
+            "duration": 323.69999998807907,
+            "navigationId": 4787
+          },
+          {
+            "name": "kineti:environmentFetchDecodeMs",
+            "entryType": "measure",
+            "startTime": 412.69999998807907,
+            "duration": 49.69999998807907,
+            "navigationId": 4787
+          },
+          {
+            "name": "kineti:geometryMs",
+            "entryType": "measure",
+            "startTime": 462.5,
+            "duration": 59.599999994039536,
+            "navigationId": 4787
+          },
+          {
+            "name": "kineti:sceneCompileMs",
+            "entryType": "measure",
+            "startTime": 526.2999999821186,
+            "duration": 1747.5,
+            "navigationId": 4787
+          },
+          {
+            "name": "kineti:fieldFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 2273.7999999821186,
+            "duration": 313,
+            "navigationId": 4787
+          },
+          {
+            "name": "kineti:heroFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 2594.7999999821186,
+            "duration": 31.700000017881393,
+            "navigationId": 4787
+          }
+        ],
+        "bodyBytes": 1384105
+      }
+    }
+  ]
+}

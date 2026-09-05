@@ -1,0 +1,3887 @@
+{
+  "baseURL": "http://127.0.0.1:4174",
+  "checks": [
+    {
+      "name": "five-candidate-tabs",
+      "pass": true
+    },
+    {
+      "name": "reference-and-unreal-links",
+      "pass": true,
+      "evidence": [
+        "http://127.0.0.1:4174/research/reference.html",
+        "http://127.0.0.1:4174/docs/FULL_CONTROL_MATRIX.md",
+        "http://127.0.0.1:8899/",
+        "http://127.0.0.1:4174/"
+      ]
+    },
+    {
+      "name": "three-webgpu: controls-preserved",
+      "pass": true
+    },
+    {
+      "name": "three-webgpu: one-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "three-webgpu: backend-selector",
+      "pass": true,
+      "evidence": {
+        "disabled": false,
+        "value": "auto"
+      }
+    },
+    {
+      "name": "three-webgpu: compute-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": true,
+        "passed": true,
+        "count": 64,
+        "values": [
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196
+        ],
+        "backend": "WebGPU",
+        "path": "Native WGSL function + TSL compute + storage readback"
+      }
+    },
+    {
+      "name": "three-webgpu: advanced-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": false,
+        "implemented": false,
+        "scope": "fixture",
+        "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+      }
+    },
+    {
+      "name": "three-webgl2: controls-preserved",
+      "pass": true
+    },
+    {
+      "name": "three-webgl2: one-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "three-webgl2: backend-selector",
+      "pass": true,
+      "evidence": {
+        "disabled": false,
+        "value": "webgl2"
+      }
+    },
+    {
+      "name": "three-webgl2: compute-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": true,
+        "passed": true,
+        "count": 64,
+        "values": [
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196
+        ],
+        "backend": "WebGL2",
+        "path": "GLSL function + transform feedback emulation + readback; not native compute"
+      }
+    },
+    {
+      "name": "three-webgl2: transform-feedback-labelled",
+      "pass": true
+    },
+    {
+      "name": "three-webgl2: advanced-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": false,
+        "implemented": false,
+        "scope": "fixture",
+        "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+      }
+    },
+    {
+      "name": "babylon-webgpu: controls-preserved",
+      "pass": true
+    },
+    {
+      "name": "babylon-webgpu: one-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "babylon-webgpu: backend-selector",
+      "pass": true,
+      "evidence": {
+        "disabled": false,
+        "value": "auto"
+      }
+    },
+    {
+      "name": "babylon-webgpu: compute-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": true,
+        "passed": true,
+        "count": 64,
+        "values": [
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196
+        ],
+        "backend": "WebGPU",
+        "path": "Babylon ComputeShader / native WGSL / StorageBuffer GPU readback"
+      }
+    },
+    {
+      "name": "babylon-webgpu: advanced-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": false,
+        "implemented": false,
+        "scope": "fixture",
+        "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+      }
+    },
+    {
+      "name": "babylon-webgl2: controls-preserved",
+      "pass": true
+    },
+    {
+      "name": "babylon-webgl2: one-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "babylon-webgl2: backend-selector",
+      "pass": true,
+      "evidence": {
+        "disabled": false,
+        "value": "webgl2"
+      }
+    },
+    {
+      "name": "babylon-webgl2: compute-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": false,
+        "passed": false,
+        "count": 64,
+        "values": [],
+        "backend": "WebGL2",
+        "path": "unsupported",
+        "reason": "Native compute shaders require the WebGPU backend; no CPU simulation is used."
+      }
+    },
+    {
+      "name": "babylon-webgl2: advanced-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": false,
+        "implemented": false,
+        "scope": "fixture",
+        "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+      }
+    },
+    {
+      "name": "playcanvas-webgpu: controls-preserved",
+      "pass": true
+    },
+    {
+      "name": "playcanvas-webgpu: one-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "playcanvas-webgpu: backend-selector",
+      "pass": true,
+      "evidence": {
+        "disabled": false,
+        "value": "auto"
+      }
+    },
+    {
+      "name": "playcanvas-webgpu: compute-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": true,
+        "passed": true,
+        "count": 64,
+        "values": [
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196
+        ],
+        "backend": "WebGPU",
+        "nativeCompute": true,
+        "path": "Native WGSL Compute + StorageBuffer readback, dispatched during application update"
+      }
+    },
+    {
+      "name": "playcanvas-webgpu: advanced-semantics",
+      "pass": true,
+      "evidence": {
+        "backend": "WebGPU",
+        "mrt": {
+          "supported": true,
+          "passed": true,
+          "backend": "WebGPU",
+          "language": "WGSL",
+          "sourceAuthorship": "Full custom vertex and fragment shader sources",
+          "path": "ShaderUtils + two RenderTarget color attachments + Texture.read from GPU",
+          "attachments": [
+            {
+              "index": 0,
+              "expected": [
+                64,
+                128,
+                191,
+                255
+              ],
+              "values": [
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255
+              ],
+              "passed": true
+            },
+            {
+              "index": 1,
+              "expected": [
+                191,
+                64,
+                128,
+                255
+              ],
+              "values": [
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255
+              ],
+              "passed": true
+            }
+          ],
+          "actual": [
+            [
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255
+            ],
+            [
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255
+            ]
+          ],
+          "expected": [
+            [
+              64,
+              128,
+              191,
+              255
+            ],
+            [
+              191,
+              64,
+              128,
+              255
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "playcanvas-webgl2: controls-preserved",
+      "pass": true
+    },
+    {
+      "name": "playcanvas-webgl2: one-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "playcanvas-webgl2: backend-selector",
+      "pass": true,
+      "evidence": {
+        "disabled": false,
+        "value": "webgl2"
+      }
+    },
+    {
+      "name": "playcanvas-webgl2: compute-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": false,
+        "passed": false,
+        "backend": "WebGL2",
+        "nativeCompute": false,
+        "limitation": "PlayCanvas compute/storage buffers require WebGPU. WebGL2 transform feedback is available as a separate API, not executed by this compute probe."
+      }
+    },
+    {
+      "name": "playcanvas-webgl2: advanced-semantics",
+      "pass": true,
+      "evidence": {
+        "backend": "WebGL2",
+        "mrt": {
+          "supported": true,
+          "passed": true,
+          "backend": "WebGL2",
+          "language": "GLSL",
+          "sourceAuthorship": "Full custom vertex and fragment shader sources",
+          "path": "ShaderUtils + two RenderTarget color attachments + Texture.read from GPU",
+          "attachments": [
+            {
+              "index": 0,
+              "expected": [
+                64,
+                128,
+                191,
+                255
+              ],
+              "values": [
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255
+              ],
+              "passed": true
+            },
+            {
+              "index": 1,
+              "expected": [
+                191,
+                64,
+                128,
+                255
+              ],
+              "values": [
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255
+              ],
+              "passed": true
+            }
+          ],
+          "actual": [
+            [
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255,
+              64,
+              127,
+              191,
+              255
+            ],
+            [
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255,
+              191,
+              64,
+              127,
+              255
+            ]
+          ],
+          "expected": [
+            [
+              64,
+              128,
+              191,
+              255
+            ],
+            [
+              191,
+              64,
+              128,
+              255
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "native_webgpu-webgpu: controls-preserved",
+      "pass": true
+    },
+    {
+      "name": "native_webgpu-webgpu: one-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "native_webgpu-webgpu: backend-selector",
+      "pass": true,
+      "evidence": {
+        "disabled": true,
+        "value": "webgpu"
+      }
+    },
+    {
+      "name": "native_webgpu-webgpu: compute-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": true,
+        "passed": true,
+        "backend": "WebGPU",
+        "path": "Raw GPUDevice + own WGSL compute + dispatchWorkgroups + copyBufferToBuffer + mapAsync; no engine and no CPU evaluation",
+        "count": 64,
+        "values": [
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196
+        ]
+      }
+    },
+    {
+      "name": "native_webgpu-webgpu: advanced-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": true,
+        "passed": true,
+        "backend": "WebGPU",
+        "mrt": {
+          "passed": true,
+          "attachments": 2,
+          "actual": [
+            [
+              44,
+              89,
+              133,
+              255
+            ],
+            [
+              204,
+              51,
+              25,
+              255
+            ]
+          ],
+          "expected": [
+            [
+              45,
+              89,
+              134,
+              255
+            ],
+            [
+              204,
+              51,
+              26,
+              255
+            ]
+          ],
+          "firstTarget": "src-alpha / one-minus-src-alpha over explicit clear RGBA",
+          "secondTarget": "replacement; independent attachment state"
+        },
+        "atomics": {
+          "passed": true,
+          "actual": [
+            64,
+            2016
+          ],
+          "expected": [
+            64,
+            2016
+          ],
+          "path": "64 GPU invocations atomicAdd(storage count,1) and atomicAdd(storage sum,id)"
+        },
+        "timestamp": {
+          "supported": true,
+          "elapsedNanoseconds": 0,
+          "method": "GPU timestamp-query around the isolated 4x4 MRT pass; browser may quantize timestamps; not a scene performance benchmark"
+        }
+      }
+    },
+    {
+      "name": "native_webgpu-webgpu: atomic-readback",
+      "pass": true
+    },
+    {
+      "name": "native_webgl-webgl2: controls-preserved",
+      "pass": true
+    },
+    {
+      "name": "native_webgl-webgl2: one-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "native_webgl-webgl2: backend-selector",
+      "pass": true,
+      "evidence": {
+        "disabled": true,
+        "value": "webgl2"
+      }
+    },
+    {
+      "name": "native_webgl-webgl2: compute-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": true,
+        "passed": true,
+        "count": 64,
+        "values": [
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196
+        ],
+        "backend": "WebGL2",
+        "path": "Native transform feedback + getBufferSubData; not native compute shader"
+      }
+    },
+    {
+      "name": "native_webgl-webgl2: transform-feedback-labelled",
+      "pass": true
+    },
+    {
+      "name": "native_webgl-webgl2: advanced-semantics",
+      "pass": true,
+      "evidence": {
+        "mrt": {
+          "supported": true,
+          "passed": true,
+          "attachments": 2,
+          "actual": [
+            [
+              64,
+              127,
+              191,
+              255
+            ],
+            [
+              204,
+              153,
+              102,
+              255
+            ]
+          ],
+          "expected": [
+            [
+              64,
+              128,
+              191,
+              255
+            ],
+            [
+              204,
+              153,
+              102,
+              255
+            ]
+          ]
+        },
+        "atomics": {
+          "supported": false,
+          "reason": "Storage-buffer atomics and native compute are not in WebGL2."
+        },
+        "timestamp": {
+          "available": true,
+          "measured": false
+        },
+        "limits": {
+          "maxDrawBuffers": 8,
+          "maxVertexAttribs": 16,
+          "maxTextureSize": 16384
+        }
+      }
+    },
+    {
+      "name": "native_webgl-webgl2: atomic-limit-preserved",
+      "pass": true
+    },
+    {
+      "name": "native-webgpu-does-not-claim-webgl-fallback",
+      "pass": true
+    },
+    {
+      "name": "rapid-switch-settles-on-last-request",
+      "pass": true
+    },
+    {
+      "name": "edit-during-switch-preserved",
+      "pass": true
+    },
+    {
+      "name": "pending-gpu-probe-preserved-before-disposal",
+      "pass": true
+    },
+    {
+      "name": "previous-scenes-disposed-once",
+      "pass": true,
+      "evidence": [
+        {
+          "engine": "Three.js",
+          "calls": 1,
+          "framesAtDispose": 23,
+          "laterFrames": 23
+        },
+        {
+          "engine": "Three.js",
+          "calls": 1,
+          "framesAtDispose": 15,
+          "laterFrames": 15
+        },
+        {
+          "engine": "Babylon.js",
+          "calls": 1,
+          "framesAtDispose": 12,
+          "laterFrames": 12
+        },
+        {
+          "engine": "Babylon.js",
+          "calls": 1,
+          "framesAtDispose": 14,
+          "laterFrames": 14
+        },
+        {
+          "engine": "PlayCanvas",
+          "calls": 1,
+          "framesAtDispose": null,
+          "laterFrames": null
+        },
+        {
+          "engine": "PlayCanvas",
+          "calls": 1,
+          "framesAtDispose": null,
+          "laterFrames": null
+        },
+        {
+          "engine": "WebGPU directo",
+          "calls": 1,
+          "framesAtDispose": 18,
+          "laterFrames": 18
+        },
+        {
+          "engine": "Native WebGL2",
+          "calls": 1,
+          "framesAtDispose": 16,
+          "laterFrames": 16
+        },
+        {
+          "engine": "WebGPU directo",
+          "calls": 1,
+          "framesAtDispose": 13,
+          "laterFrames": 13
+        }
+      ]
+    },
+    {
+      "name": "disposed-readable-frame-counters-stop",
+      "pass": true
+    },
+    {
+      "name": "keyboard-home",
+      "pass": true
+    },
+    {
+      "name": "keyboard-right-babylon",
+      "pass": true
+    },
+    {
+      "name": "keyboard-right-playcanvas",
+      "pass": true
+    },
+    {
+      "name": "keyboard-right-native_webgpu",
+      "pass": true
+    },
+    {
+      "name": "keyboard-right-native_webgl",
+      "pass": true
+    },
+    {
+      "name": "keyboard-right-three",
+      "pass": true
+    },
+    {
+      "name": "keyboard-left-wrap",
+      "pass": true
+    },
+    {
+      "name": "keyboard-end",
+      "pass": true
+    },
+    {
+      "name": "hero-preset",
+      "pass": true
+    },
+    {
+      "name": "mosaic-preset",
+      "pass": true
+    },
+    {
+      "name": "configuration-download-identifies-fixed-backend",
+      "pass": true
+    },
+    {
+      "name": "report-download-has-real-diagnostics-and-both-probes",
+      "pass": true
+    },
+    {
+      "name": "report-preserves-unsupported-and-unimplemented",
+      "pass": true
+    },
+    {
+      "name": "mobile-render-and-diagnostics-resize",
+      "pass": true
+    },
+    {
+      "name": "mobile-tabs-fit-viewport",
+      "pass": true
+    },
+    {
+      "name": "panel-can-be-hidden",
+      "pass": true
+    },
+    {
+      "name": "pagehide-disposes-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "compiled-reference-viewer-and-original-load",
+      "pass": true
+    },
+    {
+      "name": "compiled-reference-all-188-load",
+      "pass": true
+    },
+    {
+      "name": "no-browser-errors",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "routes": [
+    {
+      "engine": "three",
+      "requestedBackend": "auto",
+      "actualBackend": "WebGPU",
+      "diagnostics": {
+        "ready": true,
+        "engine": "Three.js",
+        "version": "185",
+        "backend": "WebGPU",
+        "progress": 0.6,
+        "cubePieces": 27,
+        "tileCount": 162,
+        "activeTiles": 162,
+        "drawCalls": 13,
+        "triangles": 412417,
+        "frameMs": 21.914276181694554,
+        "frameNumber": 19,
+        "environmentLoaded": true,
+        "pixelRatio": 1,
+        "width": 1440,
+        "height": 900,
+        "controls": {
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.23,
+          "rotation": [
+            0.3,
+            0.908407346410207,
+            -0.045
+          ],
+          "cameraFov": 37,
+          "roughness": 0.77,
+          "metalness": 0.08,
+          "clearcoat": 0.46,
+          "environmentIntensity": 0.68,
+          "keyIntensity": 3.8,
+          "exposure": 1.06,
+          "glyphColor": "#354330",
+          "shadows": false,
+          "postEffect": 0,
+          "waveAmplitude": 0,
+          "wavePhase": 0,
+          "density": 162
+        },
+        "probe": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              1.19,
+              0.96
+            ],
+            "world": [
+              1.0368,
+              1.3852000000000002,
+              1.0368
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368,
+              -0.9368,
+              -1.0368
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.77,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 162,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 2,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "TSL vertex shader / per-instance centre attribute"
+          },
+          "postEffect": 0,
+          "exposure": 1.06
+        }
+      },
+      "compute": {
+        "capturedAt": "2026-09-05T04:35:27.479Z",
+        "engine": "three",
+        "requestedBackend": "auto",
+        "actualBackend": "WebGPU",
+        "result": {
+          "supported": true,
+          "passed": true,
+          "count": 64,
+          "values": [
+            7,
+            10,
+            13,
+            16,
+            19,
+            22,
+            25,
+            28,
+            31,
+            34,
+            37,
+            40,
+            43,
+            46,
+            49,
+            52,
+            55,
+            58,
+            61,
+            64,
+            67,
+            70,
+            73,
+            76,
+            79,
+            82,
+            85,
+            88,
+            91,
+            94,
+            97,
+            100,
+            103,
+            106,
+            109,
+            112,
+            115,
+            118,
+            121,
+            124,
+            127,
+            130,
+            133,
+            136,
+            139,
+            142,
+            145,
+            148,
+            151,
+            154,
+            157,
+            160,
+            163,
+            166,
+            169,
+            172,
+            175,
+            178,
+            181,
+            184,
+            187,
+            190,
+            193,
+            196
+          ],
+          "backend": "WebGPU",
+          "path": "Native WGSL function + TSL compute + storage readback"
+        }
+      },
+      "advanced": {
+        "capturedAt": "2026-09-05T04:35:27.668Z",
+        "engine": "three",
+        "requestedBackend": "auto",
+        "actualBackend": "WebGPU",
+        "result": {
+          "supported": false,
+          "implemented": false,
+          "scope": "fixture",
+          "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+        }
+      }
+    },
+    {
+      "engine": "three",
+      "requestedBackend": "webgl2",
+      "actualBackend": "WebGL2",
+      "diagnostics": {
+        "ready": true,
+        "engine": "Three.js",
+        "version": "185",
+        "backend": "WebGL2",
+        "progress": 0.6,
+        "cubePieces": 27,
+        "tileCount": 162,
+        "activeTiles": 162,
+        "drawCalls": 13,
+        "triangles": 412417,
+        "frameMs": 66.2427456928971,
+        "frameNumber": 13,
+        "environmentLoaded": true,
+        "pixelRatio": 1,
+        "width": 1440,
+        "height": 900,
+        "controls": {
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.23,
+          "rotation": [
+            0.3,
+            0.908407346410207,
+            -0.045
+          ],
+          "cameraFov": 37,
+          "roughness": 0.77,
+          "metalness": 0.08,
+          "clearcoat": 0.46,
+          "environmentIntensity": 0.68,
+          "keyIntensity": 3.8,
+          "exposure": 1.06,
+          "glyphColor": "#354330",
+          "shadows": false,
+          "postEffect": 0,
+          "waveAmplitude": 0,
+          "wavePhase": 0,
+          "density": 162
+        },
+        "probe": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              1.19,
+              0.96
+            ],
+            "world": [
+              1.0368,
+              1.3852000000000002,
+              1.0368
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368,
+              -0.9368,
+              -1.0368
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.77,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 162,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 2,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "TSL vertex shader / per-instance centre attribute"
+          },
+          "postEffect": 0,
+          "exposure": 1.06
+        }
+      },
+      "compute": {
+        "capturedAt": "2026-09-05T04:35:32.092Z",
+        "engine": "three",
+        "requestedBackend": "webgl2",
+        "actualBackend": "WebGL2",
+        "result": {
+          "supported": true,
+          "passed": true,
+          "count": 64,
+          "values": [
+            7,
+            10,
+            13,
+            16,
+            19,
+            22,
+            25,
+            28,
+            31,
+            34,
+            37,
+            40,
+            43,
+            46,
+            49,
+            52,
+            55,
+            58,
+            61,
+            64,
+            67,
+            70,
+            73,
+            76,
+            79,
+            82,
+            85,
+            88,
+            91,
+            94,
+            97,
+            100,
+            103,
+            106,
+            109,
+            112,
+            115,
+            118,
+            121,
+            124,
+            127,
+            130,
+            133,
+            136,
+            139,
+            142,
+            145,
+            148,
+            151,
+            154,
+            157,
+            160,
+            163,
+            166,
+            169,
+            172,
+            175,
+            178,
+            181,
+            184,
+            187,
+            190,
+            193,
+            196
+          ],
+          "backend": "WebGL2",
+          "path": "GLSL function + transform feedback emulation + readback; not native compute"
+        }
+      },
+      "advanced": {
+        "capturedAt": "2026-09-05T04:35:32.106Z",
+        "engine": "three",
+        "requestedBackend": "webgl2",
+        "actualBackend": "WebGL2",
+        "result": {
+          "supported": false,
+          "implemented": false,
+          "scope": "fixture",
+          "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+        }
+      }
+    },
+    {
+      "engine": "babylon",
+      "requestedBackend": "auto",
+      "actualBackend": "WebGPU",
+      "diagnostics": {
+        "engine": "Babylon.js",
+        "version": "9.25.0",
+        "backend": "WebGPU",
+        "fallbackReason": null,
+        "progress": 0.6,
+        "stage": "mosaic",
+        "referenceViewport": [
+          1440,
+          900
+        ],
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "hardwareScalingLevel": 1
+        },
+        "camera": {
+          "perspective": true,
+          "verticalFovDegrees": 37,
+          "positionZ": 10.535114493668699
+        },
+        "geometry": {
+          "cubies": 27,
+          "exteriorSymbols": 54,
+          "mosaicTiles": 162,
+          "mosaicSymbolInstances": 162,
+          "mosaicDrawBatches": 12
+        },
+        "effects": {
+          "bloom": false,
+          "ssao": false,
+          "shadows": false,
+          "toneMapping": "Babylon ACES",
+          "exposure": 1.06,
+          "customPostPasses": 0,
+          "postPath": "WGSL fullscreen RGB separation + contrast after scene tone mapping"
+        },
+        "controls": {
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.23,
+          "rotation": [
+            0.3,
+            0.908407346410207,
+            -0.045
+          ],
+          "cameraFov": 37,
+          "roughness": 0.77,
+          "metalness": 0.08,
+          "clearcoat": 0.46,
+          "environmentIntensity": 0.68,
+          "keyIntensity": 3.8,
+          "exposure": 1.06,
+          "glyphColor": "#354330",
+          "shadows": false,
+          "postEffect": 0,
+          "waveAmplitude": 0,
+          "wavePhase": 0,
+          "density": 162
+        },
+        "probe": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              1.19,
+              0.96
+            ],
+            "world": [
+              1.0368000268936157,
+              1.3852001428604126,
+              1.0368000268936157
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368000268936157,
+              -0.9368000030517578,
+              -1.0368000268936157
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.77,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 162,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 3,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "MaterialPluginBase / WGSL vertex / finalWorld instance center"
+          }
+        },
+        "missingFeatures": [],
+        "environment": {
+          "status": "loaded",
+          "error": null,
+          "rotationY": 0.4,
+          "url": "/hdri/studio_small_09_1k.hdr"
+        },
+        "frames": 10,
+        "frame": {
+          "drawCalls": 12,
+          "submittedTriangles": 412416,
+          "babylonDrawCalls": 12,
+          "activeIndices": 1237248,
+          "cpuSceneRenderMs": 0.5
+        },
+        "timing": {
+          "samples": 9,
+          "averageFrameMs": 24.299999998675453,
+          "fps": 41.152263376728726,
+          "p95FrameMs": 85.5,
+          "gpuFrameMs": null,
+          "method": "Measured render-loop intervals, latest 240 samples; includes browser scheduling. CPU scene time is not GPU time."
+        },
+        "comparisonLimits": "Shared geometry, camera, counts and nominal PBR settings. Babylon and Three use different light units, environment filtering and tone mapping; this is not a pixel-identical or isolated engine benchmark."
+      },
+      "compute": {
+        "capturedAt": "2026-09-05T04:35:32.942Z",
+        "engine": "babylon",
+        "requestedBackend": "auto",
+        "actualBackend": "WebGPU",
+        "result": {
+          "supported": true,
+          "passed": true,
+          "count": 64,
+          "values": [
+            7,
+            10,
+            13,
+            16,
+            19,
+            22,
+            25,
+            28,
+            31,
+            34,
+            37,
+            40,
+            43,
+            46,
+            49,
+            52,
+            55,
+            58,
+            61,
+            64,
+            67,
+            70,
+            73,
+            76,
+            79,
+            82,
+            85,
+            88,
+            91,
+            94,
+            97,
+            100,
+            103,
+            106,
+            109,
+            112,
+            115,
+            118,
+            121,
+            124,
+            127,
+            130,
+            133,
+            136,
+            139,
+            142,
+            145,
+            148,
+            151,
+            154,
+            157,
+            160,
+            163,
+            166,
+            169,
+            172,
+            175,
+            178,
+            181,
+            184,
+            187,
+            190,
+            193,
+            196
+          ],
+          "backend": "WebGPU",
+          "path": "Babylon ComputeShader / native WGSL / StorageBuffer GPU readback"
+        }
+      },
+      "advanced": {
+        "capturedAt": "2026-09-05T04:35:32.979Z",
+        "engine": "babylon",
+        "requestedBackend": "auto",
+        "actualBackend": "WebGPU",
+        "result": {
+          "supported": false,
+          "implemented": false,
+          "scope": "fixture",
+          "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+        }
+      }
+    },
+    {
+      "engine": "babylon",
+      "requestedBackend": "webgl2",
+      "actualBackend": "WebGL2",
+      "diagnostics": {
+        "engine": "Babylon.js",
+        "version": "9.25.0",
+        "backend": "WebGL2",
+        "fallbackReason": null,
+        "progress": 0.6,
+        "stage": "mosaic",
+        "referenceViewport": [
+          1440,
+          900
+        ],
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "hardwareScalingLevel": 1
+        },
+        "camera": {
+          "perspective": true,
+          "verticalFovDegrees": 37,
+          "positionZ": 10.535114493668699
+        },
+        "geometry": {
+          "cubies": 27,
+          "exteriorSymbols": 54,
+          "mosaicTiles": 162,
+          "mosaicSymbolInstances": 162,
+          "mosaicDrawBatches": 12
+        },
+        "effects": {
+          "bloom": false,
+          "ssao": false,
+          "shadows": false,
+          "toneMapping": "Babylon ACES",
+          "exposure": 1.06,
+          "customPostPasses": 0,
+          "postPath": "GLSL fullscreen RGB separation + contrast after scene tone mapping"
+        },
+        "controls": {
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.23,
+          "rotation": [
+            0.3,
+            0.908407346410207,
+            -0.045
+          ],
+          "cameraFov": 37,
+          "roughness": 0.77,
+          "metalness": 0.08,
+          "clearcoat": 0.46,
+          "environmentIntensity": 0.68,
+          "keyIntensity": 3.8,
+          "exposure": 1.06,
+          "glyphColor": "#354330",
+          "shadows": false,
+          "postEffect": 0,
+          "waveAmplitude": 0,
+          "wavePhase": 0,
+          "density": 162
+        },
+        "probe": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              1.19,
+              0.96
+            ],
+            "world": [
+              1.0368000268936157,
+              1.3852001428604126,
+              1.0368000268936157
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368000268936157,
+              -0.9368000030517578,
+              -1.0368000268936157
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.77,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 162,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 3,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "MaterialPluginBase / GLSL vertex / finalWorld instance center"
+          }
+        },
+        "missingFeatures": [
+          "native-compute-shaders"
+        ],
+        "environment": {
+          "status": "loaded",
+          "error": null,
+          "rotationY": 0.4,
+          "url": "/hdri/studio_small_09_1k.hdr"
+        },
+        "frames": 14,
+        "frame": {
+          "drawCalls": 12,
+          "submittedTriangles": 412416,
+          "babylonDrawCalls": 12,
+          "activeIndices": 1237248,
+          "cpuSceneRenderMs": 0.5999999940395355
+        },
+        "timing": {
+          "samples": 13,
+          "averageFrameMs": 16.684615385073883,
+          "fps": 59.93545412467845,
+          "p95FrameMs": 19.099999994039536,
+          "gpuFrameMs": null,
+          "method": "Measured render-loop intervals, latest 240 samples; includes browser scheduling. CPU scene time is not GPU time."
+        },
+        "comparisonLimits": "Shared geometry, camera, counts and nominal PBR settings. Babylon and Three use different light units, environment filtering and tone mapping; this is not a pixel-identical or isolated engine benchmark."
+      },
+      "compute": {
+        "capturedAt": "2026-09-05T04:35:33.537Z",
+        "engine": "babylon",
+        "requestedBackend": "webgl2",
+        "actualBackend": "WebGL2",
+        "result": {
+          "supported": false,
+          "passed": false,
+          "count": 64,
+          "values": [],
+          "backend": "WebGL2",
+          "path": "unsupported",
+          "reason": "Native compute shaders require the WebGPU backend; no CPU simulation is used."
+        }
+      },
+      "advanced": {
+        "capturedAt": "2026-09-05T04:35:33.542Z",
+        "engine": "babylon",
+        "requestedBackend": "webgl2",
+        "actualBackend": "WebGL2",
+        "result": {
+          "supported": false,
+          "implemented": false,
+          "scope": "fixture",
+          "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+        }
+      }
+    },
+    {
+      "engine": "playcanvas",
+      "requestedBackend": "auto",
+      "actualBackend": "WebGPU",
+      "diagnostics": {
+        "ready": true,
+        "engine": "PlayCanvas",
+        "version": "2.22.0",
+        "backend": "WebGPU",
+        "fallbackReason": null,
+        "progress": 0.6,
+        "cubePieces": 27,
+        "exteriorSymbols": 54,
+        "tileCount": 162,
+        "activeTiles": 162,
+        "fieldBatches": 12,
+        "drawCalls": 12,
+        "triangles": 412416,
+        "frame": {
+          "drawCalls": 12,
+          "submittedTriangles": 412416
+        },
+        "frameMs": 23.238588228125003,
+        "frameNumber": 5,
+        "environmentLoaded": true,
+        "environment": {
+          "status": "loaded",
+          "error": null,
+          "url": "/hdri/studio_small_09_1k.hdr",
+          "rotationY": 0.4,
+          "sourceSize": [
+            1024,
+            512
+          ],
+          "atlasSize": [
+            512,
+            512
+          ]
+        },
+        "pixelRatio": 1,
+        "width": 1440,
+        "height": 900,
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "pixelRatio": 1
+        },
+        "capabilities": {
+          "nativeCompute": true,
+          "compute": true,
+          "storageBuffers": true,
+          "hardwareInstancing": true,
+          "pbr": true,
+          "clearcoat": true,
+          "nativeShaderLanguage": "WGSL",
+          "customPost": true,
+          "maxColorAttachments": 8
+        },
+        "controls": {
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.23,
+          "rotation": [
+            0.3,
+            0.908407346410207,
+            -0.045
+          ],
+          "cameraFov": 37,
+          "roughness": 0.77,
+          "metalness": 0.08,
+          "clearcoat": 0.46,
+          "environmentIntensity": 0.68,
+          "keyIntensity": 3.8,
+          "exposure": 1.06,
+          "glyphColor": "#354330",
+          "shadows": false,
+          "postEffect": 0,
+          "waveAmplitude": 0,
+          "wavePhase": 0,
+          "density": 162
+        },
+        "probe": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              1.19,
+              0.96
+            ],
+            "world": [
+              1.0368000268936157,
+              1.3852001428604126,
+              1.0368000268936157
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368000268936157,
+              -0.9368000030517578,
+              -1.0368000268936157
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.77,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 162,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 2,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "WGSL transformInstancingVS / static per-instance matrices / matching body and glyph displacement"
+          },
+          "postEffect": 0,
+          "postAttached": false,
+          "exposure": 1.06
+        }
+      },
+      "compute": {
+        "capturedAt": "2026-09-05T04:35:33.987Z",
+        "engine": "playcanvas",
+        "requestedBackend": "auto",
+        "actualBackend": "WebGPU",
+        "result": {
+          "supported": true,
+          "passed": true,
+          "count": 64,
+          "values": [
+            7,
+            10,
+            13,
+            16,
+            19,
+            22,
+            25,
+            28,
+            31,
+            34,
+            37,
+            40,
+            43,
+            46,
+            49,
+            52,
+            55,
+            58,
+            61,
+            64,
+            67,
+            70,
+            73,
+            76,
+            79,
+            82,
+            85,
+            88,
+            91,
+            94,
+            97,
+            100,
+            103,
+            106,
+            109,
+            112,
+            115,
+            118,
+            121,
+            124,
+            127,
+            130,
+            133,
+            136,
+            139,
+            142,
+            145,
+            148,
+            151,
+            154,
+            157,
+            160,
+            163,
+            166,
+            169,
+            172,
+            175,
+            178,
+            181,
+            184,
+            187,
+            190,
+            193,
+            196
+          ],
+          "backend": "WebGPU",
+          "nativeCompute": true,
+          "path": "Native WGSL Compute + StorageBuffer readback, dispatched during application update"
+        }
+      },
+      "advanced": {
+        "capturedAt": "2026-09-05T04:35:34.022Z",
+        "engine": "playcanvas",
+        "requestedBackend": "auto",
+        "actualBackend": "WebGPU",
+        "result": {
+          "backend": "WebGPU",
+          "mrt": {
+            "supported": true,
+            "passed": true,
+            "backend": "WebGPU",
+            "language": "WGSL",
+            "sourceAuthorship": "Full custom vertex and fragment shader sources",
+            "path": "ShaderUtils + two RenderTarget color attachments + Texture.read from GPU",
+            "attachments": [
+              {
+                "index": 0,
+                "expected": [
+                  64,
+                  128,
+                  191,
+                  255
+                ],
+                "values": [
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255
+                ],
+                "passed": true
+              },
+              {
+                "index": 1,
+                "expected": [
+                  191,
+                  64,
+                  128,
+                  255
+                ],
+                "values": [
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255
+                ],
+                "passed": true
+              }
+            ],
+            "actual": [
+              [
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255
+              ],
+              [
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255
+              ]
+            ],
+            "expected": [
+              [
+                64,
+                128,
+                191,
+                255
+              ],
+              [
+                191,
+                64,
+                128,
+                255
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "engine": "playcanvas",
+      "requestedBackend": "webgl2",
+      "actualBackend": "WebGL2",
+      "diagnostics": {
+        "ready": true,
+        "engine": "PlayCanvas",
+        "version": "2.22.0",
+        "backend": "WebGL2",
+        "fallbackReason": null,
+        "progress": 0.6,
+        "cubePieces": 27,
+        "exteriorSymbols": 54,
+        "tileCount": 162,
+        "activeTiles": 162,
+        "fieldBatches": 12,
+        "drawCalls": 12,
+        "triangles": 412416,
+        "frame": {
+          "drawCalls": 12,
+          "submittedTriangles": 412416
+        },
+        "frameMs": 19.077103906936756,
+        "frameNumber": 14,
+        "environmentLoaded": true,
+        "environment": {
+          "status": "loaded",
+          "error": null,
+          "url": "/hdri/studio_small_09_1k.hdr",
+          "rotationY": 0.4,
+          "sourceSize": [
+            1024,
+            512
+          ],
+          "atlasSize": [
+            512,
+            512
+          ]
+        },
+        "pixelRatio": 1,
+        "width": 1440,
+        "height": 900,
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "pixelRatio": 1
+        },
+        "capabilities": {
+          "nativeCompute": false,
+          "compute": false,
+          "storageBuffers": false,
+          "hardwareInstancing": true,
+          "pbr": true,
+          "clearcoat": true,
+          "nativeShaderLanguage": "GLSL",
+          "customPost": true,
+          "maxColorAttachments": 8
+        },
+        "controls": {
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.23,
+          "rotation": [
+            0.3,
+            0.908407346410207,
+            -0.045
+          ],
+          "cameraFov": 37,
+          "roughness": 0.77,
+          "metalness": 0.08,
+          "clearcoat": 0.46,
+          "environmentIntensity": 0.68,
+          "keyIntensity": 3.8,
+          "exposure": 1.06,
+          "glyphColor": "#354330",
+          "shadows": false,
+          "postEffect": 0,
+          "waveAmplitude": 0,
+          "wavePhase": 0,
+          "density": 162
+        },
+        "probe": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              1.19,
+              0.96
+            ],
+            "world": [
+              1.0368000268936157,
+              1.3852001428604126,
+              1.0368000268936157
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368000268936157,
+              -0.9368000030517578,
+              -1.0368000268936157
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.77,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 162,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 2,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "GLSL transformInstancingVS / static per-instance matrices / matching body and glyph displacement"
+          },
+          "postEffect": 0,
+          "postAttached": false,
+          "exposure": 1.06
+        }
+      },
+      "compute": {
+        "capturedAt": "2026-09-05T04:35:34.848Z",
+        "engine": "playcanvas",
+        "requestedBackend": "webgl2",
+        "actualBackend": "WebGL2",
+        "result": {
+          "supported": false,
+          "passed": false,
+          "backend": "WebGL2",
+          "nativeCompute": false,
+          "limitation": "PlayCanvas compute/storage buffers require WebGPU. WebGL2 transform feedback is available as a separate API, not executed by this compute probe."
+        }
+      },
+      "advanced": {
+        "capturedAt": "2026-09-05T04:35:34.854Z",
+        "engine": "playcanvas",
+        "requestedBackend": "webgl2",
+        "actualBackend": "WebGL2",
+        "result": {
+          "backend": "WebGL2",
+          "mrt": {
+            "supported": true,
+            "passed": true,
+            "backend": "WebGL2",
+            "language": "GLSL",
+            "sourceAuthorship": "Full custom vertex and fragment shader sources",
+            "path": "ShaderUtils + two RenderTarget color attachments + Texture.read from GPU",
+            "attachments": [
+              {
+                "index": 0,
+                "expected": [
+                  64,
+                  128,
+                  191,
+                  255
+                ],
+                "values": [
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255,
+                  64,
+                  127,
+                  191,
+                  255
+                ],
+                "passed": true
+              },
+              {
+                "index": 1,
+                "expected": [
+                  191,
+                  64,
+                  128,
+                  255
+                ],
+                "values": [
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255,
+                  191,
+                  64,
+                  127,
+                  255
+                ],
+                "passed": true
+              }
+            ],
+            "actual": [
+              [
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255,
+                64,
+                127,
+                191,
+                255
+              ],
+              [
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255,
+                191,
+                64,
+                127,
+                255
+              ]
+            ],
+            "expected": [
+              [
+                64,
+                128,
+                191,
+                255
+              ],
+              [
+                191,
+                64,
+                128,
+                255
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "engine": "native_webgpu",
+      "requestedBackend": "webgpu",
+      "actualBackend": "WebGPU",
+      "diagnostics": {
+        "ready": true,
+        "engine": "WebGPU directo",
+        "version": "custom WGSL fixture v1",
+        "backend": "WebGPU",
+        "progress": 0.6,
+        "stage": "mosaic",
+        "referenceViewport": [
+          1440,
+          900
+        ],
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "pixelRatio": 1
+        },
+        "camera": {
+          "perspective": true,
+          "verticalFovDegrees": 37,
+          "positionZ": 10.535114493668699
+        },
+        "geometry": {
+          "cubies": 27,
+          "exteriorSymbols": 54,
+          "mosaicTiles": 162,
+          "mosaicSymbolInstances": 162,
+          "heroDrawBatches": 7,
+          "mosaicDrawBatches": 12,
+          "source": "Shared BufferGeometry authoring; uploaded to native GPU vertex/index buffers; no engine renderer"
+        },
+        "effects": {
+          "shadows": false,
+          "shadowMapSize": 1024,
+          "shadowFilter": "3x3 PCF plus hardware bilinear depth comparisons",
+          "customPostPasses": 0,
+          "bloom": false,
+          "ssao": false,
+          "antialiasing": "4x MSAA",
+          "toneMapping": "Own ACES fitted curve + explicit linear-to-sRGB",
+          "exposure": 1.06
+        },
+        "controls": {
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.23,
+          "rotation": [
+            0.3,
+            0.908407346410207,
+            -0.045
+          ],
+          "cameraFov": 37,
+          "roughness": 0.77,
+          "metalness": 0.08,
+          "clearcoat": 0.46,
+          "environmentIntensity": 0.68,
+          "keyIntensity": 3.8,
+          "exposure": 1.06,
+          "glyphColor": "#354330",
+          "shadows": false,
+          "postEffect": 0,
+          "waveAmplitude": 0,
+          "wavePhase": 0,
+          "density": 162
+        },
+        "probe": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              1.19,
+              0.96
+            ],
+            "world": [
+              1.0368,
+              1.3852000000000002,
+              1.0368
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368,
+              -0.9368,
+              -1.0368
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.77,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 162,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 2,
+          "heroMatrixVersion": 3,
+          "instanceBytesUploaded": 183296,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "Own WGSL vertex shader; shared per-instance world centre; uniform-only changes; same displacement in shadow caster"
+          },
+          "postEffect": 0,
+          "exposure": 1.06,
+          "normals": "Per-instance inverse-transpose 3x3; normalized per fragment",
+          "alphaMode": "opaque",
+          "clearcoatRoughness": 0.26
+        },
+        "environment": {
+          "url": "/hdri/studio_small_09_1k.hdr",
+          "status": "loaded",
+          "width": 1024,
+          "height": 512,
+          "mipLevels": 11,
+          "specular": "Native WGSL GGX importance sampling, 128 samples per texel per roughness mip; analytic split-sum BRDF",
+          "diffuse": "9 RGB spherical harmonics, HDR sample stride 4, solid-angle weighted Lambert convolution"
+        },
+        "environmentLoaded": true,
+        "rawControl": {
+          "device": "GPUDevice returned by API",
+          "commandEncoding": "Explicit native render and compute passes",
+          "shaderLanguage": "WGSL",
+          "bindGroupLayouts": "Explicit",
+          "normalMatrices": "CPU inverse-transpose per instance",
+          "alphaMode": "opaque scene; independent alpha blending measured by runRawControlProbe",
+          "optionalTimestampQuery": true,
+          "features": [
+            "core-features-and-limits",
+            "timestamp-query"
+          ],
+          "limits": {
+            "maxTextureDimension2D": 8192,
+            "maxColorAttachments": 8,
+            "maxVertexAttributes": 16,
+            "maxComputeInvocationsPerWorkgroup": 256
+          },
+          "adapter": {
+            "vendor": "nvidia",
+            "architecture": "blackwell",
+            "device": "",
+            "description": ""
+          }
+        },
+        "frames": 13,
+        "frameNumber": 13,
+        "frame": {
+          "drawCalls": 12,
+          "submittedTriangles": 412416,
+          "sceneDrawCalls": 12,
+          "shadowDrawCalls": 0,
+          "postDrawCalls": 0,
+          "cpuEncodeSubmitMs": 0.09999999403953552
+        },
+        "drawCalls": 12,
+        "triangles": 412416,
+        "errors": [],
+        "missingFeatures": [],
+        "timing": {
+          "samples": 12,
+          "averageFrameMs": 17.908333333333303,
+          "fps": 55.83992554676603,
+          "p95FrameMs": 18.5,
+          "gpuFrameMs": null,
+          "method": "Latest 240 requestAnimationFrame intervals, including browser scheduling. cpuEncodeSubmitMs is CPU encoding/submission time, not GPU time."
+        },
+        "comparisonLimits": "Shared meshes, pose, camera, counts and control values; custom GGX, HDR integration and tone mapping differ from Three/Babylon/PlayCanvas. This is a functional rendering prototype, not identical pixels or an isolated speed benchmark."
+      },
+      "compute": {
+        "capturedAt": "2026-09-05T04:35:35.409Z",
+        "engine": "native_webgpu",
+        "requestedBackend": "webgpu",
+        "actualBackend": "WebGPU",
+        "result": {
+          "supported": true,
+          "passed": true,
+          "backend": "WebGPU",
+          "path": "Raw GPUDevice + own WGSL compute + dispatchWorkgroups + copyBufferToBuffer + mapAsync; no engine and no CPU evaluation",
+          "count": 64,
+          "values": [
+            7,
+            10,
+            13,
+            16,
+            19,
+            22,
+            25,
+            28,
+            31,
+            34,
+            37,
+            40,
+            43,
+            46,
+            49,
+            52,
+            55,
+            58,
+            61,
+            64,
+            67,
+            70,
+            73,
+            76,
+            79,
+            82,
+            85,
+            88,
+            91,
+            94,
+            97,
+            100,
+            103,
+            106,
+            109,
+            112,
+            115,
+            118,
+            121,
+            124,
+            127,
+            130,
+            133,
+            136,
+            139,
+            142,
+            145,
+            148,
+            151,
+            154,
+            157,
+            160,
+            163,
+            166,
+            169,
+            172,
+            175,
+            178,
+            181,
+            184,
+            187,
+            190,
+            193,
+            196
+          ]
+        }
+      },
+      "advanced": {
+        "capturedAt": "2026-09-05T04:35:35.439Z",
+        "engine": "native_webgpu",
+        "requestedBackend": "webgpu",
+        "actualBackend": "WebGPU",
+        "result": {
+          "supported": true,
+          "passed": true,
+          "backend": "WebGPU",
+          "mrt": {
+            "passed": true,
+            "attachments": 2,
+            "actual": [
+              [
+                44,
+                89,
+                133,
+                255
+              ],
+              [
+                204,
+                51,
+                25,
+                255
+              ]
+            ],
+            "expected": [
+              [
+                45,
+                89,
+                134,
+                255
+              ],
+              [
+                204,
+                51,
+                26,
+                255
+              ]
+            ],
+            "firstTarget": "src-alpha / one-minus-src-alpha over explicit clear RGBA",
+            "secondTarget": "replacement; independent attachment state"
+          },
+          "atomics": {
+            "passed": true,
+            "actual": [
+              64,
+              2016
+            ],
+            "expected": [
+              64,
+              2016
+            ],
+            "path": "64 GPU invocations atomicAdd(storage count,1) and atomicAdd(storage sum,id)"
+          },
+          "timestamp": {
+            "supported": true,
+            "elapsedNanoseconds": 0,
+            "method": "GPU timestamp-query around the isolated 4x4 MRT pass; browser may quantize timestamps; not a scene performance benchmark"
+          }
+        }
+      }
+    },
+    {
+      "engine": "native_webgl",
+      "requestedBackend": "webgl2",
+      "actualBackend": "WebGL2",
+      "diagnostics": {
+        "ready": true,
+        "engine": "Native WebGL2",
+        "version": "WebGL 2 / GLSL ES 3.00",
+        "backend": "WebGL2",
+        "progress": 0.6,
+        "width": 1440,
+        "height": 900,
+        "pixelRatio": 1,
+        "cubePieces": 27,
+        "tileCount": 162,
+        "activeTiles": 162,
+        "drawCalls": 12,
+        "triangles": 412416,
+        "frameNumber": 14,
+        "frameMs": 18.246379516386153,
+        "renderCpuMs": 0.05781327000472515,
+        "environmentLoaded": true,
+        "controls": {
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.23,
+          "rotation": [
+            0.3,
+            0.908407346410207,
+            -0.045
+          ],
+          "cameraFov": 37,
+          "roughness": 0.77,
+          "metalness": 0.08,
+          "clearcoat": 0.46,
+          "environmentIntensity": 0.68,
+          "keyIntensity": 3.8,
+          "exposure": 1.06,
+          "glyphColor": "#354330",
+          "shadows": false,
+          "postEffect": 0,
+          "waveAmplitude": 0,
+          "wavePhase": 0,
+          "density": 162
+        },
+        "probe": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              1.19,
+              0.96
+            ],
+            "world": [
+              1.0368,
+              1.3852000000000002,
+              1.0368
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368,
+              -0.9368,
+              -1.0368
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.77,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 162,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 2,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "Native GLSL vertex / instanced matrix center"
+          }
+        },
+        "nativeRenderer": true,
+        "limits": "Custom GGX and clearcoat with box-filtered HDR mipmaps, not an engine-identical PBR implementation. FX target is single-sample. No native compute shader; transform feedback probe is labelled separately."
+      },
+      "compute": {
+        "capturedAt": "2026-09-05T04:35:35.880Z",
+        "engine": "native_webgl",
+        "requestedBackend": "webgl2",
+        "actualBackend": "WebGL2",
+        "result": {
+          "supported": true,
+          "passed": true,
+          "count": 64,
+          "values": [
+            7,
+            10,
+            13,
+            16,
+            19,
+            22,
+            25,
+            28,
+            31,
+            34,
+            37,
+            40,
+            43,
+            46,
+            49,
+            52,
+            55,
+            58,
+            61,
+            64,
+            67,
+            70,
+            73,
+            76,
+            79,
+            82,
+            85,
+            88,
+            91,
+            94,
+            97,
+            100,
+            103,
+            106,
+            109,
+            112,
+            115,
+            118,
+            121,
+            124,
+            127,
+            130,
+            133,
+            136,
+            139,
+            142,
+            145,
+            148,
+            151,
+            154,
+            157,
+            160,
+            163,
+            166,
+            169,
+            172,
+            175,
+            178,
+            181,
+            184,
+            187,
+            190,
+            193,
+            196
+          ],
+          "backend": "WebGL2",
+          "path": "Native transform feedback + getBufferSubData; not native compute shader"
+        }
+      },
+      "advanced": {
+        "capturedAt": "2026-09-05T04:35:35.894Z",
+        "engine": "native_webgl",
+        "requestedBackend": "webgl2",
+        "actualBackend": "WebGL2",
+        "result": {
+          "mrt": {
+            "supported": true,
+            "passed": true,
+            "attachments": 2,
+            "actual": [
+              [
+                64,
+                127,
+                191,
+                255
+              ],
+              [
+                204,
+                153,
+                102,
+                255
+              ]
+            ],
+            "expected": [
+              [
+                64,
+                128,
+                191,
+                255
+              ],
+              [
+                204,
+                153,
+                102,
+                255
+              ]
+            ]
+          },
+          "atomics": {
+            "supported": false,
+            "reason": "Storage-buffer atomics and native compute are not in WebGL2."
+          },
+          "timestamp": {
+            "available": true,
+            "measured": false
+          },
+          "limits": {
+            "maxDrawBuffers": 8,
+            "maxVertexAttribs": 16,
+            "maxTextureSize": 16384
+          }
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127"
+  ],
+  "scope": "Functional production-build QA: five candidates, eight backend routes, real GPU probes, controls, lifecycle, keyboard, exports and local reference images. Frame cadence is not a GPU performance comparison.",
+  "summary": {
+    "passed": 72,
+    "failed": 0,
+    "routes": 8
+  }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "exact-new",
+    "meanAbs": 0.2867136549601005,
+    "changedPixels": 2912,
+    "poseIdentical": true,
+    "mismatches": [
+      {
+        "name": "premium-glyph-6-0--1",
+        "camera": "PerspectiveCamera",
+        "maxError": 1.3959291118062818,
+        "bufferTranslation": [
+          0.11866064369678497,
+          -1.3589873313903809,
+          1.474498987197876
+        ],
+        "worldTranslation": [
+          -1.2772684681094968,
+          -0.8582501962472202,
+          0.13694546644837985
+        ]
+      }
+    ]
+  },
+  {
+    "name": "exact-refresh",
+    "meanAbs": 0,
+    "changedPixels": 0,
+    "poseIdentical": true,
+    "mismatches": []
+  },
+  {
+    "name": "exact-legacy",
+    "meanAbs": 0.2937396200429376,
+    "changedPixels": 2895,
+    "poseIdentical": true,
+    "mismatches": [
+      {
+        "name": "premium-glyph-6-0--1",
+        "camera": "PerspectiveCamera",
+        "maxError": 1.3959291118062818,
+        "bufferTranslation": [
+          0.11866064369678497,
+          -1.3589873313903809,
+          1.474498987197876
+        ],
+        "worldTranslation": [
+          -1.2772684681094968,
+          -0.8582501962472202,
+          0.13694546644837985
+        ]
+      }
+    ]
+  },
+  {
+    "name": "exact-off",
+    "meanAbs": 0.2407137359743995,
+    "changedPixels": 1625,
+    "poseIdentical": true,
+    "mismatches": [
+      {
+        "name": "premium-glyph-6-0--1",
+        "camera": "PerspectiveCamera",
+        "maxError": 1.3959291118062818,
+        "bufferTranslation": [
+          0.11866064369678497,
+          -1.3589873313903809,
+          1.474498987197876
+        ],
+        "worldTranslation": [
+          -1.2772684681094968,
+          -0.8582501962472202,
+          0.13694546644837985
+        ]
+      }
+    ]
+  },
+  {
+    "name": "trace-normal",
+    "meanAbs": 0.2866579576295216,
+    "changedPixels": 2889,
+    "poseIdentical": true,
+    "mismatches": [
+      {
+        "name": "premium-glyph-6-0--1",
+        "camera": "PerspectiveCamera",
+        "maxError": 1.3959291118062818,
+        "bufferTranslation": [
+          0.11866064369678497,
+          -1.3589873313903809,
+          1.474498987197876
+        ],
+        "worldTranslation": [
+          -1.2772684681094968,
+          -0.8582501962472202,
+          0.13694546644837985
+        ]
+      }
+    ]
+  },
+  {
+    "name": "public-identity-webgpu",
+    "meanAbs": 0,
+    "changedPixels": 0,
+    "poseIdentical": true,
+    "mismatches": []
+  },
+  {
+    "name": "invalidate-once",
+    "meanAbs": 0,
+    "changedPixels": 0,
+    "poseIdentical": true,
+    "mismatches": []
+  },
+  {
+    "name": "public-identity-webgl",
+    "meanAbs": 0,
+    "changedPixels": 0,
+    "poseIdentical": true,
+    "mismatches": []
+  }
+]

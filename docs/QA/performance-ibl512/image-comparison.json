@@ -1,0 +1,147 @@
+{
+  "before": "docs/QA/performance-compile",
+  "after": "docs/QA/performance-ibl512",
+  "comparison": "Full-resolution RGB pixels, same seeded procedural noise and viewport; no image resizing.",
+  "comparisons": [
+    {
+      "name": "desktop",
+      "progress": 0,
+      "changedPixels": 58341,
+      "above8Pixels": 2,
+      "meanAbsoluteRGB": 0.020568415637860084,
+      "maxChannel": 10,
+      "before": "desktop-000.png",
+      "after": "desktop-000.png"
+    },
+    {
+      "name": "desktop",
+      "progress": 0.23,
+      "changedPixels": 141618,
+      "above8Pixels": 381,
+      "meanAbsoluteRGB": 0.07543338477366256,
+      "maxChannel": 11,
+      "before": "desktop-023.png",
+      "after": "desktop-023.png"
+    },
+    {
+      "name": "desktop",
+      "progress": 0.4,
+      "changedPixels": 114982,
+      "above8Pixels": 8,
+      "meanAbsoluteRGB": 0.06022170781893004,
+      "maxChannel": 10,
+      "before": "desktop-040.png",
+      "after": "desktop-040.png"
+    },
+    {
+      "name": "desktop",
+      "progress": 0.56,
+      "changedPixels": 205396,
+      "above8Pixels": 6,
+      "meanAbsoluteRGB": 0.08150488683127571,
+      "maxChannel": 10,
+      "before": "desktop-056.png",
+      "after": "desktop-056.png"
+    },
+    {
+      "name": "desktop",
+      "progress": 0.74,
+      "changedPixels": 284354,
+      "above8Pixels": 0,
+      "meanAbsoluteRGB": 0.12566280864197532,
+      "maxChannel": 6,
+      "before": "desktop-074.png",
+      "after": "desktop-074.png"
+    },
+    {
+      "name": "desktop",
+      "progress": 0.88,
+      "changedPixels": 15,
+      "above8Pixels": 0,
+      "meanAbsoluteRGB": 0.000005915637860082305,
+      "maxChannel": 2,
+      "before": "desktop-088.png",
+      "after": "desktop-088.png"
+    },
+    {
+      "name": "desktop",
+      "progress": 1,
+      "changedPixels": 105841,
+      "above8Pixels": 62,
+      "meanAbsoluteRGB": 0.04672042181069959,
+      "maxChannel": 12,
+      "before": "desktop-100.png",
+      "after": "desktop-100.png"
+    },
+    {
+      "name": "mobile",
+      "progress": 0,
+      "changedPixels": 24917,
+      "above8Pixels": 0,
+      "meanAbsoluteRGB": 0.03283205735812371,
+      "maxChannel": 5,
+      "before": "mobile-000.png",
+      "after": "mobile-000.png"
+    },
+    {
+      "name": "mobile",
+      "progress": 0.23,
+      "changedPixels": 18482,
+      "above8Pixels": 0,
+      "meanAbsoluteRGB": 0.02787195690039292,
+      "maxChannel": 6,
+      "before": "mobile-023.png",
+      "after": "mobile-023.png"
+    },
+    {
+      "name": "mobile",
+      "progress": 0.4,
+      "changedPixels": 23928,
+      "above8Pixels": 0,
+      "meanAbsoluteRGB": 0.03619921416129947,
+      "maxChannel": 6,
+      "before": "mobile-040.png",
+      "after": "mobile-040.png"
+    },
+    {
+      "name": "mobile",
+      "progress": 0.56,
+      "changedPixels": 48207,
+      "above8Pixels": 7,
+      "meanAbsoluteRGB": 0.07143233280674038,
+      "maxChannel": 10,
+      "before": "mobile-056.png",
+      "after": "mobile-056.png"
+    },
+    {
+      "name": "mobile",
+      "progress": 0.74,
+      "changedPixels": 55291,
+      "above8Pixels": 2,
+      "meanAbsoluteRGB": 0.09111475675456718,
+      "maxChannel": 10,
+      "before": "mobile-074.png",
+      "after": "mobile-074.png"
+    },
+    {
+      "name": "mobile",
+      "progress": 0.88,
+      "changedPixels": 5,
+      "above8Pixels": 0,
+      "meanAbsoluteRGB": 0.000005063393688986106,
+      "maxChannel": 1,
+      "before": "mobile-088.png",
+      "after": "mobile-088.png"
+    },
+    {
+      "name": "mobile",
+      "progress": 1,
+      "changedPixels": 24831,
+      "above8Pixels": 0,
+      "meanAbsoluteRGB": 0.03249989873212622,
+      "maxChannel": 5,
+      "before": "mobile-100.png",
+      "after": "mobile-100.png"
+    }
+  ]
+}

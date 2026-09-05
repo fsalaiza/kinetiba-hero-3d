@@ -1,0 +1,319 @@
+{
+  "schema": "kineti-ab-report/v1",
+  "capturedAt": "2026-09-05T03:39:10.901Z",
+  "configuration": {
+    "schema": "kineti-ab-controls/v1",
+    "engine": "babylon",
+    "requestedBackend": "webgl2",
+    "progress": 0.6,
+    "controls": {
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "rotation": [
+        0.3,
+        0.53,
+        -0.045
+      ],
+      "cameraFov": 37,
+      "roughness": 0.27,
+      "metalness": 0.08,
+      "clearcoat": 0.46,
+      "environmentIntensity": 0.68,
+      "keyIntensity": 3.8,
+      "exposure": 1.06,
+      "glyphColor": "#354330",
+      "shadows": false,
+      "postEffect": 0,
+      "waveAmplitude": 0,
+      "wavePhase": 0,
+      "density": 432
+    }
+  },
+  "sceneState": {
+    "loading": false,
+    "activeEngine": "babylon",
+    "activeRequestedBackend": "webgl2",
+    "requestToken": 7,
+    "activeToken": 7
+  },
+  "browser": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "devicePixelRatio": 1
+  },
+  "diagnostics": {
+    "engine": "Babylon.js",
+    "version": "9.25.0",
+    "backend": "WebGL2",
+    "fallbackReason": null,
+    "progress": 0.6,
+    "stage": "mosaic",
+    "referenceViewport": [
+      1440,
+      900
+    ],
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "hardwareScalingLevel": 1
+    },
+    "camera": {
+      "perspective": true,
+      "verticalFovDegrees": 37,
+      "positionZ": 10.535114493668699
+    },
+    "geometry": {
+      "cubies": 27,
+      "exteriorSymbols": 54,
+      "mosaicTiles": 432,
+      "mosaicSymbolInstances": 432,
+      "mosaicDrawBatches": 12
+    },
+    "effects": {
+      "bloom": false,
+      "ssao": false,
+      "shadows": false,
+      "toneMapping": "Babylon ACES",
+      "exposure": 1.06,
+      "customPostPasses": 0,
+      "postPath": "GLSL fullscreen RGB separation + contrast after scene tone mapping"
+    },
+    "controls": {
+      "explode": 0,
+      "selectedPiece": 26,
+      "pieceOffset": 0,
+      "rotation": [
+        0.3,
+        0.53,
+        -0.045
+      ],
+      "cameraFov": 37,
+      "roughness": 0.27,
+      "metalness": 0.08,
+      "clearcoat": 0.46,
+      "environmentIntensity": 0.68,
+      "keyIntensity": 3.8,
+      "exposure": 1.06,
+      "glyphColor": "#354330",
+      "shadows": false,
+      "postEffect": 0,
+      "waveAmplitude": 0,
+      "wavePhase": 0,
+      "density": 432
+    },
+    "probe": {
+      "selected": {
+        "index": 26,
+        "local": [
+          0.96,
+          0.96,
+          0.96
+        ],
+        "world": [
+          1.0368000268936157,
+          1.1368000507354736,
+          1.0368000268936157
+        ]
+      },
+      "other": {
+        "index": 0,
+        "local": [
+          -0.96,
+          -0.96,
+          -0.96
+        ],
+        "world": [
+          -1.0368000268936157,
+          -0.9368000030517578,
+          -1.0368000268936157
+        ]
+      },
+      "cameraFov": 37,
+      "material": {
+        "roughness": 0.27,
+        "metalness": 0.08,
+        "clearcoat": 0.46
+      },
+      "density": 432,
+      "shadowEnabled": false,
+      "instanceMatrixVersion": 2,
+      "gpuWave": {
+        "amplitude": 0,
+        "phase": 0,
+        "path": "MaterialPluginBase / GLSL vertex / finalWorld instance center"
+      }
+    },
+    "missingFeatures": [
+      "native-compute-shaders"
+    ],
+    "environment": {
+      "status": "loaded",
+      "error": null,
+      "rotationY": 0.4,
+      "url": "/hdri/studio_small_09_1k.hdr"
+    },
+    "frames": 28,
+    "frame": {
+      "drawCalls": 12,
+      "submittedTriangles": 1099776,
+      "babylonDrawCalls": 12,
+      "activeIndices": 3299328,
+      "cpuSceneRenderMs": 0.29999999701976776
+    },
+    "timing": {
+      "samples": 27,
+      "averageFrameMs": 29.89999999988962,
+      "fps": 33.44481605363517,
+      "p95FrameMs": 31.5,
+      "gpuFrameMs": null,
+      "method": "Measured render-loop intervals, latest 240 samples; includes browser scheduling. CPU scene time is not GPU time."
+    },
+    "comparisonLimits": "Shared geometry, camera, counts and nominal PBR settings. Babylon and Three use different light units, environment filtering and tone mapping; this is not a pixel-identical or isolated engine benchmark."
+  },
+  "probeState": {
+    "selected": {
+      "index": 26,
+      "local": [
+        0.96,
+        0.96,
+        0.96
+      ],
+      "world": [
+        1.0368000268936157,
+        1.1368000507354736,
+        1.0368000268936157
+      ]
+    },
+    "other": {
+      "index": 0,
+      "local": [
+        -0.96,
+        -0.96,
+        -0.96
+      ],
+      "world": [
+        -1.0368000268936157,
+        -0.9368000030517578,
+        -1.0368000268936157
+      ]
+    },
+    "cameraFov": 37,
+    "material": {
+      "roughness": 0.27,
+      "metalness": 0.08,
+      "clearcoat": 0.46
+    },
+    "density": 432,
+    "shadowEnabled": false,
+    "instanceMatrixVersion": 2,
+    "gpuWave": {
+      "amplitude": 0,
+      "phase": 0,
+      "path": "MaterialPluginBase / GLSL vertex / finalWorld instance center"
+    }
+  },
+  "computeResults": [
+    {
+      "capturedAt": "2026-09-05T03:39:06.552Z",
+      "engine": "babylon",
+      "requestedBackend": "webgl2",
+      "result": {
+        "supported": false,
+        "passed": false,
+        "count": 64,
+        "values": [],
+        "backend": "WebGL2",
+        "path": "unsupported",
+        "reason": "Native compute shaders require the WebGPU backend; no CPU simulation is used."
+      }
+    },
+    {
+      "capturedAt": "2026-09-05T03:39:09.939Z",
+      "engine": "three",
+      "requestedBackend": "webgl2",
+      "result": {
+        "supported": true,
+        "passed": true,
+        "count": 64,
+        "values": [
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196
+        ],
+        "backend": "WebGL2",
+        "path": "GLSL function + transform feedback emulation + readback; not native compute"
+      }
+    }
+  ],
+  "comparisonLimits": [
+    "Solo un motor se crea y ejecuta a la vez. Los cambios de motor se serializan y descartan inicializaciones obsoletas.",
+    "Geometría y valores nominales compartidos; unidades de luz, filtrado del entorno, PBR y posprocesado dependen del motor.",
+    "El intervalo de fotogramas incluye programación del navegador. No equivale al tiempo GPU ni demuestra superioridad universal.",
+    "Los resultados compute se conservan tal como los devuelve la sonda, incluidos estados no soportados y rutas de fallback."
+  ]
+}

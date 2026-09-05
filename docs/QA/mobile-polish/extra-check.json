@@ -1,0 +1,30 @@
+{
+  "errors": [],
+  "state": {
+    "ready": true,
+    "backend": "WebGPU",
+    "progress": 0,
+    "targetProgress": 0,
+    "phase": 0,
+    "cubePieces": 27,
+    "tileCount": 432,
+    "activeTiles": 0,
+    "drawCalls": 176,
+    "triangles": 256503,
+    "frameMs": 30.25128084354841,
+    "renderCpuMs": 1.0792696357159286,
+    "pixelRatio": 1,
+    "adapted": false,
+    "reducedMotion": true,
+    "width": 1440,
+    "height": 900,
+    "frameNumber": 89,
+    "scrollRange": 5940,
+    "shaderAnimation": "TSL instance attributes + scroll uniforms",
+    "threeRevision": "185",
+    "destroy": {},
+    "setReducedMotion": {},
+    "goTo": {},
+    "getDiagnostics": {}
+  }
+}

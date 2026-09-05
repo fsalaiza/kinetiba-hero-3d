@@ -1,0 +1,608 @@
+{
+  "baseURL": "http://127.0.0.1:4174",
+  "checks": [
+    {
+      "name": "five-candidate-tabs",
+      "pass": true
+    },
+    {
+      "name": "reference-and-unreal-links",
+      "pass": true,
+      "evidence": [
+        "http://127.0.0.1:4174/research/reference.html",
+        "http://127.0.0.1:4174/docs/CONTROL_MATRIX.md",
+        "http://127.0.0.1:8899/",
+        "http://127.0.0.1:4174/"
+      ]
+    },
+    {
+      "name": "three-webgpu: controls-preserved",
+      "pass": true
+    },
+    {
+      "name": "three-webgpu: one-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "three-webgpu: backend-selector",
+      "pass": true,
+      "evidence": {
+        "disabled": false,
+        "value": "auto"
+      }
+    },
+    {
+      "name": "three-webgpu: compute-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": true,
+        "passed": true,
+        "count": 64,
+        "values": [
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196
+        ],
+        "backend": "WebGPU",
+        "path": "Native WGSL function + TSL compute + storage readback"
+      }
+    },
+    {
+      "name": "three-webgpu: advanced-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": false,
+        "implemented": false,
+        "scope": "fixture",
+        "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+      }
+    },
+    {
+      "name": "three-webgl2: controls-preserved",
+      "pass": true
+    },
+    {
+      "name": "three-webgl2: one-active-canvas",
+      "pass": true
+    },
+    {
+      "name": "three-webgl2: backend-selector",
+      "pass": true,
+      "evidence": {
+        "disabled": false,
+        "value": "webgl2"
+      }
+    },
+    {
+      "name": "three-webgl2: compute-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": true,
+        "passed": true,
+        "count": 64,
+        "values": [
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196
+        ],
+        "backend": "WebGL2",
+        "path": "GLSL function + transform feedback emulation + readback; not native compute"
+      }
+    },
+    {
+      "name": "three-webgl2: transform-feedback-labelled",
+      "pass": true
+    },
+    {
+      "name": "three-webgl2: advanced-semantics",
+      "pass": true,
+      "evidence": {
+        "supported": false,
+        "implemented": false,
+        "scope": "fixture",
+        "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+      }
+    },
+    {
+      "name": "completed",
+      "pass": false,
+      "evidence": "Waiting failed: 45000ms exceeded"
+    }
+  ],
+  "routes": [
+    {
+      "engine": "three",
+      "requestedBackend": "auto",
+      "actualBackend": "WebGPU",
+      "diagnostics": {
+        "ready": true,
+        "engine": "Three.js",
+        "version": "185",
+        "backend": "WebGPU",
+        "progress": 0.6,
+        "cubePieces": 27,
+        "tileCount": 162,
+        "activeTiles": 162,
+        "drawCalls": 13,
+        "triangles": 412417,
+        "frameMs": 20.92744476916794,
+        "frameNumber": 18,
+        "environmentLoaded": true,
+        "pixelRatio": 1,
+        "width": 1440,
+        "height": 900,
+        "controls": {
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.23,
+          "rotation": [
+            0.3,
+            0.908407346410207,
+            -0.045
+          ],
+          "cameraFov": 37,
+          "roughness": 0.77,
+          "metalness": 0.08,
+          "clearcoat": 0.46,
+          "environmentIntensity": 0.68,
+          "keyIntensity": 3.8,
+          "exposure": 1.06,
+          "glyphColor": "#354330",
+          "shadows": false,
+          "postEffect": 0,
+          "waveAmplitude": 0,
+          "wavePhase": 0,
+          "density": 162
+        },
+        "probe": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              1.19,
+              0.96
+            ],
+            "world": [
+              1.0368,
+              1.3852000000000002,
+              1.0368
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368,
+              -0.9368,
+              -1.0368
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.77,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 162,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 2,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "TSL vertex shader / per-instance centre attribute"
+          },
+          "postEffect": 0,
+          "exposure": 1.06
+        }
+      },
+      "compute": {
+        "capturedAt": "2026-09-05T04:31:36.874Z",
+        "engine": "three",
+        "requestedBackend": "auto",
+        "actualBackend": "WebGPU",
+        "result": {
+          "supported": true,
+          "passed": true,
+          "count": 64,
+          "values": [
+            7,
+            10,
+            13,
+            16,
+            19,
+            22,
+            25,
+            28,
+            31,
+            34,
+            37,
+            40,
+            43,
+            46,
+            49,
+            52,
+            55,
+            58,
+            61,
+            64,
+            67,
+            70,
+            73,
+            76,
+            79,
+            82,
+            85,
+            88,
+            91,
+            94,
+            97,
+            100,
+            103,
+            106,
+            109,
+            112,
+            115,
+            118,
+            121,
+            124,
+            127,
+            130,
+            133,
+            136,
+            139,
+            142,
+            145,
+            148,
+            151,
+            154,
+            157,
+            160,
+            163,
+            166,
+            169,
+            172,
+            175,
+            178,
+            181,
+            184,
+            187,
+            190,
+            193,
+            196
+          ],
+          "backend": "WebGPU",
+          "path": "Native WGSL function + TSL compute + storage readback"
+        }
+      },
+      "advanced": {
+        "capturedAt": "2026-09-05T04:31:37.071Z",
+        "engine": "three",
+        "requestedBackend": "auto",
+        "actualBackend": "WebGPU",
+        "result": {
+          "supported": false,
+          "implemented": false,
+          "scope": "fixture",
+          "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+        }
+      }
+    },
+    {
+      "engine": "three",
+      "requestedBackend": "webgl2",
+      "actualBackend": "WebGL2",
+      "diagnostics": {
+        "ready": true,
+        "engine": "Three.js",
+        "version": "185",
+        "backend": "WebGL2",
+        "progress": 0.6,
+        "cubePieces": 27,
+        "tileCount": 162,
+        "activeTiles": 162,
+        "drawCalls": 13,
+        "triangles": 412417,
+        "frameMs": 63.330743079860035,
+        "frameNumber": 14,
+        "environmentLoaded": true,
+        "pixelRatio": 1,
+        "width": 1440,
+        "height": 900,
+        "controls": {
+          "explode": 0,
+          "selectedPiece": 26,
+          "pieceOffset": 0.23,
+          "rotation": [
+            0.3,
+            0.908407346410207,
+            -0.045
+          ],
+          "cameraFov": 37,
+          "roughness": 0.77,
+          "metalness": 0.08,
+          "clearcoat": 0.46,
+          "environmentIntensity": 0.68,
+          "keyIntensity": 3.8,
+          "exposure": 1.06,
+          "glyphColor": "#354330",
+          "shadows": false,
+          "postEffect": 0,
+          "waveAmplitude": 0,
+          "wavePhase": 0,
+          "density": 162
+        },
+        "probe": {
+          "selected": {
+            "index": 26,
+            "local": [
+              0.96,
+              1.19,
+              0.96
+            ],
+            "world": [
+              1.0368,
+              1.3852000000000002,
+              1.0368
+            ]
+          },
+          "other": {
+            "index": 0,
+            "local": [
+              -0.96,
+              -0.96,
+              -0.96
+            ],
+            "world": [
+              -1.0368,
+              -0.9368,
+              -1.0368
+            ]
+          },
+          "cameraFov": 37,
+          "material": {
+            "roughness": 0.77,
+            "metalness": 0.08,
+            "clearcoat": 0.46
+          },
+          "density": 162,
+          "shadowEnabled": false,
+          "instanceMatrixVersion": 2,
+          "gpuWave": {
+            "amplitude": 0,
+            "phase": 0,
+            "path": "TSL vertex shader / per-instance centre attribute"
+          },
+          "postEffect": 0,
+          "exposure": 1.06
+        }
+      },
+      "compute": {
+        "capturedAt": "2026-09-05T04:31:41.452Z",
+        "engine": "three",
+        "requestedBackend": "webgl2",
+        "actualBackend": "WebGL2",
+        "result": {
+          "supported": true,
+          "passed": true,
+          "count": 64,
+          "values": [
+            7,
+            10,
+            13,
+            16,
+            19,
+            22,
+            25,
+            28,
+            31,
+            34,
+            37,
+            40,
+            43,
+            46,
+            49,
+            52,
+            55,
+            58,
+            61,
+            64,
+            67,
+            70,
+            73,
+            76,
+            79,
+            82,
+            85,
+            88,
+            91,
+            94,
+            97,
+            100,
+            103,
+            106,
+            109,
+            112,
+            115,
+            118,
+            121,
+            124,
+            127,
+            130,
+            133,
+            136,
+            139,
+            142,
+            145,
+            148,
+            151,
+            154,
+            157,
+            160,
+            163,
+            166,
+            169,
+            172,
+            175,
+            178,
+            181,
+            184,
+            187,
+            190,
+            193,
+            196
+          ],
+          "backend": "WebGL2",
+          "path": "GLSL function + transform feedback emulation + readback; not native compute"
+        }
+      },
+      "advanced": {
+        "capturedAt": "2026-09-05T04:31:41.469Z",
+        "engine": "three",
+        "requestedBackend": "webgl2",
+        "actualBackend": "WebGL2",
+        "result": {
+          "supported": false,
+          "implemented": false,
+          "scope": "fixture",
+          "reason": "Este fixture no implementa runRawControlProbe(). La ausencia de sonda no establece un límite del motor."
+        }
+      }
+    }
+  ],
+  "errors": [
+    "TimeoutError: Waiting failed: 45000ms exceeded\n    at new WaitTask (file:///C:/Users/fsala/Documents/GitHub/kinetiba-hero-3d/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/fsala/Documents/GitHub/kinetiba-hero-3d/node_modules/puppeteer-core/lib/esm/puppeteer/api/Realm.js:22:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/fsala/Documents/GitHub/kinetiba-hero-3d/node_modules/puppeteer-core/lib/esm/puppeteer/api/Frame.js:580:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/fsala/Documents/GitHub/kinetiba-hero-3d/node_modules/puppeteer-core/lib/esm/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/fsala/Documents/GitHub/kinetiba-hero-3d/node_modules/puppeteer-core/lib/esm/puppeteer/api/Page.js:1447:37)\n    at ready (file:///C:/Users/fsala/Documents/GitHub/kinetiba-hero-3d/scripts/qa-lab.mjs:32:14)\n    at file:///C:/Users/fsala/Documents/GitHub/kinetiba-hero-3d/scripts/qa-lab.mjs:90:13"
+  ],
+  "warnings": [],
+  "scope": "Functional production-build QA: five candidates, eight backend routes, real GPU probes, controls, lifecycle, keyboard, exports and local reference images. Frame cadence is not a GPU performance comparison.",
+  "summary": {
+    "passed": 13,
+    "failed": 1,
+    "routes": 2
+  }
+}

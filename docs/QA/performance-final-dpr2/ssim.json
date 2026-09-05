@@ -1,0 +1,75 @@
+{
+  "method": "RGB SSIM, Gaussian 11x11 sigma 1.5, L=255, C1=(.01L)^2 C2=(.03L)^2. No resizing.",
+  "comparisons": [
+    {
+      "name": "desktop",
+      "progress": 0,
+      "ssim": 0.9998483657836914
+    },
+    {
+      "name": "desktop",
+      "progress": 0.23,
+      "ssim": 0.9997457265853882
+    },
+    {
+      "name": "desktop",
+      "progress": 0.4,
+      "ssim": 0.9997615814208984
+    },
+    {
+      "name": "desktop",
+      "progress": 0.56,
+      "ssim": 0.9996373653411865
+    },
+    {
+      "name": "desktop",
+      "progress": 0.74,
+      "ssim": 0.9998281002044678
+    },
+    {
+      "name": "desktop",
+      "progress": 0.88,
+      "ssim": 1.0
+    },
+    {
+      "name": "desktop",
+      "progress": 1,
+      "ssim": 0.9997354745864868
+    },
+    {
+      "name": "mobile",
+      "progress": 0,
+      "ssim": 0.9997264742851257
+    },
+    {
+      "name": "mobile",
+      "progress": 0.23,
+      "ssim": 0.999854326248169
+    },
+    {
+      "name": "mobile",
+      "progress": 0.4,
+      "ssim": 0.999722421169281
+    },
+    {
+      "name": "mobile",
+      "progress": 0.56,
+      "ssim": 0.9998229146003723
+    },
+    {
+      "name": "mobile",
+      "progress": 0.74,
+      "ssim": 0.9998816251754761
+    },
+    {
+      "name": "mobile",
+      "progress": 0.88,
+      "ssim": 1.0
+    },
+    {
+      "name": "mobile",
+      "progress": 1,
+      "ssim": 0.9997464418411255
+    }
+  ]
+}

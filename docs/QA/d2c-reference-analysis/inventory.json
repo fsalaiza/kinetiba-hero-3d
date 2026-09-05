@@ -1,0 +1,982 @@
+[
+  {
+    "start": 1,
+    "images": [
+      {
+        "src": "../screenshots/d2c_reference/frame_001.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_002.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_003.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_004.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_005.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_006.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_007.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_008.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_009.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_010.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_011.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_012.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_013.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_014.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_015.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_016.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_017.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_018.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_019.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_020.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_021.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_022.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_023.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_024.jpg",
+        "width": 1280,
+        "height": 671
+      }
+    ]
+  },
+  {
+    "start": 25,
+    "images": [
+      {
+        "src": "../screenshots/d2c_reference/frame_025.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_026.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_027.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_028.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_029.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_030.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_031.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_032.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_033.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_034.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_035.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_036.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_037.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_038.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_039.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_040.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_041.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_042.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_043.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_044.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_045.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_046.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_047.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_048.jpg",
+        "width": 1280,
+        "height": 671
+      }
+    ]
+  },
+  {
+    "start": 49,
+    "images": [
+      {
+        "src": "../screenshots/d2c_reference/frame_049.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_050.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_051.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_052.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_053.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_054.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_055.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_056.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_057.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_058.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_059.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_060.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_061.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_062.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_063.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_064.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_065.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_066.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_067.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_068.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_069.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_070.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_071.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_072.jpg",
+        "width": 1280,
+        "height": 671
+      }
+    ]
+  },
+  {
+    "start": 73,
+    "images": [
+      {
+        "src": "../screenshots/d2c_reference/frame_073.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_074.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_075.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_076.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_077.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_078.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_079.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_080.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_081.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_082.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_083.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_084.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_085.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_086.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_087.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_088.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_089.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_090.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_091.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_092.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_093.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_094.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_095.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_096.jpg",
+        "width": 1280,
+        "height": 671
+      }
+    ]
+  },
+  {
+    "start": 97,
+    "images": [
+      {
+        "src": "../screenshots/d2c_reference/frame_097.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_098.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_099.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_100.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_101.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_102.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_103.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_104.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_105.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_106.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_107.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_108.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_109.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_110.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_111.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_112.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_113.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_114.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_115.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_116.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_117.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_118.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_119.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_120.jpg",
+        "width": 1280,
+        "height": 671
+      }
+    ]
+  },
+  {
+    "start": 121,
+    "images": [
+      {
+        "src": "../screenshots/d2c_reference/frame_121.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_122.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_123.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_124.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_125.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_126.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_127.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_128.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_129.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_130.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_131.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_132.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_133.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_134.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_135.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_136.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_137.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_138.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_139.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_140.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_141.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_142.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_143.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_144.jpg",
+        "width": 1280,
+        "height": 671
+      }
+    ]
+  },
+  {
+    "start": 145,
+    "images": [
+      {
+        "src": "../screenshots/d2c_reference/frame_145.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_146.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_147.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_148.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_149.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_150.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_151.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_152.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_153.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_154.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_155.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_156.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_157.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_158.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_159.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_160.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_161.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_162.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_163.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_164.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_165.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_166.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_167.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_168.jpg",
+        "width": 1280,
+        "height": 671
+      }
+    ]
+  },
+  {
+    "start": 169,
+    "images": [
+      {
+        "src": "../screenshots/d2c_reference/frame_169.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_170.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_171.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_172.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_173.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_174.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_175.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_176.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_177.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_178.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_179.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_180.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_181.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_182.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_183.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_184.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_185.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_186.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_187.jpg",
+        "width": 1280,
+        "height": 671
+      },
+      {
+        "src": "../screenshots/d2c_reference/frame_188.jpg",
+        "width": 1280,
+        "height": 671
+      }
+    ]
+  }
+]

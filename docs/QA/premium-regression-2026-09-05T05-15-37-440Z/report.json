@@ -1,0 +1,401 @@
+{
+  "schema": "kineti.premium-regression/v1",
+  "url": "http://127.0.0.1:4174",
+  "runs": [
+    {
+      "name": "webgpu-desktop",
+      "errors": [],
+      "diagnostics": {
+        "ready": true,
+        "backend": "WebGPU",
+        "progress": 1,
+        "targetProgress": 1,
+        "phase": 5,
+        "cubePieces": 27,
+        "exteriorPlates": 54,
+        "modeledPlates": 72,
+        "tileCount": 432,
+        "activeTiles": 0,
+        "fieldMaterials": 5,
+        "drawCalls": 376,
+        "triangles": 794478,
+        "frameMs": 18.238897215596467,
+        "renderCpuMs": 2.3879399707540307,
+        "pixelRatio": 1,
+        "adapted": false,
+        "reducedMotion": true,
+        "width": 1440,
+        "height": 900,
+        "frameNumber": 15,
+        "scrollRange": 5940,
+        "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+        "threeRevision": "185",
+        "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+        "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+        "environmentLoaded": true,
+        "ambientOcclusion": true,
+        "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+        "depthOfField": false,
+        "bloom": true,
+        "choreographyDeterministic": true,
+        "renderError": null,
+        "renderOnDemand": true,
+        "idle": true,
+        "precompiledPasses": true,
+        "initialLoadMs": 2839.1000000089407
+      }
+    },
+    {
+      "name": "webgpu-mobile",
+      "errors": [],
+      "diagnostics": {
+        "ready": true,
+        "backend": "WebGPU",
+        "progress": 1,
+        "targetProgress": 1,
+        "phase": 5,
+        "cubePieces": 27,
+        "exteriorPlates": 54,
+        "modeledPlates": 72,
+        "tileCount": 162,
+        "activeTiles": 0,
+        "fieldMaterials": 5,
+        "drawCalls": 376,
+        "triangles": 694254,
+        "frameMs": 18.21047721349382,
+        "renderCpuMs": 2.035647925407453,
+        "pixelRatio": 1,
+        "adapted": false,
+        "reducedMotion": true,
+        "width": 390,
+        "height": 844,
+        "frameNumber": 15,
+        "scrollRange": 5570,
+        "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+        "threeRevision": "185",
+        "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+        "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+        "environmentLoaded": true,
+        "ambientOcclusion": true,
+        "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+        "depthOfField": false,
+        "bloom": true,
+        "choreographyDeterministic": true,
+        "renderError": null,
+        "renderOnDemand": true,
+        "idle": true,
+        "precompiledPasses": true,
+        "initialLoadMs": 2616.9000000059605
+      }
+    },
+    {
+      "name": "webgl-desktop",
+      "errors": [],
+      "diagnostics": {
+        "ready": true,
+        "backend": "WebGL2",
+        "progress": 1,
+        "targetProgress": 1,
+        "phase": 5,
+        "cubePieces": 27,
+        "exteriorPlates": 54,
+        "modeledPlates": 72,
+        "tileCount": 432,
+        "activeTiles": 0,
+        "fieldMaterials": 5,
+        "drawCalls": 376,
+        "triangles": 794478,
+        "frameMs": 18.84175121159683,
+        "renderCpuMs": 4.338384884341958,
+        "pixelRatio": 1,
+        "adapted": false,
+        "reducedMotion": true,
+        "width": 1440,
+        "height": 900,
+        "frameNumber": 15,
+        "scrollRange": 5940,
+        "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+        "threeRevision": "185",
+        "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+        "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+        "environmentLoaded": true,
+        "ambientOcclusion": true,
+        "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+        "depthOfField": false,
+        "bloom": true,
+        "choreographyDeterministic": true,
+        "renderError": null,
+        "renderOnDemand": true,
+        "idle": true,
+        "precompiledPasses": true,
+        "initialLoadMs": 22637.5
+      }
+    },
+    {
+      "name": "webgl-mobile",
+      "errors": [],
+      "diagnostics": {
+        "ready": true,
+        "backend": "WebGL2",
+        "progress": 1,
+        "targetProgress": 1,
+        "phase": 5,
+        "cubePieces": 27,
+        "exteriorPlates": 54,
+        "modeledPlates": 72,
+        "tileCount": 162,
+        "activeTiles": 0,
+        "fieldMaterials": 5,
+        "drawCalls": 376,
+        "triangles": 694254,
+        "frameMs": 18.449905727665154,
+        "renderCpuMs": 3.4345938646385097,
+        "pixelRatio": 1,
+        "adapted": false,
+        "reducedMotion": true,
+        "width": 390,
+        "height": 844,
+        "frameNumber": 15,
+        "scrollRange": 5570,
+        "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+        "threeRevision": "185",
+        "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+        "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+        "environmentLoaded": true,
+        "ambientOcclusion": true,
+        "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+        "depthOfField": false,
+        "bloom": true,
+        "choreographyDeterministic": true,
+        "renderError": null,
+        "renderOnDemand": true,
+        "idle": true,
+        "precompiledPasses": true,
+        "initialLoadMs": 5096.9000000059605
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "webgpu-desktop/no-stale-glyph-after-open",
+      "passed": true,
+      "evidence": {
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "meanAbsoluteRGB": 0
+      }
+    },
+    {
+      "name": "webgpu-desktop/zero-idle-gpu-frames",
+      "passed": true,
+      "evidence": {
+        "before": 11,
+        "after": 11
+      }
+    },
+    {
+      "name": "webgpu-desktop/no-multi-second-first-field-stall",
+      "passed": true,
+      "evidence": {
+        "automationObservedMs": 109.27899999999954,
+        "localLimitMs": 2000
+      }
+    },
+    {
+      "name": "webgpu-desktop/field-return-restores-image",
+      "passed": true,
+      "evidence": {
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "meanAbsoluteRGB": 0
+      }
+    },
+    {
+      "name": "webgpu-desktop/requested-real-backend",
+      "passed": true,
+      "evidence": {
+        "actual": "WebGPU"
+      }
+    },
+    {
+      "name": "webgpu-desktop/scroll-wakes-render",
+      "passed": true,
+      "evidence": {
+        "afterIdle": 11,
+        "final": 15
+      }
+    },
+    {
+      "name": "webgpu-desktop/no-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "webgpu-mobile/no-stale-glyph-after-open",
+      "passed": true,
+      "evidence": {
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "meanAbsoluteRGB": 0
+      }
+    },
+    {
+      "name": "webgpu-mobile/zero-idle-gpu-frames",
+      "passed": true,
+      "evidence": {
+        "before": 11,
+        "after": 11
+      }
+    },
+    {
+      "name": "webgpu-mobile/no-multi-second-first-field-stall",
+      "passed": true,
+      "evidence": {
+        "automationObservedMs": 108.96549999999843,
+        "localLimitMs": 2000
+      }
+    },
+    {
+      "name": "webgpu-mobile/field-return-restores-image",
+      "passed": true,
+      "evidence": {
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "meanAbsoluteRGB": 0
+      }
+    },
+    {
+      "name": "webgpu-mobile/requested-real-backend",
+      "passed": true,
+      "evidence": {
+        "actual": "WebGPU"
+      }
+    },
+    {
+      "name": "webgpu-mobile/scroll-wakes-render",
+      "passed": true,
+      "evidence": {
+        "afterIdle": 11,
+        "final": 15
+      }
+    },
+    {
+      "name": "webgpu-mobile/no-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "webgl-desktop/no-stale-glyph-after-open",
+      "passed": true,
+      "evidence": {
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "meanAbsoluteRGB": 0
+      }
+    },
+    {
+      "name": "webgl-desktop/zero-idle-gpu-frames",
+      "passed": true,
+      "evidence": {
+        "before": 11,
+        "after": 11
+      }
+    },
+    {
+      "name": "webgl-desktop/no-multi-second-first-field-stall",
+      "passed": true,
+      "evidence": {
+        "automationObservedMs": 94.333000000006,
+        "localLimitMs": 2000
+      }
+    },
+    {
+      "name": "webgl-desktop/field-return-restores-image",
+      "passed": true,
+      "evidence": {
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "meanAbsoluteRGB": 0
+      }
+    },
+    {
+      "name": "webgl-desktop/requested-real-backend",
+      "passed": true,
+      "evidence": {
+        "actual": "WebGL2"
+      }
+    },
+    {
+      "name": "webgl-desktop/scroll-wakes-render",
+      "passed": true,
+      "evidence": {
+        "afterIdle": 11,
+        "final": 15
+      }
+    },
+    {
+      "name": "webgl-desktop/no-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "webgl-mobile/no-stale-glyph-after-open",
+      "passed": true,
+      "evidence": {
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "meanAbsoluteRGB": 0
+      }
+    },
+    {
+      "name": "webgl-mobile/zero-idle-gpu-frames",
+      "passed": true,
+      "evidence": {
+        "before": 11,
+        "after": 11
+      }
+    },
+    {
+      "name": "webgl-mobile/no-multi-second-first-field-stall",
+      "passed": true,
+      "evidence": {
+        "automationObservedMs": 109.33120000000054,
+        "localLimitMs": 2000
+      }
+    },
+    {
+      "name": "webgl-mobile/field-return-restores-image",
+      "passed": true,
+      "evidence": {
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "meanAbsoluteRGB": 0
+      }
+    },
+    {
+      "name": "webgl-mobile/requested-real-backend",
+      "passed": true,
+      "evidence": {
+        "actual": "WebGL2"
+      }
+    },
+    {
+      "name": "webgl-mobile/scroll-wakes-render",
+      "passed": true,
+      "evidence": {
+        "afterIdle": 11,
+        "final": 15
+      }
+    },
+    {
+      "name": "webgl-mobile/no-errors",
+      "passed": true,
+      "evidence": []
+    }
+  ],
+  "browser": "Chrome/152.0.7977.76",
+  "summary": {
+    "passed": 28,
+    "failed": 0
+  }
+}

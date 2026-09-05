@@ -1,0 +1,180 @@
+{
+  "method": "RGB SSIM, Gaussian 11x11 sigma 1.5, L=255, C1=(.01L)^2 C2=(.03L)^2. No resizing.",
+  "comparisons": [
+    {
+      "name": "desktop",
+      "progress": 0,
+      "ssim": 0.9997939467430115
+    },
+    {
+      "name": "desktop",
+      "progress": 0.23,
+      "ssim": 0.9996163845062256
+    },
+    {
+      "name": "desktop",
+      "progress": 0.4,
+      "ssim": 0.9996700286865234
+    },
+    {
+      "name": "desktop",
+      "progress": 0.56,
+      "ssim": 0.9994876980781555
+    },
+    {
+      "name": "desktop",
+      "progress": 0.74,
+      "ssim": 0.9998021125793457
+    },
+    {
+      "name": "desktop",
+      "progress": 0.88,
+      "ssim": 1.0
+    },
+    {
+      "name": "desktop",
+      "progress": 1,
+      "ssim": 0.9995784759521484
+    },
+    {
+      "name": "mobile",
+      "progress": 0,
+      "ssim": 0.9996882081031799
+    },
+    {
+      "name": "mobile",
+      "progress": 0.23,
+      "ssim": 0.9998106956481934
+    },
+    {
+      "name": "mobile",
+      "progress": 0.4,
+      "ssim": 0.9997115731239319
+    },
+    {
+      "name": "mobile",
+      "progress": 0.56,
+      "ssim": 0.9998227953910828
+    },
+    {
+      "name": "mobile",
+      "progress": 0.74,
+      "ssim": 0.9998891949653625
+    },
+    {
+      "name": "mobile",
+      "progress": 0.88,
+      "ssim": 1.0
+    },
+    {
+      "name": "mobile",
+      "progress": 1,
+      "ssim": 0.9996890425682068
+    },
+    {
+      "name": "mobile-slow",
+      "progress": 0,
+      "ssim": 0.9996882081031799
+    },
+    {
+      "name": "mobile-slow",
+      "progress": 0.23,
+      "ssim": 0.9998106956481934
+    },
+    {
+      "name": "mobile-slow",
+      "progress": 0.4,
+      "ssim": 0.9997115731239319
+    },
+    {
+      "name": "mobile-slow",
+      "progress": 0.56,
+      "ssim": 0.9998227953910828
+    },
+    {
+      "name": "mobile-slow",
+      "progress": 0.74,
+      "ssim": 0.9998891949653625
+    },
+    {
+      "name": "mobile-slow",
+      "progress": 0.88,
+      "ssim": 1.0
+    },
+    {
+      "name": "mobile-slow",
+      "progress": 1,
+      "ssim": 0.9996890425682068
+    },
+    {
+      "name": "desktop-webgl",
+      "progress": 0,
+      "ssim": 0.9997864961624146
+    },
+    {
+      "name": "desktop-webgl",
+      "progress": 0.23,
+      "ssim": 0.9996141791343689
+    },
+    {
+      "name": "desktop-webgl",
+      "progress": 0.4,
+      "ssim": 0.9996684789657593
+    },
+    {
+      "name": "desktop-webgl",
+      "progress": 0.56,
+      "ssim": 0.9994881749153137
+    },
+    {
+      "name": "desktop-webgl",
+      "progress": 0.74,
+      "ssim": 0.9998016953468323
+    },
+    {
+      "name": "desktop-webgl",
+      "progress": 0.88,
+      "ssim": 1.0
+    },
+    {
+      "name": "desktop-webgl",
+      "progress": 1,
+      "ssim": 0.9995676279067993
+    },
+    {
+      "name": "mobile-webgl",
+      "progress": 0,
+      "ssim": 0.9996566772460938
+    },
+    {
+      "name": "mobile-webgl",
+      "progress": 0.23,
+      "ssim": 0.9998104572296143
+    },
+    {
+      "name": "mobile-webgl",
+      "progress": 0.4,
+      "ssim": 0.9997066855430603
+    },
+    {
+      "name": "mobile-webgl",
+      "progress": 0.56,
+      "ssim": 0.9998196959495544
+    },
+    {
+      "name": "mobile-webgl",
+      "progress": 0.74,
+      "ssim": 0.9998859763145447
+    },
+    {
+      "name": "mobile-webgl",
+      "progress": 0.88,
+      "ssim": 1.0
+    },
+    {
+      "name": "mobile-webgl",
+      "progress": 1,
+      "ssim": 0.9996740221977234
+    }
+  ]
+}

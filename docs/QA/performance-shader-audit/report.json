@@ -1,0 +1,2740 @@
+{
+  "url": "http://127.0.0.1:4174",
+  "query": "",
+  "coldBrowserCache": true,
+  "physicalMobile": false,
+  "runs": [
+    {
+      "name": "mobile",
+      "errors": [],
+      "browser": "Chrome/152.0.7977.76",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 1
+      },
+      "cpuRate": 1,
+      "startup": {
+        "readyMs": 2693.199999988079,
+        "longTasks": [
+          {
+            "start": 430.39999997615814,
+            "duration": 111
+          },
+          {
+            "start": 2329.7999999821186,
+            "duration": 322
+          }
+        ],
+        "gpu": [
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Background.material_108",
+            "vertex": {
+              "label": "vertex_Background.material",
+              "bytes": 1800,
+              "hash": 2829546960
+            },
+            "fragment": {
+              "label": "fragment_Background.material",
+              "bytes": 1819,
+              "hash": 600239531
+            },
+            "start": 547.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": false,
+              "depthCompare": "always"
+            },
+            "callMs": 0.10000002384185791,
+            "completeMs": 30.700000017881393
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_PMREM_equirect_111",
+            "vertex": {
+              "label": "vertex_PMREM_equirect",
+              "bytes": 1480,
+              "hash": 2195370176
+            },
+            "fragment": {
+              "label": "fragment_PMREM_equirect",
+              "bytes": 2266,
+              "hash": 2488158185
+            },
+            "start": 590.8999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_PMREM_ggx_110",
+            "vertex": {
+              "label": "vertex_PMREM_ggx",
+              "bytes": 1525,
+              "hash": 1602037511
+            },
+            "fragment": {
+              "label": "fragment_PMREM_ggx",
+              "bytes": 9302,
+              "hash": 994583320
+            },
+            "start": 597.1999999880791,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "mipmap-rgba8unorm-2d-array",
+            "vertex": {
+              "label": "mipmap",
+              "bytes": 1827,
+              "hash": 1972005773
+            },
+            "fragment": {
+              "label": "mipmap",
+              "bytes": 1827,
+              "hash": 1972005773
+            },
+            "start": 618.6999999880791,
+            "targets": [
+              {
+                "format": "rgba8unorm"
+              }
+            ],
+            "primitive": {},
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_14",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 3077,
+              "hash": 3716998456
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 46993,
+              "hash": 1548753040
+            },
+            "start": 619.6999999880791,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 233.19999998807907
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_15",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 2861,
+              "hash": 2211497093
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 45043,
+              "hash": 1128951121
+            },
+            "start": 867.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 155.30000001192093
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 3258558505
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1077.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 162.90000000596046
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 410801689
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 1254.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 159.5
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5974,
+              "hash": 3786571911
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1424.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 18.5
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5810,
+              "hash": 2341986258
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 1455.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 154.40000000596046
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 1081461549
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1620,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.099999994039536
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 618920349
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 1648.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.5
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5974,
+              "hash": 173093752
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1677.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 19.400000005960464
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5810,
+              "hash": 582961143
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 1707.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.600000023841858
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 1752506868
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1734.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.900000005960464
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_98",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 686650722
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 1762.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5974,
+              "hash": 1475591362
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1789.8999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.700000017881393
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5810,
+              "hash": 4238578976
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 1818.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.900000005960464
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 2749211054
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1846.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.5
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 3911806776
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 1873.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 20
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5974,
+              "hash": 1431132896
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1902.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.10000002384185791,
+            "completeMs": 18.600000023841858
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5810,
+              "hash": 2524973354
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 1931.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.900000005960464
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 2555076938
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 1959.3999999761581,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 19
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 1801137403
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 1987.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.700000017881393
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5974,
+              "hash": 1593483569
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2014,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 17.799999982118607
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5810,
+              "hash": 3295133934
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2041.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 19.099999994039536
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5974,
+              "hash": 290004970
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2069.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 21
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium rim_98",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5760,
+              "hash": 3124887867
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2100.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18.599999994039536
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 59404610
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2129.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552,
+            "completeMs": 18
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 3710926944
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2157.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 18
+          },
+          {
+            "method": "createRenderPipelineAsync",
+            "label": "renderPipeline_Kineti premium glyph_91",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 2578,
+              "hash": 3208507158
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 41562,
+              "hash": 3464050648
+            },
+            "start": 2184.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "blend": {
+                  "color": {
+                    "srcFactor": "src-alpha",
+                    "dstFactor": "one-minus-src-alpha",
+                    "operation": "add"
+                  },
+                  "alpha": {
+                    "srcFactor": "one",
+                    "dstFactor": "one-minus-src-alpha",
+                    "operation": "add"
+                  }
+                },
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": false,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0,
+            "completeMs": 145.40000000596046
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 3846727490
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2347.2999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 1338677954
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2358.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 2599465743
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2372.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 176122985
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2382.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 582756570
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2392,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium glyph_97",
+            "vertex": {
+              "label": "vertex_Kineti premium glyph",
+              "bytes": 5817,
+              "hash": 2881458700
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium glyph",
+              "bytes": 43197,
+              "hash": 2594749887
+            },
+            "start": 2401.899999976158,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 3160429739
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2412.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 2727781496
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2422,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 827039446
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2436,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 3661694872
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2445.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 637807440
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2454.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_96",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 5981,
+              "hash": 1772624849
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2463.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 683544761
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2472.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 3341310259
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2486,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_98",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 1902935945
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2495.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 3497005658
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2504,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_95",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 3106188115
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2512.399999976158,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium rim_98",
+            "vertex": {
+              "label": "vertex_Kineti premium rim",
+              "bytes": 5767,
+              "hash": 2042546840
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium rim",
+              "bytes": 43237,
+              "hash": 2824562781
+            },
+            "start": 2520.5999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_ShadowMaterial_119",
+            "vertex": {
+              "label": "vertex_ShadowMaterial",
+              "bytes": 1325,
+              "hash": 2830975371
+            },
+            "fragment": {
+              "label": "fragment_ShadowMaterial",
+              "bytes": 802,
+              "hash": 428199296
+            },
+            "start": 2532.0999999940395,
+            "targets": [
+              {
+                "format": "rgba8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_ShadowMaterial_119",
+            "vertex": {
+              "label": "vertex_ShadowMaterial",
+              "bytes": 1457,
+              "hash": 2229628432
+            },
+            "fragment": {
+              "label": "fragment_ShadowMaterial",
+              "bytes": 1185,
+              "hash": 4058046765
+            },
+            "start": 2532.899999976158,
+            "targets": [
+              {
+                "format": "rgba8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "cw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium face_19",
+            "vertex": {
+              "label": "vertex_Kineti premium face",
+              "bytes": 3077,
+              "hash": 2973678880
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium face",
+              "bytes": 46993,
+              "hash": 2596146824
+            },
+            "start": 2565,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 1226717442
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2595,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 3362333880
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2603.399999976158,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0.10000002384185791
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 2408373708
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2615.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 3020690980
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2624,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 3760915462
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2632.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Kineti premium shell_94",
+            "vertex": {
+              "label": "vertex_Kineti premium shell",
+              "bytes": 5981,
+              "hash": 3054791863
+            },
+            "fragment": {
+              "label": "fragment_Kineti premium shell",
+              "bytes": 43807,
+              "hash": 1488750685
+            },
+            "start": 2641.0999999940395,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              },
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_GTAO_99",
+            "vertex": {
+              "label": "vertex_GTAO",
+              "bytes": 1645,
+              "hash": 352776072
+            },
+            "fragment": {
+              "label": "fragment_GTAO",
+              "bytes": 8804,
+              "hash": 2963881023
+            },
+            "start": 2644.7999999821186,
+            "targets": [
+              {
+                "format": "r8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_highPass_112",
+            "vertex": {
+              "label": "vertex_Bloom_highPass",
+              "bytes": 1640,
+              "hash": 3813253470
+            },
+            "fragment": {
+              "label": "fragment_Bloom_highPass",
+              "bytes": 7105,
+              "hash": 1441626238
+            },
+            "start": 2646.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_113",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1843,
+              "hash": 287037723
+            },
+            "start": 2647.699999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0.09999999403953552
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_114",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1845,
+              "hash": 1706828812
+            },
+            "start": 2648.7999999821186,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_115",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1845,
+              "hash": 3007534281
+            },
+            "start": 2649.5,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_116",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1845,
+              "hash": 931723130
+            },
+            "start": 2650.199999988079,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_separable_117",
+            "vertex": {
+              "label": "vertex_Bloom_separable",
+              "bytes": 1516,
+              "hash": 4212651080
+            },
+            "fragment": {
+              "label": "fragment_Bloom_separable",
+              "bytes": 1845,
+              "hash": 1812223367
+            },
+            "start": 2651,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_Bloom_comp_118",
+            "vertex": {
+              "label": "vertex_Bloom_comp",
+              "bytes": 1567,
+              "hash": 623120811
+            },
+            "fragment": {
+              "label": "fragment_Bloom_comp",
+              "bytes": 3391,
+              "hash": 2154701835
+            },
+            "start": 2652,
+            "targets": [
+              {
+                "format": "rgba16float",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_RenderPipeline_100",
+            "vertex": {
+              "label": "vertex_RenderPipeline",
+              "bytes": 1618,
+              "hash": 1413794076
+            },
+            "fragment": {
+              "label": "fragment_RenderPipeline",
+              "bytes": 8962,
+              "hash": 3429745717
+            },
+            "start": 2652.199999988079,
+            "targets": [
+              {
+                "format": "bgra8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 4,
+            "depthStencil": {
+              "format": "depth24plus",
+              "depthWriteEnabled": true,
+              "depthCompare": "less-equal"
+            },
+            "callMs": 0
+          },
+          {
+            "method": "createRenderPipeline",
+            "label": "renderPipeline_GTAO_99",
+            "vertex": {
+              "label": "vertex_GTAO",
+              "bytes": 1645,
+              "hash": 352776072
+            },
+            "fragment": {
+              "label": "fragment_GTAO",
+              "bytes": 8804,
+              "hash": 2963881023
+            },
+            "start": 2658.399999976158,
+            "targets": [
+              {
+                "format": "r8unorm",
+                "writeMask": 15
+              }
+            ],
+            "primitive": {
+              "topology": "triangle-list",
+              "frontFace": "ccw",
+              "cullMode": "back"
+            },
+            "samples": 1,
+            "callMs": 0
+          }
+        ],
+        "webgl": {},
+        "shaderSources": {
+          "176122985": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_122519Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_122519 : NodeBuffer_122519Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_122519.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_122519.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_122519.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_122519.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "582756570": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_126163Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_126163 : NodeBuffer_126163Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_126163.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_126163.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_126163.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_126163.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "582961143": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_45263Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_45263 : NodeBuffer_45263Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_45263.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_45263.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_45263.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_45263.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "1338677954": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_115231Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_115231 : NodeBuffer_115231Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_115231.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_115231.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_115231.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_115231.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "2341986258": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_30624Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_30624 : NodeBuffer_30624Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_30624.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_30624.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_30624.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_30624.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "2524973354": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_74538Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_74538 : NodeBuffer_74538Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_74538.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_74538.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_74538.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_74538.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "2599465743": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_118875Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_118875 : NodeBuffer_118875Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_118875.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_118875.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_118875.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_118875.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "2881458700": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_129807Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_129807 : NodeBuffer_129807Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_129807.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_129807.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_129807.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_129807.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "3208507158": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform14 : vec3<f32>,\n\tnodeUniform16 : vec3<f32>,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform24 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : vec3<f32>,\n\tnodeUniform22 : vec3<f32>,\n\tnodeUniform23 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tnodeUniform36 : f32,\n\tnodeUniform37 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\nstruct objectStruct {\n\tnodeUniform0 : vec3<f32>,\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform5 : mat3x3<f32>,\n\tnodeUniform6 : f32,\n\tnodeUniform7 : vec3<f32>,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform10 : f32,\n\tnodeUniform11 : vec3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform20 : mat4x4<f32>,\n\tnodeUniform28 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform31 : f32,\n\tnodeUniform32 : f32,\n\tnodeUniform34 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar253 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\n\n@vertex\nfn main( @location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = positionLocal;\n\tnormalLocal = normal;\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform5 * normalLocal ), 0.0 ) ).xyz );\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform20 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar253 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar253;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "3295133934": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_89174Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_89174 : NodeBuffer_89174Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_89174.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_89174.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_89174.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_89174.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "3710926944": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_103810Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_103810 : NodeBuffer_103810Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_103810.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_103810.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_103810.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_103810.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "3846727490": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_111587Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_111587 : NodeBuffer_111587Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_111587.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_111587.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_111587.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_111587.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n",
+          "4238578976": "// Three.js r185 - Node System\n\n// directives\n\n\n// structs\n\n\n// uniforms\n\nstruct NodeBuffer_59902Struct {\n\tvalue : array< mat4x4<f32>, 80 >\n};\n@binding( 5 ) @group( 1 )\nvar<uniform> NodeBuffer_59902 : NodeBuffer_59902Struct;\n\nstruct objectStruct {\n\tnodeUniform1 : f32,\n\tnodeUniform2 : f32,\n\tnodeUniform3 : f32,\n\tnodeUniform4 : f32,\n\tnodeUniform5 : f32,\n\tnodeUniform6 : vec3<f32>,\n\tnodeUniform7 : f32,\n\tnodeUniform8 : f32,\n\tnodeUniform9 : f32,\n\tnodeUniform11 : mat3x3<f32>,\n\tnodeUniform12 : f32,\n\tnodeUniform13 : vec3<f32>,\n\tnodeUniform14 : f32,\n\tnodeUniform15 : f32,\n\tnodeUniform16 : f32,\n\tnodeUniform17 : vec3<f32>,\n\tnodeUniform18 : f32,\n\tnodeUniform21 : f32,\n\tnodeUniform22 : f32,\n\tnodeUniform23 : f32,\n\tnodeUniform29 : mat4x4<f32>,\n\tnodeUniform37 : f32,\n\tnodeUniform38 : mat4x4<f32>,\n\tnodeUniform40 : f32,\n\tnodeUniform41 : f32,\n\tnodeUniform43 : f32\n};\n@binding( 0 ) @group( 1 )\nvar<uniform> object : objectStruct;\n\nstruct renderStruct {\n\tcameraProjectionMatrix : mat4x4<f32>,\n\tcameraViewMatrix : mat4x4<f32>,\n\tnodeUniform20 : vec3<f32>,\n\tnodeUniform25 : vec3<f32>,\n\tnodeUniform19 : vec3<f32>,\n\tnodeUniform28 : vec3<f32>,\n\tnodeUniform33 : vec3<f32>,\n\tnodeUniform36 : vec3<f32>,\n\tnodeUniform26 : vec3<f32>,\n\tnodeUniform27 : vec3<f32>,\n\tnodeUniform31 : vec3<f32>,\n\tnodeUniform32 : vec3<f32>,\n\tnodeUniform34 : vec3<f32>,\n\tnodeUniform35 : vec3<f32>,\n\tcameraWorldMatrix : mat4x4<f32>,\n\tnodeUniform44 : vec3<f32>,\n\tnodeUniform45 : f32,\n\tnodeUniform46 : f32\n};\n@binding( 0 ) @group( 0 )\nvar<uniform> render : renderStruct;\n\n// varyings\n\nstruct VaryingsStruct {\n\t@location( 0 ) v_positionView : vec3<f32>,\n\t@location( 1 ) v_normalViewGeometry : vec3<f32>,\n\t@location( 2 ) v_positionViewDirection : vec3<f32>,\n\t@location( 3 ) nodeVarying6 : vec3<f32>,\n\t@location( 4 ) nodeVarying7 : f32,\n\t@location( 5 ) nodeVarying8 : vec3<f32>,\n\t@builtin( position ) builtinClipSpace : vec4<f32>\n};\nvar<private> varyings : VaryingsStruct;\n\n// vars\nvar<private> normalLocal : vec3<f32>;\nvar<private> nodeVar0 : f32;\nvar<private> nodeVar1 : f32;\nvar<private> nodeVar2 : vec3<f32>;\nvar<private> modelViewMatrix : mat4x4<f32>;\nvar<private> VERTEX_nodeVar260 : vec4<f32>;\nvar<private> positionLocal : vec3<f32>;\nvar<private> v_modelViewProjection : vec4<f32>;\nvar<private> VERTEX_v_modelViewProjection : vec4<f32>;\n\n// codes\n\nfn tsl_inverse_mat3( m : mat3x3<f32> ) -> mat3x3<f32> {\n\n\tlet a00 = m[ 0 ][ 0 ]; let a01 = m[ 0 ][ 1 ]; let a02 = m[ 0 ][ 2 ];\n\tlet a10 = m[ 1 ][ 0 ]; let a11 = m[ 1 ][ 1 ]; let a12 = m[ 1 ][ 2 ];\n\tlet a20 = m[ 2 ][ 0 ]; let a21 = m[ 2 ][ 1 ]; let a22 = m[ 2 ][ 2 ];\n\n\tlet b01 = a22 * a11 - a12 * a21;\n\tlet b11 = - a22 * a10 + a12 * a20;\n\tlet b21 = a21 * a10 - a11 * a20;\n\n\tlet det = a00 * b01 + a01 * b11 + a02 * b21;\n\n\treturn mat3x3<f32>(\n\t\tb01, ( - a22 * a01 + a02 * a21 ), ( a12 * a01 - a02 * a11 ),\n\t\tb11, ( a22 * a00 - a02 * a20 ), ( - a12 * a00 + a02 * a10 ),\n\t\tb21, ( - a21 * a00 + a01 * a20 ), ( a11 * a00 - a01 * a10 )\n\t) * ( 1.0 / det );\n\n}\n\n\n\n@vertex\nfn main( @builtin( instance_index ) instanceIndex : u32,\n\t@location( 0 ) position : vec3<f32>,\n\t@location( 1 ) normal : vec3<f32>,\n\t@location( 2 ) aDestination : vec3<f32>,\n\t@location( 3 ) aSeed : f32,\n\t@location( 4 ) aOrigin : vec3<f32> ) -> VaryingsStruct {\n\n\t// flow\n\t// code\n\n\tpositionLocal = position;\n\tpositionLocal = ( NodeBuffer_59902.value[ instanceIndex ] * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tnormalLocal = normal;\n\tnormalLocal = normalize( ( transpose( tsl_inverse_mat3( mat3x3<f32>( NodeBuffer_59902.value[ instanceIndex ][ 0 ].xyz, NodeBuffer_59902.value[ instanceIndex ][ 1 ].xyz, NodeBuffer_59902.value[ instanceIndex ][ 2 ].xyz ) ) ) * normalLocal ) );\n\tnodeVar0 = smoothstep( ( aSeed * 0.12 ), ( ( aSeed * 0.12 ) + 0.84 ), object.nodeUniform2 );\n\tnodeVar1 = sin( ( ( ( aDestination.x * 1.05 ) + ( aDestination.y * 0.66 ) ) - ( object.nodeUniform1 * 39.0 ) ) );\n\tnodeVar2 = vec3<f32>( ( ( sin( ( ( ( aDestination.y * 0.8 ) - ( aDestination.x * 0.4 ) ) + ( object.nodeUniform1 * 17.0 ) ) ) * 0.12 ) * nodeVar0 ), ( ( nodeVar1 * 0.17 ) * nodeVar0 ), ( ( nodeVar1 * 0.026 ) * object.nodeUniform3 ) );\n\tpositionLocal = ( ( ( ( ( mat4x4<f32>( vec4<f32>( 1.0, 0.0, 0.0, 0.0 ), vec4<f32>( 0.0, cos( nodeVar2.x ), ( - sin( nodeVar2.x ) ), 0.0 ), vec4<f32>( 0.0, sin( nodeVar2.x ), cos( nodeVar2.x ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.y ), 0.0, sin( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 1.0, 0.0, 0.0 ), vec4<f32>( ( - sin( nodeVar2.y ) ), 0.0, cos( nodeVar2.y ), 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * mat4x4<f32>( vec4<f32>( cos( nodeVar2.z ), ( - sin( nodeVar2.z ) ), 0.0, 0.0 ), vec4<f32>( sin( nodeVar2.z ), cos( nodeVar2.z ), 0.0, 0.0 ), vec4<f32>( 0.0, 0.0, 1.0, 0.0 ), vec4<f32>( 0.0, 0.0, 0.0, 1.0 ) ) ) * vec4<f32>( positionLocal, 1.0 ) ).xyz * vec3<f32>( ( ( object.nodeUniform4 * smoothstep( 0.0, 0.1, object.nodeUniform2 ) ) * object.nodeUniform5 ) ) ) + mix( aOrigin, vec3<f32>( ( aDestination.x * object.nodeUniform5 ), ( aDestination.y * object.nodeUniform5 ), ( aDestination.z + ( nodeVar1 * ( 0.25 + ( object.nodeUniform3 * 0.75 ) ) ) ) ), nodeVar0 ) );\n\tvaryings.v_normalViewGeometry = normalize( ( render.cameraViewMatrix * vec4<f32>( ( object.nodeUniform11 * normalLocal ), 0.0 ) ).xyz );\n\tvaryings.nodeVarying6 = aDestination;\n\tvaryings.nodeVarying7 = aSeed;\n\tvaryings.nodeVarying8 = normal;\n\tmodelViewMatrix = ( render.cameraViewMatrix * object.nodeUniform29 );\n\tvaryings.v_positionView = ( modelViewMatrix * vec4<f32>( positionLocal, 1.0 ) ).xyz;\n\tvaryings.v_positionViewDirection = ( - varyings.v_positionView );\n\tVERTEX_nodeVar260 = ( render.cameraProjectionMatrix * vec4<f32>( varyings.v_positionView, 1.0 ) );\n\tVERTEX_v_modelViewProjection = VERTEX_nodeVar260;\n\n\t// result\n\n\tvaryings.builtinClipSpace = VERTEX_v_modelViewProjection;\n\n\treturn varyings;\n\n}\n"
+        },
+        "diagnostics": {
+          "ready": true,
+          "backend": "WebGPU",
+          "progress": 0,
+          "targetProgress": 0,
+          "phase": 0,
+          "cubePieces": 27,
+          "exteriorPlates": 54,
+          "modeledPlates": 72,
+          "tileCount": 162,
+          "activeTiles": 0,
+          "fieldMaterials": 5,
+          "drawCalls": 393,
+          "triangles": 759478,
+          "frameMs": 16.40566875000001,
+          "renderCpuMs": 0.23839999976158144,
+          "pixelRatio": 1,
+          "adapted": false,
+          "reducedMotion": false,
+          "width": 390,
+          "height": 844,
+          "frameNumber": 3,
+          "scrollRange": 5570,
+          "shaderAnimation": "TSL instanced layered panels / GPU pose, normals and scroll wave; deterministic scroll choreography",
+          "threeRevision": "185",
+          "surface": "Separate chamfered/notched composite plates, backing rings and support bosses; shallow porcelain relief; mipmapped deterministic grain",
+          "geometryDetail": "Hero bevel segments 3/4 at creation; field 2; no virtualized geometry or Nanite implementation",
+          "environmentLoaded": true,
+          "ambientOcclusion": true,
+          "aoMethod": "GTAO depth + normal MRT, spatial denoise, no temporal accumulation",
+          "depthOfField": false,
+          "bloom": true,
+          "choreographyDeterministic": true,
+          "renderError": null,
+          "renderOnDemand": true,
+          "idle": true,
+          "variants": {
+            "idleSpin": false,
+            "chromaticAberration": false,
+            "hoverLift": false
+          },
+          "precompiledPasses": true,
+          "initialLoadMs": 2599.9000000059605,
+          "startupTimings": {
+            "rendererInitMs": 328.5,
+            "environmentFetchDecodeMs": 48,
+            "geometryMs": 59.599999994039536,
+            "sceneCompileMs": 1795.7999999821186,
+            "fieldFirstRenderMs": 322.40000000596046,
+            "heroFirstRenderMs": 31.80000001192093
+          }
+        },
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4174/assets/website-CGhAIJBE.js",
+            "startTime": 5.5999999940395355,
+            "responseEnd": 10.799999982118607,
+            "duration": 5.199999988079071,
+            "transferSize": 81387,
+            "encodedBodySize": 81087,
+            "decodedBodySize": 290841,
+            "initiatorType": "script"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/modulepreload-polyfill-iJ-6Fn-a.js",
+            "startTime": 5.699999988079071,
+            "responseEnd": 10.5,
+            "duration": 4.800000011920929,
+            "transferSize": 628,
+            "encodedBodySize": 328,
+            "decodedBodySize": 698,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/chunk-DQkTRAJN.js",
+            "startTime": 5.699999988079071,
+            "responseEnd": 10.599999994039536,
+            "duration": 4.9000000059604645,
+            "transferSize": 669,
+            "encodedBodySize": 369,
+            "decodedBodySize": 685,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/symbols-CTgmpTlO.js",
+            "startTime": 5.799999982118607,
+            "responseEnd": 15.5,
+            "duration": 9.700000017881393,
+            "transferSize": 195715,
+            "encodedBodySize": 195415,
+            "decodedBodySize": 890126,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/three.tsl-C_0HqBY5.js",
+            "startTime": 5.899999976158142,
+            "responseEnd": 12.799999982118607,
+            "duration": 6.9000000059604645,
+            "transferSize": 3589,
+            "encodedBodySize": 3289,
+            "decodedBodySize": 10161,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/website-Cee8o5SW.css",
+            "startTime": 6,
+            "responseEnd": 12.899999976158142,
+            "duration": 6.899999976158142,
+            "transferSize": 5714,
+            "encodedBodySize": 5414,
+            "decodedBodySize": 26348,
+            "initiatorType": "link"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/HDRLoader-D7G2HILi.js",
+            "startTime": 6,
+            "responseEnd": 13.799999982118607,
+            "duration": 7.799999982118607,
+            "transferSize": 1680,
+            "encodedBodySize": 1380,
+            "decodedBodySize": 3282,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+            "startTime": 61.099999994039536,
+            "responseEnd": 63.89999997615814,
+            "duration": 2.7999999821186066,
+            "transferSize": 25136,
+            "encodedBodySize": 24836,
+            "decodedBodySize": 24836,
+            "initiatorType": "css"
+          },
+          {
+            "name": "http://127.0.0.1:4174/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+            "startTime": 61.19999998807907,
+            "responseEnd": 63.39999997615814,
+            "duration": 2.199999988079071,
+            "transferSize": 15008,
+            "encodedBodySize": 14708,
+            "decodedBodySize": 14708,
+            "initiatorType": "css"
+          },
+          {
+            "name": "http://127.0.0.1:4174/kineti.svg",
+            "startTime": 127.19999998807907,
+            "responseEnd": 130,
+            "duration": 2.800000011920929,
+            "transferSize": 472,
+            "encodedBodySize": 172,
+            "decodedBodySize": 195,
+            "initiatorType": "other"
+          },
+          {
+            "name": "http://127.0.0.1:4174/hdri/studio_small_09_1k.exr",
+            "startTime": 423.5,
+            "responseEnd": 428.59999999403954,
+            "duration": 5.0999999940395355,
+            "transferSize": 1056899,
+            "encodedBodySize": 1056599,
+            "decodedBodySize": 1056599,
+            "initiatorType": "fetch"
+          }
+        ],
+        "navigation": {
+          "name": "http://127.0.0.1:4174/?renderer=webgpu&",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 51.89999997615814,
+          "navigationId": 9876,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "br",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.3999999761581421,
+          "domainLookupStart": 0.3999999761581421,
+          "domainLookupEnd": 0.3999999761581421,
+          "connectStart": 0.3999999761581421,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.3999999761581421,
+          "requestStart": 1.399999976158142,
+          "responseStart": 2.699999988079071,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 2.699999988079071,
+          "responseEnd": 3.2999999821186066,
+          "transferSize": 808,
+          "encodedBodySize": 508,
+          "decodedBodySize": 1549,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 10.599999994039536,
+          "domContentLoadedEventStart": 51.29999998211861,
+          "domContentLoadedEventEnd": 51.39999997615814,
+          "domComplete": 51.89999997615814,
+          "loadEventStart": 51.89999997615814,
+          "loadEventEnd": 51.89999997615814,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {}
+        },
+        "marks": [
+          {
+            "name": "kineti:rendererInitMs",
+            "entryType": "measure",
+            "startTime": 93.2999999821186,
+            "duration": 328.5,
+            "navigationId": 9876
+          },
+          {
+            "name": "kineti:environmentFetchDecodeMs",
+            "entryType": "measure",
+            "startTime": 422.2999999821186,
+            "duration": 48,
+            "navigationId": 9876
+          },
+          {
+            "name": "kineti:geometryMs",
+            "entryType": "measure",
+            "startTime": 470.2999999821186,
+            "duration": 59.599999994039536,
+            "navigationId": 9876
+          },
+          {
+            "name": "kineti:sceneCompileMs",
+            "entryType": "measure",
+            "startTime": 534,
+            "duration": 1795.7999999821186,
+            "navigationId": 9876
+          },
+          {
+            "name": "kineti:fieldFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 2329.7999999821186,
+            "duration": 322.40000000596046,
+            "navigationId": 9876
+          },
+          {
+            "name": "kineti:heroFirstRenderMs",
+            "entryType": "measure",
+            "startTime": 2660.2999999821186,
+            "duration": 31.80000001192093,
+            "navigationId": 9876
+          }
+        ],
+        "bodyBytes": 1384105
+      }
+    }
+  ]
+}

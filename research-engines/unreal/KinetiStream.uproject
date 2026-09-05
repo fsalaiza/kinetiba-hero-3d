@@ -1,0 +1,11 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.7",
+  "Category": "Research",
+  "Description": "Isolated Kineti 27-piece Pixel Streaming probe",
+  "Modules": [{ "Name": "KinetiStream", "Type": "Runtime", "LoadingPhase": "Default" }],
+  "Plugins": [
+    { "Name": "PixelStreaming", "Enabled": false },
+    { "Name": "PixelStreaming2", "Enabled": true }
+  ]
+}

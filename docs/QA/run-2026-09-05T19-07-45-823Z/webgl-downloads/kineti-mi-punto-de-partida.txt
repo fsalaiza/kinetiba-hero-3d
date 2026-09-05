@@ -1,0 +1,9 @@
+KINETI — UN PUNTO DE PARTIDA
+
+Nombre: Prueba local Kineti
+Correo: qa@example.test
+
+¿Qué quieres poner en movimiento?
+Verificación local webgl/desktop: organizar datos y automatizar tareas.
+
+Brief preparado localmente. No se ha enviado ningún dato.

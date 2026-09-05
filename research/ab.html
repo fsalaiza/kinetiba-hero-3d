@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Kineti · Laboratorio de cinco renderers</title>
+  <link rel="stylesheet" href="./ab.css">
+</head>
+<body>
+  <div id="canvas-host" role="tabpanel" aria-labelledby="engine-three" aria-busy="true"></div>
+  <header class="lab-header">
+    <div class="lab-brand"><span class="lab-logo">K /</span><div><h1>Control de render</h1><span>Laboratorio · Kineti</span></div></div>
+    <div class="engine-tabs" role="tablist" aria-label="Motor de renderizado">
+      <button id="engine-three" type="button" role="tab" aria-selected="true" aria-controls="canvas-host" data-engine="three"><span>A</span> Three.js</button>
+      <button id="engine-babylon" type="button" role="tab" aria-selected="false" aria-controls="canvas-host" tabindex="-1" data-engine="babylon"><span>B</span> Babylon.js</button>
+      <button id="engine-playcanvas" type="button" role="tab" aria-selected="false" aria-controls="canvas-host" tabindex="-1" data-engine="playcanvas"><span>C</span> PlayCanvas</button>
+      <button id="engine-native_webgpu" type="button" role="tab" aria-selected="false" aria-controls="canvas-host" tabindex="-1" data-engine="native_webgpu"><span>D</span> WebGPU directo</button>
+      <button id="engine-native_webgl" type="button" role="tab" aria-selected="false" aria-controls="canvas-host" tabindex="-1" data-engine="native_webgl"><span>E</span> WebGL2 directo</button>
+    </div>
+    <nav aria-label="Enlaces del laboratorio"><a href="./reference.html">Referencia D2C ↗</a><a href="../docs/FULL_CONTROL_MATRIX.md">Matriz de control ↗</a><a href="http://127.0.0.1:8899" target="_blank" rel="noopener">Unreal local ↗</a><a href="/">Web principal ↗</a></nav>
+  </header>
+
+  <button class="panel-toggle" type="button" id="panel-toggle" aria-controls="control-panel" aria-expanded="true">Ocultar controles</button>
+  <aside id="control-panel" class="control-panel" aria-label="Parámetros compartidos">
+    <div class="panel-intro"><span class="eyebrow">5 candidatas · 8 rutas</span><h2>Prueba cada control.</h2><p>Los valores se conservan al cambiar de renderer. Solo una escena está activa.</p></div>
+    <div class="backend-control"><label for="backend-select">Backend solicitado</label><select id="backend-select" aria-describedby="backend-hint"><option value="auto">Automático · preferir WebGPU</option><option value="webgl2">Forzar WebGL2</option></select><p id="backend-hint">El backend real aparece en el diagnóstico.</p></div>
+    <div class="presets" role="group" aria-label="Presets de configuración"><button id="preset-hero" type="button">↺ Hero</button><button id="preset-mosaic" type="button">↺ Mosaico</button></div>
+    <div id="control-groups"></div>
+    <section class="compute-section" aria-labelledby="compute-title"><div class="section-label"><h3 id="compute-title">Prueba de cómputo</h3><span>LECTURA GPU</span></div><p>Ejecuta la sonda activa. Su respuesta identifica compute nativo, transform feedback o una limitación.</p><button id="compute-run" class="primary-button" type="button" disabled>Ejecutar compute probe <span>↗</span></button><p id="compute-context" class="probe-context">Todavía no ejecutado.</p><pre id="compute-result" tabindex="0" aria-label="Resultado exacto del compute probe">Todavía no ejecutado.</pre></section>
+    <section class="compute-section" aria-labelledby="raw-control-title"><div class="section-label"><h3 id="raw-control-title">Shaders y control directo</h3><span>MRT / ATOMICS</span></div><p>Lee la sonda disponible de targets múltiples y operaciones atómicas. Una sonda ausente en el fixture no demuestra un límite del motor.</p><button id="raw-control-run" class="primary-button" type="button" disabled>Ejecutar sonda avanzada <span>↗</span></button><p id="raw-control-context" class="probe-context">Todavía no ejecutado.</p><pre id="raw-control-result" tabindex="0" aria-label="Resultado exacto de la sonda avanzada">Todavía no ejecutado.</pre></section>
+    <section class="export-section" aria-labelledby="export-title"><h3 id="export-title">Exportar evidencia</h3><div class="export-buttons"><button id="export-config" type="button">Configuración ↓</button><button id="export-report" type="button">Reporte JSON ↓</button></div><p>Descarga local. El reporte incluye parámetros, diagnóstico, estado de prueba y respuestas exactas de ambas sondas, con su renderer y backend.</p></section>
+    <div class="limits"><strong>Alcance de la comparación</strong><p>La geometría y los parámetros nominales se comparten. Iluminación, filtrado del entorno, materiales y posprocesado pueden producir resultados diferentes.</p><p>El tiempo entre fotogramas incluye la programación del navegador. No equivale al tiempo GPU ni establece un ganador general.</p><p>Los documentos se incluyen en este build. Sus evidencias QA completas permanecen en el repositorio; <a href="http://127.0.0.1:5173/docs/QA/control-summary.json" target="_blank" rel="noopener">abrir resumen en el servidor de trabajo ↗</a>.</p></div>
+  </aside>
+
+  <section class="diagnostic-dock" aria-label="Diagnóstico del motor activo">
+    <div class="status-line"><span id="status-light" class="status-light"></span><span id="engine-status" role="status" aria-live="polite">Preparando motor…</span><span id="requested-mode">AUTO</span></div>
+    <div class="metric-grid"><div><span>Backend real</span><strong id="metric-backend">—</strong></div><div><span>Viewport de render</span><strong id="metric-viewport">—</strong></div><div><span>Draw calls</span><strong id="metric-drawcalls">—</strong></div><div><span>Intervalo de frame</span><strong id="metric-frame">—</strong></div></div>
+    <details id="diagnostics-details"><summary>Datos completos y estado de prueba <span>+</span></summary><pre id="diagnostics-json" tabindex="0" aria-label="Diagnóstico completo">Esperando inicialización.</pre></details>
+  </section>
+  <div id="action-status" class="action-status" role="status" aria-live="polite"></div>
+  <script type="module" src="./ab.js"></script>
+</body>
+</html>

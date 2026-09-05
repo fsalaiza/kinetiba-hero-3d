@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "name": "macro-frame",
+      "pass": true
+    },
+    {
+      "name": "twelve-phases",
+      "pass": true
+    },
+    {
+      "name": "helix-phase",
+      "pass": true
+    },
+    {
+      "name": "upper-bound",
+      "pass": true
+    },
+    {
+      "name": "lower-bound",
+      "pass": true
+    },
+    {
+      "name": "slider-sync",
+      "pass": true
+    },
+    {
+      "name": "all-188-load",
+      "pass": true
+    },
+    {
+      "name": "no-page-errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

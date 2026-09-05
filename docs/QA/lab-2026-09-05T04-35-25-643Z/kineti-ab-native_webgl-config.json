@@ -1,0 +1,29 @@
+{
+  "schema": "kineti-ab-controls/v1",
+  "engine": "native_webgl",
+  "requestedBackend": "webgl2",
+  "progress": 0.6,
+  "controls": {
+    "explode": 0,
+    "selectedPiece": 26,
+    "pieceOffset": 0,
+    "rotation": [
+      0.3,
+      0.53,
+      -0.045
+    ],
+    "cameraFov": 37,
+    "roughness": 0.27,
+    "metalness": 0.08,
+    "clearcoat": 0.46,
+    "environmentIntensity": 0.68,
+    "keyIntensity": 3.8,
+    "exposure": 1.06,
+    "glyphColor": "#354330",
+    "shadows": false,
+    "postEffect": 0,
+    "waveAmplitude": 0,
+    "wavePhase": 0,
+    "density": 432
+  }
+}
